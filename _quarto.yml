@@ -1,0 +1,69 @@
+project:
+  type: website
+  output-dir: docs
+
+filters:
+- nceas-learning-hub/theme
+exercises: ### for custom theme callouts
+  number: false ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html but does not work
+editor: source
+execute:
+  freeze: auto
+
+format:
+  theme-html
+
+website:
+  title: "NCEAS Working Group Training"
+  reader-mode: false
+  repo-url: https://github.com/nceas-learning-hub/nceas-wg-portal
+
+  favicon: logo_lh_hex.png # learning hub logo on browser tab
+
+  bread-crumbs: false
+  navbar:
+    right:
+      - text: "Instructors"
+        menu:
+          - text: "Casey O'Hara"
+            href: https://www.oharascience.com/
+      - icon: github
+        href: https://github.com/nceas-learning-hub/nceas-wg-portal
+        aria-label: GitHub
+
+  sidebar:
+    title: "Training Materials"
+    style: "floating"
+    search: true
+    tools:
+      - icon: house-door-fill
+        href: https://www.nceas.ucsb.edu/learning-hub
+      - icon: twitter
+        href: https://twitter.com/ucsb_nceas
+      - icon: github
+        href: nceas-learning-hub.github.io/nceas-wg-portal
+    contents:
+      - index.qmd # preface
+      # START SESSIONS
+      - section: "Working Groups Learning"
+        contents:
+        - s01_lecture_facilitating_working_group.qmd
+        - s02_lecture_data_mgmt_reproducibility.qmd
+        - s03_github_introduction.qmd
+        - s04_github_collaboration.qmd
+        - s05_github_project_management.qmd
+        - s06_lecture_one_pagers.qmd
+        - s07_lecture_communication_plan.qmd
+        - s08_lecture_communication_results.qmd
+      - section: "Additional Resources"
+        contents:
+        - s09_r_git_install_guide.qmd
+      # END SESSIONS
+
+  page-footer:
+    center: "Copyright \u00a9 2025, NCEAS"
+    ### NCEAS main website footer:
+    # center: "\u00a9 The Regents of the University of California, All Rights Reserved"
+    # could also include license info?
+
+

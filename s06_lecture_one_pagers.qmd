@@ -1,0 +1,38 @@
+---
+title: "One Pagers with Google Documents"
+---
+
+<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1PWeFAZ0KFI84WmwJJIwzYSaWpg91Trbj-AQi1G2oQGI/preview" allowfullscreen></iframe>
+
+
+
+### Workshop Description {.unnumbered}
+Graphical one-pagers are powerful ways to convey complex scientific information to a general audience and summarize working group outputs. Learn how to create compelling materials, including choices around fonts, layouts, content, and color schemes.
+
+
+### Learning Objectives{.unnumbered}
+-   Learn about free graphic resources like Coolers, Font Awesome, and the Noun Project 
+
+-   Reflect on your desired audience and goals for this science communication project
+
+-   Recognize compelling components of infographic content and layout
+
+-   Determine suitable color schemes for infographics and practice implementing them
+
+-   Customize infographics with text, fonts, photos, colors, and layouts in Google Docs
+
+
+:::callout-important
+## Missed the training?
+
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1PfOcQaiDtlcYymEkyW_rvkuMSpyQ-Z3k/view?usp=drive_link).
+
+:::
+
+
+
+### Resources {.unnumbered}
+
+- [Ten Simple Rules for Better Figures](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833)
+
+- Faces engage us: [photos with faces attract more likes and comments on Instagram](https://www.researchgate.net/publication/266655817_Faces_engage_us_photos_with_faces_attract_more_likes_and_comments_on_Instagram)
