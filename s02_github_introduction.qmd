@@ -1,5 +1,5 @@
 ---
-title: Git and GitHub
+title: Intro to Git and GitHub
 ---
 
 

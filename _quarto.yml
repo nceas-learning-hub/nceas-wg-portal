@@ -4,8 +4,10 @@ project:
 
 filters:
 - nceas-learning-hub/theme
+
 exercises: ### for custom theme callouts
-  number: false ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html but does not work
+  number: true ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html but does not work
+
 editor: source
 execute:
   freeze: auto
@@ -13,12 +15,14 @@ execute:
 format:
   theme-html
 
+
 website:
   title: "NCEAS Working Group Training"
   reader-mode: false
   repo-url: https://github.com/nceas-learning-hub/nceas-wg-portal
 
   favicon: logo_lh_hex.png # learning hub logo on browser tab
+
 
   bread-crumbs: false
   navbar:
@@ -48,12 +52,12 @@ website:
       - section: "Working Groups Learning"
         contents:
         - s01_lecture_facilitating_working_group.qmd
-        - s02_lecture_data_mgmt_reproducibility.qmd
-        - s03_github_introduction.qmd
-        - s04_github_collaboration.qmd
-        - s05_github_project_management.qmd
-        - s06_lecture_one_pagers.qmd
-        - s07_lecture_communication_plan.qmd
+        - s02_github_introduction.qmd
+        - s03_lecture_data_mgmt_reproducibility.qmd
+        - s04_github_project_management.qmd
+        - s05_github_collaboration.qmd
+        - s06_lecture_communication_plan.qmd
+        - s07_lecture_one_pagers.qmd
         - s08_lecture_communication_results.qmd
       - section: "Additional Resources"
         contents:

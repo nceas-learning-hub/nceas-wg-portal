@@ -10,27 +10,48 @@ format:
 :::
 
 
+## NCEAS Training Series: Supporting Effective Collaboration in Working Groups
+
+Welcome to the **NCEAS Working Group Training Series**, specially designed to help working groups collaborate more effectively throughout every stage of their research process. These trainings cover essential collaboration strategies and practical skills, from facilitation and communication to data management and version control.
+
+This training series is designed to foster both individual development and effective team collaboration. Training topics offers practical guidance on group facilitation, strategies for clear and productive communication, and hands-on skills for managing data and projects in a collaborative environment. Whether you're getting ready for your first group meeting or fine-tuning established workflows, these trainings offer valuable tools to support your success.
+
+### How to Participate
+
+We encourage each team to:
+
+1. **Review the training topics** listed in the schedule below.  
+2. **Discuss with your group** which sessions interest you individually and which ones may benefit the group as a whole.  
+3. **Register early** — space is limited! Use the registration links provided for each training.  
+
+Monthly emails will provide details and reminders for upcoming sessions, so you won’t miss a thing.
+
+### Logistics
+
+- **All sessions are held via Zoom.**  
+- **Training slides and video recordings ** will be posted and available for download on this site.  
+
+Let’s build stronger, smarter collaborations — together.
+
+#### Schedule
+<div style="font-size: 0.85em; overflow-x: auto;">
+| **Workshop**                            | **Date & Time**                        | **Registration**         |
+|-----------------------------------------|----------------------------------------|--------------------------|
+| Facilitating a Successful Working Group | Aug 13, 2025<br>10am – 11am PT      | Register [here](#)          |
+| Intro to Git and GitHub                 | Sep 10, 2025<br>10am – 11am PT    | Register [here](#)       |
+| Data Management & Reproducibility       | Oct 8, 2025<br>10am – 11am PT       | Register [here](#)       |
+| Project Management on GitHub            | Nov 12, 2025<br>10am – 11am PT      | Register [here](#)       |
+| Collaborating with Git and GitHub       | Dec 10, 2025<br>10am – 11am PT    | Register [here](#)       |
+| Developing a Communication Plan         | Jan 14, 2026<br>10am – 11am PT     | Register [here](#)       |
+| One Pagers with Google Documents        | Feb 11, 2026<br>10am – 11am PT      | Register [here](#)       |
+| Communicating Your Results              | Mar 11, 2026<br>10am – 11am PT     | Register [here](#)       |
+
+</div>
+
+
 ## NCEAS Expertise
 
-The [National Center for Ecological Analysis and Synthesis (NCEAS)](https://www.nceas.ucsb.edu/), a research affiliate of UCSB, is a leading expert on interdisciplinary data science and works collaboratively to answer the world's largest and most complex questions. The NCEAS approach leverages existing data and employs a team science philosophy to squeeze out all potential insights and solutions efficiently - this is called [synthesis science](https://www.nceas.ucsb.edu/our-approach).
-
-NCEAS has over 25 years of success with this model among working groups and environmental professionals. Together with the Delta Science Program and the Delta Stewardship Council we are excited to pass along skills, workflows, mindsets learn throughout the years.
-
-
-:::{.callout-tip}
-### Learning Objectives
--   Effectively manage data using `tidy` data practices
--   Implement reproducible scientific workflows throughout all aspects of a project
--   Establish best practices and utilize tools like Git & GitHub to optimize your collaboration
--   Better communicate scientific analyses and results using Markdown, GitHub webpages, and R packages like `ggplot2` and `Shiny`
-- Increase your familiarity and confidence with data science tools
-:::
-
-### Week's Schedule
-
-:::{.column-body-outset}
-<!-- ![](images/schedule.png) -->
-:::
+The [National Center for Ecological Analysis and Synthesis (NCEAS)](https://www.nceas.ucsb.edu/), a research affiliate of UCSB, is a global leader in ecological synthesis science, transforming how environmental research is conducted through data-driven collaboration. With over 30 years of success using this model among working groups and environmental professionals, NCEAS champions open science by developing tools and best practices for transparent, reproducible, and accessible research. It also invests heavily in training scientists, offering workshops and resources that build skills in data science, collaboration, and environmental analysis.
 
 
 ## Code of Conduct
@@ -39,15 +60,9 @@ By participating in this activity you agree to abide by the [NCEAS Code of Condu
 
 ## About this book
 
-These written materials are the result of a continuous and collaborative effort at NCEAS to help researchers make their work more transparent and reproducible. This work began in the early 2000's, and reflects the expertise and diligence of many, many individuals. The primary authors are listed in the citation below, with additional contributors recognized for their role in developing previous iterations of these or similar materials.
+These written materials are the result of a continuous and collaborative effort at NCEAS to help researchers make their work more transparent and reproducible. This work began in the early 2000's, and reflects the expertise and diligence of many, many individuals. The primary authors are listed in the citation under each workshop material, with additional contributors recognized for their role in developing previous iterations of these or similar materials.
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-
-**Citation:** Camila Vargas Poulsen & Angel Chen (2024), NCEAS coreR for Delta Science Program, June 2024, NCEAS Learning Hub. URL <https://learning.nceas.ucsb.edu/2024-06-delta>.
-
-**Additional contributors:** Ben Bolker, Amber E. Budden, Julien Brun, Samantha Csik, Halina Do-Linh, Natasha Haycock-Chavez, S. Jeanette Clark, Julie Lowndes, Stephanie Hampton, Matt Jone, Samanta Katz, Erin McLean, Bryce Mecum, Deanna Pennington, Karthik Ram, Jim Regetz, Tracy Teal, Daphne Virlar-Knight, Leah Wasser.
-
-
 
 This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
