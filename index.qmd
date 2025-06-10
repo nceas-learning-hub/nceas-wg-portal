@@ -37,7 +37,7 @@ Let’s build stronger, smarter collaborations — together.
 <div style="font-size: 0.85em; overflow-x: auto;">
 | **Workshop**                            | **Date & Time**                        | **Registration**         |
 |-----------------------------------------|----------------------------------------|--------------------------|
-| Facilitating a Successful Working Group | Aug 13, 2025<br>10am – 11am PT      | Register [here](#)          |
+| Facilitating a Successful Working Group | Aug 21, 2025<br>10am – 11am PT      | Register [here](#)          |
 | Intro to Git and GitHub                 | Sep 10, 2025<br>10am – 11am PT    | Register [here](#)       |
 | Data Management & Reproducibility       | Oct 8, 2025<br>10am – 11am PT       | Register [here](#)       |
 | Project Management on GitHub            | Nov 12, 2025<br>10am – 11am PT      | Register [here](#)       |

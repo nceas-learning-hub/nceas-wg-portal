@@ -29,7 +29,7 @@ website:
     right:
       - text: "Instructors"
         menu:
-          - text: "Casey O'Hara"
+          - text: "Li Kui"
             href: https://www.oharascience.com/
       - icon: github
         href: https://github.com/nceas-learning-hub/nceas-wg-portal
@@ -62,6 +62,8 @@ website:
       - section: "Additional Resources"
         contents:
         - s09_r_git_install_guide.qmd
+        - s10_r_parallel_computing.qmd
+        - s11_data_resources.qmd
       # END SESSIONS
 
   page-footer:

@@ -1,0 +1,51 @@
+---
+title: "Data & Computational Resources"
+---
+
+## Data & Computational Resources
+Explore the core infrastructure available to support your research—from managing large datasets to conducting computationally intensive analyses and sharing your results openly and reproducibly.
+
+### 1. Data Storage & Management
+
+Working groups are encouraged to use **GitHub** for version control and collaborative code development. However, GitHub has a **100 MB file size limit** per file, making it unsuitable for storing large datasets. Depending on the size and format of your data, consider the following options:
+
+1. For **small datasets (< 50 MB)** that are published and accessible via a persistent web link (e.g., data from **DataONE**), you are encouraged to reference the URL directly within your scripts to minimize redundancy and streamline reproducibility.
+
+2. For **medium-sized datasets (larger than 50 MB but smaller than 100 GB)** or unpublished data that need to be shared internally, use a **shared Google Drive**. Many working groups already have shared Drives—if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the `"data"` folder in the shared Google Drive for consistency and ease of use.
+
+3. For **large datasets (> 100 GB)**, please reach out to the Data Science Trainer to coordinate access to **NCEAS data servers**. This ensures appropriate infrastructure for high-capacity and long-term storage.
+
+---
+
+### 2. High-Performance & Parallel Computing
+
+Working groups at NCEAS can request access to **high-performance computing (HPC)** resources to support large-scale processing and computation.
+
+- To obtain HPC access with **R/RStudio pre-installed**, contact the Data Science Trainer.
+- For parallel programming support:
+  - **Python Tutorials**:
+    - [Parallel computing in Python](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parallel-programming.html)
+  - **R Tutorial**:
+    - [Parallel Computing with R](https://nceas-learning-hub.github.io/nceas-wg-portal/s10_r_parallel_computing.html)
+
+These tools and resources can help you scale your workflows efficiently across multiple cores or nodes.
+
+---
+
+### Other R Tips
+
+Enhance your data visualization and spatial analysis workflows with these R resources:
+
+- **Using `sf` for Spatial Data & Intro to Making Maps**  
+  A hands-on tutorial introducing spatial data operations and basic mapping in R.  
+  📍 [View the tutorial](https://learning.nceas.ucsb.edu/2023-08-delta/session_10.html)
+
+---
+
+### 3. Data Sharing & Publishing
+
+To support open and reproducible science, NCEAS encourages working groups to make their data **FAIR-Findable, Accessible, Interoperable, and Reusable**:
+
+- Publish datasets in trusted repositories such as the [Environmental Data Initiative (EDI)](https://edirepository.org/) using tools like [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) for metadata creation.
+- **Code** should be versioned in **GitHub** and eventually published through [Zenodo](https://zenodo.org/) to obtain a DOI.
+
