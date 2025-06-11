@@ -148,28 +148,7 @@ It's not as simple as it may seem. While in theory each added processor would li
 
 In addition, not all of a task can be parallelized. Depending on the proportion, the expected speedup can be significantly reduced.  Some propose that this may follow [Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law), where the speedup of the computation (y-axis) is a function of both the number of cores (x-axis) and the proportion of the computation that can be parallelized (see colored lines):
 
-```{r label="amdahl", eval= F, warning=FALSE}
-library(ggplot2)
-library(tidyr)
-amdahl <- function(p, s) {
-  return(1 / ( (1-p) + p/s  ))
-}
-doubles <- 2^(seq(0,16))
-cpu_perf <- cbind(cpus = doubles, p50 = amdahl(.5, doubles))
-cpu_perf <- cbind(cpu_perf, p75 = amdahl(.75, doubles))
-cpu_perf <- cbind(cpu_perf, p85 = amdahl(.85, doubles))
-cpu_perf <- cbind(cpu_perf, p90 = amdahl(.90, doubles))
-cpu_perf <- cbind(cpu_perf, p95 = amdahl(.95, doubles))
-#cpu_perf <- cbind(cpu_perf, p99 = amdahl(.99, doubles))
-cpu_perf <- as.data.frame(cpu_perf)
-cpu_perf <- cpu_perf %>% gather(prop, speedup, -cpus)
-ggplot(cpu_perf, aes(cpus, speedup, color=prop)) + 
-  geom_line() +
-  scale_x_continuous(trans='log2') +
-  theme_bw() +
-  labs(title = "Amdahl's Law")
-```
-
+![Amdahl's Law](images/r_parallel_computing/Amdahl_law.png)
 
 So, its important to evaluate the computational efficiency of requests, and work to ensure that additional compute resources brought to bear will pay off in terms of increased work being done.  With that, let's do some parallel computing...
 

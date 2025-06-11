@@ -35,16 +35,16 @@ Let’s build stronger, smarter collaborations — together.
 
 #### Schedule
 <div style="font-size: 0.85em; overflow-x: auto;">
-| **Workshop**                            | **Date & Time**                        | **Registration**         |
-|-----------------------------------------|----------------------------------------|--------------------------|
-| Facilitating a Successful Working Group | Aug 21, 2025<br>10am – 11am PT      | Register [here](#)          |
-| Intro to Git and GitHub                 | Sep 10, 2025<br>10am – 11am PT    | Register [here](#)       |
-| Data Management & Reproducibility       | Oct 8, 2025<br>10am – 11am PT       | Register [here](#)       |
-| Project Management on GitHub            | Nov 12, 2025<br>10am – 11am PT      | Register [here](#)       |
-| Collaborating with Git and GitHub       | Dec 10, 2025<br>10am – 11am PT    | Register [here](#)       |
-| Developing a Communication Plan         | Jan 14, 2026<br>10am – 11am PT     | Register [here](#)       |
-| One Pagers with Google Documents        | Feb 11, 2026<br>10am – 11am PT      | Register [here](#)       |
-| Communicating Your Results              | Mar 11, 2026<br>10am – 11am PT     | Register [here](#)       |
+| **Workshop**                            | **Date & Time**                        | **Duration**        | **Registration**         |
+|-----------------------------------------|----------------------------------------|---------------------|--------------------------|
+| Facilitating a Successful Working Group | Aug 21, 2025<br>10am – 11am PT         | 60 min              | Register [here](#)       |
+| Intro to Git and GitHub                 | Sep 10, 2025<br>10am – 11am PT         | 90 min              | Register [here](#)       |
+| Data Management & Reproducibility       | Oct 8, 2025<br>10am – 11am PT          | 60 min              | Register [here](#)       |
+| Project Management on GitHub            | Nov 12, 2025<br>10am – 11am PT         | 60 min              | Register [here](#)       |
+| Collaborating with Git and GitHub       | Dec 10, 2025<br>10am – 11am PT         | 90 min              | Register [here](#)       |
+| Developing a Communication Plan         | Jan 21, 2026<br>10am – 11am PT         | 90 min              | Register [here](#)       |
+| Infographics and One Pagers             | Feb 11, 2026<br>10am – 11am PT         | 90 min              | Register [here](#)       |
+| Communicating Your Results              | Mar 11, 2026<br>10am – 11am PT         | 90 min              | Register [here](#)       |
 
 </div>
 
