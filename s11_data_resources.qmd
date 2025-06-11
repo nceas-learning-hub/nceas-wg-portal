@@ -44,7 +44,7 @@ Enhance your data visualization and spatial analysis workflows with these R reso
 
 ### 3. Data Sharing & Publishing
 
-To support open and reproducible science, NCEAS encourages working groups to make their data **FAIR-Findable, Accessible, Interoperable, and Reusable**:
+To support open and reproducible science, NCEAS encourages working groups to make their data and code **Findable**. See the [relevant module](https://lter.github.io/ssecr/mod_next-steps.html) developed by the NCEAS-LTER team. 
 
 - Publish datasets in trusted repositories such as the [Environmental Data Initiative (EDI)](https://edirepository.org/) using tools like [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) for metadata creation.
 - **Code** should be versioned in **GitHub** and eventually published through [Zenodo](https://zenodo.org/) to obtain a DOI.
