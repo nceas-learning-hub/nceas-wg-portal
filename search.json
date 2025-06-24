@@ -132,17 +132,6 @@
     ]
   },
   {
-    "objectID": "s02_github_introduction.html",
-    "href": "s02_github_introduction.html",
-    "title": "Intro to Git and GitHub",
-    "section": "",
-    "text": "Learning Objectives\n\n\n\n\nApply the principles of Git to track and manage changes of a project\nUtilize the Git workflow including pulling changes, staging modified files, committing changes, pulling again to incorporate remote changes, and pushing changes to a remote repository\nCreate and configure Git repositories using different workflows",
-    "crumbs": [
-      "Working Groups Learning",
-      "Intro to Git and GitHub"
-    ]
-  },
-  {
     "objectID": "s02_github_introduction.html#introduction-to-version-control",
     "href": "s02_github_introduction.html#introduction-to-version-control",
     "title": "Intro to Git and GitHub",
@@ -202,7 +191,7 @@
     "href": "s02_github_introduction.html#go-further-with-git",
     "title": "Intro to Git and GitHub",
     "section": "6 Go further with Git",
-    "text": "6 Go further with Git\nThere’s a lot we haven’t covered in this brief tutorial. There are some great and much longer tutorials that cover advanced topics, such as:\n\nUsing Git on the command line\nResolving conflicts\nBranching and merging\nPull requests versus direct contributions for collaboration\nUsing .gitignore to protect sensitive data\nGitHub Issues - how to use them for project management and collaboration\n\nand much, much more.",
+    "text": "6 Go further with Git\nThere’s a lot we haven’t covered in this brief tutorial. There are some great and much longer tutorials that cover advanced topics, such as:\n\nUsing Git on the command line\nResolving conflicts\nBranching and merging\nPull requests versus direct contributions for collaboration\nUsing .gitignore to protect sensitive data\nGitHub Issues - how to use them for project management and collaboration\n\nand much, much more.\n\n\n\n\n\n\nMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
     "crumbs": [
       "Working Groups Learning",
       "Intro to Git and GitHub"
@@ -293,17 +282,6 @@
     ]
   },
   {
-    "objectID": "s05_github_collaboration.html",
-    "href": "s05_github_collaboration.html",
-    "title": "Collaborating with Git and GitHub",
-    "section": "",
-    "text": "Learning Objectives\n\n\n\n\nApply the principles, features, and collaboration tools of Git and GitHub to effectively collaborate with colleagues on code\nAnalyze and evaluate common causes of conflicts that arise when collaborating on repositories\nDemonstrate the ability to resolve conflicts using Git conflict resolution techniques\nApply workflows and best practices that minimize conflicts on collaborative repositories",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
     "objectID": "s05_github_collaboration.html#introduction-to-git-and-github-tools-for-collaboration",
     "href": "s05_github_collaboration.html#introduction-to-git-and-github-tools-for-collaboration",
     "title": "Collaborating with Git and GitHub",
@@ -385,7 +363,7 @@
     "href": "s05_github_collaboration.html#best-practices-to-avoid-merge-conflicts",
     "title": "Collaborating with Git and GitHub",
     "section": "8 Best practices to avoid merge conflicts",
-    "text": "8 Best practices to avoid merge conflicts\nSome basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:\n\n\n\n\n\nXKCD 1597\n\n\n\nCommunicate often and set up effective communication channels\nTell each other what you are working on\nStart your working session with a pull\nPull immediately after you commit and before you push\nCommit often in small chunks (this helps you organize your work!)\nMake sure you and who you are collaborating with all fully understand the Git workflow you’re using (aka make sure you’re on the same page before you start)!\n\nA good workflow is encapsulated as follows:\nPull -&gt; Edit -&gt; Save -&gt; Add (stage) -&gt; Commit -&gt; Pull -&gt; (OPTIONAL) Fix any merge conflicts -&gt; Push\nIt may take a bit of practice to get comfortable with navigating merge conflicts, but like any other technical skill, they’ll become less intimidating with time. With careful communication and a consistent workflow, conflicts can be largely avoided or resolved when they do occur.",
+    "text": "8 Best practices to avoid merge conflicts\nSome basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:\n\n\n\n\n\nXKCD 1597\n\n\n\nCommunicate often and set up effective communication channels\nTell each other what you are working on\nStart your working session with a pull\nPull immediately after you commit and before you push\nCommit often in small chunks (this helps you organize your work!)\nMake sure you and who you are collaborating with all fully understand the Git workflow you’re using (aka make sure you’re on the same page before you start)!\n\nA good workflow is encapsulated as follows:\nPull -&gt; Edit -&gt; Save -&gt; Add (stage) -&gt; Commit -&gt; Pull -&gt; (OPTIONAL) Fix any merge conflicts -&gt; Push\nIt may take a bit of practice to get comfortable with navigating merge conflicts, but like any other technical skill, they’ll become less intimidating with time. With careful communication and a consistent workflow, conflicts can be largely avoided or resolved when they do occur.\n\n\n\n\n\n\nMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
     "crumbs": [
       "Working Groups Learning",
       "Collaborating with Git and GitHub"
@@ -469,28 +447,6 @@
     ]
   },
   {
-    "objectID": "s04_github_project_management.html",
-    "href": "s04_github_project_management.html",
-    "title": "Project Management on GitHub",
-    "section": "",
-    "text": "Learning Objectives\n\n\n\n\nUtilize GitHub’s project management tools to organize and manage projects\nPractice creating issues in GitHub\nCraft informative READMEs for Git repositories",
-    "crumbs": [
-      "Working Groups Learning",
-      "Project Management on GitHub"
-    ]
-  },
-  {
-    "objectID": "s04_github_project_management.html#slides",
-    "href": "s04_github_project_management.html#slides",
-    "title": "Project Management on GitHub",
-    "section": "Slides",
-    "text": "Slides",
-    "crumbs": [
-      "Working Groups Learning",
-      "Project Management on GitHub"
-    ]
-  },
-  {
     "objectID": "s04_github_project_management.html#exercise-github-issues",
     "href": "s04_github_project_management.html#exercise-github-issues",
     "title": "Project Management on GitHub",
@@ -506,7 +462,7 @@
     "href": "s04_github_project_management.html#exercise-practice-creating-informative-readmes",
     "title": "Project Management on GitHub",
     "section": "2 Exercise: Practice creating informative READMEs",
-    "text": "2 Exercise: Practice creating informative READMEs\nYou can do this either for the training_&lt;username&gt; repo, or the Lobster Report repo (make sure just one of you edits this one) or edit a personal repo from one of your projects. Make sure to include the 6 core elements:\n\nA short, but descriptive title\nA brief explanation of the repository’s purpose\nA concise description of what’s housed in the repository\nDetails regarding data access\nA list of authors or contributors (for collaborative work)\nReferences / acknowledgements\n\n\n\n\n\n\n\nREADME Examples\n\n\n\n\nA shiny dashboard for exploring my personal Strava data, by Sam Csik\nThomas Fire Data Analysis by Anna Ramji\nArt of README by Kira Oakley",
+    "text": "2 Exercise: Practice creating informative READMEs\nYou can do this either for the training_&lt;username&gt; repo, or the Lobster Report repo (make sure just one of you edits this one) or edit a personal repo from one of your projects. Make sure to include the 6 core elements:\n\nA short, but descriptive title\nA brief explanation of the repository’s purpose\nA concise description of what’s housed in the repository\nDetails regarding data access\nA list of authors or contributors (for collaborative work)\nReferences / acknowledgements\n\n\n\n\n\n\n\nREADME Examples\n\n\n\n\nA shiny dashboard for exploring my personal Strava data, by Sam Csik\nThomas Fire Data Analysis by Anna Ramji\nArt of README by Kira Oakley\n\n\n\n\n\n\n\n\n\nMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
     "crumbs": [
       "Working Groups Learning",
       "Project Management on GitHub"
