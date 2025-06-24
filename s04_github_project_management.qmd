@@ -2,6 +2,9 @@
 title: Project Management on GitHub
 ---
 
+<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1DBBxIa7rE2ULDL32MfJ-AXQdR6F1vN1vD8H4AEnwyfU/preview" allowfullscreen></iframe>
+
+
 :::{.callout-tip}
 ## Learning Objectives
 
@@ -9,13 +12,6 @@ title: Project Management on GitHub
 - Practice creating issues in GitHub
 - Craft informative READMEs for Git repositories
 :::
-
-
-## Slides {.unnumbered}
-
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1ehw-Mg-i1QfXpz0MTLwIlaXNKRp42NB5TboZOhuTqtI/preview"allowfullscreen></iframe>
-
-
 
 ## Exercise: GitHub Issues
 
@@ -97,6 +93,7 @@ You can do this either for the `training_<username>` repo, or the Lobster Report
 - [ ] A list of authors or contributors (for collaborative work)
 - [ ] References / acknowledgements
 
+
 ::: {.callout-note}
 ### README Examples
 
@@ -108,3 +105,9 @@ You can do this either for the `training_<username>` repo, or the Lobster Report
 
 :::
 
+:::callout-important
+## Missed the training?
+
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1VwvMOu2MeM0nKvEX5wzJ8n3KvCB9XRS3/view?usp=sharing).
+
+:::

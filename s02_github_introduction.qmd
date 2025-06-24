@@ -1,7 +1,7 @@
 ---
 title: Intro to Git and GitHub
 ---
-
+<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1V5WJYPTcsrKwkiKr5Z4Hzc6m3D2al4cq0j-rBawPkoU/preview" allowfullscreen></iframe>
 
 :::{.callout-tip}
 ## Learning Objectives
@@ -10,6 +10,7 @@ title: Intro to Git and GitHub
 -   Utilize the Git workflow including pulling changes, staging modified files, committing changes, pulling again to incorporate remote changes, and pushing changes to a remote repository
 -   Create and configure Git repositories using different workflows
 :::
+
 
 ## Introduction to Version Control
 
@@ -745,6 +746,14 @@ There's a lot we haven't covered in this brief tutorial. There are some great an
 -   GitHub Issues - how to use them for project management and collaboration
 
 and much, much more.
+
+:::callout-important
+## Missed the training?
+
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1M0gsFWWAdbG7CmmEmPUJj4HwhTINWTLB/view?usp=drive_link).
+
+:::
+
 
 ## Git resources
 

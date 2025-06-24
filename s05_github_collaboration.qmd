@@ -1,6 +1,7 @@
 ---
 title: Collaborating with Git and GitHub
 ---
+<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1ehw-Mg-i1QfXpz0MTLwIlaXNKRp42NB5TboZOhuTqtI/preview" allowfullscreen></iframe>
 
 :::{.callout-tip}
 ## Learning Objectives
@@ -10,6 +11,7 @@ title: Collaborating with Git and GitHub
 - Demonstrate the ability to resolve conflicts using Git conflict resolution techniques
 - Apply workflows and best practices that minimize conflicts on collaborative repositories
 :::
+
 
 ## Introduction to Git and GitHub Tools for Collaboration
 
@@ -419,3 +421,11 @@ A good workflow is encapsulated as follows:
 
 
 It may take a bit of practice to get comfortable with navigating merge conflicts, but like any other technical skill, they'll become less intimidating with time. With careful communication and a consistent workflow, conflicts can be largely avoided or resolved when they do occur.
+
+
+:::callout-important
+## Missed the training?
+
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1RDm55Onv83B15w_zwSV43Tvhb4-rW0bd/view?usp=drive_link).
+
+:::
