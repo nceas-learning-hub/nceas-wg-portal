@@ -5,7 +5,7 @@ title: "Data & Computational Resources"
 ## Data & Computational Resources
 Explore the core infrastructure available to support your research—from managing large datasets to conducting computationally intensive analyses and sharing your results openly and reproducibly.
 
-### 1. Data Storage & Management
+### Data Storage & Management
 
 Working groups are encouraged to use **GitHub** for version control and collaborative code development. However, GitHub has a **100 MB file size limit** per file, making it unsuitable for storing large datasets. Depending on the size and format of your data, consider the following options:
 
@@ -17,7 +17,7 @@ Working groups are encouraged to use **GitHub** for version control and collabor
 
 ---
 
-### 2. High-Performance & Parallel Computing
+### High-Performance & Parallel Computing
 
 Working groups at NCEAS can request access to **high-performance computing (HPC)** resources to support large-scale processing and computation.
 
@@ -32,9 +32,9 @@ These tools and resources can help you scale your workflows efficiently across m
 
 ---
 
-### Other R Tips
+### R Tips
 
-Enhance your data visualization and spatial analysis workflows with these R resources:
+Here are some optional R modules that fall outside our regular working group training topics. If you have questions about R programming, feel free to reach out—we can develop a custom module as part of our working group resources. These topics are designed to strengthen your data visualization and analysis skills using R:
 
 - **Using `sf` for Spatial Data & Intro to Making Maps**  
   A hands-on tutorial introducing spatial data operations and basic mapping in R.  
@@ -42,10 +42,24 @@ Enhance your data visualization and spatial analysis workflows with these R reso
 
 ---
 
-### 3. Data Sharing & Publishing
+### Data Sharing & Publishing
 
 To support open and reproducible science, NCEAS encourages working groups to make their data and code **Findable**. See the [relevant module](https://lter.github.io/ssecr/mod_next-steps.html) developed by the NCEAS-LTER team. 
 
 - Publish datasets in trusted repositories such as the [Environmental Data Initiative (EDI)](https://edirepository.org/) using tools like [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) for metadata creation.
 - **Code** should be versioned in **GitHub** and eventually published through [Zenodo](https://zenodo.org/) to obtain a DOI.
+
+
+### Other NCEAS resources
+- [**Synthesis Skills for Early Career Researchers (SSECR)**](https://lter.github.io/ssecr/)  
+  An LTER course designed to build foundational synthesis and collaboration skills.
+
+- [**LTER Scientific Computing Team Website**](https://lter.github.io/scicomp/)  
+  Resources and tools from the LTER community focused on scientific computing best practices.
+
+- [**NCEAS Resources for Working Groups**](https://www.nceas.ucsb.edu/working-group-resources)  
+  A curated collection of guidance and tools drawn from NCEAS's extensive experience supporting synthesis science.
+
+- [**NCEAS Computing Resources**](https://nceaswelcome.weebly.com/computing.html)  
+  An overview of computing platforms, tools, and services available to NCEAS working groups.
 
