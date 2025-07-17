@@ -60,8 +60,8 @@ To support open and reproducible science, NCEAS encourages working groups to mak
 - [**NCEAS Resources for Working Groups**](https://www.nceas.ucsb.edu/working-group-resources)  
   A curated collection of guidance and tools drawn from NCEAS's extensive experience supporting synthesis science.
 
-- [**NCEAS Computing Resources**](https://nceaswelcome.weebly.com/computing.html)  
-  An overview of computing platforms, tools, and services available to NCEAS working groups.
+- [**NCEAS Hight Performance Computing**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing)  
+  An overview of high performance computing available to NCEAS working groups.
   
 - [**Carpentry @ UCSB library**](https://carpentry.library.ucsb.edu/workshop/2025/07/08/ucsb-geospatial.html)  
   A list of the free training provided by the UCSB library, including various R and Python courses for the coming quarter.
