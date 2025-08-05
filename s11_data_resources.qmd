@@ -25,13 +25,7 @@ Working groups at NCEAS can request access to **high-performance computing (HPC)
 
 - If you're working with a large dataset, using the Parquet file format can significantly improve read/write and computation speed. Parquet is a columnar storage format that allows for efficient compression and faster querying, especially when only a subset of columns is needed. Please see the [**training materials**](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parquet-arrow.html) for how to read and write Parquet files.  
 
-- For parallel programming support:
-  - **Python Tutorials**:
-    - [Parallel computing in Python](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parallel-programming.html)
-  - **R Tutorial**:
-    - [Parallel Computing with R](https://nceas-learning-hub.github.io/nceas-wg-portal/s10_r_parallel_computing.html)
-
-These tools and resources can help you scale your workflows efficiently across multiple cores or nodes.
+- For parallel computation, please see the tutorials for [Python](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parallel-programming.html) and [R](https://nceas-learning-hub.github.io/nceas-wg-portal/s10_r_parallel_computing.html). These resources can help you scale your workflows efficiently across multiple cores or nodes.
 
 ---
 
