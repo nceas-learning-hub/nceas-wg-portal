@@ -13,7 +13,7 @@ Working groups are encouraged to use **GitHub** for version control and collabor
 
 2. For **medium-sized datasets (larger than 50 MB but smaller than 100 GB)** or unpublished data that need to be shared internally, use a **shared Google Drive**. Many working groups already have shared Drives—if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the `"data"` folder in the shared Google Drive for consistency and ease of use.
 
-3. For **large datasets (> 100 GB)**, please reach out to the Data Science Trainer to coordinate access to **NCEAS data servers**. This ensures appropriate infrastructure for high-capacity and long-term storage.
+3. For **large datasets (> 100 GB)**, please reach out to the Data Science Trainer to coordinate access to [**NCEAS data servers**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing). This ensures appropriate infrastructure for high-capacity and large-scale processing. 
 
 ---
 
@@ -21,7 +21,10 @@ Working groups are encouraged to use **GitHub** for version control and collabor
 
 Working groups at NCEAS can request access to **high-performance computing (HPC)** resources to support large-scale processing and computation.
 
-- To obtain HPC access with **R/RStudio pre-installed**, contact the Data Science Trainer.
+- To obtain HPC access with **R/RStudio pre-installed**, contact the Data Science Trainer to obtain access to the [Aurora server](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing).
+
+- If you're working with a large dataset, using the Parquet file format can significantly improve read/write and computation speed. Parquet is a columnar storage format that allows for efficient compression and faster querying, especially when only a subset of columns is needed. Please see the [**training materials**](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parquet-arrow.html) for how to read and write Parquet files.  
+
 - For parallel programming support:
   - **Python Tutorials**:
     - [Parallel computing in Python](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parallel-programming.html)
@@ -46,8 +49,13 @@ Here are some optional R modules that fall outside our regular working group tra
 
 To support open and reproducible science, NCEAS encourages working groups to make their data and code **Findable**. See the [relevant module](https://lter.github.io/ssecr/mod_next-steps.html) developed by the NCEAS-LTER team. 
 
-- Publish datasets in trusted repositories such as the [Environmental Data Initiative (EDI)](https://edirepository.org/) using tools like [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) for metadata creation.
-- **Code** should be versioned in **GitHub** and eventually published through [Zenodo](https://zenodo.org/) to obtain a DOI.
+- Consider publishing your datasets in [KNB](https://knb.ecoinformatics.org/) for long-term preservation and reproducibility of your research.  
+
+- Alternatively, publish datasets in trusted repositories such as the [Environmental Data Initiative (EDI)](https://edirepository.org/) using tools like [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) for metadata creation.
+
+- **Code** should be versioned in **GitHub** and published through [Zenodo](https://zenodo.org/) to obtain a DOI, following [Github --> Zenodo](https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/Task_2.md) steps. 
+
+- The [DataOne portal service](https://www.dataone.org/plus/) offers an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps—all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataOne network. The service is currently free and ideal for long-term access and visibility of your project’s outputs.
 
 
 ### Other NCEAS resources
