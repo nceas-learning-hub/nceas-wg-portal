@@ -13,7 +13,7 @@ Working groups are encouraged to use **GitHub** for version control and collabor
 
 2. For **medium-sized datasets (larger than 50 MB but smaller than 100 GB)** or unpublished data that need to be shared internally, use a **shared Google Drive**. Many working groups already have shared Drives—if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the `"data"` folder in the shared Google Drive for consistency and ease of use.
 
-3. For **large datasets (> 100 GB)**, please reach out to the Data Science Trainer to coordinate access to [**NCEAS data servers**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing). This ensures appropriate infrastructure for high-capacity and large-scale processing. 
+3. For **large datasets (> 100 GB)**, especially if you need to process the data using multiple cores, please reach out to the Data Science Trainer to coordinate access to [**NCEAS data servers**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing). This ensures appropriate infrastructure for high-capacity and large-scale processing. 
 
 ---
 
