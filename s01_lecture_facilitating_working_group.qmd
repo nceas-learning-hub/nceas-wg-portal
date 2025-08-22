@@ -7,21 +7,69 @@ title: "Facilitating a successful working group"
 <iframe width="560" height="380" src="https://docs.google.com/presentation/d/1VCRV2htljOrSUkW3Fvjl2rwkm-TNR-9LRn-tS2_2CGY/preview?" frameborder="0" allowfullscreen></iframe>
 </div> 
 
-### Workshop Description {.unnumbered}
+## Workshop Description {.unnumbered}
 
 Learn how to effectively manage a working group from before the first meeting, during the first meeting, and what comes next. We will discuss how to align expectations, general tips on communicating with the team, and what to expect from the working group process. This workshop will also touch on project management and facilitation tips with plenty of time to ask questions to our professional facilitators.
 
-### Learning Objectives {.unnumbered}
+:::{.callout-tip}
+## Learning Objectives {.unnumbered}
 
--   Become familiar with best practices for running a successful and productive working group from start to finish
--   Familiarize yourself with the fundamentals of good team communication and collaboration
--   Learn tips and tricks for team facilitation and moving through difficult discussions
--   Establish understanding of the working group process, logistics, and management as well as what makes - NCEAS-style working groups most successful
+-   Recognize best practices for designing, running, and sustaining a successful working group from initiation through completion
+-   Apply strategies for effective communication, collaboration, and group norm-setting to foster inclusive participation
+-   Use practical facilitation tools and techniques to guide discussions, manage conflict, and navigate challenging group dynamics
+-   Understand the full lifecycle of a working group—including logistics, project management, and decision-making—and identify the factors that make NCEAS-style working groups uniquely effective.
+:::
+
+
+## Foundations of a Successful Working Group
+
+- Start with a shared vision and clarify what excites participants about the project.
+- Establish communication and coordination plans early.
+- Set group norms and ground rules at the first meeting to manage expectations over a multi-year commitment.
+- Build in unstructured time (walks, social events, informal chats) to strengthen relationships.
+
+## Facilitation Priorities
+
+- Create a space where everyone feels they can contribute (inclusive practices, attending to power dynamics).
+- Begin with purpose and principles—aligning on why the group exists and its shared goals.
+- Encourage divergent thinking to generate innovative solutions.
+- Close well—synthesize discussion, clarify next steps, and keep momentum going.
+
+## Techniques for Inclusive Participation
+
+- Use varied participation formats: silent reflection, round robin, small groups, and plenary sessions.
+- Offer multiple channels for input: verbal, written, visual, informal, formal.
+- Track who speaks, invite quieter voices, and address dominance or imbalance in participation.
+- Leverage “liberating structures” like Nine Whys (clarifying purpose) and 1-2-4-All (inclusive brainstorming).
+
+## Navigating the “Groan Zone”
+
+- Working groups naturally pass through a phase of divergent ideas and uncertainty (“groan zone”).
+- Recognize this as a productive stage, not failure.
+- Move toward convergence with clear proposals, criteria for decision-making, and processes to combine ideas.
+- Use facilitation tools to manage tension and maintain forward progress.
+
+## Project Management and Logistics
+
+- Treat project management as the “engine” that keeps ideas moving toward outcomes.
+- Keep a decision log to record why choices were made (avoids confusion later).
+- Develop a work plan with clear responsibilities, deliverables, and timelines.
+- Use the project management tool that the group will actually use—whether GitHub, Slack, Google Docs, or even Excel.
+- Regularly review and update the plan; appoint someone to track progress across subgroups.
+
+## Communication Between Meetings
+
+- Virtual meetings should be efficient, interactive, and sustain collaboration.
+- Use shared notes or communication platforms (Slack, email, Google chat) to keep everyone aligned.
+- Encourage subgroups to share “key takeaways and next steps” with the broader team.
+- Strategies that can quickly gauge agreement and readiness to move forward
+
+
 
 :::callout-important
 ## Missed the training?
 
-Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1-aJMTq5c6hjfG51A8bkL5uJZNLEs71we/view?usp=sharing).
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1Xn-jATeL5IkLhKj1NwTYrzgWcXQ10fW_/view).
 
 :::
 
@@ -34,4 +82,4 @@ Find the video recording of this workshop in this [link](https://drive.google.co
 
 -   NCEAS’ [Checklists! for successful scientific working groups](https://docs.google.com/document/d/1QZFxXh9KQ3VPFwMBjt1nC_rdG7kW80KeL5C3PjyEaP8/edit)
 
--   [Liberating Structures](https://www.liberatingstructures.com/ls-menu) for facilitation 
+-   [Liberating Structures](https://www.liberatingstructures.com/ls-menu) for facilitation
