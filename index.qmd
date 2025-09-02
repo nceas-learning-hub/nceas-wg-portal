@@ -39,6 +39,7 @@ Let’s build stronger, smarter collaborations — together.
 |-----------------------------------------|----------------------------------------|---------------------|--------------------------|
 | Facilitating a Successful Working Group | Aug 21, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/Eio-rXEeRPiyaBwPXX-z-Q)       |
 | Intro to Git and GitHub                 | Sep 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/5nnUZ9KTSj25ApzqKj-ZtQ)       |
+| Canva 101                               | Sep 24, 2025<br>10am – 11am PT         | 60 min              | Register open soon       |
 | Data Management & Reproducibility       | Oct 8, 2025<br>10am – 11am PT          | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/TGqzbDKiTQuGvFAMQsmW-Q)       |
 | Project Management on GitHub            | Nov 12, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/QtYCYvJlT1uJjnqyIMCCNw)       |
 | Collaborating with Git and GitHub       | Dec 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/Vw2FO9BbRti2Mp_6TnZIlg)       |

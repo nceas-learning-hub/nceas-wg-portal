@@ -53,6 +53,7 @@ website:
         contents:
         - s01_lecture_facilitating_working_group.qmd
         - s02_github_introduction.qmd
+        - s12_lecture_canvas.qmd
         - s03_lecture_data_mgmt_reproducibility.qmd
         - s04_github_project_management.qmd
         - s05_github_collaboration.qmd

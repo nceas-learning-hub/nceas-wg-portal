@@ -1,0 +1,41 @@
+---
+title: "Canva 101"
+---
+
+
+### Workshop Description {.unnumbered}
+This introductory webinar will teach working group members how to use Canva, a free online design tool, to create and edit visual materials. The training will focus on navigating Canva’s interface, understanding basic design tools, and making edits to pre-made one-pager templates provided by NCEAS comms team. No previous design experience is necessary—just make a free Canva account to get started!
+
+:::{.callout-tip}
+### Learning Objectives {.unnumbered}
+By the end of this session, participants will be able to:
+
+- Navigate the Canva platform
+- Understand key design tools and workspace layout
+- Select and apply existing templates for one-pagers
+- Edit text, images, colors, and layout elements within a template
+- Upload and manage project assets (e.g., logos, images)
+- Export final designs in multiple formats (PDF, PNG) for sharing
+- Collaborate with team members on shared Canva projects
+:::
+
+:::callout-important
+## Before the webina
+
+please make a free Canva account [here](https://www.canva.com/en_in/login/).
+
+:::
+
+
+### Working Group Templates {.unnumbered}
+
+[Link to shared Canva folder with one-pager templates](https://www.canva.com/design/DAGoA0mZmdU/40F7-MaNoaguQIHVvN_PmQ/edit?utm_content=DAGoA0mZmdU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+- Includes pre-designed one-pager templates to be customized for your project
+
+
+### Resources {.unnumbered}
+
+- [Canva Beginner’s Guide](https://www.canva.com/learn/how-to-canva-beginners-guide/) – Official walkthrough of Canva tools and design features
+- [Canva Design School](https://www.canva.com/design-school/) – Free lessons on layout, color, typography, and more
+- [Working with Teams in Canva](https://www.canva.com/learn/how-to-share-designs-on-canva/) – Tips for collaborating on designs
