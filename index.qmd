@@ -37,15 +37,15 @@ Let’s build stronger, smarter collaborations — together.
 <div style="font-size: 0.85em; overflow-x: auto;">
 | **Workshop**                            | **Date & Time**                        | **Duration**        | **Registration**         |
 |-----------------------------------------|----------------------------------------|---------------------|--------------------------|
-| Facilitating a Successful Working Group | Aug 21, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/Eio-rXEeRPiyaBwPXX-z-Q)       |
-| Intro to Git and GitHub                 | Sep 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/5nnUZ9KTSj25ApzqKj-ZtQ)       |
-| Canva 101                               | Sep 24, 2025<br>10am – 11am PT         | 60 min              | Register open soon       |
-| Data Management & Reproducibility       | Oct 8, 2025<br>10am – 11am PT          | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/TGqzbDKiTQuGvFAMQsmW-Q)       |
-| Project Management on GitHub            | Nov 12, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/QtYCYvJlT1uJjnqyIMCCNw)       |
-| Collaborating with Git and GitHub       | Dec 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/Vw2FO9BbRti2Mp_6TnZIlg)       |
-| Developing a Communication Plan         | Jan 21, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/df1DNFtATN-lwsADByDiiw)       |
-| Infographics and One Pagers             | Feb 11, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/MkJD_7lDSS-PEDcAk6Y3IQ)       |
-| Communicating Your Results              | Mar 11, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/O_hscpcBRhiPuQtTRHX3vQ)       |
+| [Facilitating a Successful Working Group](s01_lecture_facilitating_working_group.qmd) | Aug 21, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/Eio-rXEeRPiyaBwPXX-z-Q)       |
+| [Intro to Git and GitHub](s02_github_introduction.qmd)                 | Sep 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/5nnUZ9KTSj25ApzqKj-ZtQ)       |
+| [Canva 101](s12_lecture_canvas.qmd)                               | Sep 24, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/sIjFUgMoSD2vC-P_aCnaiQ)       |
+| [Data Management & Reproducibility](s03_lecture_data_mgmt_reproducibility.qmd)       | Oct 8, 2025<br>10am – 11am PT          | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/TGqzbDKiTQuGvFAMQsmW-Q)       |
+| [Project Management on GitHub](s04_github_project_management.qmd)            | Nov 12, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/QtYCYvJlT1uJjnqyIMCCNw)       |
+| [Collaborating with Git and GitHub](s05_github_collaboration.qmd)       | Dec 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/Vw2FO9BbRti2Mp_6TnZIlg)       |
+| [Developing a Communication Plan](s06_lecture_communication_plan.qmd)         | Jan 21, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/df1DNFtATN-lwsADByDiiw)       |
+| [Infographics and One Pagers](s07_lecture_one_pagers.qmd)             | Feb 11, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/MkJD_7lDSS-PEDcAk6Y3IQ)       |
+| [Communicating Your Results](s08_lecture_communication_results.qmd)              | Mar 11, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/O_hscpcBRhiPuQtTRHX3vQ)       |
 
 </div>
 
