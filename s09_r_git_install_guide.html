@@ -558,9 +558,7 @@ Important
 <ul>
 <li><strong>macOS and Linux</strong> usually come with Git pre-installed<br>
 </li>
-<li><strong>Windows</strong> may or may not include Git, depending on the version<br>
-</li>
-<li>It’s a good idea to <strong>double-check</strong></li>
+<li><strong>Windows</strong> may or may not include Git, depending on the version</li>
 </ul>
 </div>
 </div>
@@ -586,6 +584,22 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p>Is it necessary to have Git installed in your machine for this workshop. GitHub’s <a href="https://github.com/git-guides">Git Guides</a> are a really wonderful resource to start learning about this topic.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Troubleshooting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you download Git and the Git commands still not recognized by your computer, check your computer’s PATHS.</p>
+<p>To do this, follow the instructions in <a href="https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command">this link</a> on how to set the right PATHS.</p>
+<p>Restart your computer and try running <code>git --version</code> on the terminal. You should get something like <code>git version XX.XX</code> (but with numbers instead of Xs).</p>
+<p><strong>If you see the git version printed out in your terminal, you are all set</strong></p>
 </div>
 </div>
 </section>
@@ -618,7 +632,7 @@ Important
 </div>
 </section>
 <section id="setup-your-git-config-and-github-pat" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored"><span class="header-section-number">5.2</span> Setup your git config and GitHub PAT</h3>
+<h3 data-number="5.2" class="anchored" data-anchor-id="setup-your-git-config-and-github-pat"><span class="header-section-number">5.2</span> Setup your git config and GitHub PAT</h3>
 <p>In the RStudio Console</p>
 <p><strong>Step 1:</strong> set the user’s global user.name and user.email and define integrate changes from one branch into another branch for all repositories.</p>
 <div class="cell">
@@ -651,6 +665,7 @@ Important
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Step 4:</strong> Setting up your PAT</p>
+<p>Before you can push or pull between RStudio and GitHub, you’ll need to set up a Personal Access Token (PAT) for secure authentication.</p>
 <ol type="1">
 <li>Run <code>usethis::create_github_token()</code> in the Console.</li>
 <li>A new browser window should open up to GitHub, showing all the scopes options. You can review the scopes, but you don’t need to worry about which ones to select this time. The previous function automatically pre-selects some recommended scopes. <strong>Go ahead and scroll to the bottom and click “Generate Token”</strong>.</li>
@@ -660,23 +675,6 @@ Important
 <li>Last thing, run <code>usethis::git_sitrep()</code> in the Console to check your Git configuration and that you’ve successful stored your PAT. <strong>Note:</strong> look for <code>Personal access token for 'https://github.com': '&lt;discovered&gt;'</code></li>
 </ol>
 <p><strong>Once you’ve completed these steps you are ready for our workshop on Git and Github</strong></p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Troubleshooting
-</div>
-</div>
-<section id="issues-installing-git-on-a-windows" class="level2 callout-body-container callout-body" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="issues-installing-git-on-a-windows"><span class="header-section-number">6</span> Issues installing Git on a Windows</h2>
-<p>If you download Git and the Git commands still not recognized by your computer, check your computer’s PATHS.</p>
-<p>To do this, follow the instructions in <a href="https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command">this link</a> on how to set the right PATHS.</p>
-<p>Restart your computer and try running <code>git --version</code> on the terminal. You should get something like <code>git version XX.XX</code> (but with numbers instead of Xs).</p>
-<p><strong>If you see the git version printed out in your terminal, you are all set</strong></p>
-</section>
-</div>
 
 
 </section>
