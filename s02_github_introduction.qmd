@@ -236,6 +236,7 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 - Delete merged branches to keep history tidy  
 
 ---
+
 ## Go further with Git
 
 There's a lot we haven't covered in this brief tutorial. There are some great and much longer tutorials that cover advanced topics, such as:
