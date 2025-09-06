@@ -482,78 +482,78 @@
   {
     "objectID": "s09_r_git_install_guide.html",
     "href": "s09_r_git_install_guide.html",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "",
     "text": "To install R, visit cloud.r-project.org to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R.\n\n# Run me in RStudio's \"Console\"\nversion$version.string",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
     "objectID": "s09_r_git_install_guide.html#install-or-update-r",
     "href": "s09_r_git_install_guide.html#install-or-update-r",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "",
     "text": "To install R, visit cloud.r-project.org to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R.\n\n# Run me in RStudio's \"Console\"\nversion$version.string",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
     "objectID": "s09_r_git_install_guide.html#install-or-update-rstudio",
     "href": "s09_r_git_install_guide.html#install-or-update-rstudio",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "2 Install or update RStudio",
     "text": "2 Install or update RStudio\nWhile R is a programming language, RStudio is a software (often referred to as an IDE, Integrated Development Environment) that provides R programmers with a neat, easy-to-use interface for coding in R. There are a number of IDEs out there, but RStudio is arguably the best and definitely most popular among R programmers.\nNote: RStudio will not work without R installed, and you won’t particularly enjoy using R without having RStudio installed. Be sure to install both!\n\n\n\n\n\nImage Credit: Manny Gimond | Accessible at https://mgimond.github.io/ES218/R_vs_RStudio.html\n\n\n\n\n\nNew install: To install RStudio, visit https://posit.co/download/rstudio-desktop/. Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.\nUpdate: If you already have RStudio and need to update: Open RStudio, and under ‘Help’ in the top menu, choose ‘Check for updates.’ If you have the most recent release, it will return ‘No update available. You are running the most recent version of RStudio.’ Otherwise, you should follow the instructions to install an updated version.\nOpen RStudio: If upon opening RStudio you are prompted to install Command Line Tools, do it.\n\n\n\n\n\n\n\nfor Mac user\n\n\n\nPotential issue:\nMac users may be prompted to install additional tools when using Git.\nSteps if needed:\n\nTo install command line tools (if you’re not automatically prompted), run in the Terminal tab in RStudio: xcode-select --install\nVisit xquartz.org to download & install XQuartz",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
     "objectID": "s09_r_git_install_guide.html#check-for-git",
     "href": "s09_r_git_install_guide.html#check-for-git",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "3 Check for git",
     "text": "3 Check for git\n\n\n\n\n\n\nImportant\n\n\n\n\nmacOS and Linux usually come with Git pre-installed\n\nWindows may or may not include Git, depending on the version\n\nIt’s a good idea to double-check\n\n\n\nYou should already have git on your device, but let’s check for it anyway.\n\nOpen RStudio\nIn the Terminal tab, run the following command:\n\n\nwhich git\n\n\nIf after running that you get something that looks like a file path to git on your computer, then you have git installed. For example, that might return something like this (or it could differ a bit): /usr/local/bin/git. If you instead get no response at all, you should download & install git from here: git-scm.com/downloads\n\n\n\n\n\n\n\nImportant\n\n\n\nIs it necessary to have Git installed in your machine for this workshop. GitHub’s Git Guides are a really wonderful resource to start learning about this topic.",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
     "objectID": "s09_r_git_install_guide.html#create-a-github-account",
     "href": "s09_r_git_install_guide.html#create-a-github-account",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "4 Create a GitHub account",
     "text": "4 Create a GitHub account\nIf you don’t already have a GitHub account, go to github.com and create one. Here are helpful considerations for choosing a username: happygitwithr.com/github-acct.html.",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
     "objectID": "s09_r_git_install_guide.html#connect-git-and-github-in-rstudio",
     "href": "s09_r_git_install_guide.html#connect-git-and-github-in-rstudio",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "5 Connect Git and GitHub in RStudio",
     "text": "5 Connect Git and GitHub in RStudio\nThe last step to take before you’re all set for the workshop is to get these components talking to one another! You will have to introduce you GitHub credentials to your local computer, using RStudio and then create a Personal Access Token (PAT) on your GitHub account that will allow to transfer the changes you have made to your code in your computer to GitHub. The steps below will guide you on how to get this set up.\n\n5.1 Install R packages\n\nInstall the usethis and gitcreds packages in R by running the following in the RStudio Console:\n\n\ninstall.packages(“usethis”)\n\ninstall.packages(\"gitcreds\")\n\nA lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.\n\n\n\n\n\n\n\n\n\n\n\n5.2 Setup your git config and GitHub PAT\nIn the RStudio Console\nStep 1: set the user’s global user.name and user.email and define integrate changes from one branch into another branch for all repositories.\n\n1usethis::use_git_config(user.name = \"my_user_name\",\n2                        user.email = \"my_email@nceas.ucsb.edu\",\n3                        pull.rebase = \"false\")\n\n\n1\n\nAdd you exact same GitHub user name. Case and spelling matters!\n\n2\n\nSet up your email address associated to you GitHub account.\n\n3\n\nSetting “merge” as the default strategy to integrate changes from one branch into another branch (for all repos). Check the note at the end of this chapter for more details.\n\n\n\n\nStep 2: define the name of the branch that gets created when you make the first commit in a new Git repo\n\nusethis::git_default_branch_configure(name = \"main\")\n\nStep 3: check to make sure everything looks correct\n\nusethis::git_sitrep()\n\nStep 4: Setting up your PAT\n\nRun usethis::create_github_token() in the Console.\nA new browser window should open up to GitHub, showing all the scopes options. You can review the scopes, but you don’t need to worry about which ones to select this time. The previous function automatically pre-selects some recommended scopes. Go ahead and scroll to the bottom and click “Generate Token”.\nCopy the generated token.\nBack in RStudio, run gitcreds::gitcreds_set() in the Console. And wait until you are prompted to paste your token.\nPaste your PAT when the prompt asks for it.\nLast thing, run usethis::git_sitrep() in the Console to check your Git configuration and that you’ve successful stored your PAT. Note: look for Personal access token for 'https://github.com': '&lt;discovered&gt;'\n\nOnce you’ve completed these steps you are ready for our workshop on Git and Github\n\n\n\n\n\n\nTroubleshooting\n\n\n\n6 Issues installing Git on a Windows\nIf you download Git and the Git commands still not recognized by your computer, check your computer’s PATHS.\nTo do this, follow the instructions in this link on how to set the right PATHS.\nRestart your computer and try running git --version on the terminal. You should get something like git version XX.XX (but with numbers instead of Xs).\nIf you see the git version printed out in your terminal, you are all set",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
     "objectID": "s09_r_git_install_guide.html#issues-installing-git-on-a-windows",
     "href": "s09_r_git_install_guide.html#issues-installing-git-on-a-windows",
-    "title": "Installing R and Git on Your Computer",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
     "section": "6 Issues installing Git on a Windows",
     "text": "6 Issues installing Git on a Windows\nIf you download Git and the Git commands still not recognized by your computer, check your computer’s PATHS.\nTo do this, follow the instructions in this link on how to set the right PATHS.\nRestart your computer and try running git --version on the terminal. You should get something like git version XX.XX (but with numbers instead of Xs).\nIf you see the git version printed out in your terminal, you are all set",
     "crumbs": [
       "Additional Resources",
-      "Installing R and Git on Your Computer"
+      "Setting Up R, RStudio, Git, and GitHub"
     ]
   },
   {
