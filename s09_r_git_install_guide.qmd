@@ -46,7 +46,6 @@ Mac users may be prompted to install additional tools when using Git.
 
 - **macOS and Linux** usually come with Git pre-installed  
 - **Windows** may or may not include Git, depending on the version  
-- It’s a good idea to **double-check**  
   
 :::
 
@@ -65,6 +64,20 @@ which git
 ::: {.callout-important}
 Is it necessary to have Git installed in your machine for this workshop. GitHub's [Git Guides](https://github.com/git-guides) are a really wonderful resource to start learning about this topic.
 :::
+
+:::{.callout-warning} 
+## Troubleshooting
+
+If you download Git and the Git commands still not recognized by your computer, check your computer's PATHS.
+
+To do this, follow the instructions in [this link](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) on how to set the right PATHS.
+
+
+Restart your computer and try running `git --version` on the terminal. You should get something like `git version XX.XX` (but with numbers instead of Xs).
+
+**If you see the git version printed out in your terminal, you are all set**
+:::
+
 
 ## Create a GitHub account 
 
@@ -134,6 +147,8 @@ usethis::git_sitrep()
 
 **Step 4:** Setting up your PAT
 
+Before you can push or pull between RStudio and GitHub, you’ll need to set up a Personal Access Token (PAT) for secure authentication.
+
 1.  Run `usethis::create_github_token()` in the Console.
 2.  A new browser window should open up to GitHub, showing all the scopes options. You can review the scopes, but you don't need to worry about which ones to select this time. The previous function automatically pre-selects some recommended scopes. **Go ahead and scroll to the bottom and click "Generate Token"**.
 3.  Copy the generated token.
@@ -146,16 +161,3 @@ usethis::git_sitrep()
 
 **Once you've completed these steps you are ready for our workshop on Git and Github**
 
-:::{.callout-warning} 
-## Troubleshooting
-
-## Issues installing Git on a Windows
-If you download Git and the Git commands still not recognized by your computer, check your computer's PATHS.
-
-To do this, follow the instructions in [this link](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) on how to set the right PATHS.
-
-
-Restart your computer and try running `git --version` on the terminal. You should get something like `git version XX.XX` (but with numbers instead of Xs).
-
-**If you see the git version printed out in your terminal, you are all set**
-:::
