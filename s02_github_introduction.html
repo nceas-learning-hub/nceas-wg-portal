@@ -446,6 +446,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#what-exactly-are-git-and-github" id="toc-what-exactly-are-git-and-github" class="nav-link" data-scroll-target="#what-exactly-are-git-and-github"><span class="header-section-number">2.1</span> What <em>exactly</em> are Git and GitHub?</a></li>
   <li><a href="#understanding-how-local-working-files-git-and-github-all-work-together" id="toc-understanding-how-local-working-files-git-and-github-all-work-together" class="nav-link" data-scroll-target="#understanding-how-local-working-files-git-and-github-all-work-together"><span class="header-section-number">2.2</span> Understanding how local working files, Git, and GitHub all work together</a></li>
+  <li><a href="#what-is-the-difference-between-a-normal-folder-vs.-a-git-repository" id="toc-what-is-the-difference-between-a-normal-folder-vs.-a-git-repository" class="nav-link" data-scroll-target="#what-is-the-difference-between-a-normal-folder-vs.-a-git-repository">What is the difference between a “normal” folder vs.&nbsp;a Git repository</a></li>
+  <li><a href="#lets-look-at-a-github-repository" id="toc-lets-look-at-a-github-repository" class="nav-link" data-scroll-target="#lets-look-at-a-github-repository">Let’s Look at a GitHub Repository</a></li>
   <li><a href="#git-vocabulary-commands" id="toc-git-vocabulary-commands" class="nav-link" data-scroll-target="#git-vocabulary-commands"><span class="header-section-number">2.3</span> Git Vocabulary &amp; Commands</a></li>
   </ul></li>
   <li><a href="#gitgithub-workflow-at-a-glance" id="toc-gitgithub-workflow-at-a-glance" class="nav-link" data-scroll-target="#gitgithub-workflow-at-a-glance"><span class="header-section-number">3</span> Git–GitHub Workflow (at a glance)</a>
@@ -556,13 +558,14 @@ Learning Objectives
 <section id="understanding-how-local-working-files-git-and-github-all-work-together" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="understanding-how-local-working-files-git-and-github-all-work-together"><span class="header-section-number">2.2</span> Understanding how local working files, Git, and GitHub all work together</h3>
 <p>It can be a bit daunting to understand all the moving parts of the Git / GitHub life cycle (i.e.&nbsp;how file changes are tracked locally within repositories, then stored for safe-keeping and collaboration on remote repositories, then brought back down to a local machine(s) for continued development). It gets easier with practice, but we’ll explain (first in words, then with an illustration) at a high-level how things work:</p>
-<section id="what-is-the-difference-between-a-normal-folder-vs.-a-git-repository" class="level4" data-number="2.2.1">
-<h4 data-number="2.2.1" class="anchored" data-anchor-id="what-is-the-difference-between-a-normal-folder-vs.-a-git-repository"><span class="header-section-number">2.2.1</span> What is the difference between a “normal” folder vs.&nbsp;a Git repository</h4>
+</section>
+<section id="what-is-the-difference-between-a-normal-folder-vs.-a-git-repository" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="what-is-the-difference-between-a-normal-folder-vs.-a-git-repository">What is the difference between a “normal” folder vs.&nbsp;a Git repository</h3>
 <p>Whether you’re a Mac or a PC user, you’ll likely have created a folder at some point in time for organizing files. Let’s pretend that we create a folder, called <code>myFolder/</code>, and add two files: <code>myData.csv</code> and <code>myAnalysis.R</code>. The contents of this folder are not currently version controlled – meaning, for example, that if we make some changes to <code>myAnalysis.R</code> that don’t quite work out, we have no way of accessing or reverting back to a previous version of <code>myAnalysis.R</code> (without remembering/rewriting things, of course).</p>
 <p>Git allows you to turn any “normal” folder, like <code>myFolder/</code>, into a <strong>Git repository</strong> – you’ll often see/hear this referenced as “initializing a Git repository”. When you initialize a folder on your local computer as a Git repository, a hidden <code>.git/</code> folder is created <em>within</em> that folder (e.g.&nbsp;<code>myFolder/.git/</code>) – this <code>.git/</code> folder <em>is</em> the <strong>Git repository</strong>. As you use Git commands to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the <code>.git/</code> folder. This allows you to access and/or recover any previous versions of your work. If you delete <code>.git/</code>, you delete your project’s history.</p>
 </section>
-<section id="lets-look-at-a-github-repository." class="level4" data-number="2.2.2">
-<h4 data-number="2.2.2" class="anchored" data-anchor-id="lets-look-at-a-github-repository."><span class="header-section-number">2.2.2</span> Let’s Look at a GitHub Repository.</h4>
+<section id="lets-look-at-a-github-repository" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="lets-look-at-a-github-repository">Let’s Look at a GitHub Repository</h3>
 <p>Here are some things you might notice:</p>
 <ul>
 <li><strong>File view:</strong> A list of files and folders, showing when each was last modified and who made the most recent changes.<br>
@@ -572,7 +575,6 @@ Learning Objectives
 <li><strong>Detailed changes:</strong> Drilling into an individual commit reveals exactly what was changed in each file.</li>
 </ul>
 <p>Tracking these changes—and linking them to released versions of code, data, and documentation—is exactly what Git and GitHub are designed for. They are especially powerful tools for managing scientific workflows, ensuring that code, figures, and manuscripts are versioned and reproducible.</p>
-</section>
 </section>
 <section id="git-vocabulary-commands" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="git-vocabulary-commands"><span class="header-section-number">2.3</span> Git Vocabulary &amp; Commands</h3>
@@ -759,24 +761,11 @@ Exercise 1 - Setup
 </div>
 </div>
 <p>If you are successful, you’ve now created your first repository! It has a couple of files that GitHub created for you: <code>README.md</code>, <code>LICENSE</code>, and <code>.gitignore</code>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>README.md</code> files are used to share important information about your repository You should always add a <code>README.md</code> to the root directory of your repository – it is a markdown file that is rendered as HTML and displayed on the landing page of your repository. This is a common place to include any pertinent information about what your repository contains, how to use it, etc.</p>
-</div>
-</div>
 </section>
 <section id="exercise-modify-the-readme-file" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="exercise-modify-the-readme-file">Exercise: Modify the README File</h3>
 <div class="callout callout-style-default callout-exercise no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -785,7 +774,7 @@ Exercise 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div class="callout-exercise">
 <p>Navigate to the <code>README.md</code> file in the repository file listing, and edit it by clicking on the <strong>pencil icon</strong> (top right of the file):</p>
@@ -805,7 +794,7 @@ Exercise 2
 <section id="exercise-clone-to-local-computer-and-use-git-locally-in-rstudio" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="exercise-clone-to-local-computer-and-use-git-locally-in-rstudio">Exercise: Clone to Local Computer and use Git locally in RStudio</h3>
 <div class="callout callout-style-default callout-exercise no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -814,7 +803,7 @@ Exercise 3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div class="callout-exercise">
 <ul>
@@ -861,7 +850,6 @@ Note
 </li>
 <li>Store bulky datasets externally (e.g., EDI, Google Drive, Box) and link to them</li>
 </ul>
-<hr>
 </section>
 <section id="account-security" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="account-security"><span class="header-section-number">4.2</span> Account &amp; Security</h3>
@@ -876,7 +864,6 @@ Note
 </li>
 <li>Regularly review and revoke old PATs or third-party app access</li>
 </ul>
-<hr>
 </section>
 <section id="using-.gitignore-to-keep-repos-clean" class="level3" data-number="4.3">
 <h3 data-number="4.3" class="anchored" data-anchor-id="using-.gitignore-to-keep-repos-clean"><span class="header-section-number">4.3</span> Using .gitignore to Keep Repos Clean</h3>
