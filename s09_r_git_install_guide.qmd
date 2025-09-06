@@ -1,5 +1,5 @@
 ---
-title: Installing R and Git on Your Computer
+title: Setting Up R, RStudio, Git, and GitHub
 ---
 
 ## Install or update R
