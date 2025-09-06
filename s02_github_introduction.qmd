@@ -138,7 +138,7 @@ There are many valid workflows.
 
 In this course we’ll demonstrate: Create a remote repository and clone to your local computer.
 
----
+
 ### Exercise : Create a remote repository on GitHub {.unnumbered}
 
 ::: callout-exercise
@@ -154,7 +154,8 @@ In this course we’ll demonstrate: Create a remote repository and clone to your
 :::
 
 If you are successful, you've now created your first repository! It has a couple of files that GitHub created for you: `README.md`, `LICENSE`, and `.gitignore`. 
----
+
+
 ### Exercise: Modify the README File {.unnumbered}
 
 ::: callout-exercise
@@ -169,7 +170,7 @@ Navigate to the `README.md` file in the repository file listing, and edit it by 
 
 Congratulations, you've now authored your first versioned commit! If you navigate back to the GitHub page for the repository, you'll see your commit listed there, as well as the rendered `README.md` file.
 
----
+
 ### Exercise: Clone to Local Computer and use Git locally in RStudio {.unnumbered}
 
 ::: callout-exercise
@@ -192,7 +193,7 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 
 :::
 
----
+
 
 ## Best Practices in Git/GitHub
 ### File Size & Data
@@ -235,7 +236,7 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 - Use **branches** for experimental work, Merge changes back into `main` using **pull requests**  
 - Delete merged branches to keep history tidy  
 
----
+
 
 ## Go further with Git
 
