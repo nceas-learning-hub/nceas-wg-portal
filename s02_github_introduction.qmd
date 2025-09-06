@@ -69,13 +69,13 @@ The version control system we'll be diving into is Git, the most widely used mod
 
 It can be a bit daunting to understand all the moving parts of the Git / GitHub life cycle (i.e. how file changes are tracked locally within repositories, then stored for safe-keeping and collaboration on remote repositories, then brought back down to a local machine(s) for continued development). It gets easier with practice, but we'll explain (first in words, then with an illustration) at a high-level how things work:
 
-#### What is the difference between a "normal" folder vs. a Git repository
+### What is the difference between a "normal" folder vs. a Git repository  {.unnumbered}
 
 Whether you're a Mac or a PC user, you'll likely have created a folder at some point in time for organizing files. Let's pretend that we create a folder, called `myFolder/`, and add two files: `myData.csv` and `myAnalysis.R`. The contents of this folder are not currently version controlled -- meaning, for example, that if we make some changes to `myAnalysis.R` that don't quite work out, we have no way of accessing or reverting back to a previous version of `myAnalysis.R` (without remembering/rewriting things, of course).
 
 Git allows you to turn any "normal" folder, like `myFolder/`, into a **Git repository** -- you'll often see/hear this referenced as "initializing a Git repository". When you initialize a folder on your local computer as a Git repository, a hidden `.git/` folder is created *within* that folder (e.g. `myFolder/.git/`) -- this `.git/` folder *is* the **Git repository**. As you use Git commands to capture versions or "snapshots" of your work, those versions (and their associated metadata) get stored within the `.git/` folder. This allows you to access and/or recover any previous versions of your work. If you delete `.git/`, you delete your project's history.
 
-#### Let's Look at a GitHub Repository.
+### Let's Look at a GitHub Repository  {.unnumbered}
 
 Here are some things you might notice:
 
@@ -138,7 +138,7 @@ There are many valid workflows.
 
 In this course we’ll demonstrate: Create a remote repository and clone to your local computer.
 
-
+---
 ### Exercise : Create a remote repository on GitHub {.unnumbered}
 
 ::: callout-exercise
@@ -154,12 +154,7 @@ In this course we’ll demonstrate: Create a remote repository and clone to your
 :::
 
 If you are successful, you've now created your first repository! It has a couple of files that GitHub created for you: `README.md`, `LICENSE`, and `.gitignore`. 
-
-::: {.callout-note}
-`README.md` files are used to share important information about your repository
-You should always add a `README.md` to the root directory of your repository -- it is a markdown file that is rendered as HTML and displayed on the landing page of your repository. This is a common place to include any pertinent information about what your repository contains, how to use it, etc.
-:::
-
+---
 ### Exercise: Modify the README File {.unnumbered}
 
 ::: callout-exercise
@@ -174,7 +169,7 @@ Navigate to the `README.md` file in the repository file listing, and edit it by 
 
 Congratulations, you've now authored your first versioned commit! If you navigate back to the GitHub page for the repository, you'll see your commit listed there, as well as the rendered `README.md` file.
 
-
+---
 ### Exercise: Clone to Local Computer and use Git locally in RStudio {.unnumbered}
 
 ::: callout-exercise
@@ -196,8 +191,10 @@ If you are prompted to provide your GitHub username and password when **Push**in
 it's a good indicator that you did not set your GitHub Personal Access Token (PAT) correctly. You can redo the steps outlined in the [GitHub Authentication section](s09_r_git_install_guide.qmd) to (re)set your PAT, then **Push** again.
 
 :::
-## Best Practices in Git/GitHub
 
+---
+
+## Best Practices in Git/GitHub
 ### File Size & Data
 
 - Keep repositories **small** (< 1 GB recommended)  
@@ -205,7 +202,6 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 - Use **Git LFS** for large binary files (media, big data)  
 - Store bulky datasets externally (e.g., EDI, Google Drive, Box) and link to them  
 
----
 
 ### Account & Security
 
@@ -215,7 +211,7 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 - Authenticate with **Personal Access Tokens (PATs)** instead of passwords  
 - Regularly review and revoke old PATs or third-party app access  
 
----
+
 
 ### Using .gitignore to Keep Repos Clean
 
@@ -223,10 +219,14 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 - Common examples: large datasets, passwords, temporary files, system files
 - Helps keep repositories reproducible and clutter-free
 
+
+
 ### Writing a Good README
 - Helps others (and your future self) quickly understand your project
 - Encourages reuse and collaboration
 - Acts as documentation “front door”
+
+
 
 ###  Commit & Branching Practices
 - Write **concise messages** that explain *why* the change was made  
@@ -235,6 +235,7 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 - Use **branches** for experimental work, Merge changes back into `main` using **pull requests**  
 - Delete merged branches to keep history tidy  
 
+---
 ## Go further with Git
 
 There's a lot we haven't covered in this brief tutorial. There are some great and much longer tutorials that cover advanced topics, such as:
