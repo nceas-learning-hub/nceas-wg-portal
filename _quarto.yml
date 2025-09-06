@@ -21,7 +21,7 @@ website:
   reader-mode: false
   repo-url: https://github.com/nceas-learning-hub/nceas-wg-portal
 
-  favicon: logo_lh_hex.png # learning hub logo on browser tab
+  favicon: images/logo_lh_hex.png # learning hub logo on browser tab
 
 
   bread-crumbs: false
