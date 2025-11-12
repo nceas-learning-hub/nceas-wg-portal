@@ -18,6 +18,6 @@ title: Project Management on GitHub
 :::callout-important
 ## Missed the training?
 
-Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1VwvMOu2MeM0nKvEX5wzJ8n3KvCB9XRS3/view?usp=sharing).
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1fAdA5Eu7pQLOphq1AaYX1oVjNsi9MvMP/view?usp=sharing).
 
 :::
