@@ -1,15 +1,16 @@
 ---
 title: Collaborating with Git and GitHub
 ---
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1ehw-Mg-i1QfXpz0MTLwIlaXNKRp42NB5TboZOhuTqtI/preview" allowfullscreen></iframe>
+<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8/preview" allowfullscreen></iframe>
 
 :::{.callout-tip}
 ## Learning Objectives
 
-- Apply the principles, features, and collaboration tools of Git and GitHub to effectively collaborate with colleagues on code
-- Analyze and evaluate common causes of conflicts that arise when collaborating on repositories 
-- Demonstrate the ability to resolve conflicts using Git conflict resolution techniques
-- Apply workflows and best practices that minimize conflicts on collaborative repositories
+- Use Git and GitHub tools to collaborate effectively on shared research code.
+
+- Identify and resolve merge conflicts in the RStudio environment.
+
+- Apply workflows and best practices that reduce conflicts in shared github repositories.
 :::
 
 
