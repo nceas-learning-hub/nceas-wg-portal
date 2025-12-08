@@ -583,7 +583,7 @@
     "href": "s02_github_introduction.html#go-further-with-git",
     "title": "Intro to Git and GitHub",
     "section": "5 Go further with Git",
-    "text": "5 Go further with Git\nThere’s a lot we haven’t covered in this brief tutorial. There are some great and much longer tutorials that cover advanced topics, such as:\n\nUsing Git on the command line\nResolving conflicts\nBranching and merging\nPull requests versus direct contributions for collaboration\nGitHub Issues - how to use them for project management and collaboration\n\nand much, much more.\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
+    "text": "5 Go further with Git\nThere is much more to Git and GitHub than we can cover in this brief tutorial. Later modules in the working group training series delve into additional advanced topics, including:\n\nResolving merge conflicts\nWorking with branches and merges\nChoosing between pull requests and direct contributions\nUsing GitHub Issues for project management and team collaboration\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
     "crumbs": [
       "Working Groups Learning",
       "Intro to Git and GitHub"
