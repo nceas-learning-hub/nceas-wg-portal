@@ -240,15 +240,12 @@ it's a good indicator that you did not set your GitHub Personal Access Token (PA
 
 ## Go further with Git
 
-There's a lot we haven't covered in this brief tutorial. There are some great and much longer tutorials that cover advanced topics, such as:
+There is much more to Git and GitHub than we can cover in this brief tutorial. Later modules in the working group training series delve into additional advanced topics, including:
 
--   Using Git on the command line
--   Resolving conflicts
--   Branching and merging
--   Pull requests versus direct contributions for collaboration
--   GitHub Issues - how to use them for project management and collaboration
-
-and much, much more.
+-   Resolving merge conflicts
+-   Working with branches and merges
+-   Choosing between pull requests and direct contributions
+-   Using GitHub Issues for project management and team collaboration
 
 :::callout-important
 ## Missed the training?
