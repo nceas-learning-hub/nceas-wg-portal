@@ -43,7 +43,7 @@ Let’s build stronger, smarter collaborations — together.
 | [Data Management & Reproducibility](s03_lecture_data_mgmt_reproducibility.qmd)       | Oct 8, 2025<br>10am – 11am PT          | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/TGqzbDKiTQuGvFAMQsmW-Q)       |
 | [Project Management on GitHub](s04_github_project_management.qmd)            | Nov 12, 2025<br>10am – 11am PT         | 60 min              | Register [here](https://ucsb.zoom.us/meeting/register/QtYCYvJlT1uJjnqyIMCCNw)       |
 | [Collaborating with Git and GitHub](s05_github_collaboration.qmd)       | Dec 10, 2025<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/Vw2FO9BbRti2Mp_6TnZIlg)       |
-| [Developing a Communication Plan](s06_lecture_communication_plan.qmd)         | Jan 21, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/df1DNFtATN-lwsADByDiiw)       |
+| [Building a Communications Strategy](s06_lecture_communication_plan.qmd)         | Jan 21, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/df1DNFtATN-lwsADByDiiw)       |
 | [Infographics and One Pagers](s07_lecture_one_pagers.qmd)             | Feb 11, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/MkJD_7lDSS-PEDcAk6Y3IQ)       |
 | [Communicating Your Results](s08_lecture_communication_results.qmd)              | Mar 11, 2026<br>10am – 11:30am PT      | 90 min              | Register [here](https://ucsb.zoom.us/meeting/register/O_hscpcBRhiPuQtTRHX3vQ)       |
 

@@ -1,20 +1,26 @@
 ---
-title: "Developing a Communication Plan"
+title: "Building a Communications Strategy"
 ---
 
 
 
 ### Workshop Description {.unnumbered}
-Developing your communications plan and brand identity can be intimidating, but coming up with a slogan, focus, audience, and personality will streamline the rest of your science communication efforts. Workshop your plan and your brand and then apply it across your portfolio, including websites, letterhead, and social media.
+Effective science communication starts long before results are published and develops alongside the research itself. This interactive Zoom workshop is designed for scientific working groups who want to think more strategically about communication and integrate it into their collaborative process.
 
+Participants will learn how to clarify communication goals, identify priority audiences, and craft audience-centered messages and learn how to use tools such as the Compass SciComm Message Box. The workshop focuses on building shared understanding and practical approaches that working groups can revisit and apply throughout their project. Participants will leave better equipped to make intentional communication decisions and support the use and impact of their science.
 
-
+:::{.callout-tip}
 ### Learning Objectives{.unnumbered}
--   Recognize the importance of a cohesive plan and brand identity as a scientist
 
--   Create keywords that capture the essence of your personal/group brand identity 
+By the end of this workshop, participants will be able to:
 
--   Connect brand identity to overall asset collection including logos, photos, and biographies
+- Describe how strategic communication can be integrated into working group science throughout the life of a project, not only at publication
+- Apply a structured framework (e.g., the Compass SciComm Message Box) to think through audiences, messages, and relevance
+- Identify priority audiences and clarify why their science matters to those groups
+- Recognize how communication goals, messages, and platforms are connected and evolve over time
+- Identify practical next steps for incorporating communication planning into future working group meetings
+
+:::
 
 
 
@@ -24,8 +30,5 @@ Developing your communications plan and brand identity can be intimidating, but 
 Recorded video will be posted after the training
 :::
 
-
-
-### Resources {.unnumbered}
 
 
