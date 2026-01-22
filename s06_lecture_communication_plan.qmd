@@ -9,6 +9,10 @@ Effective science communication starts long before results are published and dev
 
 Participants will learn how to clarify communication goals, identify priority audiences, and craft audience-centered messages and learn how to use tools such as the Compass SciComm Message Box. The workshop focuses on building shared understanding and practical approaches that working groups can revisit and apply throughout their project. Participants will leave better equipped to make intentional communication decisions and support the use and impact of their science.
 
+
+<iframe src="https://drive.google.com/file/d/1b1K_8LFctMNYOQmqO2hD52tWSpmTDgGJ/preview" width="800" height="600" allowfullscreen></iframe>
+
+
 :::{.callout-tip}
 ### Learning Objectives{.unnumbered}
 
@@ -27,8 +31,11 @@ By the end of this workshop, participants will be able to:
 :::callout-important
 ## Missed the training?
 
-Recorded video will be posted after the training
+Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1i8kcO_qPrfuVK-R52Oi5-wq2TwAf39vQ/view?usp=sharing).
 :::
 
 
+### Resources {.unnumbered}
 
+- [Message box Workbook](https://drive.google.com/file/d/1sJ0e97Wnrv6y_gVjLS0ij57F9UXoLEgE/view?usp=sharing)
+- [Message box blank template](https://drive.google.com/file/d/1367JePN-ZNJvTxhFPL9F7oJH6aXIYfUw/view?usp=sharing)
