@@ -58,10 +58,11 @@ website:
         - s04_github_project_management.qmd
         - s05_github_collaboration.qmd
         - s06_lecture_communication_plan.qmd
-        - s07_lecture_one_pagers.qmd
-        - s08_lecture_communication_results.qmd
+
       - section: "Additional Resources"
         contents:
+        - s07_lecture_one_pagers.qmd
+        - s08_lecture_communication_results.qmd
         - s09_r_git_install_guide.qmd
         - s10_r_parallel_computing.qmd
         - s11_data_resources.qmd

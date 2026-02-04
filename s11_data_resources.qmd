@@ -63,7 +63,7 @@ To support open and reproducible science, NCEAS encourages working groups to mak
 
 
 ## Similar Short Courses and Workshops
-- [**Synthesis Skills for Early Career Researchers (SSECR)**](https://lter.github.io/ssecr/)  
+- [**Synthesis Skills for Early Career Researchers (SSECR)**](https://lter.github.io/ssecr-2024/)  
   An LTER course designed to build foundational synthesis and collaboration skills.
 
 - [**LTER Scientific Computing Team**](https://lter.github.io/scicomp/)  
