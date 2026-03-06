@@ -11,373 +11,69 @@
     ]
   },
   {
-    "objectID": "s03_lecture_data_mgmt_reproducibility.html",
-    "href": "s03_lecture_data_mgmt_reproducibility.html",
-    "title": "Data Management and Reproducibility",
-    "section": "",
-    "text": "Workshop Description\nComputational tools make it easier than ever to collect, analyze, and share data and results in transparent and reproducible ways. To achieve reproducibility, it is important to set systems in place and manage data thoroughly. Data management is the process of handling, organizing, documenting, and preserving data used in a project/research. It helps your research outcomes be transparent, maximizing your work’s practical use and value. This lesson provides an overview of all the meaningful steps in a research project and dives into how to plan for successful data management. We will also discuss tools and systems to help you organize and document your work for better reproducibility and to facilitate collaboration (including with yourself).\n\n\nLearning Objectives\n\nRecognize common data management challenges in synthesis and collaborative research.\nApply best practices for organizing, documenting, and harmonizing ecological datasets.\nDevelop a reproducible data workflow from data discovery to publication.\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.\n\n\n\n\nResources\n\nThe Research Data Management Workbook by Kristin Briney\nData Management CheatSheet\nData inventory spreadsheet template\nDocumenting Things: Openly for Future Us, by Julia Stewart Lowndes at posit::conf(2023). Slides & Recording\nOcean Health Index Documentation: Methods and SOP for data management\nArctic Data Center data policy template\nLTER Working Group README template",
+    "objectID": "s02_github_introduction.html#introduction-to-version-control",
+    "href": "s02_github_introduction.html#introduction-to-version-control",
+    "title": "Intro to Git and GitHub",
+    "section": "1 Introduction to Version Control",
+    "text": "1 Introduction to Version Control\n\n\n\n\n\nEvery file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when bugs are discovered. Sometimes those fixes lead to even more bugs, leading to more changes in the code base. Data files get combined together. Sometimes those same files are split and combined again. In just one research project, we can expect thousands of changes to occur.\nThese changes are important to track, and yet, we often use simplistic file names to do so. Many of us have experienced renaming a document or script multiple times with the disingenuous addition of “final” to the file name (like the comic above demonstrates).\nYou might think there is a better way, and you’d be right: version control. Version control provides an organized and transparent way to track changes in code and additional files. This practice was designed for software development, but is easily applicable to scientific programming.\nThe version control system we’ll be diving into is Git, the most widely used modern version control system in the world.\n\nWith Git we can enhance our workflow:\n\nEliminate the need for cryptic filenames and comments to track our work.\nProvide detailed descriptions of our changes through commits, making it easier to understand the reasons behind code modifications.\nUse commits to access and even execute older versions of our code.\nAssign meaningful tags to specific versions of our code.\nAdditionally, GitHub, as a centralized hosting platform for all the git repositories, offers a powerful distributed feature. Multiple individuals can work on the same analysis concurrently on their own computers, with the ability to merge everyone’s changes together.",
     "crumbs": [
       "Working Groups Learning",
-      "Data Management and Reproducibility"
+      "Intro to Git and GitHub"
     ]
   },
   {
-    "objectID": "s11_data_resources.html",
-    "href": "s11_data_resources.html",
-    "title": "Data & Computational Resources",
-    "section": "",
-    "text": "Explore the core infrastructure available to support your research—from managing large datasets to conducting computationally intensive analyses and sharing your results openly and reproducibly.",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s11_data_resources.html#data-storage-management",
-    "href": "s11_data_resources.html#data-storage-management",
-    "title": "Data & Computational Resources",
-    "section": "1 Data Storage & Management",
-    "text": "1 Data Storage & Management\nWorking groups are encouraged to use GitHub for version control and collaborative code development. However, GitHub has a 100 MB file size limit per file, making it unsuitable for storing large datasets. Depending on the size and format of your data, consider the following options:\n\nFor small datasets (&lt; 50 MB) that are published and accessible via a persistent web link (e.g., data from DataONE), you are encouraged to reference the URL directly within your scripts to minimize redundancy and streamline reproducibility.\nFor medium-sized datasets (larger than 50 MB but smaller than 100 GB) or unpublished data that need to be shared internally, use a shared Google Drive. Many working groups already have shared Drives—if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the \"data\" folder in the shared Google Drive for consistency and ease of use.\nFor large datasets (&gt; 100 GB), especially if you need to process the data using multiple cores, please reach out to the Data Science Trainer to coordinate access to NCEAS data servers. This ensures appropriate infrastructure for high-capacity and large-scale processing.",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s11_data_resources.html#high-performance-parallel-computing",
-    "href": "s11_data_resources.html#high-performance-parallel-computing",
-    "title": "Data & Computational Resources",
-    "section": "2 High-Performance & Parallel Computing",
-    "text": "2 High-Performance & Parallel Computing\nWorking groups at NCEAS can request access to high-performance computing (HPC) resources to support large-scale processing and computation.\n\nTo obtain HPC access with R/RStudio pre-installed, contact the Data Science Trainer to obtain access to the Aurora server.\nIf you’re working with a large dataset, using the Parquet file format can significantly improve read/write and computation speed. Parquet is a columnar storage format that allows for efficient compression and faster querying, especially when only a subset of columns is needed. Please see the training materials for how to read and write Parquet files.\nFor parallel computation, please see the tutorials for Python and R. These resources can help you scale your workflows efficiently across multiple cores or nodes.",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s11_data_resources.html#r-tips",
-    "href": "s11_data_resources.html#r-tips",
-    "title": "Data & Computational Resources",
-    "section": "3 R Tips",
-    "text": "3 R Tips\nHere are some optional R modules that fall outside our regular working group training topics. If you have questions about R programming, feel free to reach out—we can develop a custom module as part of our working group resources. These topics are designed to strengthen your data visualization and analysis skills using R:\n\nUsing sf for Spatial Data & Intro to Making Maps\nA hands-on tutorial introducing spatial data operations and basic mapping in R.\n📍 View the tutorial",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s11_data_resources.html#data-sharing-publishing",
-    "href": "s11_data_resources.html#data-sharing-publishing",
-    "title": "Data & Computational Resources",
-    "section": "4 Data Sharing & Publishing",
-    "text": "4 Data Sharing & Publishing\nTo support open and reproducible science, NCEAS encourages working groups to make their data and code Findable. See the relevant module developed by the NCEAS-LTER team.\n\nConsider publishing your datasets in KNB for long-term preservation and reproducibility of your research.\nAlternatively, publish datasets in trusted repositories such as the Environmental Data Initiative (EDI) using tools like ezEML for metadata creation.\nCode should be versioned in GitHub and published through Zenodo to obtain a DOI, following Github –&gt; Zenodo steps.\nThe DataOne portal service offers an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps—all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataOne network. The service is currently free and ideal for long-term access and visibility of your project’s outputs.",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s11_data_resources.html#relevant-nceas-resources",
-    "href": "s11_data_resources.html#relevant-nceas-resources",
-    "title": "Data & Computational Resources",
-    "section": "5 Relevant NCEAS Resources",
-    "text": "5 Relevant NCEAS Resources\n\nLTER Scientific Computing Team Website\nResources and tools from the LTER community focused on scientific computing best practices.\nNCEAS Resources for Working Groups\nA curated collection of guidance and tools drawn from NCEAS’s extensive experience supporting synthesis science.\nNCEAS Hight Performance Computing\nAn overview of high performance computing available to NCEAS working groups.",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s11_data_resources.html#similar-short-courses-and-workshops",
-    "href": "s11_data_resources.html#similar-short-courses-and-workshops",
-    "title": "Data & Computational Resources",
-    "section": "6 Similar Short Courses and Workshops",
-    "text": "6 Similar Short Courses and Workshops\n\nSynthesis Skills for Early Career Researchers (SSECR)\nAn LTER course designed to build foundational synthesis and collaboration skills.\nLTER Scientific Computing Team\nA collection of resources and tutorials on scientific computing best practices from the LTER community.\nGitHub Repositories Education series A collection of educational materials and tutorials developed by the LTER community.\nEcological Data Synthesis: A Primer on Essential Methods A comprehensive guide to methods and best practices for ecological data synthesis.\nCarpentry @ UCSB library\nA list of the free training provided by the UCSB library, including various R and Python courses for the coming quarter.",
-    "crumbs": [
-      "Additional Resources",
-      "Data & Computational Resources"
-    ]
-  },
-  {
-    "objectID": "s08_lecture_communication_results.html",
-    "href": "s08_lecture_communication_results.html",
-    "title": "Communicating Your Results for Press releases and Social Media",
-    "section": "",
-    "text": "Workshop Description\nYour paper was just accepted, but now what? From social media to press releases to multimedia products to stakeholder meetings, learn about pathways for promoting your publication and products.\n\n\nLearning Objectives\n\nRecognize the power of social media in spreading information about papers\nIdentify successful strategies for marketing publications\nPractice summarizing complex scientific information in short, accessible formats\nApply methods for storytelling to developing a social media post thread\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nRecorded video will be posted after the training\n\n\n\n\nResources\n\nHow Science Communication Can Boost Your Research",
-    "crumbs": [
-      "Additional Resources",
-      "Communicating Your Results for Press releases and Social Media"
-    ]
-  },
-  {
-    "objectID": "index.html#nceas-training-series-supporting-effective-collaboration-in-working-groups",
-    "href": "index.html#nceas-training-series-supporting-effective-collaboration-in-working-groups",
-    "title": "About the course",
-    "section": "1 NCEAS Training Series: Supporting Effective Collaboration in Working Groups",
-    "text": "1 NCEAS Training Series: Supporting Effective Collaboration in Working Groups\nWelcome to the NCEAS Working Group Training Series, specially designed to help working groups collaborate more effectively throughout every stage of their research process. These trainings cover essential collaboration strategies and practical skills, from facilitation and communication to data management and version control.\nThis training series is designed to foster both individual development and effective team collaboration. Training topics offers practical guidance on group facilitation, strategies for clear and productive communication, and hands-on skills for managing data and projects in a collaborative environment. Whether you’re getting ready for your first group meeting or fine-tuning established workflows, these trainings offer valuable tools to support your success.\n\n1.1 How to Participate\nWe encourage each team to:\n\nReview the training topics listed in the schedule below.\n\nDiscuss with your group which sessions interest you individually and which ones may benefit the group as a whole.\n\nRegister early — space is limited! Use the registration links provided for each training.\n\nMonthly emails will provide details and reminders for upcoming sessions, so you won’t miss a thing.\n\n\n1.2 Logistics\n\nAll sessions are held via Zoom.\n\nTraining slides and video recordings  will be posted and available for download on this site.\n\nLet’s build stronger, smarter collaborations — together.\n\n1.2.1 Schedule\n\n\n\n\nWorkshop\nDate & Time\nDuration\nRegistration\n\n\n\n\nFacilitating a Successful Working Group\nAug 21, 202510am – 11am PT\n60 min\nRegister here\n\n\nIntro to Git and GitHub\nSep 10, 202510am – 11:30am PT\n90 min\nRegister here\n\n\nCanva 101\nSep 24, 202510am – 11am PT\n60 min\nRegister here\n\n\nData Management & Reproducibility\nOct 8, 202510am – 11am PT\n60 min\nRegister here\n\n\nProject Management on GitHub\nNov 12, 202510am – 11am PT\n60 min\nRegister here\n\n\nCollaborating with Git and GitHub\nDec 10, 202510am – 11:30am PT\n90 min\nRegister here\n\n\nBuilding a Communications Strategy\nJan 21, 202610am – 11:30am PT\n90 min\nRegister here",
-    "crumbs": [
-      "About the course"
-    ]
-  },
-  {
-    "objectID": "index.html#nceas-expertise",
-    "href": "index.html#nceas-expertise",
-    "title": "About the course",
-    "section": "2 NCEAS Expertise",
-    "text": "2 NCEAS Expertise\nThe National Center for Ecological Analysis and Synthesis (NCEAS), a research affiliate of UCSB, is a global leader in ecological synthesis science, transforming how environmental research is conducted through data-driven collaboration. With over 30 years of success using this model among working groups and environmental professionals, NCEAS champions open science by developing tools and best practices for transparent, reproducible, and accessible research. It also invests heavily in training scientists, offering workshops and resources that build skills in data science, collaboration, and environmental analysis.",
-    "crumbs": [
-      "About the course"
-    ]
-  },
-  {
-    "objectID": "index.html#code-of-conduct",
-    "href": "index.html#code-of-conduct",
-    "title": "About the course",
-    "section": "3 Code of Conduct",
-    "text": "3 Code of Conduct\nBy participating in this activity you agree to abide by the NCEAS Code of Conduct.",
-    "crumbs": [
-      "About the course"
-    ]
-  },
-  {
-    "objectID": "index.html#about-this-book",
-    "href": "index.html#about-this-book",
-    "title": "About the course",
-    "section": "4 About this book",
-    "text": "4 About this book\nThese written materials are the result of a continuous and collaborative effort at NCEAS to help researchers make their work more transparent and reproducible. This work began in the early 2000’s, and reflects the expertise and diligence of many, many individuals. The primary authors are listed in the citation under each workshop material, with additional contributors recognized for their role in developing previous iterations of these or similar materials.\nThis work is licensed under a Creative Commons Attribution 4.0 International License.\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books.",
-    "crumbs": [
-      "About the course"
-    ]
-  },
-  {
-    "objectID": "s09_r_git_install_guide.html",
-    "href": "s09_r_git_install_guide.html",
-    "title": "Setting Up R, RStudio, Git, and GitHub",
-    "section": "",
-    "text": "To install R, visit cloud.r-project.org to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R.\n\n# Run me in RStudio's \"Console\"\nversion$version.string",
-    "crumbs": [
-      "Additional Resources",
-      "Setting Up R, RStudio, Git, and GitHub"
-    ]
-  },
-  {
-    "objectID": "s09_r_git_install_guide.html#install-or-update-r",
-    "href": "s09_r_git_install_guide.html#install-or-update-r",
-    "title": "Setting Up R, RStudio, Git, and GitHub",
-    "section": "",
-    "text": "To install R, visit cloud.r-project.org to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R.\n\n# Run me in RStudio's \"Console\"\nversion$version.string",
-    "crumbs": [
-      "Additional Resources",
-      "Setting Up R, RStudio, Git, and GitHub"
-    ]
-  },
-  {
-    "objectID": "s09_r_git_install_guide.html#install-or-update-rstudio",
-    "href": "s09_r_git_install_guide.html#install-or-update-rstudio",
-    "title": "Setting Up R, RStudio, Git, and GitHub",
-    "section": "2 Install or update RStudio",
-    "text": "2 Install or update RStudio\nWhile R is a programming language, RStudio is a software (often referred to as an IDE, Integrated Development Environment) that provides R programmers with a neat, easy-to-use interface for coding in R. There are a number of IDEs out there, but RStudio is arguably the best and definitely most popular among R programmers.\nNote: RStudio will not work without R installed, and you won’t particularly enjoy using R without having RStudio installed. Be sure to install both!\n\n\n\n\n\nImage Credit: Manny Gimond | Accessible at https://mgimond.github.io/ES218/R_vs_RStudio.html\n\n\n\n\n\nNew install: To install RStudio, visit https://posit.co/download/rstudio-desktop/. Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.\nUpdate: If you already have RStudio and need to update: Open RStudio, and under ‘Help’ in the top menu, choose ‘Check for updates.’ If you have the most recent release, it will return ‘No update available. You are running the most recent version of RStudio.’ Otherwise, you should follow the instructions to install an updated version.\nOpen RStudio: If upon opening RStudio you are prompted to install Command Line Tools, do it.\n\n\n\n\n\n\n\nNotefor Mac user\n\n\n\nPotential issue:\nMac users may be prompted to install additional tools when using Git.\nSteps if needed:\n\nTo install command line tools (if you’re not automatically prompted), run in the Terminal tab in RStudio: xcode-select --install\nVisit xquartz.org to download & install XQuartz",
-    "crumbs": [
-      "Additional Resources",
-      "Setting Up R, RStudio, Git, and GitHub"
-    ]
-  },
-  {
-    "objectID": "s09_r_git_install_guide.html#check-for-git",
-    "href": "s09_r_git_install_guide.html#check-for-git",
-    "title": "Setting Up R, RStudio, Git, and GitHub",
-    "section": "3 Check for git",
-    "text": "3 Check for git\n\n\n\n\n\n\nImportant\n\n\n\n\nmacOS and Linux usually come with Git pre-installed\n\nWindows may or may not include Git, depending on the version\n\n\n\nYou should already have git on your device, but let’s check for it anyway.\n\nOpen RStudio\nIn the Terminal tab, run the following command:\n\n\nwhich git\n\n\nIf after running that you get something that looks like a file path to git on your computer, then you have git installed. For example, that might return something like this (or it could differ a bit): /usr/local/bin/git. If you instead get no response at all, you should download & install git from here: git-scm.com/downloads\n\n\n\n\n\n\n\nImportant\n\n\n\nIs it necessary to have Git installed in your machine for this workshop. GitHub’s Git Guides are a really wonderful resource to start learning about this topic.\n\n\n\n\n\n\n\n\nWarningTroubleshooting\n\n\n\nIf you download Git and the Git commands still not recognized by your computer, check your computer’s PATHS.\nTo do this, follow the instructions in this link on how to set the right PATHS.\nRestart your computer and try running git --version on the terminal. You should get something like git version XX.XX (but with numbers instead of Xs).\nIf you see the git version printed out in your terminal, you are all set",
-    "crumbs": [
-      "Additional Resources",
-      "Setting Up R, RStudio, Git, and GitHub"
-    ]
-  },
-  {
-    "objectID": "s09_r_git_install_guide.html#create-a-github-account",
-    "href": "s09_r_git_install_guide.html#create-a-github-account",
-    "title": "Setting Up R, RStudio, Git, and GitHub",
-    "section": "4 Create a GitHub account",
-    "text": "4 Create a GitHub account\nIf you don’t already have a GitHub account, go to github.com and create one. Here are helpful considerations for choosing a username: happygitwithr.com/github-acct.html.",
-    "crumbs": [
-      "Additional Resources",
-      "Setting Up R, RStudio, Git, and GitHub"
-    ]
-  },
-  {
-    "objectID": "s09_r_git_install_guide.html#connect-git-and-github-in-rstudio",
-    "href": "s09_r_git_install_guide.html#connect-git-and-github-in-rstudio",
-    "title": "Setting Up R, RStudio, Git, and GitHub",
-    "section": "5 Connect Git and GitHub in RStudio",
-    "text": "5 Connect Git and GitHub in RStudio\nThe last step to take before you’re all set for the workshop is to get these components talking to one another! You will have to introduce you GitHub credentials to your local computer, using RStudio and then create a Personal Access Token (PAT) on your GitHub account that will allow to transfer the changes you have made to your code in your computer to GitHub. The steps below will guide you on how to get this set up.\n\n5.1 Install R packages\n\nInstall the usethis and gitcreds packages in R by running the following in the RStudio Console:\n\n\ninstall.packages(“usethis”)\n\ninstall.packages(\"gitcreds\")\n\nA lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.\n\n\n\n\n\n\n\n\n\n\n\n5.2 Setup your git config and GitHub PAT\nIn the RStudio Console\nStep 1: set the user’s global user.name and user.email and define integrate changes from one branch into another branch for all repositories.\n\n1usethis::use_git_config(user.name = \"my_user_name\",\n2                        user.email = \"my_email@nceas.ucsb.edu\",\n3                        pull.rebase = \"false\")\n\n\n1\n\nAdd you exact same GitHub user name. Case and spelling matters!\n\n2\n\nSet up your email address associated to you GitHub account.\n\n3\n\nSetting “merge” as the default strategy to integrate changes from one branch into another branch (for all repos). Check the note at the end of this chapter for more details.\n\n\n\n\nStep 2: define the name of the branch that gets created when you make the first commit in a new Git repo\n\nusethis::git_default_branch_configure(name = \"main\")\n\nStep 3: check to make sure everything looks correct\n\nusethis::git_sitrep()\n\nStep 4: Setting up your PAT\nBefore you can push or pull between RStudio and GitHub, you’ll need to set up a Personal Access Token (PAT) for secure authentication.\n\nRun usethis::create_github_token() in the Console.\nA new browser window should open up to GitHub, showing all the scopes options. You can review the scopes, but you don’t need to worry about which ones to select this time. The previous function automatically pre-selects some recommended scopes. Go ahead and scroll to the bottom and click “Generate Token”.\nCopy the generated token.\nBack in RStudio, run gitcreds::gitcreds_set() in the Console. And wait until you are prompted to paste your token.\nPaste your PAT when the prompt asks for it.\nLast thing, run usethis::git_sitrep() in the Console to check your Git configuration and that you’ve successful stored your PAT. Note: look for Personal access token for 'https://github.com': '&lt;discovered&gt;'\n\nOnce you’ve completed these steps you are ready for our workshop on Git and Github",
-    "crumbs": [
-      "Additional Resources",
-      "Setting Up R, RStudio, Git, and GitHub"
-    ]
-  },
-  {
-    "objectID": "s01_lecture_facilitating_working_group.html#workshop-description",
-    "href": "s01_lecture_facilitating_working_group.html#workshop-description",
-    "title": "Facilitating a successful working group",
-    "section": "Workshop Description",
-    "text": "Workshop Description\nLearn how to effectively manage a working group from before the first meeting, during the first meeting, and what comes next. We will discuss how to align expectations, general tips on communicating with the team, and what to expect from the working group process. This workshop will also touch on project management and facilitation tips with plenty of time to ask questions to our professional facilitators.\n\n\n\n\n\n\nTipLearning Objectives\n\n\n\n\nRecognize best practices for designing, running, and sustaining a successful working group from initiation through completion\nApply strategies for effective communication, collaboration, and group norm-setting to foster inclusive participation\nUse practical facilitation tools and techniques to guide discussions, manage conflict, and navigate challenging group dynamics\nUnderstand the full lifecycle of a working group—including logistics, project management, and decision-making—and identify the factors that make NCEAS-style working groups uniquely effective.",
+    "objectID": "s02_github_introduction.html#introduction-to-git-github",
+    "href": "s02_github_introduction.html#introduction-to-git-github",
+    "title": "Intro to Git and GitHub",
+    "section": "2 Introduction to Git + GitHub",
+    "text": "2 Introduction to Git + GitHub\n\n2.1 What exactly are Git and GitHub?\n\nGit:\n\nan open-source distributed version control software\ndesigned to manage the versioning and tracking of source code files and project history\noperates locally on your computer, allowing you to create repositories, and track changes\nprovides features such as committing changes, branching and merging code, reverting to previous versions, and managing project history\nworks directly with the files on your computer and does not require a network connection to perform most operations\nprimarily used through the command-line interface (CLI, e.g. Terminal), but also has various GUI tools available (e.g. RStudio IDE)\n\n\n\n\n\n\nGitHub:\n\nonline platform and service built around Git\nprovides a centralized hosting platform for Git repositories\nallows us to store, manage, and collaborate on their Git repositories in the cloud\noffers additional features on top of Git, such as a web-based interface, issue tracking, project management tools, pull requests, code review, and collaboration features\nenables easy sharing of code with others, facilitating collaboration and contribution to open source projects\nprovides a social aspect, allowing users to follow projects, star repositories, and discover new code\n\n\n\n\n\n\n\n2.2 Understanding how local working files, Git, and GitHub all work together\nIt can be a bit daunting to understand all the moving parts of the Git / GitHub life cycle (i.e. how file changes are tracked locally within repositories, then stored for safe-keeping and collaboration on remote repositories, then brought back down to a local machine(s) for continued development). It gets easier with practice, but we’ll explain (first in words, then with an illustration) at a high-level how things work:\n\n\nWhat is the difference between a “normal” folder vs. a Git repository\nWhether you’re a Mac or a PC user, you’ll likely have created a folder at some point in time for organizing files. Let’s pretend that we create a folder, called myFolder/, and add two files: myData.csv and myAnalysis.R. The contents of this folder are not currently version controlled – meaning, for example, that if we make some changes to myAnalysis.R that don’t quite work out, we have no way of accessing or reverting back to a previous version of myAnalysis.R (without remembering/rewriting things, of course).\nGit allows you to turn any “normal” folder, like myFolder/, into a Git repository – you’ll often see/hear this referenced as “initializing a Git repository”. When you initialize a folder on your local computer as a Git repository, a hidden .git/ folder is created within that folder (e.g. myFolder/.git/) – this .git/ folder is the Git repository. As you use Git commands to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the .git/ folder. This allows you to access and/or recover any previous versions of your work. If you delete .git/, you delete your project’s history.\n\n\nLet’s Look at a GitHub Repository\nHere are some things you might notice:\n\nFile view: A list of files and folders, showing when each was last modified and who made the most recent changes.\n\nCommit history: If you open the “Commits” tab, you can see the history of changes across all files. For example, you might notice that one of the collaborators was fixing errors in last commit.\n\nDetailed changes: Drilling into an individual commit reveals exactly what was changed in each file.\n\nTracking these changes—and linking them to released versions of code, data, and documentation—is exactly what Git and GitHub are designed for. They are especially powerful tools for managing scientific workflows, ensuring that code, figures, and manuscripts are versioned and reproducible.\n\n\n2.3 Git Vocabulary & Commands\nWe know the world of Git and GitHub can be daunting. Use these tables as references while you use Git and GitHub, and we encourage you to build upon this list as you become more comfortable with these tools.\nThis table contains essential terms and commands that complement intro to Git skills. They will get you far on personal and individual projects.\n\nEssential Git Commands\n\n\n\n\n\n\n\nTerm\nGit Command(s)\nDefinition\n\n\n\n\nAdd/Stage\ngit add [file]\nStaging marks a modified file in its current version to go into your next commit snapshot. You can also stage all modified files at the same time using git add .\n\n\nCommit\ngit commit\nRecords changes to the repository.\n\n\nCommit Message\ngit commit -m \"my commit message\"\nRecords changes to the repository and include a descriptive message (you should always include a commit message!).\n\n\nFetch\ngit fetch\nRetrieves changes from a remote repository but does not merge them into your local working file(s).\n\n\nPull\ngit pull\nRetrieves changes from a remote repository and merges them into your local working file(s).\n\n\nPush\ngit push\nSends local commits to a remote repository.\n\n\nStatus\ngit status\nShows the current status of the repository, including (un)staged files and branch information.\n\n\n\nThis table includes more advanced Git terms and commands that are commonly used in both individual and collaborative projects.\n\nAdvanced Git Commands\n\n\n\n\n\n\n\nTerm\nGit Command(s)\nDefinition\n\n\n\n\nBranch\ngit branch\nLists existing branches or creates a new branch.\n\n\nCheckout\ngit checkout [branch]\nSwitches to a different branch or restores files from a specific commit.\n\n\nClone\ngit clone [repository]\nCreates a local copy of a remote repository.\n\n\nDiff\ngit diff\nShows differences between files, commits, or branches.\n\n\nFork\n-\nCreates a personal copy of a repository under your GitHub account for independent development.\n\n\nLog\ngit log\nDisplays the commit history of the repository.\n\n\nMerge\ngit merge [branch]\nIntegrates changes from one branch into another branch.\n\n\nMerge Conflict\n-\nOccurs when Git cannot automatically merge changes from different branches, requiring manual resolution.\n\n\nPull Request (PR)\n-\nA request to merge changes from a branch into another branch, typically in a collaborative project.\n\n\nRebase\ngit rebase\nIntegrates changes from one branch onto another by modifying commit history.\n\n\nRemote\ngit remote\nManages remote repositories linked to the local repository.\n\n\nRepository\ngit init\nA directory where Git tracks and manages files and their versions.\n\n\nStash\ngit stash\nTemporarily saves changes that are not ready to be committed.\n\n\nTag\ngit tag\nAssigns a label or tag to a specific commit.\n\n\n\nGit has a rich set of commands and features, and there are many more terms beyond either table. Learn more by visiting the git documentation.",
     "crumbs": [
       "Working Groups Learning",
-      "Facilitating a successful working group"
+      "Intro to Git and GitHub"
     ]
   },
   {
-    "objectID": "s01_lecture_facilitating_working_group.html#foundations-of-a-successful-working-group",
-    "href": "s01_lecture_facilitating_working_group.html#foundations-of-a-successful-working-group",
-    "title": "Facilitating a successful working group",
-    "section": "1 Foundations of a Successful Working Group",
-    "text": "1 Foundations of a Successful Working Group\n\nStart with a shared vision and clarify what excites participants about the project.\nEstablish communication and coordination plans early.\nSet group norms and ground rules at the first meeting to manage expectations over a multi-year commitment.\nBuild in unstructured time (walks, social events, informal chats) to strengthen relationships.",
+    "objectID": "s02_github_introduction.html#gitgithub-workflow-at-a-glance",
+    "href": "s02_github_introduction.html#gitgithub-workflow-at-a-glance",
+    "title": "Intro to Git and GitHub",
+    "section": "3 Git–GitHub Workflow (at a glance)",
+    "text": "3 Git–GitHub Workflow (at a glance)\nThere are many valid workflows.\n\nFresh start: Create a repo on GitHub → clone locally → start coding.\nExisting project: Create a repo on GitHub → clone locally → add your existing files.\nCollaborator workflow: Clone an existing GitHub repo → edit locally → commit & push.\n\nIn this course we’ll demonstrate: Create a remote repository and clone to your local computer.\n\nExercise : Create a remote repository on GitHub\n\n\n\n\n\n\nExerciseExercise 1 - Setup\n\n\n\n\n\n\n\nLogin to GitHub\nClick the New repository button\nName it {FIRSTNAME}_test\nAdd a short description\nCheck the box to add a README.md file\nAdd a .gitignore file using the R template\nSet the LICENSE to Apache 2.0\n\n\n\n\n\nIf you are successful, you’ve now created your first repository! It has a couple of files that GitHub created for you: README.md, LICENSE, and .gitignore.\n\n\nExercise: Modify the README File\n\n\n\n\n\n\nExerciseExercise 2\n\n\n\n\n\n\nNavigate to the README.md file in the repository file listing, and edit it by clicking on the pencil icon (top right of the file):\n\nAdd a new level-2 header called ## Purpose.\n\nUnderneath, add some bullet points describing the purpose of the repository.\n\nWhen done, add a commit message and click the Commit changes button.\n\n\n\n\n\nCongratulations, you’ve now authored your first versioned commit! If you navigate back to the GitHub page for the repository, you’ll see your commit listed there, as well as the rendered README.md file.\n\n\nExercise: Clone to Local Computer and use Git locally in RStudio\n\n\n\n\n\n\nExerciseExercise 3\n\n\n\n\n\n\n\nCopy the repository URL from GitHub\nOpen RStudio\nGo to: File → New Project → Version Control → Git\n\nPaste the repository URL and choose a local folder\n\nClick Create Project\n\nEdit the readme file from Rstudio or copy a .R code into the folder\nCommit and push the changes to GitHub\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are prompted to provide your GitHub username and password when Pushing, it’s a good indicator that you did not set your GitHub Personal Access Token (PAT) correctly. You can redo the steps outlined in the GitHub Authentication section to (re)set your PAT, then Push again.",
     "crumbs": [
       "Working Groups Learning",
-      "Facilitating a successful working group"
+      "Intro to Git and GitHub"
     ]
   },
   {
-    "objectID": "s01_lecture_facilitating_working_group.html#facilitation-priorities",
-    "href": "s01_lecture_facilitating_working_group.html#facilitation-priorities",
-    "title": "Facilitating a successful working group",
-    "section": "2 Facilitation Priorities",
-    "text": "2 Facilitation Priorities\n\nCreate a space where everyone feels they can contribute (inclusive practices, attending to power dynamics).\nBegin with purpose and principles—aligning on why the group exists and its shared goals.\nEncourage divergent thinking to generate innovative solutions.\nClose well—synthesize discussion, clarify next steps, and keep momentum going.",
+    "objectID": "s02_github_introduction.html#best-practices-in-gitgithub",
+    "href": "s02_github_introduction.html#best-practices-in-gitgithub",
+    "title": "Intro to Git and GitHub",
+    "section": "4 Best Practices in Git/GitHub",
+    "text": "4 Best Practices in Git/GitHub\n\n4.1 File Size & Data\n\nKeep repositories small (&lt; 1 GB recommended)\n\nAvoid individual files &gt; 50 MB (GitHub hard limit is 100 MB)\n\nUse Git LFS for large binary files (media, big data)\n\nStore bulky datasets externally (e.g., EDI, Google Drive, Box) and link to them\n\n\n\n4.2 Account & Security\n\nEnable two-factor authentication (2FA) on GitHub\n\nNever commit secrets (API keys, passwords)\n\nUse .gitignore to exclude sensitive or unnecessary files\n\nAuthenticate with Personal Access Tokens (PATs) instead of passwords\n\nRegularly review and revoke old PATs or third-party app access\n\n\n\n4.3 Using .gitignore to Keep Repos Clean\n\nPrevents sensitive or unnecessary files from being tracked by Git\nCommon examples: large datasets, passwords, temporary files, system files\nHelps keep repositories reproducible and clutter-free\n\n\n\n4.4 Writing a Good README\n\nHelps others (and your future self) quickly understand your project\nEncourages reuse and collaboration\nActs as documentation “front door”\n\n\n\n4.5 Commit & Branching Practices\n\nWrite concise messages that explain why the change was made\n\nCommit early and often — avoid giant all-in-one commits\n\nEach commit should represent a logical unit of work\n\nUse branches for experimental work, Merge changes back into main using pull requests\n\nDelete merged branches to keep history tidy",
     "crumbs": [
       "Working Groups Learning",
-      "Facilitating a successful working group"
+      "Intro to Git and GitHub"
     ]
   },
   {
-    "objectID": "s01_lecture_facilitating_working_group.html#techniques-for-inclusive-participation",
-    "href": "s01_lecture_facilitating_working_group.html#techniques-for-inclusive-participation",
-    "title": "Facilitating a successful working group",
-    "section": "3 Techniques for Inclusive Participation",
-    "text": "3 Techniques for Inclusive Participation\n\nUse varied participation formats: silent reflection, round robin, small groups, and plenary sessions.\nOffer multiple channels for input: verbal, written, visual, informal, formal.\nTrack who speaks, invite quieter voices, and address dominance or imbalance in participation.\nLeverage “liberating structures” like Nine Whys (clarifying purpose) and 1-2-4-All (inclusive brainstorming).",
+    "objectID": "s02_github_introduction.html#go-further-with-git",
+    "href": "s02_github_introduction.html#go-further-with-git",
+    "title": "Intro to Git and GitHub",
+    "section": "5 Go further with Git",
+    "text": "5 Go further with Git\nThere is much more to Git and GitHub than we can cover in this brief tutorial. Later modules in the working group training series delve into additional advanced topics, including:\n\nResolving merge conflicts\nWorking with branches and merges\nChoosing between pull requests and direct contributions\nUsing GitHub Issues for project management and team collaboration\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
     "crumbs": [
       "Working Groups Learning",
-      "Facilitating a successful working group"
+      "Intro to Git and GitHub"
     ]
   },
   {
-    "objectID": "s01_lecture_facilitating_working_group.html#navigating-the-groan-zone",
-    "href": "s01_lecture_facilitating_working_group.html#navigating-the-groan-zone",
-    "title": "Facilitating a successful working group",
-    "section": "4 Navigating the “Groan Zone”",
-    "text": "4 Navigating the “Groan Zone”\n\nWorking groups naturally pass through a phase of divergent ideas and uncertainty (“groan zone”).\nRecognize this as a productive stage, not failure.\nMove toward convergence with clear proposals, criteria for decision-making, and processes to combine ideas.\nUse facilitation tools to manage tension and maintain forward progress.",
+    "objectID": "s02_github_introduction.html#git-resources",
+    "href": "s02_github_introduction.html#git-resources",
+    "title": "Intro to Git and GitHub",
+    "section": "6 Git resources",
+    "text": "6 Git resources\n\nPro Git Book\nHappy Git and GitHub for the useR\nGitHub Documentation\nLearn Git Branching is an interactive tool to learn Git on the command line\nSoftware Carpentry Version Control with Git\nBitbucket’s tutorials on Git Workflows",
     "crumbs": [
       "Working Groups Learning",
-      "Facilitating a successful working group"
-    ]
-  },
-  {
-    "objectID": "s01_lecture_facilitating_working_group.html#project-management-and-logistics",
-    "href": "s01_lecture_facilitating_working_group.html#project-management-and-logistics",
-    "title": "Facilitating a successful working group",
-    "section": "5 Project Management and Logistics",
-    "text": "5 Project Management and Logistics\n\nTreat project management as the “engine” that keeps ideas moving toward outcomes.\nKeep a decision log to record why choices were made (avoids confusion later).\nDevelop a work plan with clear responsibilities, deliverables, and timelines.\nUse the project management tool that the group will actually use—whether GitHub, Slack, Google Docs, or even Excel.\nRegularly review and update the plan; appoint someone to track progress across subgroups.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Facilitating a successful working group"
-    ]
-  },
-  {
-    "objectID": "s01_lecture_facilitating_working_group.html#communication-between-meetings",
-    "href": "s01_lecture_facilitating_working_group.html#communication-between-meetings",
-    "title": "Facilitating a successful working group",
-    "section": "6 Communication Between Meetings",
-    "text": "6 Communication Between Meetings\n\nVirtual meetings should be efficient, interactive, and sustain collaboration.\nUse shared notes or communication platforms (Slack, email, Google chat) to keep everyone aligned.\nEncourage subgroups to share “key takeaways and next steps” with the broader team.\nStrategies that can quickly gauge agreement and readiness to move forward\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.\n\n\n\nKey Resources\n\nNCEAS’ Resources for Working Groups webpage\nNCEAS’ Guide to successful scientific working groups\nNCEAS’ Checklists! for successful scientific working groups\nLiberating Structures for facilitation",
-    "crumbs": [
-      "Working Groups Learning",
-      "Facilitating a successful working group"
-    ]
-  },
-  {
-    "objectID": "s04_github_project_management.html",
-    "href": "s04_github_project_management.html",
-    "title": "Project Management on GitHub",
-    "section": "",
-    "text": "TipLearning Objectives\n\n\n\n\nUnderstand the GitHub structure for managing team and project\nCreate, manage, and effectively use GitHub Issues to plan, assign, and monitor tasks.\nSet up and customize GitHub Projects to visualize workflows, prioritize tasks, and streamline team coordination.\n\n\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Project Management on GitHub"
-    ]
-  },
-  {
-    "objectID": "s05_github_collaboration.html#introduction-to-git-and-github-tools-for-collaboration",
-    "href": "s05_github_collaboration.html#introduction-to-git-and-github-tools-for-collaboration",
-    "title": "Collaborating with Git and GitHub",
-    "section": "1 Introduction to Git and GitHub Tools for Collaboration",
-    "text": "1 Introduction to Git and GitHub Tools for Collaboration\n\n\nArtwork by Allison Horst\n\nGit is a powerful tool for both individual and collaborative work. When multiple researchers contribute to the same project, Git ensures everyone can work independently while still being able to synchronize their changes reliably. Using a shared repository on GitHub provides a central place where collaborators can clone the project, make updates, and merge their work smoothly.\nDuring collaboration, it’s normal to encounter merge conflicts, which occur when two people modify the same part of a file in different ways. Conflicts are a routine part of team workflows and simply signal that Git needs human guidance to decide which version to keep. Learning to identify and resolve conflicts builds confidence and helps collaborators integrate their work more effectively.\n\n\n\n\n\nMore advanced collaboration relies on GitHub’s workflow tools: branches, pull requests, and reviews. Branches allow contributors to develop new analyses separately from the stable main branch. Pull requests act as formal proposals to merge those changes, creating a space for documentation and discussion. Reviews ensure quality, clarity, and consistency across the project. Together, these tools support a well-structured workflow for ecological research teams working on shared repositories.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s05_github_collaboration.html#collaborating-with-a-trusted-colleague-without-conflicts",
-    "href": "s05_github_collaboration.html#collaborating-with-a-trusted-colleague-without-conflicts",
-    "title": "Collaborating with Git and GitHub",
-    "section": "2 Collaborating with a trusted colleague without conflicts",
-    "text": "2 Collaborating with a trusted colleague without conflicts\n\nStep 0: Owner adds a Collaborator to their repository on GitHub\nWe start our collaboration by giving a trusted colleague access to our repository on GitHub. In this example, we define the Owner as the individual who owns the repository, and the Collaborator as the person whom the Owner chooses to give permission to make changes to their repository.\n\n\n\n\n\n\nTip\n\n\n\nThese steps are for the Owner:\n\nNavigate to the {FIRSTNAME}_test repository\nGo to Settings and navigate to Collaborators in the Access section on the left-hand side\nUnder Manage Access click the button Add people and type the username of your Collaborator in the search box\nOnce you’ve found the correct username, click Add {Collaborator username} to this repository\n\nNow, the Collaborator will follow this step:\n\nCheck your email for an invitation to GitHub or check your notifications (likely under Your Organizations) on GitHub to accept the invite to collaborate.\n\n\n\n\n\nStep 1: Collaborator clones the remote repository\nIn order to contribute, the Collaborator must clone the repository from the Owner’s GitHub account (Note: as a Collaborator, you won’t see the repository appear under your profile’s Repositories page). To do this, the Collaborator should navigate to the Owner’s repository on GitHub, then copy the clone URL. In RStudio, the Collaborator will create a new project from version control by pasting this clone URL into the appropriate dialog box (see the earlier chapter introducing GitHub).\n\n\n\n\n\n\nTipINTERMEDIATE STEP: Collaborators communicate with each other that they plan to make some changes\n\n\n\nFrequent communication is SO important when collaborating! Letting one another know that you’re about to make and push changes to the remote repo can help to prevent merge conflicts (and reduce headaches). The easiest way to avoid merge conflicts is to ensure that you and your collaborators aren’t working on the same file(s)/section(s) of code at the same time.\n\n\n\n\nStep 2: Collaborator edits files locally\nWith the repo cloned locally, the Collaborator can now make changes to the file, adding a line or statement somewhere noticeable near the top. Save the changes.\n\n\nStep 3: Collaborator commits, pulls, and pushs\nIt’s recommended that all collaborators (including the repo Owner) follow this workflow when syncing changes between their local repo and the remote repo (in this example, the Collaborator is now following these steps):\n\ncommit your modified file(s)\npull to fetch and merge changes from the remote/origin repository (in an ideal situation, as we’re demonstrating here, any potential changes are merged seamlessly without conflict)\npush your changes to the remote/origin repository\n\n\n\n\n\n\n\nNoteWhy do I need to add and commit files before pulling?\n\n\n\nRemember, git pull is a combination of git fetching remote changes to your local repo and git mergeing those changes from your local repo into your local working file(s).\nThe merge part of git pull will fail if you have uncommitted changes in your local working file(s) to avoid any potential overwriting of your own changes. Because of this, you should always, add/commit then pull, and finally push.\n\n\n\n\n\n\n\n\n\nStep 4: Owner pulls new changes from the remote repo to their local repo\n\n\nStep 5: Owner edits, commits, pulls (just in case!) and pushes\nFollowing the same workflow as the Collaborator did earlier.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s05_github_collaboration.html#merge-conflicts",
-    "href": "s05_github_collaboration.html#merge-conflicts",
-    "title": "Collaborating with Git and GitHub",
-    "section": "3 Merge conflicts",
-    "text": "3 Merge conflicts\nMerge conflicts occur when both collaborators make conflicting changes to the same file. Resolving merge conflicts involves identifying the root of the problem and restoring the project to a normal state. Good communication, discussing file sections to work on, and avoiding overlaps can help prevent merge conflicts. However, if conflicts do arise, Git warns about potential issues and ensures that changes from different collaborators based on the same file version are not overwritten. To resolve conflicts, you need to explicitly specify whose changes should be used for each conflicting line in the file.\n\nCommon ways to resolve a merge conflict\nSometimes you just made a mistake. When you get a merge conflict, the repository is placed in a “Merging” state until you resolve it. You can simply choose to “revert” file back to the earlier version before you changed.\nOf course, after doing that you still haven’t synced with your Collaborator’s changes, so things are still unresolved. But at least your repository is now usable on your local machine.\nOption 2: When you pull a file with a conflict, Git will provide you with a warning modify the file so that it includes both your own changes and your Collaborator’s changes. The file will also appear in the Git tab with an orange U icon, which indicates that the file is Unmerged and therefore awaiting your help to resolve the conflict. It delimits these blocks of conflicted code with a series of less than and greater than signs, so they are easy to find:\n\n\n\n\n\nIn the above example, &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD marks the start of your changes. The ======= delimiter separates your changes from your Collaborator’s conflicting changes. &gt;&gt;&gt;&gt;&gt;&gt;&gt; mark the end of your Collaborator’s changes.\nTo resolve the conflicts, simply find all of these blocks, and edit them so that the file looks how you want (either pick your lines, your Collaborator’s lines, some combination, or something altogether new), and save. Be sure you removed the delimiter lines that started with\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt;\n=======\n&gt;&gt;&gt;&gt;&gt;&gt;&gt;\n\nOnce you have made those changes, you simply commit, and push the files to resolve the conflict.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s05_github_collaboration.html#producing-and-resolving-merge-conflicts",
-    "href": "s05_github_collaboration.html#producing-and-resolving-merge-conflicts",
-    "title": "Collaborating with Git and GitHub",
-    "section": "4 Producing and resolving merge conflicts",
-    "text": "4 Producing and resolving merge conflicts\nTo illustrate this process, the instructors are going to carefully create a merge conflict step-by-step, show how to resolve it, and show how to see the results of the successful merge after it is complete. First, the instructors will walk through the exercise to demonstrate the issues. Then, participants will pair up and try the exercise.\n\nStep 1: Owner and Collaborator ensure that their local repos are synced with the remote repo\nBegin the exercise by ensuring that both the Owner and Collaborator have all of the changes synced from the remote repo to their local repos. This includes doing a git pull to ensure that you have all changes locally, and ensuring that the Git tab in RStudio doesn’t show any changes that need to be committed.\n\n\nStep 2: Owner makes a change and commits locally\nFrom this clean slate, the Owner will first modify and commit a small change. The Owner should add their name on a specific line of the README.md file (we will change the title in line 1). Save and commit the change (but DO NOT push). The Owner should now have a local but unpushed commit that the Collaborator does not yet have access to.\n\n\nStep 3: Collaborator makes a change and commits on the same line\nNow, the Collaborator will modify and commit a small change. The Collaborator should add their name to the same line of the README.md file (we will again change the title in line 1). Save and commit the change (but DO NOT push). The Collaborator should now also have a local but unpushed commit that the Owner does not yet have access to.\nAt this point, both the Owner and Collaborator have committed local changes, but neither have tried to share their changes via GitHub.\n\n\nStep 4: Collaborator pushes the file to GitHub\nSharing starts when the Collaborator pushes their changes to the GitHub repo, which updates GitHub with their version of the file. The Owner is now one revision behind, but doesn’t know it yet.\n\n\nStep 5: Owner pushes their changes and gets an error\nAt this point, the Owner tries to push their change to the repository, which triggers an error from GitHub. While the error message is long, it tells you everything needed (that the Owner’s repository doesn’t reflect the changes on GitHub, and that they need to pull before they can push).\n\n\n\nStep 6: Owner pulls from GitHub to get Collaborator changes\nFollowing the error message, the Owner pulls the changes from GitHub, and gets another, different error message. Here, it indicates that there is a merge conflict because of the conflicting lines.\n\nIn the Git pane of RStudio, the file is also flagged with an orange U, which stands for an unresolved merge conflict.\n\n\n\nStep 7: Owner edits the file to resolve the conflict\nTo resolve the conflict, the Owner now needs to edit the file. Again, as indicated above, Git has flagged the locations in the file where a conflict occurred with &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt;. The Owner should edit the file, merging whatever changes are appropriate until the conflicting lines read how they should, and eliminate all of the marker lines with &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt;.\n\nOf course, for scripts and programs, resolving the changes means more than just merging the text – whoever is doing the merging should make sure that the code runs properly and that none of the logic of the program has been broken.\n\n\n\nStep 8: Owner commits the resolved changes\nFrom this point forward, things proceed as normal. The Owner first adds the file, which changes the orange U to a blue M for modified. Then, the Owner commits the changes locally. The Owner now has a resolved version of the file on their system.\n\n\n\nStep 9: Owner pushes the resolved changes to GitHub\nThe Owner can now push the changes, without error, to GitHub.\n\n\n\nStep 10: Collaborator pulls the resolved changes from GitHub\nFinally, the Collaborator can pull from GitHub to get the changes (which include the resolved conflicted lines of code) that the Owner made.\n\n\nStep 11: Both can view commit history\nBoth the Collaborator and the Owner can view the history, which includes information about the conflict, the associated branch, and the merged changes.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s05_github_collaboration.html#best-practices-to-avoid-merge-conflicts",
-    "href": "s05_github_collaboration.html#best-practices-to-avoid-merge-conflicts",
-    "title": "Collaborating with Git and GitHub",
-    "section": "5 Best practices to avoid merge conflicts",
-    "text": "5 Best practices to avoid merge conflicts\nSome basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:\n\n\n\n\n\nXKCD 1597\n\n\n\nCommunicate often and set up effective communication channels\nTell each other what you are working on\nStart your working session with a pull\nPull immediately after you commit and before you push\nCommit often in small chunks (this helps you organize your work!)\nMake sure you and who you are collaborating with all fully understand the Git workflow you’re using (aka make sure you’re on the same page before you start)!\n\nA good workflow is encapsulated as follows:\nPull -&gt; Edit -&gt; Save -&gt; Commit -&gt; Pull -&gt; (OPTIONAL) Fix any merge conflicts -&gt; Push",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s05_github_collaboration.html#a-note-on-advanced-collaboration-techniques",
-    "href": "s05_github_collaboration.html#a-note-on-advanced-collaboration-techniques",
-    "title": "Collaborating with Git and GitHub",
-    "section": "6 A Note on Advanced Collaboration Techniques",
-    "text": "6 A Note on Advanced Collaboration Techniques\nThere are many Git and GitHub collaboration techniques, some more advanced than others. Here is a table for your reference on a few popular Git collaboration workflow strategies and tools.\n\n\n\n\n\n\n\n\n\nCollaboration Technique\nBenefits\nWhen to Use\nWhen Not to Use\n\n\n\n\nBranch Management Strategies\n1. Enables parallel development and experimentation2. Facilitates isolation of features or bug fixes3. Provides flexibility and control over project workflows\nWhen working on larger projects with multiple features or bug fixes simultaneously.When you want to maintain a stable main branch while developing new features or resolving issues on separate branches.When collaborating with teammates on different aspects of a project and later integrating their changes.\nWhen working on small projects with a single developer or limited codebase.When the project scope is simple and doesn’t require extensive branch management.When there is no need to isolate features or bug fixes.\n\n\nCode Review Practices\n1. Enhances code quality and correctness through feedback2. Promotes knowledge sharing and learning within the team3. Helps identify bugs, improve performance, and ensure adherence to coding standards\nWhen collaborating on a codebase with team members to ensure code quality and maintain best practices.When you want to receive feedback and suggestions on your code to improve its readability, efficiency, or functionality.When working on critical or complex code that requires an extra layer of scrutiny before merging it into the main branch.\nWhen working on personal projects or small codebases with no collaboration involved.When time constraints or project size make it impractical to conduct code reviews.When the codebase is less critical or has low complexity.\n\n\nForking\n1. Enables independent experimentation and development2. Provides a way to contribute to a project without direct access3. Allows for creating separate, standalone copies of a repository\nWhen you want to contribute to a project without having direct write access to the original repository.When you want to work on an independent variation or extension of an existing project.When experimenting with changes or modifications to a project while keeping the original repository intact.\nWhen collaborating on a project with direct write access to the original repository.When the project does not allow external contributions or forking.When the project size or complexity doesn’t justify the need for independent variations.\n\n\nPull Requests\n1. Facilitates code review and discussion2. Allows for collaboration and feedback from team members3. Enables better organization and tracking of proposed changes\nWhen working on a shared repository with a team and wanting to contribute changes in a controlled and collaborative manner.When you want to propose changes to a project managed by others and seek review and approval before merging them into the main codebase.\nWhen working on personal projects or individual coding tasks without the need for collaboration.When immediate changes or fixes are required without review processes.When working on projects with a small team or single developer with direct write access to the repository.\n\n\n\nThe “When Not to Use” column provides insights into situations where it may be less appropriate / unnecessary to use each collaboration technique, helping you make informed decisions based on the specific context and requirements of your project.\nThese techniques provide different benefits and are used in various collaboration scenarios, depending on the project’s needs and team dynamics.\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Collaborating with Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s06_lecture_communication_plan.html",
-    "href": "s06_lecture_communication_plan.html",
-    "title": "Building a Communications Strategy",
-    "section": "",
-    "text": "Workshop Description\nEffective science communication starts long before results are published and develops alongside the research itself. This interactive Zoom workshop is designed for scientific working groups who want to think more strategically about communication and integrate it into their collaborative process.\nParticipants will learn how to clarify communication goals, identify priority audiences, and craft audience-centered messages and learn how to use tools such as the Compass SciComm Message Box. The workshop focuses on building shared understanding and practical approaches that working groups can revisit and apply throughout their project. Participants will leave better equipped to make intentional communication decisions and support the use and impact of their science.\n\n\n\n\n\n\n\n\nTipLearning Objectives\n\n\n\nBy the end of this workshop, participants will be able to:\n\nDescribe how strategic communication can be integrated into working group science throughout the life of a project, not only at publication\nApply a structured framework (e.g., the Compass SciComm Message Box) to think through audiences, messages, and relevance\nIdentify priority audiences and clarify why their science matters to those groups\nRecognize how communication goals, messages, and platforms are connected and evolve over time\nIdentify practical next steps for incorporating communication planning into future working group meetings\n\n\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.\n\n\n\n\nResources\n\nMessage box Workbook\nMessage box blank template",
-    "crumbs": [
-      "Working Groups Learning",
-      "Building a Communications Strategy"
+      "Intro to Git and GitHub"
     ]
   },
   {
@@ -502,6 +198,365 @@
     ]
   },
   {
+    "objectID": "s09_r_git_install_guide.html",
+    "href": "s09_r_git_install_guide.html",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
+    "section": "",
+    "text": "To install R, visit cloud.r-project.org to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R.\n\n# Run me in RStudio's \"Console\"\nversion$version.string",
+    "crumbs": [
+      "Additional Resources",
+      "Setting Up R, RStudio, Git, and GitHub"
+    ]
+  },
+  {
+    "objectID": "s09_r_git_install_guide.html#install-or-update-r",
+    "href": "s09_r_git_install_guide.html#install-or-update-r",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
+    "section": "",
+    "text": "To install R, visit cloud.r-project.org to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R.\n\n# Run me in RStudio's \"Console\"\nversion$version.string",
+    "crumbs": [
+      "Additional Resources",
+      "Setting Up R, RStudio, Git, and GitHub"
+    ]
+  },
+  {
+    "objectID": "s09_r_git_install_guide.html#install-or-update-rstudio",
+    "href": "s09_r_git_install_guide.html#install-or-update-rstudio",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
+    "section": "2 Install or update RStudio",
+    "text": "2 Install or update RStudio\nWhile R is a programming language, RStudio is a software (often referred to as an IDE, Integrated Development Environment) that provides R programmers with a neat, easy-to-use interface for coding in R. There are a number of IDEs out there, but RStudio is arguably the best and definitely most popular among R programmers.\nNote: RStudio will not work without R installed, and you won’t particularly enjoy using R without having RStudio installed. Be sure to install both!\n\n\n\n\n\nImage Credit: Manny Gimond | Accessible at https://mgimond.github.io/ES218/R_vs_RStudio.html\n\n\n\n\n\nNew install: To install RStudio, visit https://posit.co/download/rstudio-desktop/. Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.\nUpdate: If you already have RStudio and need to update: Open RStudio, and under ‘Help’ in the top menu, choose ‘Check for updates.’ If you have the most recent release, it will return ‘No update available. You are running the most recent version of RStudio.’ Otherwise, you should follow the instructions to install an updated version.\nOpen RStudio: If upon opening RStudio you are prompted to install Command Line Tools, do it.\n\n\n\n\n\n\n\nNotefor Mac user\n\n\n\nPotential issue:\nMac users may be prompted to install additional tools when using Git.\nSteps if needed:\n\nTo install command line tools (if you’re not automatically prompted), run in the Terminal tab in RStudio: xcode-select --install\nVisit xquartz.org to download & install XQuartz",
+    "crumbs": [
+      "Additional Resources",
+      "Setting Up R, RStudio, Git, and GitHub"
+    ]
+  },
+  {
+    "objectID": "s09_r_git_install_guide.html#check-for-git",
+    "href": "s09_r_git_install_guide.html#check-for-git",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
+    "section": "3 Check for git",
+    "text": "3 Check for git\n\n\n\n\n\n\nImportant\n\n\n\n\nmacOS and Linux usually come with Git pre-installed\n\nWindows may or may not include Git, depending on the version\n\n\n\nYou should already have git on your device, but let’s check for it anyway.\n\nOpen RStudio\nIn the Terminal tab, run the following command:\n\n\nwhich git\n\n\nIf after running that you get something that looks like a file path to git on your computer, then you have git installed. For example, that might return something like this (or it could differ a bit): /usr/local/bin/git. If you instead get no response at all, you should download & install git from here: git-scm.com/downloads\n\n\n\n\n\n\n\nImportant\n\n\n\nIs it necessary to have Git installed in your machine for this workshop. GitHub’s Git Guides are a really wonderful resource to start learning about this topic.\n\n\n\n\n\n\n\n\nWarningTroubleshooting\n\n\n\nIf you download Git and the Git commands still not recognized by your computer, check your computer’s PATHS.\nTo do this, follow the instructions in this link on how to set the right PATHS.\nRestart your computer and try running git --version on the terminal. You should get something like git version XX.XX (but with numbers instead of Xs).\nIf you see the git version printed out in your terminal, you are all set",
+    "crumbs": [
+      "Additional Resources",
+      "Setting Up R, RStudio, Git, and GitHub"
+    ]
+  },
+  {
+    "objectID": "s09_r_git_install_guide.html#create-a-github-account",
+    "href": "s09_r_git_install_guide.html#create-a-github-account",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
+    "section": "4 Create a GitHub account",
+    "text": "4 Create a GitHub account\nIf you don’t already have a GitHub account, go to github.com and create one. Here are helpful considerations for choosing a username: happygitwithr.com/github-acct.html.",
+    "crumbs": [
+      "Additional Resources",
+      "Setting Up R, RStudio, Git, and GitHub"
+    ]
+  },
+  {
+    "objectID": "s09_r_git_install_guide.html#connect-git-and-github-in-rstudio",
+    "href": "s09_r_git_install_guide.html#connect-git-and-github-in-rstudio",
+    "title": "Setting Up R, RStudio, Git, and GitHub",
+    "section": "5 Connect Git and GitHub in RStudio",
+    "text": "5 Connect Git and GitHub in RStudio\nThe last step to take before you’re all set for the workshop is to get these components talking to one another! You will have to introduce you GitHub credentials to your local computer, using RStudio and then create a Personal Access Token (PAT) on your GitHub account that will allow to transfer the changes you have made to your code in your computer to GitHub. The steps below will guide you on how to get this set up.\n\n5.1 Install R packages\n\nInstall the usethis and gitcreds packages in R by running the following in the RStudio Console:\n\n\ninstall.packages(“usethis”)\n\ninstall.packages(\"gitcreds\")\n\nA lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.\n\n\n\n\n\n\n\n\n\n\n\n5.2 Setup your git config and GitHub PAT\nIn the RStudio Console\nStep 1: set the user’s global user.name and user.email and define integrate changes from one branch into another branch for all repositories.\n\n1usethis::use_git_config(user.name = \"my_user_name\",\n2                        user.email = \"my_email@nceas.ucsb.edu\",\n3                        pull.rebase = \"false\")\n\n\n1\n\nAdd you exact same GitHub user name. Case and spelling matters!\n\n2\n\nSet up your email address associated to you GitHub account.\n\n3\n\nSetting “merge” as the default strategy to integrate changes from one branch into another branch (for all repos). Check the note at the end of this chapter for more details.\n\n\n\n\nStep 2: define the name of the branch that gets created when you make the first commit in a new Git repo\n\nusethis::git_default_branch_configure(name = \"main\")\n\nStep 3: check to make sure everything looks correct\n\nusethis::git_sitrep()\n\nStep 4: Setting up your PAT\nBefore you can push or pull between RStudio and GitHub, you’ll need to set up a Personal Access Token (PAT) for secure authentication.\n\nRun usethis::create_github_token() in the Console.\nA new browser window should open up to GitHub, showing all the scopes options. You can review the scopes, but you don’t need to worry about which ones to select this time. The previous function automatically pre-selects some recommended scopes. Go ahead and scroll to the bottom and click “Generate Token”.\nCopy the generated token.\nBack in RStudio, run gitcreds::gitcreds_set() in the Console. And wait until you are prompted to paste your token.\nPaste your PAT when the prompt asks for it.\nLast thing, run usethis::git_sitrep() in the Console to check your Git configuration and that you’ve successful stored your PAT. Note: look for Personal access token for 'https://github.com': '&lt;discovered&gt;'\n\nOnce you’ve completed these steps you are ready for our workshop on Git and Github",
+    "crumbs": [
+      "Additional Resources",
+      "Setting Up R, RStudio, Git, and GitHub"
+    ]
+  },
+  {
+    "objectID": "s03_lecture_data_mgmt_reproducibility.html",
+    "href": "s03_lecture_data_mgmt_reproducibility.html",
+    "title": "Data Management and Reproducibility",
+    "section": "",
+    "text": "Workshop Description\nComputational tools make it easier than ever to collect, analyze, and share data and results in transparent and reproducible ways. To achieve reproducibility, it is important to set systems in place and manage data thoroughly. Data management is the process of handling, organizing, documenting, and preserving data used in a project/research. It helps your research outcomes be transparent, maximizing your work’s practical use and value. This lesson provides an overview of all the meaningful steps in a research project and dives into how to plan for successful data management. We will also discuss tools and systems to help you organize and document your work for better reproducibility and to facilitate collaboration (including with yourself).\n\n\nLearning Objectives\n\nRecognize common data management challenges in synthesis and collaborative research.\nApply best practices for organizing, documenting, and harmonizing ecological datasets.\nDevelop a reproducible data workflow from data discovery to publication.\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.\n\n\n\n\nResources\n\nThe Research Data Management Workbook by Kristin Briney\nData Management CheatSheet\nData inventory spreadsheet template\nDocumenting Things: Openly for Future Us, by Julia Stewart Lowndes at posit::conf(2023). Slides & Recording\nOcean Health Index Documentation: Methods and SOP for data management\nArctic Data Center data policy template\nLTER Working Group README template",
+    "crumbs": [
+      "Working Groups Learning",
+      "Data Management and Reproducibility"
+    ]
+  },
+  {
+    "objectID": "s08_lecture_communication_results.html",
+    "href": "s08_lecture_communication_results.html",
+    "title": "Communicating Your Results for Press releases and Social Media",
+    "section": "",
+    "text": "Workshop Description\nYour paper was just accepted, but now what? From social media to press releases to multimedia products to stakeholder meetings, learn about pathways for promoting your publication and products.\n\n\nLearning Objectives\n\nRecognize the power of social media in spreading information about papers\nIdentify successful strategies for marketing publications\nPractice summarizing complex scientific information in short, accessible formats\nApply methods for storytelling to developing a social media post thread\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nRecorded video will be posted after the training\n\n\n\n\nResources\n\nHow Science Communication Can Boost Your Research",
+    "crumbs": [
+      "Additional Resources",
+      "Communicating Your Results for Press releases and Social Media"
+    ]
+  },
+  {
+    "objectID": "index.html#nceas-training-series-supporting-effective-collaboration-in-working-groups",
+    "href": "index.html#nceas-training-series-supporting-effective-collaboration-in-working-groups",
+    "title": "About the course",
+    "section": "1 NCEAS Training Series: Supporting Effective Collaboration in Working Groups",
+    "text": "1 NCEAS Training Series: Supporting Effective Collaboration in Working Groups\nWelcome to the NCEAS Working Group Training Series, specially designed to help working groups collaborate more effectively throughout every stage of their research process. These trainings cover essential collaboration strategies and practical skills, from facilitation and communication to data management and version control.\nThis training series is designed to foster both individual development and effective team collaboration. Training topics offers practical guidance on group facilitation, strategies for clear and productive communication, and hands-on skills for managing data and projects in a collaborative environment. Whether you’re getting ready for your first group meeting or fine-tuning established workflows, these trainings offer valuable tools to support your success.\n\n1.1 How to Participate\nWe encourage each team to:\n\nReview the training topics listed in the schedule below.\n\nDiscuss with your group which sessions interest you individually and which ones may benefit the group as a whole.\n\nRegister early — space is limited! Use the registration links provided for each training.\n\nMonthly emails will provide details and reminders for upcoming sessions, so you won’t miss a thing.\n\n\n1.2 Logistics\n\nAll sessions are held via Zoom.\n\nTraining slides and video recordings  will be posted and available for download on this site.\n\nLet’s build stronger, smarter collaborations — together.\n\n1.2.1 Schedule\n\n\n\n\nWorkshop\nDate & Time\nDuration\nRegistration\n\n\n\n\nFacilitating a Successful Working Group\nAug 21, 202510am – 11am PT\n60 min\nRegister here\n\n\nIntro to Git and GitHub\nSep 10, 202510am – 11:30am PT\n90 min\nRegister here\n\n\nCanva 101\nSep 24, 202510am – 11am PT\n60 min\nRegister here\n\n\nData Management & Reproducibility\nOct 8, 202510am – 11am PT\n60 min\nRegister here\n\n\nProject Management on GitHub\nNov 12, 202510am – 11am PT\n60 min\nRegister here\n\n\nCollaborating with Git and GitHub\nDec 10, 202510am – 11:30am PT\n90 min\nRegister here\n\n\nBuilding a Communications Strategy\nJan 21, 202610am – 11:30am PT\n90 min\nRegister here",
+    "crumbs": [
+      "About the course"
+    ]
+  },
+  {
+    "objectID": "index.html#nceas-expertise",
+    "href": "index.html#nceas-expertise",
+    "title": "About the course",
+    "section": "2 NCEAS Expertise",
+    "text": "2 NCEAS Expertise\nThe National Center for Ecological Analysis and Synthesis (NCEAS), a research affiliate of UCSB, is a global leader in ecological synthesis science, transforming how environmental research is conducted through data-driven collaboration. With over 30 years of success using this model among working groups and environmental professionals, NCEAS champions open science by developing tools and best practices for transparent, reproducible, and accessible research. It also invests heavily in training scientists, offering workshops and resources that build skills in data science, collaboration, and environmental analysis.",
+    "crumbs": [
+      "About the course"
+    ]
+  },
+  {
+    "objectID": "index.html#code-of-conduct",
+    "href": "index.html#code-of-conduct",
+    "title": "About the course",
+    "section": "3 Code of Conduct",
+    "text": "3 Code of Conduct\nBy participating in this activity you agree to abide by the NCEAS Code of Conduct.",
+    "crumbs": [
+      "About the course"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-book",
+    "href": "index.html#about-this-book",
+    "title": "About the course",
+    "section": "4 About this book",
+    "text": "4 About this book\nThese written materials are the result of a continuous and collaborative effort at NCEAS to help researchers make their work more transparent and reproducible. This work began in the early 2000’s, and reflects the expertise and diligence of many, many individuals. The primary authors are listed in the citation under each workshop material, with additional contributors recognized for their role in developing previous iterations of these or similar materials.\nThis work is licensed under a Creative Commons Attribution 4.0 International License.\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "About the course"
+    ]
+  },
+  {
+    "objectID": "s05_github_collaboration.html#introduction-to-git-and-github-tools-for-collaboration",
+    "href": "s05_github_collaboration.html#introduction-to-git-and-github-tools-for-collaboration",
+    "title": "Collaborating with Git and GitHub",
+    "section": "1 Introduction to Git and GitHub Tools for Collaboration",
+    "text": "1 Introduction to Git and GitHub Tools for Collaboration\n\n\nArtwork by Allison Horst\n\nGit is a powerful tool for both individual and collaborative work. When multiple researchers contribute to the same project, Git ensures everyone can work independently while still being able to synchronize their changes reliably. Using a shared repository on GitHub provides a central place where collaborators can clone the project, make updates, and merge their work smoothly.\nDuring collaboration, it’s normal to encounter merge conflicts, which occur when two people modify the same part of a file in different ways. Conflicts are a routine part of team workflows and simply signal that Git needs human guidance to decide which version to keep. Learning to identify and resolve conflicts builds confidence and helps collaborators integrate their work more effectively.\n\n\n\n\n\nMore advanced collaboration relies on GitHub’s workflow tools: branches, pull requests, and reviews. Branches allow contributors to develop new analyses separately from the stable main branch. Pull requests act as formal proposals to merge those changes, creating a space for documentation and discussion. Reviews ensure quality, clarity, and consistency across the project. Together, these tools support a well-structured workflow for ecological research teams working on shared repositories.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Collaborating with Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "s05_github_collaboration.html#collaborating-with-a-trusted-colleague-without-conflicts",
+    "href": "s05_github_collaboration.html#collaborating-with-a-trusted-colleague-without-conflicts",
+    "title": "Collaborating with Git and GitHub",
+    "section": "2 Collaborating with a trusted colleague without conflicts",
+    "text": "2 Collaborating with a trusted colleague without conflicts\n\nStep 0: Owner adds a Collaborator to their repository on GitHub\nWe start our collaboration by giving a trusted colleague access to our repository on GitHub. In this example, we define the Owner as the individual who owns the repository, and the Collaborator as the person whom the Owner chooses to give permission to make changes to their repository.\n\n\n\n\n\n\nTip\n\n\n\nThese steps are for the Owner:\n\nNavigate to the {FIRSTNAME}_test repository\nGo to Settings and navigate to Collaborators in the Access section on the left-hand side\nUnder Manage Access click the button Add people and type the username of your Collaborator in the search box\nOnce you’ve found the correct username, click Add {Collaborator username} to this repository\n\nNow, the Collaborator will follow this step:\n\nCheck your email for an invitation to GitHub or check your notifications (likely under Your Organizations) on GitHub to accept the invite to collaborate.\n\n\n\n\n\nStep 1: Collaborator clones the remote repository\nIn order to contribute, the Collaborator must clone the repository from the Owner’s GitHub account (Note: as a Collaborator, you won’t see the repository appear under your profile’s Repositories page). To do this, the Collaborator should navigate to the Owner’s repository on GitHub, then copy the clone URL. In RStudio, the Collaborator will create a new project from version control by pasting this clone URL into the appropriate dialog box (see the earlier chapter introducing GitHub).\n\n\n\n\n\n\nTipINTERMEDIATE STEP: Collaborators communicate with each other that they plan to make some changes\n\n\n\nFrequent communication is SO important when collaborating! Letting one another know that you’re about to make and push changes to the remote repo can help to prevent merge conflicts (and reduce headaches). The easiest way to avoid merge conflicts is to ensure that you and your collaborators aren’t working on the same file(s)/section(s) of code at the same time.\n\n\n\n\nStep 2: Collaborator edits files locally\nWith the repo cloned locally, the Collaborator can now make changes to the file, adding a line or statement somewhere noticeable near the top. Save the changes.\n\n\nStep 3: Collaborator commits, pulls, and pushs\nIt’s recommended that all collaborators (including the repo Owner) follow this workflow when syncing changes between their local repo and the remote repo (in this example, the Collaborator is now following these steps):\n\ncommit your modified file(s)\npull to fetch and merge changes from the remote/origin repository (in an ideal situation, as we’re demonstrating here, any potential changes are merged seamlessly without conflict)\npush your changes to the remote/origin repository\n\n\n\n\n\n\n\nNoteWhy do I need to add and commit files before pulling?\n\n\n\nRemember, git pull is a combination of git fetching remote changes to your local repo and git mergeing those changes from your local repo into your local working file(s).\nThe merge part of git pull will fail if you have uncommitted changes in your local working file(s) to avoid any potential overwriting of your own changes. Because of this, you should always, add/commit then pull, and finally push.\n\n\n\n\n\n\n\n\n\nStep 4: Owner pulls new changes from the remote repo to their local repo\n\n\nStep 5: Owner edits, commits, pulls (just in case!) and pushes\nFollowing the same workflow as the Collaborator did earlier.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Collaborating with Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "s05_github_collaboration.html#merge-conflicts",
+    "href": "s05_github_collaboration.html#merge-conflicts",
+    "title": "Collaborating with Git and GitHub",
+    "section": "3 Merge conflicts",
+    "text": "3 Merge conflicts\nMerge conflicts occur when both collaborators make conflicting changes to the same file. Resolving merge conflicts involves identifying the root of the problem and restoring the project to a normal state. Good communication, discussing file sections to work on, and avoiding overlaps can help prevent merge conflicts. However, if conflicts do arise, Git warns about potential issues and ensures that changes from different collaborators based on the same file version are not overwritten. To resolve conflicts, you need to explicitly specify whose changes should be used for each conflicting line in the file.\n\nCommon ways to resolve a merge conflict\nSometimes you just made a mistake. When you get a merge conflict, the repository is placed in a “Merging” state until you resolve it. You can simply choose to “revert” file back to the earlier version before you changed.\nOf course, after doing that you still haven’t synced with your Collaborator’s changes, so things are still unresolved. But at least your repository is now usable on your local machine.\nOption 2: When you pull a file with a conflict, Git will provide you with a warning modify the file so that it includes both your own changes and your Collaborator’s changes. The file will also appear in the Git tab with an orange U icon, which indicates that the file is Unmerged and therefore awaiting your help to resolve the conflict. It delimits these blocks of conflicted code with a series of less than and greater than signs, so they are easy to find:\n\n\n\n\n\nIn the above example, &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD marks the start of your changes. The ======= delimiter separates your changes from your Collaborator’s conflicting changes. &gt;&gt;&gt;&gt;&gt;&gt;&gt; mark the end of your Collaborator’s changes.\nTo resolve the conflicts, simply find all of these blocks, and edit them so that the file looks how you want (either pick your lines, your Collaborator’s lines, some combination, or something altogether new), and save. Be sure you removed the delimiter lines that started with\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt;\n=======\n&gt;&gt;&gt;&gt;&gt;&gt;&gt;\n\nOnce you have made those changes, you simply commit, and push the files to resolve the conflict.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Collaborating with Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "s05_github_collaboration.html#producing-and-resolving-merge-conflicts",
+    "href": "s05_github_collaboration.html#producing-and-resolving-merge-conflicts",
+    "title": "Collaborating with Git and GitHub",
+    "section": "4 Producing and resolving merge conflicts",
+    "text": "4 Producing and resolving merge conflicts\nTo illustrate this process, the instructors are going to carefully create a merge conflict step-by-step, show how to resolve it, and show how to see the results of the successful merge after it is complete. First, the instructors will walk through the exercise to demonstrate the issues. Then, participants will pair up and try the exercise.\n\nStep 1: Owner and Collaborator ensure that their local repos are synced with the remote repo\nBegin the exercise by ensuring that both the Owner and Collaborator have all of the changes synced from the remote repo to their local repos. This includes doing a git pull to ensure that you have all changes locally, and ensuring that the Git tab in RStudio doesn’t show any changes that need to be committed.\n\n\nStep 2: Owner makes a change and commits locally\nFrom this clean slate, the Owner will first modify and commit a small change. The Owner should add their name on a specific line of the README.md file (we will change the title in line 1). Save and commit the change (but DO NOT push). The Owner should now have a local but unpushed commit that the Collaborator does not yet have access to.\n\n\nStep 3: Collaborator makes a change and commits on the same line\nNow, the Collaborator will modify and commit a small change. The Collaborator should add their name to the same line of the README.md file (we will again change the title in line 1). Save and commit the change (but DO NOT push). The Collaborator should now also have a local but unpushed commit that the Owner does not yet have access to.\nAt this point, both the Owner and Collaborator have committed local changes, but neither have tried to share their changes via GitHub.\n\n\nStep 4: Collaborator pushes the file to GitHub\nSharing starts when the Collaborator pushes their changes to the GitHub repo, which updates GitHub with their version of the file. The Owner is now one revision behind, but doesn’t know it yet.\n\n\nStep 5: Owner pushes their changes and gets an error\nAt this point, the Owner tries to push their change to the repository, which triggers an error from GitHub. While the error message is long, it tells you everything needed (that the Owner’s repository doesn’t reflect the changes on GitHub, and that they need to pull before they can push).\n\n\n\nStep 6: Owner pulls from GitHub to get Collaborator changes\nFollowing the error message, the Owner pulls the changes from GitHub, and gets another, different error message. Here, it indicates that there is a merge conflict because of the conflicting lines.\n\nIn the Git pane of RStudio, the file is also flagged with an orange U, which stands for an unresolved merge conflict.\n\n\n\nStep 7: Owner edits the file to resolve the conflict\nTo resolve the conflict, the Owner now needs to edit the file. Again, as indicated above, Git has flagged the locations in the file where a conflict occurred with &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt;. The Owner should edit the file, merging whatever changes are appropriate until the conflicting lines read how they should, and eliminate all of the marker lines with &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt;.\n\nOf course, for scripts and programs, resolving the changes means more than just merging the text – whoever is doing the merging should make sure that the code runs properly and that none of the logic of the program has been broken.\n\n\n\nStep 8: Owner commits the resolved changes\nFrom this point forward, things proceed as normal. The Owner first adds the file, which changes the orange U to a blue M for modified. Then, the Owner commits the changes locally. The Owner now has a resolved version of the file on their system.\n\n\n\nStep 9: Owner pushes the resolved changes to GitHub\nThe Owner can now push the changes, without error, to GitHub.\n\n\n\nStep 10: Collaborator pulls the resolved changes from GitHub\nFinally, the Collaborator can pull from GitHub to get the changes (which include the resolved conflicted lines of code) that the Owner made.\n\n\nStep 11: Both can view commit history\nBoth the Collaborator and the Owner can view the history, which includes information about the conflict, the associated branch, and the merged changes.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Collaborating with Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "s05_github_collaboration.html#best-practices-to-avoid-merge-conflicts",
+    "href": "s05_github_collaboration.html#best-practices-to-avoid-merge-conflicts",
+    "title": "Collaborating with Git and GitHub",
+    "section": "5 Best practices to avoid merge conflicts",
+    "text": "5 Best practices to avoid merge conflicts\nSome basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:\n\n\n\n\n\nXKCD 1597\n\n\n\nCommunicate often and set up effective communication channels\nTell each other what you are working on\nStart your working session with a pull\nPull immediately after you commit and before you push\nCommit often in small chunks (this helps you organize your work!)\nMake sure you and who you are collaborating with all fully understand the Git workflow you’re using (aka make sure you’re on the same page before you start)!\n\nA good workflow is encapsulated as follows:\nPull -&gt; Edit -&gt; Save -&gt; Commit -&gt; Pull -&gt; (OPTIONAL) Fix any merge conflicts -&gt; Push",
+    "crumbs": [
+      "Working Groups Learning",
+      "Collaborating with Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "s05_github_collaboration.html#a-note-on-advanced-collaboration-techniques",
+    "href": "s05_github_collaboration.html#a-note-on-advanced-collaboration-techniques",
+    "title": "Collaborating with Git and GitHub",
+    "section": "6 A Note on Advanced Collaboration Techniques",
+    "text": "6 A Note on Advanced Collaboration Techniques\nThere are many Git and GitHub collaboration techniques, some more advanced than others. Here is a table for your reference on a few popular Git collaboration workflow strategies and tools.\n\n\n\n\n\n\n\n\n\nCollaboration Technique\nBenefits\nWhen to Use\nWhen Not to Use\n\n\n\n\nBranch Management Strategies\n1. Enables parallel development and experimentation2. Facilitates isolation of features or bug fixes3. Provides flexibility and control over project workflows\nWhen working on larger projects with multiple features or bug fixes simultaneously.When you want to maintain a stable main branch while developing new features or resolving issues on separate branches.When collaborating with teammates on different aspects of a project and later integrating their changes.\nWhen working on small projects with a single developer or limited codebase.When the project scope is simple and doesn’t require extensive branch management.When there is no need to isolate features or bug fixes.\n\n\nCode Review Practices\n1. Enhances code quality and correctness through feedback2. Promotes knowledge sharing and learning within the team3. Helps identify bugs, improve performance, and ensure adherence to coding standards\nWhen collaborating on a codebase with team members to ensure code quality and maintain best practices.When you want to receive feedback and suggestions on your code to improve its readability, efficiency, or functionality.When working on critical or complex code that requires an extra layer of scrutiny before merging it into the main branch.\nWhen working on personal projects or small codebases with no collaboration involved.When time constraints or project size make it impractical to conduct code reviews.When the codebase is less critical or has low complexity.\n\n\nForking\n1. Enables independent experimentation and development2. Provides a way to contribute to a project without direct access3. Allows for creating separate, standalone copies of a repository\nWhen you want to contribute to a project without having direct write access to the original repository.When you want to work on an independent variation or extension of an existing project.When experimenting with changes or modifications to a project while keeping the original repository intact.\nWhen collaborating on a project with direct write access to the original repository.When the project does not allow external contributions or forking.When the project size or complexity doesn’t justify the need for independent variations.\n\n\nPull Requests\n1. Facilitates code review and discussion2. Allows for collaboration and feedback from team members3. Enables better organization and tracking of proposed changes\nWhen working on a shared repository with a team and wanting to contribute changes in a controlled and collaborative manner.When you want to propose changes to a project managed by others and seek review and approval before merging them into the main codebase.\nWhen working on personal projects or individual coding tasks without the need for collaboration.When immediate changes or fixes are required without review processes.When working on projects with a small team or single developer with direct write access to the repository.\n\n\n\nThe “When Not to Use” column provides insights into situations where it may be less appropriate / unnecessary to use each collaboration technique, helping you make informed decisions based on the specific context and requirements of your project.\nThese techniques provide different benefits and are used in various collaboration scenarios, depending on the project’s needs and team dynamics.\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Collaborating with Git and GitHub"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html",
+    "href": "s11_data_resources.html",
+    "title": "Data & Computational Resources",
+    "section": "",
+    "text": "Explore the core infrastructure available to support your research—from managing large datasets to conducting computationally intensive analyses and sharing your results openly and reproducibly.",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html#data-storage-management",
+    "href": "s11_data_resources.html#data-storage-management",
+    "title": "Data & Computational Resources",
+    "section": "1 Data Storage & Management",
+    "text": "1 Data Storage & Management\nWorking groups are encouraged to use GitHub for version control and collaborative code development. However, GitHub has a 100 MB file size limit per file, making it unsuitable for storing large datasets. Depending on the size and format of your data, consider the following options:\n\nFor small datasets (&lt; 50 MB) that are published and accessible via a persistent web link (e.g., data from DataONE), you are encouraged to reference the URL directly within your scripts to minimize redundancy and streamline reproducibility.\nFor medium-sized datasets (larger than 50 MB but smaller than 100 GB) or unpublished data that need to be shared internally, use a shared Google Drive. Many working groups already have shared Drives—if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the \"data\" folder in the shared Google Drive for consistency and ease of use.\nFor large datasets (&gt; 100 GB), especially if you need to process the data using multiple cores, please reach out to the Data Science Trainer to coordinate access to NCEAS data servers. This ensures appropriate infrastructure for high-capacity and large-scale processing.",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html#high-performance-parallel-computing",
+    "href": "s11_data_resources.html#high-performance-parallel-computing",
+    "title": "Data & Computational Resources",
+    "section": "2 High-Performance & Parallel Computing",
+    "text": "2 High-Performance & Parallel Computing\nWorking groups at NCEAS can request access to high-performance computing (HPC) resources to support large-scale processing and computation.\n\nTo obtain HPC access with R/RStudio pre-installed, contact the Data Science Trainer to obtain access to the Aurora server.\nIf you’re working with a large dataset, using the Parquet file format can significantly improve read/write and computation speed. Parquet is a columnar storage format that allows for efficient compression and faster querying, especially when only a subset of columns is needed. Please see the training materials for how to read and write Parquet files.\nFor parallel computation, please see the tutorials for Python and R. These resources can help you scale your workflows efficiently across multiple cores or nodes.",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html#r-tips",
+    "href": "s11_data_resources.html#r-tips",
+    "title": "Data & Computational Resources",
+    "section": "3 R Tips",
+    "text": "3 R Tips\nHere are some optional R modules that fall outside our regular working group training topics. If you have questions about R programming, feel free to reach out—we can develop a custom module as part of our working group resources. These topics are designed to strengthen your data visualization and analysis skills using R:\n\nUsing sf for Spatial Data & Intro to Making Maps\nA hands-on tutorial introducing spatial data operations and basic mapping in R.\n📍 View the tutorial",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html#data-sharing-publishing",
+    "href": "s11_data_resources.html#data-sharing-publishing",
+    "title": "Data & Computational Resources",
+    "section": "4 Data Sharing & Publishing",
+    "text": "4 Data Sharing & Publishing\nTo support open and reproducible science, NCEAS encourages working groups to make their data and code Findable. See the relevant module developed by the NCEAS-LTER team.\n\nConsider publishing your datasets in KNB for long-term preservation and reproducibility of your research.\nAlternatively, publish datasets in trusted repositories such as the Environmental Data Initiative (EDI) using tools like ezEML for metadata creation.\nCode should be versioned in GitHub and published through Zenodo to obtain a DOI, following Github –&gt; Zenodo steps.\nThe DataOne portal service offers an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps—all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataOne network. The service is currently free and ideal for long-term access and visibility of your project’s outputs.",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html#relevant-nceas-resources",
+    "href": "s11_data_resources.html#relevant-nceas-resources",
+    "title": "Data & Computational Resources",
+    "section": "5 Relevant NCEAS Resources",
+    "text": "5 Relevant NCEAS Resources\n\nLTER Scientific Computing Team Website\nResources and tools from the LTER community focused on scientific computing best practices.\nNCEAS Resources for Working Groups\nA curated collection of guidance and tools drawn from NCEAS’s extensive experience supporting synthesis science.\nNCEAS Hight Performance Computing\nAn overview of high performance computing available to NCEAS working groups.",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s11_data_resources.html#similar-short-courses-and-workshops",
+    "href": "s11_data_resources.html#similar-short-courses-and-workshops",
+    "title": "Data & Computational Resources",
+    "section": "6 Similar Short Courses and Workshops",
+    "text": "6 Similar Short Courses and Workshops\n\nSynthesis Skills for Early Career Researchers (SSECR)\nAn LTER course designed to build foundational synthesis and collaboration skills.\nLTER Scientific Computing Team\nA collection of resources and tutorials on scientific computing best practices from the LTER community.\nGitHub Repositories Education series A collection of educational materials and tutorials developed by the LTER community.\nEcological Data Synthesis: A Primer on Essential Methods A comprehensive guide to methods and best practices for ecological data synthesis.\nCarpentry @ UCSB library\nA list of the free training provided by the UCSB library, including various R and Python courses for the coming quarter.",
+    "crumbs": [
+      "Additional Resources",
+      "Data & Computational Resources"
+    ]
+  },
+  {
+    "objectID": "s06_lecture_communication_plan.html",
+    "href": "s06_lecture_communication_plan.html",
+    "title": "Building a Communications Strategy",
+    "section": "",
+    "text": "Workshop Description\nEffective science communication starts long before results are published and develops alongside the research itself. This interactive Zoom workshop is designed for scientific working groups who want to think more strategically about communication and integrate it into their collaborative process.\nParticipants will learn how to clarify communication goals, identify priority audiences, and craft audience-centered messages and learn how to use tools such as the Compass SciComm Message Box. The workshop focuses on building shared understanding and practical approaches that working groups can revisit and apply throughout their project. Participants will leave better equipped to make intentional communication decisions and support the use and impact of their science.\n\n\n\n\n\n\n\n\nTipLearning Objectives\n\n\n\nBy the end of this workshop, participants will be able to:\n\nDescribe how strategic communication can be integrated into working group science throughout the life of a project, not only at publication\nApply a structured framework (e.g., the Compass SciComm Message Box) to think through audiences, messages, and relevance\nIdentify priority audiences and clarify why their science matters to those groups\nRecognize how communication goals, messages, and platforms are connected and evolve over time\nIdentify practical next steps for incorporating communication planning into future working group meetings\n\n\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.\n\n\n\n\nResources\n\nMessage box Workbook\nMessage box blank template",
+    "crumbs": [
+      "Working Groups Learning",
+      "Building a Communications Strategy"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#workshop-description",
+    "href": "s01_lecture_facilitating_working_group.html#workshop-description",
+    "title": "Facilitating a successful working group",
+    "section": "Workshop Description",
+    "text": "Workshop Description\nLearn how to effectively manage a working group from before the first meeting, during the first meeting, and what comes next. We will discuss how to align expectations, general tips on communicating with the team, and what to expect from the working group process. This workshop will also touch on project management and facilitation tips with plenty of time to ask questions to our professional facilitators.\n\n\n\n\n\n\nTipLearning Objectives\n\n\n\n\nRecognize best practices for designing, running, and sustaining a successful working group from initiation through completion\nApply strategies for effective communication, collaboration, and group norm-setting to foster inclusive participation\nUse practical facilitation tools and techniques to guide discussions, manage conflict, and navigate challenging group dynamics\nUnderstand the full lifecycle of a working group—including logistics, project management, and decision-making—and identify the factors that make NCEAS-style working groups uniquely effective.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#foundations-of-a-successful-working-group",
+    "href": "s01_lecture_facilitating_working_group.html#foundations-of-a-successful-working-group",
+    "title": "Facilitating a successful working group",
+    "section": "1 Foundations of a Successful Working Group",
+    "text": "1 Foundations of a Successful Working Group\n\nStart with a shared vision and clarify what excites participants about the project.\nEstablish communication and coordination plans early.\nSet group norms and ground rules at the first meeting to manage expectations over a multi-year commitment.\nBuild in unstructured time (walks, social events, informal chats) to strengthen relationships.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#facilitation-priorities",
+    "href": "s01_lecture_facilitating_working_group.html#facilitation-priorities",
+    "title": "Facilitating a successful working group",
+    "section": "2 Facilitation Priorities",
+    "text": "2 Facilitation Priorities\n\nCreate a space where everyone feels they can contribute (inclusive practices, attending to power dynamics).\nBegin with purpose and principles—aligning on why the group exists and its shared goals.\nEncourage divergent thinking to generate innovative solutions.\nClose well—synthesize discussion, clarify next steps, and keep momentum going.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#techniques-for-inclusive-participation",
+    "href": "s01_lecture_facilitating_working_group.html#techniques-for-inclusive-participation",
+    "title": "Facilitating a successful working group",
+    "section": "3 Techniques for Inclusive Participation",
+    "text": "3 Techniques for Inclusive Participation\n\nUse varied participation formats: silent reflection, round robin, small groups, and plenary sessions.\nOffer multiple channels for input: verbal, written, visual, informal, formal.\nTrack who speaks, invite quieter voices, and address dominance or imbalance in participation.\nLeverage “liberating structures” like Nine Whys (clarifying purpose) and 1-2-4-All (inclusive brainstorming).",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#navigating-the-groan-zone",
+    "href": "s01_lecture_facilitating_working_group.html#navigating-the-groan-zone",
+    "title": "Facilitating a successful working group",
+    "section": "4 Navigating the “Groan Zone”",
+    "text": "4 Navigating the “Groan Zone”\n\nWorking groups naturally pass through a phase of divergent ideas and uncertainty (“groan zone”).\nRecognize this as a productive stage, not failure.\nMove toward convergence with clear proposals, criteria for decision-making, and processes to combine ideas.\nUse facilitation tools to manage tension and maintain forward progress.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#project-management-and-logistics",
+    "href": "s01_lecture_facilitating_working_group.html#project-management-and-logistics",
+    "title": "Facilitating a successful working group",
+    "section": "5 Project Management and Logistics",
+    "text": "5 Project Management and Logistics\n\nTreat project management as the “engine” that keeps ideas moving toward outcomes.\nKeep a decision log to record why choices were made (avoids confusion later).\nDevelop a work plan with clear responsibilities, deliverables, and timelines.\nUse the project management tool that the group will actually use—whether GitHub, Slack, Google Docs, or even Excel.\nRegularly review and update the plan; appoint someone to track progress across subgroups.",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
+    "objectID": "s01_lecture_facilitating_working_group.html#communication-between-meetings",
+    "href": "s01_lecture_facilitating_working_group.html#communication-between-meetings",
+    "title": "Facilitating a successful working group",
+    "section": "6 Communication Between Meetings",
+    "text": "6 Communication Between Meetings\n\nVirtual meetings should be efficient, interactive, and sustain collaboration.\nUse shared notes or communication platforms (Slack, email, Google chat) to keep everyone aligned.\nEncourage subgroups to share “key takeaways and next steps” with the broader team.\nStrategies that can quickly gauge agreement and readiness to move forward\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.\n\n\n\nKey Resources\n\nNCEAS’ Resources for Working Groups webpage\nNCEAS’ Guide to successful scientific working groups\nNCEAS’ Checklists! for successful scientific working groups\nLiberating Structures for facilitation",
+    "crumbs": [
+      "Working Groups Learning",
+      "Facilitating a successful working group"
+    ]
+  },
+  {
     "objectID": "s12_lecture_canvas.html",
     "href": "s12_lecture_canvas.html",
     "title": "Canva 101",
@@ -513,69 +568,14 @@
     ]
   },
   {
-    "objectID": "s02_github_introduction.html#introduction-to-version-control",
-    "href": "s02_github_introduction.html#introduction-to-version-control",
-    "title": "Intro to Git and GitHub",
-    "section": "1 Introduction to Version Control",
-    "text": "1 Introduction to Version Control\n\n\n\n\n\nEvery file in the scientific process changes. Manuscripts are edited. Figures get revised. Code gets fixed when bugs are discovered. Sometimes those fixes lead to even more bugs, leading to more changes in the code base. Data files get combined together. Sometimes those same files are split and combined again. In just one research project, we can expect thousands of changes to occur.\nThese changes are important to track, and yet, we often use simplistic file names to do so. Many of us have experienced renaming a document or script multiple times with the disingenuous addition of “final” to the file name (like the comic above demonstrates).\nYou might think there is a better way, and you’d be right: version control. Version control provides an organized and transparent way to track changes in code and additional files. This practice was designed for software development, but is easily applicable to scientific programming.\nThe version control system we’ll be diving into is Git, the most widely used modern version control system in the world.\n\nWith Git we can enhance our workflow:\n\nEliminate the need for cryptic filenames and comments to track our work.\nProvide detailed descriptions of our changes through commits, making it easier to understand the reasons behind code modifications.\nUse commits to access and even execute older versions of our code.\nAssign meaningful tags to specific versions of our code.\nAdditionally, GitHub, as a centralized hosting platform for all the git repositories, offers a powerful distributed feature. Multiple individuals can work on the same analysis concurrently on their own computers, with the ability to merge everyone’s changes together.",
+    "objectID": "s04_github_project_management.html",
+    "href": "s04_github_project_management.html",
+    "title": "Project Management on GitHub",
+    "section": "",
+    "text": "TipLearning Objectives\n\n\n\n\nUnderstand the GitHub structure for managing team and project\nCreate, manage, and effectively use GitHub Issues to plan, assign, and monitor tasks.\nSet up and customize GitHub Projects to visualize workflows, prioritize tasks, and streamline team coordination.\n\n\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
     "crumbs": [
       "Working Groups Learning",
-      "Intro to Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s02_github_introduction.html#introduction-to-git-github",
-    "href": "s02_github_introduction.html#introduction-to-git-github",
-    "title": "Intro to Git and GitHub",
-    "section": "2 Introduction to Git + GitHub",
-    "text": "2 Introduction to Git + GitHub\n\n2.1 What exactly are Git and GitHub?\n\nGit:\n\nan open-source distributed version control software\ndesigned to manage the versioning and tracking of source code files and project history\noperates locally on your computer, allowing you to create repositories, and track changes\nprovides features such as committing changes, branching and merging code, reverting to previous versions, and managing project history\nworks directly with the files on your computer and does not require a network connection to perform most operations\nprimarily used through the command-line interface (CLI, e.g. Terminal), but also has various GUI tools available (e.g. RStudio IDE)\n\n\n\n\n\n\nGitHub:\n\nonline platform and service built around Git\nprovides a centralized hosting platform for Git repositories\nallows us to store, manage, and collaborate on their Git repositories in the cloud\noffers additional features on top of Git, such as a web-based interface, issue tracking, project management tools, pull requests, code review, and collaboration features\nenables easy sharing of code with others, facilitating collaboration and contribution to open source projects\nprovides a social aspect, allowing users to follow projects, star repositories, and discover new code\n\n\n\n\n\n\n\n2.2 Understanding how local working files, Git, and GitHub all work together\nIt can be a bit daunting to understand all the moving parts of the Git / GitHub life cycle (i.e. how file changes are tracked locally within repositories, then stored for safe-keeping and collaboration on remote repositories, then brought back down to a local machine(s) for continued development). It gets easier with practice, but we’ll explain (first in words, then with an illustration) at a high-level how things work:\n\n\nWhat is the difference between a “normal” folder vs. a Git repository\nWhether you’re a Mac or a PC user, you’ll likely have created a folder at some point in time for organizing files. Let’s pretend that we create a folder, called myFolder/, and add two files: myData.csv and myAnalysis.R. The contents of this folder are not currently version controlled – meaning, for example, that if we make some changes to myAnalysis.R that don’t quite work out, we have no way of accessing or reverting back to a previous version of myAnalysis.R (without remembering/rewriting things, of course).\nGit allows you to turn any “normal” folder, like myFolder/, into a Git repository – you’ll often see/hear this referenced as “initializing a Git repository”. When you initialize a folder on your local computer as a Git repository, a hidden .git/ folder is created within that folder (e.g. myFolder/.git/) – this .git/ folder is the Git repository. As you use Git commands to capture versions or “snapshots” of your work, those versions (and their associated metadata) get stored within the .git/ folder. This allows you to access and/or recover any previous versions of your work. If you delete .git/, you delete your project’s history.\n\n\nLet’s Look at a GitHub Repository\nHere are some things you might notice:\n\nFile view: A list of files and folders, showing when each was last modified and who made the most recent changes.\n\nCommit history: If you open the “Commits” tab, you can see the history of changes across all files. For example, you might notice that one of the collaborators was fixing errors in last commit.\n\nDetailed changes: Drilling into an individual commit reveals exactly what was changed in each file.\n\nTracking these changes—and linking them to released versions of code, data, and documentation—is exactly what Git and GitHub are designed for. They are especially powerful tools for managing scientific workflows, ensuring that code, figures, and manuscripts are versioned and reproducible.\n\n\n2.3 Git Vocabulary & Commands\nWe know the world of Git and GitHub can be daunting. Use these tables as references while you use Git and GitHub, and we encourage you to build upon this list as you become more comfortable with these tools.\nThis table contains essential terms and commands that complement intro to Git skills. They will get you far on personal and individual projects.\n\nEssential Git Commands\n\n\n\n\n\n\n\nTerm\nGit Command(s)\nDefinition\n\n\n\n\nAdd/Stage\ngit add [file]\nStaging marks a modified file in its current version to go into your next commit snapshot. You can also stage all modified files at the same time using git add .\n\n\nCommit\ngit commit\nRecords changes to the repository.\n\n\nCommit Message\ngit commit -m \"my commit message\"\nRecords changes to the repository and include a descriptive message (you should always include a commit message!).\n\n\nFetch\ngit fetch\nRetrieves changes from a remote repository but does not merge them into your local working file(s).\n\n\nPull\ngit pull\nRetrieves changes from a remote repository and merges them into your local working file(s).\n\n\nPush\ngit push\nSends local commits to a remote repository.\n\n\nStatus\ngit status\nShows the current status of the repository, including (un)staged files and branch information.\n\n\n\nThis table includes more advanced Git terms and commands that are commonly used in both individual and collaborative projects.\n\nAdvanced Git Commands\n\n\n\n\n\n\n\nTerm\nGit Command(s)\nDefinition\n\n\n\n\nBranch\ngit branch\nLists existing branches or creates a new branch.\n\n\nCheckout\ngit checkout [branch]\nSwitches to a different branch or restores files from a specific commit.\n\n\nClone\ngit clone [repository]\nCreates a local copy of a remote repository.\n\n\nDiff\ngit diff\nShows differences between files, commits, or branches.\n\n\nFork\n-\nCreates a personal copy of a repository under your GitHub account for independent development.\n\n\nLog\ngit log\nDisplays the commit history of the repository.\n\n\nMerge\ngit merge [branch]\nIntegrates changes from one branch into another branch.\n\n\nMerge Conflict\n-\nOccurs when Git cannot automatically merge changes from different branches, requiring manual resolution.\n\n\nPull Request (PR)\n-\nA request to merge changes from a branch into another branch, typically in a collaborative project.\n\n\nRebase\ngit rebase\nIntegrates changes from one branch onto another by modifying commit history.\n\n\nRemote\ngit remote\nManages remote repositories linked to the local repository.\n\n\nRepository\ngit init\nA directory where Git tracks and manages files and their versions.\n\n\nStash\ngit stash\nTemporarily saves changes that are not ready to be committed.\n\n\nTag\ngit tag\nAssigns a label or tag to a specific commit.\n\n\n\nGit has a rich set of commands and features, and there are many more terms beyond either table. Learn more by visiting the git documentation.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Intro to Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s02_github_introduction.html#gitgithub-workflow-at-a-glance",
-    "href": "s02_github_introduction.html#gitgithub-workflow-at-a-glance",
-    "title": "Intro to Git and GitHub",
-    "section": "3 Git–GitHub Workflow (at a glance)",
-    "text": "3 Git–GitHub Workflow (at a glance)\nThere are many valid workflows.\n\nFresh start: Create a repo on GitHub → clone locally → start coding.\nExisting project: Create a repo on GitHub → clone locally → add your existing files.\nCollaborator workflow: Clone an existing GitHub repo → edit locally → commit & push.\n\nIn this course we’ll demonstrate: Create a remote repository and clone to your local computer.\n\nExercise : Create a remote repository on GitHub\n\n\n\n\n\n\nExerciseExercise 1 - Setup\n\n\n\n\n\n\n\nLogin to GitHub\nClick the New repository button\nName it {FIRSTNAME}_test\nAdd a short description\nCheck the box to add a README.md file\nAdd a .gitignore file using the R template\nSet the LICENSE to Apache 2.0\n\n\n\n\n\nIf you are successful, you’ve now created your first repository! It has a couple of files that GitHub created for you: README.md, LICENSE, and .gitignore.\n\n\nExercise: Modify the README File\n\n\n\n\n\n\nExerciseExercise 2\n\n\n\n\n\n\nNavigate to the README.md file in the repository file listing, and edit it by clicking on the pencil icon (top right of the file):\n\nAdd a new level-2 header called ## Purpose.\n\nUnderneath, add some bullet points describing the purpose of the repository.\n\nWhen done, add a commit message and click the Commit changes button.\n\n\n\n\n\nCongratulations, you’ve now authored your first versioned commit! If you navigate back to the GitHub page for the repository, you’ll see your commit listed there, as well as the rendered README.md file.\n\n\nExercise: Clone to Local Computer and use Git locally in RStudio\n\n\n\n\n\n\nExerciseExercise 3\n\n\n\n\n\n\n\nCopy the repository URL from GitHub\nOpen RStudio\nGo to: File → New Project → Version Control → Git\n\nPaste the repository URL and choose a local folder\n\nClick Create Project\n\nEdit the readme file from Rstudio or copy a .R code into the folder\nCommit and push the changes to GitHub\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are prompted to provide your GitHub username and password when Pushing, it’s a good indicator that you did not set your GitHub Personal Access Token (PAT) correctly. You can redo the steps outlined in the GitHub Authentication section to (re)set your PAT, then Push again.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Intro to Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s02_github_introduction.html#best-practices-in-gitgithub",
-    "href": "s02_github_introduction.html#best-practices-in-gitgithub",
-    "title": "Intro to Git and GitHub",
-    "section": "4 Best Practices in Git/GitHub",
-    "text": "4 Best Practices in Git/GitHub\n\n4.1 File Size & Data\n\nKeep repositories small (&lt; 1 GB recommended)\n\nAvoid individual files &gt; 50 MB (GitHub hard limit is 100 MB)\n\nUse Git LFS for large binary files (media, big data)\n\nStore bulky datasets externally (e.g., EDI, Google Drive, Box) and link to them\n\n\n\n4.2 Account & Security\n\nEnable two-factor authentication (2FA) on GitHub\n\nNever commit secrets (API keys, passwords)\n\nUse .gitignore to exclude sensitive or unnecessary files\n\nAuthenticate with Personal Access Tokens (PATs) instead of passwords\n\nRegularly review and revoke old PATs or third-party app access\n\n\n\n4.3 Using .gitignore to Keep Repos Clean\n\nPrevents sensitive or unnecessary files from being tracked by Git\nCommon examples: large datasets, passwords, temporary files, system files\nHelps keep repositories reproducible and clutter-free\n\n\n\n4.4 Writing a Good README\n\nHelps others (and your future self) quickly understand your project\nEncourages reuse and collaboration\nActs as documentation “front door”\n\n\n\n4.5 Commit & Branching Practices\n\nWrite concise messages that explain why the change was made\n\nCommit early and often — avoid giant all-in-one commits\n\nEach commit should represent a logical unit of work\n\nUse branches for experimental work, Merge changes back into main using pull requests\n\nDelete merged branches to keep history tidy",
-    "crumbs": [
-      "Working Groups Learning",
-      "Intro to Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s02_github_introduction.html#go-further-with-git",
-    "href": "s02_github_introduction.html#go-further-with-git",
-    "title": "Intro to Git and GitHub",
-    "section": "5 Go further with Git",
-    "text": "5 Go further with Git\nThere is much more to Git and GitHub than we can cover in this brief tutorial. Later modules in the working group training series delve into additional advanced topics, including:\n\nResolving merge conflicts\nWorking with branches and merges\nChoosing between pull requests and direct contributions\nUsing GitHub Issues for project management and team collaboration\n\n\n\n\n\n\n\nImportantMissed the training?\n\n\n\nFind the video recording of this workshop in this link.",
-    "crumbs": [
-      "Working Groups Learning",
-      "Intro to Git and GitHub"
-    ]
-  },
-  {
-    "objectID": "s02_github_introduction.html#git-resources",
-    "href": "s02_github_introduction.html#git-resources",
-    "title": "Intro to Git and GitHub",
-    "section": "6 Git resources",
-    "text": "6 Git resources\n\nPro Git Book\nHappy Git and GitHub for the useR\nGitHub Documentation\nLearn Git Branching is an interactive tool to learn Git on the command line\nSoftware Carpentry Version Control with Git\nBitbucket’s tutorials on Git Workflows",
-    "crumbs": [
-      "Working Groups Learning",
-      "Intro to Git and GitHub"
+      "Project Management on GitHub"
     ]
   }
 ]
