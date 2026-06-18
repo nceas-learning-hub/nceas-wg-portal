@@ -3,6 +3,7 @@
 This is the development version, changes will be listed below as they are made.
 
 - Expands `.gitignore` and clarifies types of content listed therein
+- Adds README to repo
 
 ## Version 1.0
 
