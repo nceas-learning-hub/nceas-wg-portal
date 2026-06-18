@@ -1,5 +1,5 @@
 ---
-title: Setting Up R, RStudio, Git, and GitHub
+title: Setting Up Git & GitHub
 ---
 
 ## Install or update R

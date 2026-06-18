@@ -16,8 +16,9 @@ exercises: ### for custom theme callouts
 website:
   title: "NCEAS Training Series: Supporting Effective Collaboration in Working Groups"
   repo-url: https://github.com/nceas-learning-hub/nceas-wg-portal
+  repo-actions: [issue]
   favicon: images/logo_lh.png
-  bread-crumbs: true
+  bread-crumbs: false
   navbar:
     right:
       - text: "Instructors"
@@ -33,28 +34,43 @@ website:
     title: "Materials"
     search: true
     tools:
-      - icon: house-door-fill
-        href: https://www.nceas.ucsb.edu/learning-hub
       - icon: github
         href: nceas-learning-hub.github.io/nceas-wg-portal
+      - icon: house-door-fill
+        href: https://www.nceas.ucsb.edu/learning-hub
     contents:
-      - index.qmd
-      - section: "Working Groups Learning"
+      - text: "Series Home"
+        href: index.qmd
+      - text: "NCEAS Resources"
+        href: nceas-resources.qmd
+      - section: "Git & GitHub Trainings"
         contents:
-        - s01_lecture_facilitating_working_group.qmd
-        - s02_github_introduction.qmd
-        - s12_lecture_canvas.qmd
-        - s03_lecture_data_mgmt_reproducibility.qmd
-        - s04_github_project_management.qmd
-        - s05_github_collaboration.qmd
-        - s06_lecture_communication_plan.qmd
-      - section: "Additional Resources"
+        - text: "Setup"
+          href: git-github_setup.qmd
+        - text: "Fundamentals"
+          href: git-github_fundamentals.qmd
+        - text: "Advanced Features"
+          href: git-github_advanced.qmd
+        - text: "Project Management"
+          href: git-github_project-mgmt.qmd
+      - section: "Data Science Trainings"
         contents:
-        - s07_lecture_one_pagers.qmd
-        - s08_lecture_communication_results.qmd
-        - s09_r_git_install_guide.qmd
-        - s10_r_parallel_computing.qmd
-        - s11_data_resources.qmd
+        - text: "Data Management & Reproducibility"
+          href: data-sci_reproducibility.qmd
+        - text: "Parallel Computing in R"
+          href: data-sci_parallel-computing.qmd
+      - section: "Team Science Trainings"
+        contents:
+        - text: "Successful Facilitation"
+          href: team-sci_facilitation.qmd
+        - text: "Communication Plans"
+          href: team-sci_communication-plan.qmd
+        - text: "Communicating Results"
+          href: team-sci_communicate-external.qmd
+        - text: "Making a One Pager"
+          href: team-sci_one-pagers.qmd
+        - text: "Canva 101"
+          href: team-sci_canva-basics.qmd
   page-footer:
     center: "Copyright &copy; 2026, NCEAS"
 

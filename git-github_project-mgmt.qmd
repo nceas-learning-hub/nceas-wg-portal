@@ -1,5 +1,5 @@
 ---
-title: Project Management on GitHub
+title: Project Management with GitHub
 ---
 
 <iframe width="560" height="380"src="https://docs.google.com/presentation/d/1-DHMTlneOTZXYFDTzzS6ycaLbfLmSHQpXQzNKb_pVYA/preview" allowfullscreen></iframe>

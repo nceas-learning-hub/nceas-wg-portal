@@ -1,5 +1,5 @@
 ---
-title: "Canva 101"
+title: "Graphic Design with Canva"
 ---
 
 <iframe width="560" height="380"src="https://docs.google.com/presentation/d/1hRpsOjCLOCGKgV149oK1FEYtz6ID54ZNtCSDdg0rUmU/preview" allowfullscreen></iframe>

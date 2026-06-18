@@ -1,5 +1,5 @@
 ---
-title: Collaborating with Git and GitHub
+title: "Git & GitHub: Advanced Features"
 ---
 <iframe width="560" height="380"src="https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8/preview" allowfullscreen></iframe>
 
