@@ -2,6 +2,8 @@
 
 This is the development version, changes will be listed below as they are made.
 
+- Renames all workshop lessons to group them by category (and mirrors that grouping in website sidebar)
+- Adds custom 404 page
 - Expands `.gitignore` and clarifies types of content listed therein
 - Adds README to repo
 
