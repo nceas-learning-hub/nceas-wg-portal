@@ -1,10 +1,10 @@
-## Version 1.0.900
+## Version 1.0.00.900
 
 This is the development version, changes will be listed below as they are made.
 
 - Expands `.gitignore` and clarifies types of content listed therein
 - Adds README to repo
 
-## Version 1.0
+## Version 1.0.00
 
 Version of the NCEAS working group training materials created in June 2025 and maintained/updated through March 2026
