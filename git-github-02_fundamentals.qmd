@@ -2,6 +2,10 @@
 title: "Git & GitHub: Fundamentals"
 ---
 
+<!---
+Old (as of June 2026) GoogleSlides deck on this topic here: https://docs.google.com/presentation/d/1V5WJYPTcsrKwkiKr5Z4Hzc6m3D2al4cq0j-rBawPkoU/edit?slide=id.g27bcc787444_0_0#slide=id.g27bcc787444_0_0
+--->
+
 :::{.callout-tip icon="false"}
 ### {{< fa brain >}} Learning Objectives
 
@@ -655,9 +659,3 @@ There's a lot we haven't covered in this tutorial. There are some great and much
 - [Learn Git Branching](https://learngitbranching.js.org/) is an interactive tool to learn Git on the command line
 - [Software Carpentry Version Control with Git](https://swcarpentry.github.io/git-novice/)
 - Bitbucket's tutorials on [Git Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-
-
-
-
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1V5WJYPTcsrKwkiKr5Z4Hzc6m3D2al4cq0j-rBawPkoU/preview" allowfullscreen></iframe>
-
