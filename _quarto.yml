@@ -35,8 +35,6 @@ website:
     contents:
       - text: "Series Home"
         href: index.qmd
-      - text: "NCEAS Resources"
-        href: nceas-resources.qmd
       - section: "Git & GitHub Trainings"
         contents:
         - text: "Setup"
@@ -65,6 +63,8 @@ website:
           href: team-sci_one-pagers.qmd
         - text: "Canva 101"
           href: team-sci_canva-basics.qmd
+      - text: "Other NCEAS Resources"
+        href: nceas-resources.qmd
   page-footer:
     center: "Copyright &copy; 2026, [NCEAS](https://www.nceas.ucsb.edu/) | [{{< fa scale-balanced >}} CC 4.0 International](http://creativecommons.org/licenses/by/4.0/) "
 
