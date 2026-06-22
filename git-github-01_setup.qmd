@@ -19,7 +19,7 @@ If you already have R, check that you have **at least version 4.5.0** by running
 
 ## Install an IDE
 
-Next, **you'll need to install an <u>i</u>ntegrated <u>d</u>evelopment <u>e</u>nvironment** or "IDE". This will allow you to write code and use Git with a neat, easy-to-use interface. There are a number of IDEs that exist but RStudio or Positron are reasonable 'first choices' for those coding primarily in R
+Next, **you'll need to install an <u>i</u>ntegrated <u>d</u>evelopment <u>e</u>nvironment** or "IDE". This is a fancy term for any piece of software that lets you write software. Essentially, your IDE will allow you to write code and use Git with a neat, easy-to-use interface. There are a number of IDEs that exist but [RStudio](https://posit.co/download/rstudio-desktop/) or [Positron](https://positron.posit.co/) are reasonable 'first choices' for those coding primarily in R
 
 :::{.panel-tabset}
 ### Positron
