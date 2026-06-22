@@ -46,13 +46,13 @@ website:
       - section: "Git & GitHub Trainings"
         contents:
         - text: "Setup"
-          href: git-github_setup.qmd
+          href: git-github-01_setup.qmd
         - text: "Fundamentals"
-          href: git-github_fundamentals.qmd
+          href: git-github-02_fundamentals.qmd
         - text: "Advanced Features"
-          href: git-github_advanced.qmd
+          href: git-github-03_advanced.qmd
         - text: "Project Management"
-          href: git-github_project-mgmt.qmd
+          href: git-github-04_project-mgmt.qmd
       - section: "Data Science Trainings"
         contents:
         - text: "Data Management & Reproducibility"
