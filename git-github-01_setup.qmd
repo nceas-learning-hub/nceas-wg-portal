@@ -1,163 +1,303 @@
 ---
 title: Setting Up Git & GitHub
+code-annotations: hover
 ---
 
-## Install or update R
-
-To install R, visit [cloud.r-project.org](https://cloud.r-project.org/) to download the most recent version for your operating system. If you already have R, check that you have at least version 4.0.0 by running the following R code below. If your R version is 3.X, please update to avoid any issues related to earlier version of the R. 
-
-```{r eval=FALSE}
-
-# Run me in RStudio's "Console"
-version$version.string
-```
-
-## Install or update RStudio
-
-While R is a programming language, RStudio is a software (often referred to as an IDE, **I**ntegrated **D**evelopment **E**nvironment) that provides R programmers with a neat, easy-to-use interface for coding in R. There are a number of IDEs out there, but RStudio is arguably the best and definitely most popular among R programmers.
-
-**Note:** RStudio will not work without R installed, and you won't particularly enjoy using R without having RStudio installed. Be sure to install *both*!
-
-```{r, echo = FALSE, fig.align="center", fig.cap = "Image Credit: Manny Gimond | Accessible at https://mgimond.github.io/ES218/R_vs_RStudio.html"}
-knitr::include_graphics("images/r_git_install_guide/R_RStudio.png")
-```
-
-- **New install:** To install RStudio, visit <https://posit.co/download/rstudio-desktop/>. Download the free (“Open Source Edition”) Desktop version for your operating system. You should install the most up-to-date version available that is supported by your operating system.
-
-- **Update:** If you already have RStudio and need to update: Open RStudio, and under ‘Help’ in the top menu, choose ‘Check for updates.’ If you have the most recent release, it will return ‘No update available. You are running the most recent version of RStudio.’ Otherwise, you should follow the instructions to install an updated version.
-
-- Open RStudio: **If upon opening RStudio you are prompted to install Command Line Tools, do it.**
-
-::: {.callout-note}
-## for Mac user
-**Potential issue:**  
-Mac users may be prompted to install additional tools when using Git.
-
-**Steps if needed:**
-
-- To install command line tools (if you’re not automatically prompted), run in the Terminal tab in RStudio: `xcode-select --install`
-
-- Visit [xquartz.org](https://www.xquartz.org/) to download & install XQuartz
-::: 
-
-## Check for git
+If you are participating in this training series, we are so excited to help you acquire new or hone existing technical and interpersonal skills in the realm of synthesis science! To ensure that you get the most out of this training series, **we recommend that you take the following steps _<u>before</u>_ the first week.**
 
 ::: {.callout-important}
+#### Note on Organization-Owned Computers
 
-- **macOS and Linux** usually come with Git pre-installed  
-- **Windows** may or may not include Git, depending on the version  
-  
+If your organization has a dedicated IT team that has sole power to install software on your computer, you will need to contact them before the training to do the installation bits of the preparation steps we outline below.
 :::
 
-You should already have git on your device, but let’s check for it anyway. 
+## Install R
 
-- Open RStudio
+"R" is the coding language we'll use for all of the code-related training modules. **Follow the relevant instructions for your operating system here: [r-project.org](https://www.r-project.org/).**
 
-- In the Terminal tab, run the following command:
+If you already have R, check that you have **at least version 4.5.0** by running the following R code: `version$version.string`. If your R version is earlier than that version, please update to minimize avoidable issues.
 
-```{bash eval=FALSE}
-which git
-```
+## Install an IDE
 
-- If after running that you get something that looks like a file path to git on your computer, then you have git installed. For example, that might return something like this (or it could differ a bit): `/usr/local/bin/git`. If you instead get no response at all, you should download & install git from here: [git-scm.com/downloads](https://git-scm.com/downloads)
+Next, **you'll need to install an <u>i</u>ntegrated <u>d</u>evelopment <u>e</u>nvironment** or "IDE". This will allow you to write code and use Git with a neat, easy-to-use interface. There are a number of IDEs that exist but RStudio or Positron are reasonable 'first choices' for those coding primarily in R
 
-::: {.callout-important}
-Is it necessary to have Git installed in your machine for this workshop. GitHub's [Git Guides](https://github.com/git-guides) are a really wonderful resource to start learning about this topic.
+:::{.panel-tabset}
+### Positron
+
+Follow the relevant instructions for your operating system at [positron.posit.co](https://positron.posit.co/). Update your version if your version number is much lower than what you see on the preceding link.
+
+### RStudio
+
+Follow the relevant instructions for your operating system at [posit.co/products/open-source/rstudio](https://posit.co/products/open-source/rstudio). Update your version if your version number is much lower than what you see on the preceding link.
+
 :::
 
-:::{.callout-warning} 
-## Troubleshooting
+:::callout-note
+### Positron versus RStudio
 
-If you download Git and the Git commands still not recognized by your computer, check your computer's PATHS.
+You may already be familiar and comfortable with RStudio (we are too!).  Positron is the next generation IDE developed by the same folks who made RStudio, and it has better integration for Quarto, non-R programming languags, and Git/GitHub. Because the makers of RStudio themselves are pushing this transition, we feel it is worth making the leap for this training.
 
-To do this, follow the instructions in [this link](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) on how to set the right PATHS.
-
-
-Restart your computer and try running `git --version` on the terminal. You should get something like `git version XX.XX` (but with numbers instead of Xs).
-
-**If you see the git version printed out in your terminal, you are all set**
+That said, nearly everything in this training will work equally well in RStudio!
 :::
 
+## Install Necessary R Packages
 
-## Create a GitHub account 
+So-called "base R" contains some useful, fundamental operations from the moment you install it. However, there are a variety of external packages that contain more specific tools that can also be extremely useful to you. Most of these we will provide installation instructions for in the lessons that use them, but there are a few that it will benefit you to install now. **Choose one option and run the respective {{< fa brands r-project >}} R code in the "Console" pane of Positron/RStudio.**
 
-If you don’t already have a GitHub account, go to [github](https://github.com/).com and create one. Here are helpful considerations for choosing a username: [happygitwithr.com/github-acct.html](https://happygitwithr.com/github-acct.html).
+::: {.panel-tabset}
 
+### {{< fa brands r-project >}} base R (standard)
 
-## Connect Git and GitHub in RStudio
+This is the built-in function to install packages in R.  This is what you will most likely see "in the wild" and works well.
 
-The last step to take before you’re all set for the workshop is to get these components talking to one another! You will have to introduce you GitHub credentials to your local computer, using RStudio and then create a Personal Access Token (PAT) on your GitHub account that will allow to transfer the changes you have made to your code in your computer to GitHub. The steps below will guide you on how to get this set up.
-
-### Install R packages
-
-- Install the `usethis` and `gitcreds` packages in R by running the following in the RStudio Console: 
-
-```{r eval=FALSE}
-install.packages(“usethis”)
-
+```r
+install.packages("usethis")
 install.packages("gitcreds")
 ```
-    
-A lot of scary looking red text will show up while this is installing - don’t panic. If you get to the end and see something like below (with no error) it’s installed successfully.
 
-```{r, echo = FALSE, fig.out="60%", fig.align="center"}
-knitr::include_graphics("images/r_git_install_guide/install-pkg-success.png")
+::::{.callout-warning}
+Do not use `install.packages()` in a script, though, since it will re-install the package every time you run it - not good practice for reproducibility or performance.
+::::
+
+### {{< fa brands r-project >}} `librarian` (recommended)
+
+The `librarian` package is an improved way to install and manage R packages.  It will test to see if the package is already installed, and if not, it will install it for you, and then load the package.  
+
+`librarian::shelf(package)` takes the place of `install.packages("pakage")` + `library(package)`.  
+
+```r
+## install.packages("librarian")
+librarian::shelf(usethis, gitcreds) # <1>
+```
+1. The `shelf` function will automatically install the packages that you don't already have and then load all the identified libraries
+
+::::{.callout-tip}
+Because `librarian::shelf()` checks to see if a package has already been installed, it is safe to include in a script!
+::::
+:::
+
+## Install Git
+
+**Git** is the name of the software that we can use to do "version control" for the code files we'll develop. We'll get into this more later but for now, it is enough to know this is analogous to Microsoft Word's "track changes" feature but with some extra tools that are great for code files.
+
+Installing Git differs slightly depending on your computer's operating system so check out the tabs below for the right option for you. These instructions are modified from Jennifer Bryan's excellent "[Happy Git and GitHub for the useR](https://happygitwithr.com/)" ebook.
+
+:::{.panel-tabset}
+### {{< fa brands apple >}} Mac
+
+Run the following {{< fa terminal >}} command line code.
+
+```
+xcode-select --install
 ```
 
+For more detailed instructions, see [here](https://happygitwithr.com/install-git#macos).
 
-### Setup your git config and GitHub PAT
+### {{< fa brands windows >}} Windows
 
-In the RStudio Console
+[Install Git for Windows](https://gitforwindows.org/) (a.k.a. "Git Bash"). When asked about "Adjusting your PATH environment", **select "Git from the command line and also from 3rd-party software"**.
 
-**Step 1:** set the user's global user.name and user.email and define integrate changes from one branch into another branch for all repositories.
+For more detailed instructions, see [here](https://happygitwithr.com/install-git#install-git-windows).
 
-```{r}
-#| eval: false
+### {{< fa brands linux >}} Linux
 
-usethis::use_git_config(user.name = "my_user_name", # <1>
-                        user.email = "my_email@nceas.ucsb.edu", # <2>
-                        pull.rebase = "false") # <3>
+Install Git via your distro's package manager (in the {{< fa terminal >}} Terminal).
+
+If you use Ubuntu or Debian Linux that {{< fa terminal >}} code is as follows:
 
 ```
+sudo apt-get install git
+```
 
-1. Add you exact same GitHub user name. Case and spelling matters!
+If instead you use Fedora or RedHat Linux the {{< fa terminal >}} code is instead:
 
-2. Set up your email address associated to you GitHub account.
+```
+sudo yum install git
+```
 
-3. Setting "merge" as the default strategy to integrate changes from one branch into another branch (for all repos). Check the note at the end of this chapter for more details.
+For more detailed instructions, see [here](https://happygitwithr.com/install-git#linux).
 
+:::
 
-**Step 2:** define the name of the branch that gets created when you make the first commit in a new Git repo
+Check that the installation was successful by running the following {{< fa terminal >}} command line code in the terminal (you may need to restart your computer first): 
 
-```{r}
-#| eval: false
+```bash
+git --version
+```
 
+If successful, you should see something like `git version 2.40.1.windows.1`.
+
+## Make a GitHub Account
+
+**GitHub** is a nice web interface for collaborating with other people who use Git. Later in the lifecycle of a project, GitHub is also useful for sharing and publicizing your code beyond your team and also has some potentially useful project management tools. 
+
+For this training:
+
+1. **Make a profile at [github.com](https://github.com/)** 
+2. _Consider_ adding a profile photo 
+    - Doing so will make you stand out relative to the default 'space invader' image your account will start with
+
+## Set Git Options
+
+**Before you can use Git, you need to tell it who you are** (a.k.a. you must set the global options). You can do this either with {{< fa terminal >}} command line code or with {{< fa brands r-project >}} R code from the `usethis` package. For this lesson we will use the `usethis` package. However, you can also find the command line code to reference in the future.
+
+::: {.callout-note}
+## What's the Terminal?
+
+Technically, the "Terminal" is an interface for the shell, a computer program. We use the Terminal to directly tell a computer what to do outside of R. This is different from the "Console" in your IDE (Positron, RStudio), which interprets R code and returns a value.
+
+The Terminal should be visible by default in your IDE, but if it is not, you can open it by clicking **Terminal** {{< fa arrow-right >}} **New Terminal**. A Terminal tab should now be open right next to the Console tab.
+:::
+
+::: {.callout-tip}
+## Don't Fear the Terminal!
+
+Most of our Git operations will be done with R code, but there are some situations where you _must_ work in the Terminal and use command line. It may be daunting to code in the Terminal, but as your comfort increases over time, you might find you prefer it. Either way, it's beneficial to learn _enough_ command line and to not be intimidated in the Terminal. 
+:::
+
+### Configure GitHub Username and Email
+
+First, **update your global options with your GitHub username and email.** You can use either {{< fa terminal >}} command line code in the Terminal or {{< fa brands r-project >}} R code in the Console
+
+:::{.panel-tabset}
+### Console + {{< fa brands r-project >}} R Code
+
+**Step 1:** Tell Git (1) your GitHub username and (2) your GitHub-associated email address.
+
+```r
+usethis::use_git_config(user.name = "my_user_name",
+                        user.email = "my_email@nceas.ucsb.edu")
+```
+
+**Step 2:** Define the default name for a branch that gets created when you make the first commit in a new Git repository (a.k.a. "repo").
+
+```r
 usethis::git_default_branch_configure(name = "main")
-
 ```
 
-**Step 3:** check to make sure everything looks correct
+**Step 3:** Check to make sure everything looks correct.
 
-```{r}
-#| eval: false
-
+```r
 usethis::git_sitrep()
 ```
 
+### Terminal + {{< fa terminal >}} Command Line Code
 
-**Step 4:** Setting up your PAT
+**Step 1:** Tell Git (1) your GitHub username and (2) your GitHub-associated email address.
 
-Before you can push or pull between RStudio and GitHub, you’ll need to set up a Personal Access Token (PAT) for secure authentication.
+```bash
+git config --global user.name "my_user_name"
+```
+```bash
+git config --global user.email "my_email@nceas.ucsb.edu"
+```
 
-1.  Run `usethis::create_github_token()` in the Console.
-2.  A new browser window should open up to GitHub, showing all the scopes options. You can review the scopes, but you don't need to worry about which ones to select this time. The previous function automatically pre-selects some recommended scopes. **Go ahead and scroll to the bottom and click "Generate Token"**.
-3.  Copy the generated token.
-4.  Back in RStudio, run `gitcreds::gitcreds_set()` in the Console. And wait until you are prompted to paste your token.
-5. Paste your PAT when the prompt asks for it.
-6. Last thing, run `usethis::git_sitrep()` in the Console to check your Git configuration and that you've successful stored your PAT. 
-**Note:** look for `Personal access token for 'https://github.com': '<discovered>'`
+**Step 2:** Define the default name for a branch that gets created when you make the first commit in a new Git repository (a.k.a. "repo").
 
+``` bash
+git config --global init.defaultBranch main
+```
 
+**Step 3:** Check to make sure everything looks correct.
 
-**Once you've completed these steps you are ready for our workshop on Git and Github**
+``` bash
+git config --global --list
+```
 
+:::
+
+::: {.callout-note}
+## Why Change the Default Branch Name?
+
+Previously, the default branch name was "master" and this terminology for Git branches is problematic, which motivates us to update our default branch to "main" instead. 
+:::
+
+### Configure Strategy for Reconciling Differences
+
+When you're working on the same GitHub repository as the rest of your team, what happens when you and a teammate edit the same file at the same time? How does Git 'know' how to reconcile those differences? Simply put, we tell Git how we want it to make that judgment call!
+
+There are three options, "merge," "rebase," and "fast forward." **We recommend that you choose the "merge" strategy** as it will seamlessly handle easy situations where human oversight isn't needed but will flag more nuanced problems (called "merge conflicts") for you to resolve manually. For more information on "merge" versus "rebase", see [here](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).  You can always revisit this decision later using essentially the same code below!
+
+::: {.panel-tabset}
+### Console + {{< fa brands r-project >}} R Code
+
+Set the default strategy for reconciling differences.
+
+```r
+usethis::use_git_config(pull.rebase = "false")
+```
+
+### Terminal + {{< fa terminal >}} Command Line Code
+
+Set the default strategy for reconciling differences.
+
+```bash
+git config --global pull.rebase false
+```
+
+Note: The `--global` option will set this as default for all repositories on your computer. If you remove that piece, it will only set for the current repo.
+:::
+
+::: {.callout-warning}
+#### Difference Reconciliation Error
+
+If you forget to set your `pull.rebase` option, you will get the following error message when you try to sync your local computer with GitHub.  Note, the error message gives you the terminal code to fix it!
+
+```bash
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:    git config pull.rebase false # merge (the default strategy) # <1>
+hint:    git config pull.rebase true  # rebase
+hint:    git config pull.ff only      # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --norebase, 
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches
+```
+1. This is the Terminal code to set the "merge" strategy, though we recommend you set this globally using the `--global` option.
+:::
+
+## Authenticate Your Computer with GitHub
+
+While you will use your GitHub password to log in to your account on a web browser, in order to actually send code you write from your local computer up to GitHub, you'll need to "authenticate" in a different, more secure way.
+
+The book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html) has a wealth of information related to working with Git in R, and the instructions below are based off of [Chapter 9: Personal access token for HTTPS](https://happygitwithr.com/https-pat.html) in that book.
+
+**We will be using Personal Access Token (PAT) authentication for this training series.** If this topic is of interest, you can find information on a different approach to authentication--called "SSH keys"--[here](https://happygitwithr.com/ssh-keys.html).
+
+:::{.panel-tabset}
+### Console + {{< fa brands r-project >}} R Code
+
+**Step 1:** Jumpstart the token creation process with the following {{< fa brands r-project >}} R code. This will open a new browser window with a big checklist of different options ("scopes") for your token. Feel free to scroll through them at your leisure. 
+
+``` r
+usethis::create_github_token()
+```
+
+**Step 2:** Scroll to the bottom of the token creation page and click "Generate Token".
+
+**Step 3:** <u>Copy the generated token.</u> You will _never_ be able to see this token again (_ever!_) when you leave this page!
+
+**Step 4:** Return to your IDE and run the following {{< fa brands r-project >}} R code.
+
+``` r
+gitcreds::gitcreds_set()
+```
+
+**Step 5:** When prompted, paste your newly-created PAT into the Console.
+
+**Step 6:** Check all of those steps worked by running the following R code. You are hoping to see `Personal access token for 'https://github.com': '<discovered>'`, if you see `<unset>` instead, something has gone wrong with the preceding steps.
+
+``` r
+usethis::git_sitrep()
+```
+
+:::
+
+## Celebrate!
+
+Congratulations! If you worked through _all_ of the above steps, you should be ready for any of the Git/GitHub lessons in this training series!
