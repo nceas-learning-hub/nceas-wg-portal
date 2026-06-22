@@ -45,6 +45,8 @@ website:
           href: git-github-03_advanced.qmd
         - text: "Project Management"
           href: git-github-04_project-mgmt.qmd
+        - text: "**_Recordings_**"
+          href: recordings/git-github.qmd
       - section: "Data Science Trainings"
         contents:
         - text: "Data Management & Reproducibility"

@@ -237,10 +237,3 @@ There are many Git and GitHub collaboration techniques, some more advanced than 
 The "When Not to Use" column provides insights into situations where it *may* be less appropriate / unnecessary to use each collaboration technique, helping you make informed decisions based on the specific context and requirements of your project.
 
 These techniques provide different benefits and are used in various collaboration scenarios, depending on the project's needs and team dynamics.
-
-:::callout-important
-## Missed the training?
-
-Find the video recording of this workshop in this [link](https://drive.google.com/file/d/1Kf5SBzO7QwOmb0wbYc7dgFrcUaFEBzdB/view?usp=drive_link).
-
-:::
