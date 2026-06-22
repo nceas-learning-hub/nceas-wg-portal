@@ -21,12 +21,6 @@ website:
   bread-crumbs: false
   navbar:
     right:
-      - text: "Instructors"
-        menu:
-          - text: "Nick J Lyon"
-            href: https://njlyon0.github.io/
-          - text: "Li Kui"
-            href: https://github.com/lkuiucsb
       - icon: github
         href: https://github.com/nceas-learning-hub/nceas-wg-portal
         aria-label: GitHub
