@@ -1,8 +1,26 @@
 ---
 title: "Data & Computational Resources"
+number-sections: false
 ---
 
-Explore the core infrastructure available to support your research—from managing large datasets to conducting computationally intensive analyses and sharing your results openly and reproducibly.
+Explore the core infrastructure available to support your research-from other trainings to managing large datasets to conducting computationally intensive analyses and sharing your results openly and reproducibly.
+
+## Other Short Courses, Trainings, & Workshops
+
+- [**Synthesis Skills for Early Career Researchers**](https://lter.github.io/ssecr/) (SSECR)  
+    - An LTER course designed to build foundational synthesis and collaboration skills
+
+- [**LTER Scientific Computing Team**](https://lter.github.io/scicomp/)  
+    - A collection of resources and tutorials on scientific computing best practices from the LTER community
+  
+- [**Ecological Data Synthesis: A Primer on Essential Methods**](https://lter.github.io/eco-data-synth-primer/)
+    - A comprehensive guide to methods and best practices for ecological data synthesis
+
+- [**Using 'sf' for Spatial Data & Intro to Making Maps**](https://learning.nceas.ucsb.edu/2023-08-delta/session_10.html)
+    - A hands-on tutorial introducing spatial data operations and basic mapping in R
+
+- [**Carpentry @ UCSB library**](https://carpentry.library.ucsb.edu/)  
+    - A list of the free training provided by the UCSB library, including various R and Python courses for the coming quarter
 
 ## Data Storage & Management
 
@@ -10,70 +28,42 @@ Working groups are encouraged to use **GitHub** for version control and collabor
 
 1. For **small datasets (< 50 MB)** that are published and accessible via a persistent web link (e.g., data from **DataONE**), you are encouraged to reference the URL directly within your scripts to minimize redundancy and streamline reproducibility.
 
-2. For **medium-sized datasets (larger than 50 MB but smaller than 100 GB)** or unpublished data that need to be shared internally, use a **shared Google Drive**. Many working groups already have shared Drives—if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the `"data"` folder in the shared Google Drive for consistency and ease of use.
+2. For **medium-sized datasets (larger than 50 MB but smaller than 100 GB)** or unpublished data that need to be shared internally, use a **shared Google Drive**. Many working groups already have shared Drives-if yours has not been set up, please contact the Data Science Trainer. Organizing raw data within the `"data"` folder in the shared Google Drive for consistency and ease of use.
 
 3. For **large datasets (> 100 GB)**, especially if you need to process the data using multiple cores, please reach out to the Data Science Trainer to coordinate access to [**NCEAS data servers**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing). This ensures appropriate infrastructure for high-capacity and large-scale processing. 
 
----
-
-## High-Performance & Parallel Computing
+## High-Performance Computing
 
 Working groups at NCEAS can request access to **high-performance computing (HPC)** resources to support large-scale processing and computation.
 
 - To obtain HPC access with **R/RStudio pre-installed**, contact the Data Science Trainer to obtain access to the [Aurora server](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing).
 
-- If you're working with a large dataset, using the Parquet file format can significantly improve read/write and computation speed. Parquet is a columnar storage format that allows for efficient compression and faster querying, especially when only a subset of columns is needed. Please see the [**training materials**](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parquet-arrow.html) for how to read and write Parquet files.  
-
-- For parallel computation, please see the tutorials for [Python](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parallel-programming.html) and [R](https://nceas-learning-hub.github.io/nceas-wg-portal/s10_r_parallel_computing.html). These resources can help you scale your workflows efficiently across multiple cores or nodes.
-
----
-
-## R Tips
-
-Here are some optional R modules that fall outside our regular working group training topics. If you have questions about R programming, feel free to reach out—we can develop a custom module as part of our working group resources. These topics are designed to strengthen your data visualization and analysis skills using R:
-
-- **Using `sf` for Spatial Data & Intro to Making Maps**  
-  A hands-on tutorial introducing spatial data operations and basic mapping in R.  
-  📍 [View the tutorial](https://learning.nceas.ucsb.edu/2023-08-delta/session_10.html)
-
----
+- If you're working with a large dataset, using the Parquet file format can significantly improve read/write and computation speed. Parquet is a columnar storage format that allows for efficient compression and faster querying, especially when only a subset of columns is needed. Please see [here](https://learning.nceas.ucsb.edu/2025-04-arctic/sections/parquet-arrow.html) for information on how to read and write Parquet files.  
 
 ## Data Sharing & Publishing
 
 To support open and reproducible science, NCEAS encourages working groups to make their data and code **Findable**. See the [relevant module](https://lter.github.io/ssecr/mod_next-steps.html) developed by the NCEAS-LTER team. 
 
-- Consider publishing your datasets in [KNB](https://knb.ecoinformatics.org/) for long-term preservation and reproducibility of your research.  
+You might consider **publishing your data** in trusted repositories like:
 
-- Alternatively, publish datasets in trusted repositories such as the [Environmental Data Initiative (EDI)](https://edirepository.org/) using tools like [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) for metadata creation.
+- [Environmental Data Initiative (EDI)](https://edirepository.org/)
+    - Includes the [ezEML](https://www.youtube.com/watch?v=T2lhEBWzIPQ) tool for straightforward metadata creation
+- [Knowledge Network for Biocomplexity](https://knb.ecoinformatics.org/) (KNB)
 
-- **Code** should be versioned in **GitHub** and published through [Zenodo](https://zenodo.org/) to obtain a DOI, following [Github --> Zenodo](https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/Task_2.md) steps. 
+Your **code** meanwhile can be:
 
-- The [DataOne portal service](https://www.dataone.org/plus/) offers an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps—all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataOne network. The service is currently free and ideal for long-term access and visibility of your project’s outputs.
+- _Versioned_ in [{{< fa brands github >}} GitHub](https://github.com/) but _published_ through [Zenodo](https://zenodo.org/) (to get a DOI)
+    - For more info on connecting GitHub and Zenodo, see [here](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 
+For **finding more data**, use the same data repositories identified above or check out:
 
-## Relevant NCEAS Resources
+- [DataOne](https://www.dataone.org/): an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps-all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataOne network. The service is currently free and ideal for long-term access and visibility of your project's outputs.
+
+## Other Relevant NCEAS Resources
+
 - [**LTER Scientific Computing Team Website**](https://lter.github.io/scicomp/)  
-  Resources and tools from the LTER community focused on scientific computing best practices.
-
-- [**NCEAS Resources for Working Groups**](https://www.nceas.ucsb.edu/working-group-resources)  
-  A curated collection of guidance and tools drawn from NCEAS's extensive experience supporting synthesis science.
-
-- [**NCEAS Hight Performance Computing**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing)  
-  An overview of high performance computing available to NCEAS working groups.
-
-
-## Similar Short Courses and Workshops
-- [**Synthesis Skills for Early Career Researchers (SSECR)**](https://lter.github.io/ssecr-2024/)  
-  An LTER course designed to build foundational synthesis and collaboration skills.
-
-- [**LTER Scientific Computing Team**](https://lter.github.io/scicomp/)  
-  A collection of resources and tutorials on scientific computing best practices from the LTER community.
-
-- [**GitHub Repositories Education series**](https://github.com/orgs/lter/repositories?q=education)
-  A collection of educational materials and tutorials developed by the LTER community.
-  
-- [**Ecological Data Synthesis: A Primer on Essential Methods**](https://lter.github.io/eco-data-synth-primer/)
-  A comprehensive guide to methods and best practices for ecological data synthesis.
-
-- [**Carpentry @ UCSB library**](https://carpentry.library.ucsb.edu/workshop/2025/07/08/ucsb-geospatial.html)  
-  A list of the free training provided by the UCSB library, including various R and Python courses for the coming quarter.
+    - Resources and tools from the LTER community focused on scientific computing best practices
+- [**NCEAS Resources for Working Groups**](https://www.nceas.ucsb.edu/working-group-resources)
+    - A curated collection of guidance and tools drawn from NCEAS's extensive experience supporting synthesis science.
+- [**NCEAS High Performance Computing**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing)  
+    - An overview of high performance computing available to NCEAS working groups.
