@@ -53,13 +53,13 @@ Your **code** meanwhile can be:
 
 For **finding more data**, use the same data repositories identified above or check out:
 
-- [DataOne](https://www.dataone.org/): an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps-all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataOne network. The service is currently free and ideal for long-term access and visibility of your project's outputs.
+- [DataONE](https://www.dataone.org/): an easy, sustainable way for working groups to showcase and share their datasets. Portals can include searchable data catalogs, embedded maps, visualizations, and Shiny apps-all without needing to maintain a separate website. Data can come from repositories like KNB, EDI, or others in the DataONE network. The service is currently free and ideal for long-term access and visibility of your project's outputs.
 
 ## Other Relevant NCEAS Resources
 
 - [**LTER Scientific Computing Team Website**](https://lter.github.io/scicomp/)  
     - Resources and tools from the LTER community focused on scientific computing best practices
 - [**NCEAS Resources for Working Groups**](https://www.nceas.ucsb.edu/working-group-resources)
-    - A curated collection of guidance and tools drawn from NCEAS's extensive experience supporting synthesis science.
+    - A curated collection of guidance and tools drawn from NCEAS' extensive experience supporting synthesis science.
 - [**NCEAS High Performance Computing**](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing)  
     - An overview of high performance computing available to NCEAS working groups.

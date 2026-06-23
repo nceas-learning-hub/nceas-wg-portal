@@ -33,7 +33,7 @@ After completing this session, you will be able to:
 </div> 
 
 ### Workshop Description {.unnumbered}
-This introductory webinar will teach working group members how to use Canva, a free online design tool, to create and edit visual materials. The training will focus on navigating Canva’s interface, understanding basic design tools, and making edits to pre-made one-pager templates provided by NCEAS comms team. No previous design experience is necessary—just make a free Canva account to get started!
+This introductory webinar will teach working group members how to use Canva, a free online design tool, to create and edit visual materials. The training will focus on navigating Canva's interface, understanding basic design tools, and making edits to pre-made one-pager templates provided by NCEAS' communications team. No previous design experience is necessary—just make a free Canva account to get started!
 
 ## NCEAS One-Pager Templates
 
@@ -41,6 +41,6 @@ Shared Canva folder with [one-pager templates](https://www.canva.com/design/DAGo
 
 ## Additional Resources
 
-- [Canva Beginner’s Guide](https://www.canva.com/learn/how-to-canva-beginners-guide/) – Official walkthrough of Canva tools and design features
+- [Canva Beginner's Guide](https://www.canva.com/learn/how-to-canva-beginners-guide/) – Official walkthrough of Canva tools and design features
 - [Canva Design School](https://www.canva.com/design-school/) – Free lessons on layout, color, typography, and more
 - [Working with Teams in Canva](https://www.canva.com/learn/how-to-share-designs-on-canva/) – Tips for collaborating on designs

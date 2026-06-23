@@ -3,7 +3,7 @@ title: "About the Training Series"
 number-sections: false
 ---
 
-Welcome to the **NCEAS Working Group Training Series**, specfically designed to help working groups collaborate more effectively throughout every stage of their research process. These trainings cover essential collaboration strategies and practical skills and are designed to foster both individual development and effective team collaboration.
+Welcome to the **NCEAS Working Group Training Series**, specifically designed to help working groups collaborate more effectively throughout every stage of their research process. These trainings cover essential collaboration strategies and practical skills and are designed to foster both individual development and effective team collaboration.
 
 Training topics offer practical guidance on group facilitation, strategies for clear and productive communication, and hands-on skills for managing data and projects in a collaborative environment. Whether you're getting ready for your first group meeting or fine-tuning established workflows, these trainings offer valuable tools to support your success.
 

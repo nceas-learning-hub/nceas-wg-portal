@@ -78,7 +78,7 @@ If you click into the 'Issues' tab of a repository that doesn't have any, you'll
 Let's open a new issue to demonstrate some of the useful features they provide. **Click the "New issue" button** to begin. This will open a dialog menu where we can begin to create our issue. Let's **start by adding a title and then clicking the "Create" button.** We could do more setup stuff through this window but let's start with the bare minimum for demonstrative purposes.
 
 :::{.callout-important icon="false" collapse="true"}
-### "Meta" Screenshot Acknowledgement
+### "Meta" Screenshot Acknowledgment
 
 You may recognize that the issue used in this demo is about improving the module you are currently working through. We hope that isn't distracting but it felt more efficient to improve this module and document the process for use in it at the same time than invent a fake issue while also needing to document our process for improving this part of the workshop.
 
@@ -105,7 +105,7 @@ The three facets of an issue's metadata that you're most likely to use are:
 3. Type
     - An interesting step one level "above" labels. The example below uses the Agile software development framework, but--like labels--you can customize these to fit your group's needs (for more info on Agile see [here](https://en.wikipedia.org/wiki/Agile_software_development))
 
-Let's customize those three fields for the issue we just opened. To customize any part of issue metadata **click the gear icon to the right of the field you want to edit.** That will open a list of possible options for that field so you can just choose the one(s) that apply to this issue. After you've selected some information for the issue's metadata, your siderbar might look like the screen capture below.
+Let's customize those three fields for the issue we just opened. To customize any part of issue metadata **click the gear icon to the right of the field you want to edit.** That will open a list of possible options for that field so you can just choose the one(s) that apply to this issue. After you've selected some information for the issue's metadata, your sidebar might look like the screen capture below.
 
 ![](images/git-github-05_project-mgmt/make-issue_03-meta.png){fig-alt="Screenshot of the metadata sidebar of a GitHub issue with some fields filled out" fig-align="center" width="40%"}
 
@@ -177,7 +177,7 @@ In the diagram below, open issues have a {{< fa regular circle-dot >}} while clo
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- {{< fa regular circle-check >}} Files without years (#6)   
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- {{< fa regular circle-check >}} Relative Abundance Data (#7)  
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa regular circle-check >}} Identify Spatial Data Source (#8)    
-&nbsp;&nbsp;L&nbsp; {{< fa regular circle-dot >}} **Analysis Judgement Calls (#9)**  
+&nbsp;&nbsp;L&nbsp; {{< fa regular circle-dot >}} **Analysis Judgment Calls (#9)**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- {{< fa regular circle-check >}} Distance/Dissimilarity Metric Options (#10)   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- {{< fa regular circle-check >}} Normalize data? (#11)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa regular circle-dot >}} Analyze within or across ecosystem (#12)    
@@ -187,7 +187,7 @@ In the diagram below, open issues have a {{< fa regular circle-dot >}} while clo
 
 \
 
-By leaving the parent issues open (in this example, numbers 1, 4, and 9) all of the sub-issues are easily findable if one of these judgement calls need to be revisited (whether to change track or write the relevant portion of a manuscript).
+By leaving the parent issues open (in this example, numbers 1, 4, and 9) all of the sub-issues are easily findable if one of these judgment calls need to be revisited (whether to change track or write the relevant portion of a manuscript).
 
 :::
 ::::
@@ -301,7 +301,7 @@ So, even if an issue was closed in the distant past of your repository on GitHub
 
 As a brief aside from the nuts and bolts of how to create and manage an issue, it is important to discuss appropriate issue scope.
 
-Essentially, **an issue should directly correspond to either a single task or a single judgement call.** It is not always possible to predict how projects can evolve at the outset so you may find issues spanning multiple tasks despite your best efforts but as much as you can plan to keep a 1-to-1 ratio of tasks to issues you will find delegation and tracking of task completion that much easier.
+Essentially, **an issue should directly correspond to either a single task or a single judgment call.** It is not always possible to predict how projects can evolve at the outset so you may find issues spanning multiple tasks despite your best efforts but as much as you can plan to keep a 1-to-1 ratio of tasks to issues you will find delegation and tracking of task completion that much easier.
 
 Personally, I am a longtime believer in S.M.A.R.T. goals (i.e., goals that are **S**pecific, **M**easurable, **A**ttainable, **R**elevant, and **T**ime-specific), but there are many established ways of partitioning a larger project to achievable sub-tasks and you should use whichever is most intuitive to you.
 
@@ -373,7 +373,7 @@ This should give you a list of the projects that: (1) you have recently opened, 
 
 ![](images/git-github-05_project-mgmt/issue-to-proj_01-meta.png){fig-alt="Screenshot of the metadata sidebar of a GitHub issue with the 'Projects' option open" fig-align="center" width="40%"}
 
-Once you've chosen your project, the metadata sidebar should update to show which project the issue is now linked to. However, it adds a new sub-field called "Status" that likely says "No status". **"Status" is a project option that you can use to track the lifecycle of an issue.** The default options are "To Do", "In Progress", and "Done" but you can add custom ones if you want!
+Once you've chosen your project, the metadata sidebar should update to show which project the issue is now linked to. However, it adds a new sub-field called "Status" that likely says "No status". **"Status" is a project option that you can use to track the life-cycle of an issue.** The default options are "To Do", "In Progress", and "Done" but you can add custom ones if you want!
 
 ![](images/git-github-05_project-mgmt/issue-to-proj_02-no-status.png){fig-alt="Screenshot of the metadata sidebar of a GitHub issue where a project has been selected but the status says 'no status'" fig-align="center" width="40%"}
 

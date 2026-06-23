@@ -127,7 +127,7 @@ And finally, if we drill into a particular commit, we can see exactly what was c
 
 Tracking these changes, how they relate to released versions of software and files is exactly what Git and GitHub are good for. And we will show how they can really be effective for tracking versions of scientific code, figures, and manuscripts to accomplish a reproducible workflow.
 
-## **Practice**: Core IDE-Git-Github Workflow
+## **Practice**: Core IDE-Git-GitHub Workflow
 
 ### Make a New GitHub Repository
 
@@ -232,7 +232,7 @@ In this dialog, do the following:
 2. Enter the name you want for the folder containing your local repository
     - Feel free to just re-use the name of the repository
 3. Finally, choose which folder you want to clone this repository to
-    - We recommend not cloning into a local sync of a cloud storage service (e.g., OneDrive, Dropbox) as that service’s form of version control and Git’s may cause problems for you
+    - We recommend not cloning into a local sync of a cloud storage service (e.g., OneDrive, Dropbox) as that service's form of version control and Git's may cause problems for you
 
 Once that's all done, click **Create Project**.
 
@@ -277,7 +277,7 @@ Recall that headers are any line that starts with at least one `#`.
 ![](images/git-github-02_fundamentals/positron-commit_01-edit.png){.lightbox fig-alight="center" fig-alt="Screen capture of Positron with the README file opened and Git it is flagging it as having been modified"}
 
 ### {{< fa brands r-project >}} RStudio
-![](images/git-github-02_fundamentals/rstudio-commit_01-edit.png){.lightbox fig-alight="center" fig-alt="Screen capture of RSTudio with the README file opened"}
+![](images/git-github-02_fundamentals/rstudio-commit_01-edit.png){.lightbox fig-alight="center" fig-alt="Screen capture of RStudio with the README file opened"}
 
 :::
 
@@ -317,7 +317,7 @@ If you **head over to the Git pane**, you'll see that the README now appears the
 
 Once you are there, **check the box next to the README** under the "Staged" heading. _Clicking that button is analogous to using the Git command, `git add README.md`, in the command line._
 
-After you check the box, you can **click either of the two left-most buttons in the Git pane.** In the resulting pop-up menu (which looks imilar to the history menu), you can now add a commit message and then click the "Commit" button when you're ready to do so. _This is analogous to using the Git command, `git commit -m "my commit message"`, in the command line._
+After you check the box, you can **click either of the two left-most buttons in the Git pane.** In the resulting pop-up menu (which looks similar to the history menu), you can now add a commit message and then click the "Commit" button when you're ready to do so. _This is analogous to using the Git command, `git commit -m "my commit message"`, in the command line._
 
 ![](images/git-github-02_fundamentals/rstudio-commit_03-stage.png){.lightbox width="80%" fig-align="center" fig-alt="Screen capture of RStudio's commit menu with the README file staged and an informative commit message in the respective text field"}
 

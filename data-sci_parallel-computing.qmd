@@ -43,7 +43,7 @@ To help with **cpu-bound** computations, one can take advantage of modern proces
 ## Processors (CPUs), Cores, and Threads
 
 A modern CPU (Central Processing Unit) is at the heart of every computer.  While
-traditional computers had a single CPU, modern computers can ship with mutliple 
+traditional computers had a single CPU, modern computers can ship with multiple 
 processors, each of which in turn can contain multiple cores.  These processors and 
 cores are available to perform computations. But, just what's the difference between 
 processors and cores? A computer with one processor may still have 4 cores (quad-core), 
@@ -72,7 +72,7 @@ processors for a total of 16 cores in this machine.
 
 ![](images/data-sci_parallel-computing/processors.png){fig-alt="Simple graphic showing several processors (composed of cores) within a larger shape labeled 'Server A'" fig-align="center"}
 
-You can think of this as allowing 16 computations to happen at the same time. Theroetically, your computation would take 1/16 of the time (but only theoretically, more on that later).
+You can think of this as allowing 16 computations to happen at the same time. Theoretically, your computation would take 1/16 of the time (but only theoretically, more on that later).
 
 Historically, many languages only utilized one processor, which makes them single-threaded.  Which is a shame, because the 2019 MacBook Pro that I am writing this on is much more powerful than that, and has mutliple cores that would support concurrent execution of multiple threads:
 
@@ -139,9 +139,9 @@ In comparison, the middle panel shows two approaches to parallelization on a sin
 
 With **multi-process** execution, a separate process is created for each of the 5 tasks, and these are executed concurrently on the cores of the processor. The difference is that each process has it's own copy of the program memory, and changes are merged when each child process completes. Because each child process must be created and resources for that process must be marshalled and unmarshalled, there is more overhead in creating a process than a thread. "Marshalling" is the process of transforming the memory representation of an object into another format, which allows communication between remote objects by converting an object into serialized form.
 
-Finally, **cluster parallel** execution is shown in the last panel, in which a cluster with multiple computers is used to execute multiple processes for each task. Again, there is a setup task associated with creating and mashaling resources for the task, which now includes the overhead of moving data from one machine to the others in the cluster over the network. This further increases the cost of creating and executing multiple processes, but can be highly advantageous when accessing exceedingly large numbers of processing cores on clusters. 
+Finally, **cluster parallel** execution is shown in the last panel, in which a cluster with multiple computers is used to execute multiple processes for each task. Again, there is a setup task associated with creating and marshalling resources for the task, which now includes the overhead of moving data from one machine to the others in the cluster over the network. This further increases the cost of creating and executing multiple processes, but can be highly advantageous when accessing exceedingly large numbers of processing cores on clusters. 
 
-The key to performance gains is to ensure that the overhead associated with creating new threads or processes is small relative to the time it takes to perform a task. Somewhat unintuitively, when the setup overhead time exceeds the task time, parallel execution will likely be slower than serial.
+The key to performance gains is to ensure that the overhead associated with creating new threads or processes is small relative to the time it takes to perform a task. Somewhat un-intuitively, when the setup overhead time exceeds the task time, parallel execution will likely be slower than serial.
 
 ## When to Parallelize
 
@@ -361,17 +361,17 @@ while(!resolved(model_result)) {
 value(model_result)
 ```
 
-The `multisession` futures plan is one in which each future task is evaluated in a separate, background R session that runs on the same host that launched the process. If the host has multiple cores available, then `multisession` will make use of these and create background sessions on each of the available cores. If all background sessions are busy, then the creation of new `future` expressions wil be blocked until one is available. 
+The `multisession` futures plan is one in which each future task is evaluated in a separate, background R session that runs on the same host that launched the process. If the host has multiple cores available, then `multisession` will make use of these and create background sessions on each of the available cores. If all background sessions are busy, then the creation of new `future` expressions will be blocked until one is available. 
 
 ::: {layout-ncol="2"}
 
-So, what's the point of all of this? Basically, the `future` package provides a mechanism for evaluating expressions asynchronously, which we can leverage to launch many sessions on available cores. We can harness this with another package, `furrr`, which functions as an asynchrobous analogue to `purrr`. 
+So, what's the point of all of this? Basically, the `future` package provides a mechanism for evaluating expressions asynchronously, which we can leverage to launch many sessions on available cores. We can harness this with another package, `furrr`, which functions as an asynchronous analogue to `purrr`. 
 
 ![](images/data-sci_parallel-computing/furrr-logo.png){width="20%" fig-alt="Hex logo for 'furrr' R package"}
 
 :::
 
-With `furrr`, you can use the `map()` pattern to execute an expression across a set of inputs using asynchronous futures. Most of the details here are hidden under the hood, so this usage pattern should feel really familiar to `purrr` users. For example, let's return to our bootstrap linear model, and reimplement it, first using purrr, and then with furrr.
+With `furrr`, you can use the `map()` pattern to execute an expression across a set of inputs using asynchronous futures. Most of the details here are hidden under the hood, so this usage pattern should feel really familiar to `purrr` users. For example, let's return to our bootstrap linear model, and re-implement it, first using purrr, and then with furrr.
 
 ```{r,eval=FALSE}
 library(purrr)
@@ -397,7 +397,7 @@ In this lesson, we showed examples of computing tasks that are likely limited by
 ## Additional Resources
 
 - [Multicore Data Science with R and Python](https://blog.dominodatalab.com/multicore-data-science-r-python/)
-- [Beyond Single-Core R](https://ljdursi.github.io/beyond-single-core-R/#/) by Jonoathan Dursi (also see [GitHub repo for slide source](https://github.com/ljdursi/beyond-single-core-R))
+- [Beyond Single-Core R](https://ljdursi.github.io/beyond-single-core-R/#/) by Jonathan Dursi (also see [GitHub repo for slide source](https://github.com/ljdursi/beyond-single-core-R))
 - The venerable [Parallel R](http://shop.oreilly.com/product/0636920021421.do) by McCallum and Weston (a bit dated on the tooling, but conceptually solid)
 - The [doParallel Vignette](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
 - [future: Unified Parallel and Distributed Processing in R for Everyone](https://future.futureverse.org)

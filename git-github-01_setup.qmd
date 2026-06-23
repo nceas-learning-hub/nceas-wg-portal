@@ -35,7 +35,7 @@ Follow the relevant instructions for your operating system at [posit.co/products
 :::callout-note
 ### Positron versus RStudio
 
-You may already be familiar and comfortable with RStudio (we are too!).  Positron is the next generation IDE developed by the same folks who made RStudio, and it has better integration for Quarto, non-R programming languags, and Git/GitHub. Because the makers of RStudio themselves are pushing this transition, we feel it is worth making the leap for this training.
+You may already be familiar and comfortable with RStudio (we are too!).  Positron is the next generation IDE developed by the same folks who made RStudio, and it has better integration for Quarto, non-R programming languages, and Git/GitHub. Because the makers of RStudio themselves are pushing this transition, we feel it is worth making the leap for this training.
 
 That said, nearly everything in this training will work equally well in RStudio!
 :::
