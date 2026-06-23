@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project Management with GitHub – NCEAS Training Series: Supporting Effective Collaboration in Working Groups</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/logo_lh.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-1805ba9b646ab736575413ff991a77ad.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-fcd6bcbf5fe6ffc218e5620175a4e85a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-1805ba9b646ab736575413ff991a77ad.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #44444444;
+      }
+</style>
+
+
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/nceas-learning-hub/theme/banner/banner.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">NCEAS Training Series: Supporting Effective Collaboration in Working Groups</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/nceas-learning-hub/nceas-wg-portal"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Project Management with GitHub</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">Project Management with GitHub</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+        <div class="sidebar-tools-collapse">
+    <a href="./nceas-learning-hub.github.io/nceas-wg-portal" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.nceas.ucsb.edu/learning-hub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-door-fill"></i></a>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Series Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Git &amp; GitHub Trainings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git-github-01_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git-github-02_fundamentals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fundamentals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git-github-03_conflict.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resolving Conflicts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git-github-04_advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Advanced Features</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./git-github-05_project-mgmt.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Project Management</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recordings/git-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong><em>Recordings</em></strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data Science Trainings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-sci_reproducibility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Management &amp; Reproducibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-sci_parallel-computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parallel Computing in R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recordings/data-sci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong><em>Recordings</em></strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Team Science Trainings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./team-sci_facilitation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Successful Facilitation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./team-sci_communication-plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Communication Plans</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./team-sci_communicate-external.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Communicating Results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./team-sci_one-pagers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Making a One Pager</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./team-sci_canva-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Canva 101</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recordings/team-sci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong><em>Recordings</em></strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nceas-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other NCEAS Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-an-issue" id="toc-what-is-an-issue" class="nav-link active" data-scroll-target="#what-is-an-issue"><span class="header-section-number">1</span> What Is an Issue?</a>
+  <ul class="collapse">
+  <li><a href="#example-issue" id="toc-example-issue" class="nav-link" data-scroll-target="#example-issue"><span class="header-section-number">1.1</span> Example Issue</a></li>
+  </ul></li>
+  <li><a href="#finding-issues-in-a-repository" id="toc-finding-issues-in-a-repository" class="nav-link" data-scroll-target="#finding-issues-in-a-repository"><span class="header-section-number">2</span> Finding Issues in a Repository</a>
+  <ul class="collapse">
+  <li><a href="#what-if-there-arent-any-issues" id="toc-what-if-there-arent-any-issues" class="nav-link" data-scroll-target="#what-if-there-arent-any-issues"><span class="header-section-number">2.1</span> What If There Aren’t Any Issues?</a></li>
+  </ul></li>
+  <li><a href="#creating-an-issue" id="toc-creating-an-issue" class="nav-link" data-scroll-target="#creating-an-issue"><span class="header-section-number">3</span> Creating an Issue</a>
+  <ul class="collapse">
+  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata"><span class="header-section-number">3.1</span> Metadata</a></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="header-section-number">3.2</span> Comments</a></li>
+  </ul></li>
+  <li><a href="#inter-issue-relationships" id="toc-inter-issue-relationships" class="nav-link" data-scroll-target="#inter-issue-relationships"><span class="header-section-number">4</span> Inter-Issue Relationships</a>
+  <ul class="collapse">
+  <li><a href="#working-group-use-cases-for-nesting-issues" id="toc-working-group-use-cases-for-nesting-issues" class="nav-link" data-scroll-target="#working-group-use-cases-for-nesting-issues"><span class="header-section-number">4.1</span> Working Group Use-Cases for Nesting Issues</a></li>
+  </ul></li>
+  <li><a href="#value-of-issue-numbers" id="toc-value-of-issue-numbers" class="nav-link" data-scroll-target="#value-of-issue-numbers"><span class="header-section-number">5</span> Value of Issue Numbers</a>
+  <ul class="collapse">
+  <li><a href="#referencing-issue-in-other-repositories" id="toc-referencing-issue-in-other-repositories" class="nav-link" data-scroll-target="#referencing-issue-in-other-repositories"><span class="header-section-number">5.1</span> Referencing Issue in Other Repositories</a></li>
+  </ul></li>
+  <li><a href="#closing-an-issue" id="toc-closing-an-issue" class="nav-link" data-scroll-target="#closing-an-issue"><span class="header-section-number">6</span> Closing an Issue</a></li>
+  <li><a href="#appropriate-issue-scope" id="toc-appropriate-issue-scope" class="nav-link" data-scroll-target="#appropriate-issue-scope"><span class="header-section-number">7</span> Appropriate Issue Scope</a></li>
+  <li><a href="#what-is-a-project" id="toc-what-is-a-project" class="nav-link" data-scroll-target="#what-is-a-project"><span class="header-section-number">8</span> What is a Project?</a></li>
+  <li><a href="#using-projects" id="toc-using-projects" class="nav-link" data-scroll-target="#using-projects"><span class="header-section-number">9</span> Using Projects</a></li>
+  <li><a href="#project-ownership" id="toc-project-ownership" class="nav-link" data-scroll-target="#project-ownership"><span class="header-section-number">10</span> Project Ownership</a></li>
+  <li><a href="#using-projects-1" id="toc-using-projects-1" class="nav-link" data-scroll-target="#using-projects-1"><span class="header-section-number">11</span> Using Projects</a>
+  <ul class="collapse">
+  <li><a href="#customizing-project-interface" id="toc-customizing-project-interface" class="nav-link" data-scroll-target="#customizing-project-interface"><span class="header-section-number">11.1</span> Customizing Project Interface</a></li>
+  </ul></li>
+  <li><a href="#integrating-issues" id="toc-integrating-issues" class="nav-link" data-scroll-target="#integrating-issues"><span class="header-section-number">12</span> Integrating Issues</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/nceas-learning-hub/nceas-wg-portal/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<!---
+Old (as of June 2026) GoogleSlides deck on this topic here: https://docs.google.com/presentation/d/1-DHMTlneOTZXYFDTzzS6ycaLbfLmSHQpXQzNKb_pVYA
+
+
+Slide deck embed code (vvv)
+<div style="display: flex; justify-content: center;"> 
+<iframe width="560" height="380" src="https://docs.google.com/presentation/d/1-DHMTlneOTZXYFDTzzS6ycaLbfLmSHQpXQzNKb_pVYA/preview?" frameborder="0" allowfullscreen></iframe>
+</div> 
+--->
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-brain" aria-label="brain"></i> Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After completing this session, you will be able to:</p>
+<ul>
+<li>Define an issue in the context of GitHub</li>
+<li>Create a new issue in an existing repository</li>
+<li>Explain considerations for creating a useful, appropriately-scoped issue</li>
+<li>Define a project in the context of GitHub</li>
+<li>Explain in what contexts Projects are useful</li>
+<li>Identify the three available project view options</li>
+<li>Explain how issues can get added to projects</li>
+</ul>
+</div>
+</div>
+<section id="what-is-an-issue" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-is-an-issue"><span class="header-section-number">1</span> What Is an Issue?</h2>
+<p>Issues are a convenient way of identifying and delegating tasks <strong>within a single repository</strong> as well as documenting progress over time. They can also be used as a digital lab notebook for personal use to brainstorm on a novel topic or preserve important links or supplementary material for easy distribution across a whole team.</p>
+<p>Importantly, <u>while issues can definitely be helpful they are <em>not</em> required to successfully use GitHub for collaborating as a team</u>. Issues absolutely have the potential to facilitate division of labor within a team though and are thus worth covering in this training.</p>
+<p>An additional function that may be outside of the scope of what you need to use within your team is that it allows non-members to flag issues that they’ve had with code written by your team or request additional functionality that doesn’t yet exist in your framework. Depending on your use of packages in R you may have already opened an issue on an existing R package or workshop materials hosted in GitHub to do just that!</p>
+<p>To see a more complete example of how issues can be used we can examine the open issues of an established R package.</p>
+<section id="example-issue" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="example-issue"><span class="header-section-number">1.1</span> Example Issue</h3>
+<p>Below is the GitHub landing page for the <code>googldrive</code> package and you can see that next to the underlined “Code” tab is an “Issues” tab with a gray circle with the number 22 in it. This number notifies us that as of this screen capture, there were twenty two open issues on this package’s GitHub repository.</p>
+<p><a href="images/git-github-05_project-mgmt/googledrive-issue_01-repo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/git-github-05_project-mgmt/googledrive-issue_01-repo.png" class="img-fluid" alt="Screenshot of the GitHub repository for the 'googledrive' R package with many open issues"></a></p>
+<p>If you click over to the issues tab you will see the titles of all current “open” (i.e., ongoing) issues on the repository. Each issue has a title and beneath that a unique number following a <code>#</code> as well as how long ago the issue was opened and the GitHub username of the person who opened the issue. On the right side of each issue’s thumbnail you can see the number of comments added to it.</p>
+<p><a href="images/git-github-05_project-mgmt/googledrive-issue_02-issue-tab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/git-github-05_project-mgmt/googledrive-issue_02-issue-tab.png" class="img-fluid" alt="Screenshot of the issues tab of the 'googledrive' R package"></a></p>
+<p>Comments can be used to have a full dialogue among different users – potentially both in and outside of the team responsible for managing the code! The conversational aspect of issues can make them functionally similar to an email thread or messaging app chain. This communication can help keep the solutions to tasks well-documented while ensuring that every member of your group can have their voice heard.</p>
+<p><a href="images/git-github-05_project-mgmt/googledrive-issue_03-comments.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/git-github-05_project-mgmt/googledrive-issue_03-comments.png" class="img-fluid" alt="Screenshot of the conversation between a user and a package maintainer in a particular issue"></a></p>
+</section>
+</section>
+<section id="finding-issues-in-a-repository" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="finding-issues-in-a-repository"><span class="header-section-number">2</span> Finding Issues in a Repository</h2>
+<p>Before we get into creating our own, it’ll be helpful to cover where issues live in GitHub. If you go to the landing page of any repository, you’ll see the–perhaps familiar–facets of the code component of GitHub: the repository’s name, the most recent commit, the files and folders in the repository, and so on.</p>
+<p>If you look <strong>above the repository’s name</strong> you’ll see that all of this information is actually just one tab of the repository (labeled “<i class="fa-solid fa-code" aria-label="code"></i> Code”). Note the <strong><span style="color:orange">orange</span></strong> underline of that tab in the screen capture below.</p>
+<p><a href="images/git-github-05_project-mgmt/find-issue_01-repo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/git-github-05_project-mgmt/find-issue_01-repo.png" class="img-fluid" alt="Screenshot of the landing page of a GitHub repository"></a></p>
+<p>The next tab over is labeled “<i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Issue”, <strong>click that tab!</strong> You should now see the list of all issues in the repository. As we can see in the screen capture below, the most recent few issues (sorted to the top, just like commits), are focused on a cohort of LTER SPARC groups.</p>
+<p>If we look just above the first issue we can see that 10 issues are “open” (i.e., active) and 90 are closed. By default only the open ones are displayed. Your group may not need that many issues so don’t worry too much about how many you’ve got!</p>
+<p><a href="images/git-github-05_project-mgmt/find-issue_02-issue.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/git-github-05_project-mgmt/find-issue_02-issue.png" class="img-fluid" alt="Screenshot of the 'issues' tab of a GitHub repository with a number of open issues displayed"></a></p>
+<section id="what-if-there-arent-any-issues" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="what-if-there-arent-any-issues"><span class="header-section-number">2.1</span> What If There Aren’t Any Issues?</h3>
+<p>If you click into the ‘Issues’ tab of a repository that doesn’t have any, you’ll get a screen like the following screen capture. Note that other than the absence of issues, the screen looks the same as when there are issues (i.e., the same buttons and search/filter fields are still available).</p>
+<p><a href="images/git-github-05_project-mgmt/find-issue_03-no-issues.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/git-github-05_project-mgmt/find-issue_03-no-issues.png" class="img-fluid" alt="Screenshot of the 'issues' tab of a GitHub repository with no issues (either open or closed)"></a></p>
+</section>
+</section>
+<section id="creating-an-issue" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="creating-an-issue"><span class="header-section-number">3</span> Creating an Issue</h2>
+<p>Let’s open a new issue to demonstrate some of the useful features they provide. <strong>Click the “New issue” button</strong> to begin. This will open a dialog menu where we can begin to create our issue. Let’s <strong>start by adding a title and then clicking the “Create” button.</strong> We could do more setup stuff through this window but let’s start with the bare minimum for demonstrative purposes.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>“Meta” Screenshot Acknowledgment
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You may recognize that the issue used in this demo is about improving the module you are currently working through. We hope that isn’t distracting but it felt more efficient to improve this module and document the process for use in it at the same time than invent a fake issue while also needing to document our process for improving this part of the workshop.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/make-issue_01-title.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/git-github-05_project-mgmt/make-issue_01-title.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="Screenshot of the dialog menu in GitHub when you start to create a new issue with only a title filled out"></a></p>
+</figure>
+</div>
+<p>Clicking “Create” should automatically redirect you to the page for your new issue. It will automatically be given a unique (to this repository) number that you can see next to the issue’s title at the top of the screen. We’ll get to why the issue number is useful later.</p>
+<p><strong>There are two main categories of useful information in an issue: comments and metadata.</strong> Comments take up the majority of the horizontal area (see the wide left column) while metadata information occupies a thin column on the right side of the screen.</p>
+<p><a href="images/git-github-05_project-mgmt/make-issue_02-home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/git-github-05_project-mgmt/make-issue_02-home.png" class="img-fluid" alt="Screenshot of a newly-opened GitHub issue with only a title filled out"></a></p>
+<section id="metadata" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="metadata"><span class="header-section-number">3.1</span> Metadata</h3>
+<p>When we create issues, we like to <strong>start with the metadata</strong> as this information is more useful when thinking things through from a strategic project management perspective. To clarify, the comments are also useful but they are specific to the task at hand, <strong>the metadata allow you to categorize how this issue supports the larger vision for the project.</strong></p>
+<p>The three facets of an issue’s metadata that you’re most likely to use are:</p>
+<ol type="1">
+<li>Assignees
+<ul>
+<li>These people will get email notifications of all activity in the issue</li>
+</ul></li>
+<li>Labels
+<ul>
+<li>Categorical descriptors for what kind of issue this is. These can be customized and have been heavily customized in the screen captures to follow</li>
+</ul></li>
+<li>Type
+<ul>
+<li>An interesting step one level “above” labels. The example below uses the Agile software development framework, but–like labels–you can customize these to fit your group’s needs (for more info on Agile see <a href="https://en.wikipedia.org/wiki/Agile_software_development">here</a>)</li>
+</ul></li>
+</ol>
+<p>Let’s customize those three fields for the issue we just opened. To customize any part of issue metadata <strong>click the gear icon to the right of the field you want to edit.</strong> That will open a list of possible options for that field so you can just choose the one(s) that apply to this issue. After you’ve selected some information for the issue’s metadata, your sidebar might look like the screen capture below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/make-issue_03-meta.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/git-github-05_project-mgmt/make-issue_03-meta.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the metadata sidebar of a GitHub issue with some fields filled out"></a></p>
+</figure>
+</div>
+</section>
+<section id="comments" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="comments"><span class="header-section-number">3.2</span> Comments</h3>
+<p>Once you’re happy with the metadata, we can edit the first comment. “Edit” not “make” because the first comment is actually the field below the title that we left blank when we opened the issue initially. To edit that comment, <strong>click the ellipsis (…) in the top right corner of the first comment and select the “<i class="fa-solid fa-pencil" aria-label="pencil"></i> Edit” option.</strong> Note that GitHub issues accept Markdown syntax so any tips or tricks you’ve picked up in styling the plain text of RMarkdown or Quarto files should also apply to beautifying your issue.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Finished Comment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Markdown ‘Behind the Scenes’</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>After you’ve edited your issue’s first comment it might look something like this.</p>
+<p><a href="images/git-github-05_project-mgmt/make-issue_05-comment-front.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/git-github-05_project-mgmt/make-issue_05-comment-front.png" class="img-fluid" alt="Screenshot of an issue with an edited top-level comment and some metadata filled out"></a></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>This is the ‘back end’ of the issue displayed in the other tabset panel. Note the Markdown tricks being applied for both form and function purposes.</p>
+<p><a href="images/git-github-05_project-mgmt/make-issue_04-comment-back.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/git-github-05_project-mgmt/make-issue_04-comment-back.png" class="img-fluid" alt="Screenshot of an issue comment being edited with Markdown syntax"></a></p>
+</div>
+</div>
+</div>
+<p>While issue comments are completely free for you to use as you see fit, it is important to remember that <em>your most frequent collaborator is yourself in the future</em> so a future version of yourself will absolutely thank you if you <strong>include as much useful context as possible.</strong> In a team setting like this one, extra detail can also really help when the person opening the issue is not the person responsible for editing the code to address it.</p>
+</section>
+</section>
+<section id="inter-issue-relationships" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="inter-issue-relationships"><span class="header-section-number">4</span> Inter-Issue Relationships</h2>
+<p>While technically a facet of the metadata, it is worthwhile to make some specific time to discuss issue “relationships.” Once you have a number of issues open, it’s likely that some of them will be related! Possibly because one requires another to be completed before it can be started or maybe a number of small tasks all support a single, larger task.</p>
+<p>Whatever the specifics, you can formally enshrine this in GitHub by editing a piece of the issue’s metadata in the right sidebar beneath most of the other issue metadata elements. <strong>The “Relationships” piece is towards the bottom of the metadata sidebar</strong> (just beneath “Milestone”).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-relationship_00-area.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/git-github-05_project-mgmt/issue-relationship_00-area.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the metadata sidebar of a GitHub issue"></a></p>
+</figure>
+</div>
+<p>Once you find it, <strong>click the gear icon.</strong> For synthesis working groups, “Add parent” is likely to be the most useful but if you want to add one of the other types of relationship instead, you absolutely can! Note that <em>each issue can only have one parent</em>, though you can change that relationship to a different issue if need be.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-relationship_01-type.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/git-github-05_project-mgmt/issue-relationship_01-type.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the 'issue relationships' dropdown menu in GitHub with 'Add parent', 'Mark as blocked by' and 'Mark as blocking' as options"></a></p>
+</figure>
+</div>
+<p>Regardless of the type of relationship you pick, you will now be in a dropdown menu with all the issue in this repository as options to be added as in-relationship with your current issue. You can either scroll through this list or type words that are in the title of the issue with which you want to connect your current one.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-relationship_02-options.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/git-github-05_project-mgmt/issue-relationship_02-options.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of GitHub issue 'relationship' dropdown open showing a selection of recent issues in the same repository"></a></p>
+</figure>
+</div>
+<p>After you select one, the “Relationships” heading should clearly state which issue this one is linked with and if you click it, it will direct you to that other issue.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-relationship_03-done.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/git-github-05_project-mgmt/issue-relationship_03-done.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of a GitHub issue with a linked parent"></a></p>
+</figure>
+</div>
+<p>If you do visit the other issue, you can see all of its sub-issues in a convenient list beneath the first comment of that issue. It may look something like the following:</p>
+<p><a href="images/git-github-05_project-mgmt/issue-relationship_04-from-parent.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/git-github-05_project-mgmt/issue-relationship_04-from-parent.png" class="img-fluid" alt="Screenshot of a GitHub issue with at least one sub-issue"></a></p>
+<section id="working-group-use-cases-for-nesting-issues" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="working-group-use-cases-for-nesting-issues"><span class="header-section-number">4.1</span> Working Group Use-Cases for Nesting Issues</h3>
+<p>Some use-cases of this feature for working groups include the following:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Findable Documentation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Delegating Writing</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Sub-Team Work Plans</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Easily find all issues related to a topic (even closed ones) by <strong>having a parent issue that is never closed</strong>–even when all of its sub-issues are closed. In this instance, your issue structure might look like the following diagram.</p>
+<p>In the diagram below, open issues have a <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> while closed issues have a <i class="fa-regular fa-circle-check" aria-label="circle-check"></i>.</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Group Repository<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Data Discovery (#1)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Find Equatorial Data (#2)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Identify Spatial Data Source (#3)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Find Trait Data (#5)<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Quality Control (#4)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Files without years (#6)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Relative Abundance Data (#7)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Identify Spatial Data Source (#8)<br>
+&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Analysis Judgment Calls (#9)</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Distance/Dissimilarity Metric Options (#10)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Normalize data? (#11)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Analyze within or across ecosystem (#12)</p>
+</div><div class="column" style="width:45%;">
+<p><br>
+</p>
+<p>By leaving the parent issues open (in this example, numbers 1, 4, and 9) all of the sub-issues are easily findable if one of these judgment calls need to be revisited (whether to change track or write the relevant portion of a manuscript).</p>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Create <strong>an issue for each manuscript section</strong> and link actionable tasks for each underneath their respective parent. In this instance, your issue structure might look like the following diagram.</p>
+<p>In the diagram below, open issues have a <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> while closed issues have a <i class="fa-regular fa-circle-check" aria-label="circle-check"></i>.</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Group Repository<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Introduction (#1)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> gather references (#6)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Outline and draft section (#8)<br>
+&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> <strong>Methods (#2)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Review data wrangling/analysis code (#7)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Outline and draft section (#9)<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Results (#3)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Settle on final figures (#10)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Outline and draft section (#11)<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Discussion (#4)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Review results draft (#12)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Outline and draft section (#14)<br>
+&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Abstract (#5)</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Draft section (#13)</p>
+</div><div class="column" style="width:45%;">
+<p><br>
+</p>
+<p>In this use-case, you can absolutely close parent issues after their sub-issues are all completed (see the “Methods” issue in the diagram above).</p>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Make <strong>an issue for each sub-team</strong> then nest issues that <em>team</em> is responsible for as children to that parent. In this instance, your issue structure might look like the following diagram.</p>
+<p>In the diagram below, open issues have a <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> while closed issues have a <i class="fa-regular fa-circle-check" aria-label="circle-check"></i>.</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Group Repository<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Data Team (#1)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Fill out Data Inventory for all datasets (#4)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Data Purgatory (#7)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Check taxonomic names (#8)<br>
+&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Analysis Team (#2)</strong><br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Analyze abundance data (#5)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Multivariate stats for community comp. (#6)<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Draft figures of core story (#9)<br>
+&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> <strong>Writing Team (#3)</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|– <i class="fa-regular fa-circle-check" aria-label="circle-check"></i> Outline introduction and find sources (#10)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-regular fa-circle-dot" aria-label="circle-dot"></i> Draft abstract for ESA (#11)</p>
+</div><div class="column" style="width:45%;">
+<p><br>
+</p>
+<p>In this use-case, you likely wouldn’t close the parent issues; or at least you wouldn’t close them until that team was finished with all of their work.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="value-of-issue-numbers" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="value-of-issue-numbers"><span class="header-section-number">5</span> Value of Issue Numbers</h2>
+<p>Earlier in this module, we promised to get into why the unique number of each issue is useful. Simply put, <strong>you can reference issues in commits or in other issue by using their number!</strong></p>
+<p>When you make a commit, add a hashtag/pound sign (<code>#</code>) and the number of the issue that you want to reference. This will have two key results.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Issue Linked to Commit</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Commit Appears in Issue</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Most directly, the <strong>issue number in the commit message on GitHub will become a hyperlink to that issue.</strong> Anywhere the commit appears (on GitHub), the issue will be linked and easily findable.</p>
+<p><a href="images/git-github-05_project-mgmt/number-ref_01-commit.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/git-github-05_project-mgmt/number-ref_01-commit.png" class="img-fluid" alt="Screenshot of a GitHub repository where the most recent commit has an issue number that is a hyperlink"></a></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>The other feature is a little less obvious in the moment but wonderful for documenting how issues and code edits can be in conversation with one another. The <strong>commit message will show up in the comment history of the issue.</strong> So, when you are scrolling through the comments of an issue, commits that reference that issue will be visible and in chronological order with the comments. So if one comment said “can you fix this?” there could be a commit immediately below it where the commit message is “fixed per #12”.</p>
+<p><a href="images/git-github-05_project-mgmt/number-ref_02-issue.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/git-github-05_project-mgmt/number-ref_02-issue.png" class="img-fluid" alt="Screenshot of a commit message in the history of an issue because it included that issue's number"></a></p>
+</div>
+</div>
+</div>
+<p><strong>By leveraging this feature, you can greatly simplify your commit messages</strong> because you can be confident that some of the necessary context and rationale are described in the issue and so do not need to be re-hashed in your commit message.</p>
+<section id="referencing-issue-in-other-repositories" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="referencing-issue-in-other-repositories"><span class="header-section-number">5.1</span> Referencing Issue in Other Repositories</h3>
+<p>You can even reference issues in other repositories! However, the necessary syntax does change slightly. Once you adopt that syntax though, the referenced number would have the same behavior described above when referencing issues with commits in the same repository</p>
+<ul>
+<li>Commit referencing an issue in <em>the same repository</em>: <code>fix qc code per #12</code></li>
+<li>Commit reference an issue in <em>a different repository</em>: <code>fix qc code per user/repo#12</code></li>
+</ul>
+</section>
+</section>
+<section id="closing-an-issue" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="closing-an-issue"><span class="header-section-number">6</span> Closing an Issue</h2>
+<p>When you’re done with an issue, simply click the “Close issue” button. It will still be findable in your repository, it just won’t show up by default when you go to the “Issues tab”. In order to see all the closed issues on a repository, simply <strong>click the Closed</strong> button in the top left of the “Issues” tab of the relevant repository.</p>
+<p><a href="images/git-github-05_project-mgmt/closed-issues.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/git-github-05_project-mgmt/closed-issues.png" class="img-fluid" alt="Screenshot of the closed issues section of a repository in GitHub"></a></p>
+<p>So, even if an issue was closed in the distant past of your repository on GitHub, you can still easily access and view all of its contents! This greatly facilitates the use of issues in tracking problem solving, brainstorm sessions, and supporting documents.</p>
+</section>
+<section id="appropriate-issue-scope" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="appropriate-issue-scope"><span class="header-section-number">7</span> Appropriate Issue Scope</h2>
+<p>As a brief aside from the nuts and bolts of how to create and manage an issue, it is important to discuss appropriate issue scope.</p>
+<p>Essentially, <strong>an issue should directly correspond to either a single task or a single judgment call.</strong> It is not always possible to predict how projects can evolve at the outset so you may find issues spanning multiple tasks despite your best efforts but as much as you can plan to keep a 1-to-1 ratio of tasks to issues you will find delegation and tracking of task completion that much easier.</p>
+<p>Personally, I am a longtime believer in S.M.A.R.T. goals (i.e., goals that are <strong>S</strong>pecific, <strong>M</strong>easurable, <strong>A</strong>ttainable, <strong>R</strong>elevant, and <strong>T</strong>ime-specific), but there are many established ways of partitioning a larger project to achievable sub-tasks and you should use whichever is most intuitive to you.</p>
+<p>If issues seem like something that your group is broadly interested in it may be worthwhile to have a conversation about some general ‘rules of thumb’ for the scope of tasks identified by issues.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Practice - Create an Issue
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Now that we’ve covered what issues are and how to open them, let’s take a minute and create some issues on your repository! On your GitHub repository, click over to the Issues tab and create a new issue. This can be either a placeholder just to have experience creating an issue or a real task that you think the team will have to deal with in the future. We are here if you need clarification!</p>
+</div>
+</div>
+</section>
+<section id="what-is-a-project" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="what-is-a-project"><span class="header-section-number">8</span> What is a Project?</h2>
+<p>Projects are GitHub’s primary <em>strategic</em> project management tool. While issues can be very useful for particular tasks at a tactical, on-the-ground level, they are less valuable for making larger-scale plans and tracking evolving priorities. <strong>A project acts as an umbrella that includes many issues</strong> and tracks their inter-relationships and where they fit in a bigger-picture view of a project.</p>
+</section>
+<section id="using-projects" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="using-projects"><span class="header-section-number">9</span> Using Projects</h2>
+<p>Projects can be super useful, but they also include a non-trivial amount of setup and maintenance. So, <strong>you should use a GitHub Project <em>only</em> if <u>most</u> of the following applies to you:</strong></p>
+<ol type="1">
+<li>You use issues <em>extensively</em></li>
+<li>You use many metadata features within issues
+<ul>
+<li>E.g., assignees, labels, issue relationships</li>
+</ul></li>
+<li>You have at least three repositories, all with their own issues</li>
+<li>Project management is exciting to you</li>
+</ol>
+<p>At the LTER SciComp team we use Projects extensively, but that’s because all three of those statements apply to us! For many working groups, <strong>using issues and issue metadata can be enough for the scale of their project.</strong> However, if you do decide you want to use Projects, check out the information contained in this module!</p>
+</section>
+<section id="project-ownership" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="project-ownership"><span class="header-section-number">10</span> Project Ownership</h2>
+<p><strong>Projects can only be owned by a particular user or an organization.</strong> In either case, any number of users can be allowed access to the project. The list of all projects owned by an organization/user can be accessed via the “projects” tab. Note that this tab’s name is consistent for users and organizations; organizations just have more tabs to support the expanded set of tools available to them. Note that in the screenshot below we are in an organization (“lter”) <em>not</em> a specific repository.</p>
+<p><a href="images/git-github-05_project-mgmt/projects-1-org.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/git-github-05_project-mgmt/projects-1-org.png" class="img-fluid" alt="Screenshot of the 'projects' tab of a GitHub organization"></a></p>
+<p>Once a project has been created, <strong>it can be “linked” to any number of repositories owned by the same entity.</strong> This can be done from the “Projects” tab of each repository to which linking is desired. Note in the top left of the screenshot below that we are in a repository owned by the LTER GitHub organization.</p>
+<p><a href="images/git-github-05_project-mgmt/projects-2-linking.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/git-github-05_project-mgmt/projects-2-linking.png" class="img-fluid" alt="Screenshot of the 'projects' tab of a particular repository"></a></p>
+</section>
+<section id="using-projects-1" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="using-projects-1"><span class="header-section-number">11</span> Using Projects</h2>
+<p>Within the team that created this workshop, we use issues to track and document the work that we do on behalf of working groups. Because there are so many issues spread across so many repositories, we are an ideal candidate to maximize the value of GitHub projects. See below for a screenshot of what our project looks like (as of early spring 2026).</p>
+<p><a href="images/git-github-05_project-mgmt/project-ex_scicomp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/git-github-05_project-mgmt/project-ex_scicomp.png" class="img-fluid" alt="Screenshot of an open project in 'table' view with many open issues with a number of visible metadata fields as columns"></a></p>
+<p>Note that the issue above has the view set to nest issues beneath their parent issue because our team also extensively uses the issue “relationship” feature. See the issues module for more detail on that feature.</p>
+<section id="customizing-project-interface" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="customizing-project-interface"><span class="header-section-number">11.1</span> Customizing Project Interface</h3>
+<p>You can change which metadata fields are visible, how issues are grouped or sorted, and even the project view itself by clicking the “<i class="fa-solid fa-gear" aria-label="gear"></i> View” button (top right corner) and customizing the options within the resulting dropdown menu.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/project-views_01-options.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/git-github-05_project-mgmt/project-views_01-options.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Screenshot of the 'View' settings menu in a GitHub project"></a></p>
+</figure>
+</div>
+<p>If you want, you can also add and customize multiple separate views in the same project! This is a great choice if your group includes a variety of thinking or learning styles and the separate tabs will all have the same issues included.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/project-views_02-tabs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/git-github-05_project-mgmt/project-views_02-tabs.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="screenshot of the tabs at the top of a GitHub project"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="integrating-issues" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="integrating-issues"><span class="header-section-number">12</span> Integrating Issues</h2>
+<p>After you make a project, you’ll want to add issues to it! <strong>You can either add issues to a project from the issue itself or from the project directly.</strong> See the tabs below for instructions of either approach.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">From Issue</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">From Project</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Adding an issue to a project can be done <strong>from the issue’s metadata options.</strong> You can do this when you first create an issue or after the fact. In the screen captures below, we’ll show how to do this with an existing issue.</p>
+<p>To start, <strong>go to the issue you want to add</strong>. Once you’re there, look at the metadata sidebar and <strong>find the “Projects” section</strong> (should be just above “Milestone” and just below “Type”). Next, <strong>click the <i class="fa-solid fa-gear" aria-label="gear"></i> gear icon</strong> in the top right corner of that option.</p>
+<p>This should give you a list of the projects that: (1) you have recently opened, or (2) are linked to the repository in which the issue lives. <strong>Check the box next to the project to which you want to add this issue.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-to-proj_01-meta.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/git-github-05_project-mgmt/issue-to-proj_01-meta.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the metadata sidebar of a GitHub issue with the 'Projects' option open"></a></p>
+</figure>
+</div>
+<p>Once you’ve chosen your project, the metadata sidebar should update to show which project the issue is now linked to. However, it adds a new sub-field called “Status” that likely says “No status”. <strong>“Status” is a project option that you can use to track the life-cycle of an issue.</strong> The default options are “To Do”, “In Progress”, and “Done” but you can add custom ones if you want!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-to-proj_02-no-status.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="images/git-github-05_project-mgmt/issue-to-proj_02-no-status.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the metadata sidebar of a GitHub issue where a project has been selected but the status says 'no status'"></a></p>
+</figure>
+</div>
+<p><strong>Click “No status” to see a dropdown menu</strong> of statuses available in your project <strong>and pick one from the list.</strong> In this case, we’ll pick “Active Progress” as we are currently working on this issue.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-to-proj_03-status.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="images/git-github-05_project-mgmt/issue-to-proj_03-status.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the metadata sidebar of a GitHub issue with the dropdown menu of available project status options expanded"></a></p>
+</figure>
+</div>
+<p>Once you’ve done this, the chosen status should be visible in the metadata of the issue. If you change the status (either from the issue or from the project), it’ll update here. The history of statuses of this issue will also appear in the chronological comments on the left sidebar of the issue.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/issue-to-proj_04-done.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="images/git-github-05_project-mgmt/issue-to-proj_04-done.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Screenshot of the metadata sidebar of a GitHub issue where a project has been selected and the status is 'Active Progress'"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Adding an issue to a project can be done <strong>from the project itself</strong> as well. This is a little more straightforward than adding from the issue as some pieces of data (e.g., project status) are specified implicitly depending on where in the project you add the new issue.</p>
+<p>At the bottom of most project views, there should be a small <i class="fa-solid fa-plus" aria-label="plus"></i> plus sign button. Click it and you’ll be able to either (A) add a new issue that is attached to this project, (B) create a “draft”, or (C) add an existing issue from a repository to which this project is linked.</p>
+<p>If you start typing the title of an issue, this dropdown menu should automatically update itself with issues in repositories linked to this project that have a partial match to what you are typing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/git-github-05_project-mgmt/proj-to-issue_01-add-item.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="images/git-github-05_project-mgmt/proj-to-issue_01-add-item.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="Screenshot of the 'add item' menu in a GitHub project with some options on adding or making a new issue"></a></p>
+</figure>
+</div>
+<p>A “draft” in this context is sort of a partial issue that is specific to projects and can’t be created elsewhere. For the sake of clarity, we recommend either making a new issue or adding an existing one rather than using this somewhat ambiguous option.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nceas-learning-hub\.github\.io\/nceas-wg-portal\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright © 2026, <a href="https://www.nceas.ucsb.edu/">NCEAS</a> | <a href="http://creativecommons.org/licenses/by/4.0/"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> CC 4.0 International</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nceas-learning-hub/nceas-wg-portal/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

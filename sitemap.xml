@@ -1,59 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s05_github_collaboration.html</loc>
-    <lastmod>2026-06-18T18:23:39.513Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/team-sci_one-pagers.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s10_r_parallel_computing.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/team-sci_communication-plan.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s11_data_resources.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/team-sci_canva-basics.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s06_lecture_communication_plan.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/recordings/git-github.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s12_lecture_canvas.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/nceas-resources.html</loc>
+    <lastmod>2026-06-23T22:33:17.546Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s07_lecture_one_pagers.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/git-github-05_project-mgmt.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s08_lecture_communication_results.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/git-github-03_conflict.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s09_r_git_install_guide.html</loc>
-    <lastmod>2026-06-18T18:23:39.514Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/git-github-01_setup.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s02_github_introduction.html</loc>
-    <lastmod>2026-06-18T18:23:39.512Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/data-sci_parallel-computing.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s03_lecture_data_mgmt_reproducibility.html</loc>
-    <lastmod>2026-06-18T18:23:39.512Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/data-sci_reproducibility.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s01_lecture_facilitating_working_group.html</loc>
-    <lastmod>2026-06-18T18:23:39.512Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/git-github-02_fundamentals.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/s04_github_project_management.html</loc>
-    <lastmod>2026-06-18T18:23:39.512Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/NEWS.html</loc>
-    <lastmod>2026-06-18T18:23:39.446Z</lastmod>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/git-github-04_advanced.html</loc>
+    <lastmod>2026-06-23T22:33:17.457Z</lastmod>
   </url>
   <url>
     <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/index.html</loc>
-    <lastmod>2026-06-18T18:23:39.512Z</lastmod>
+    <lastmod>2026-06-23T22:33:17.546Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/recordings/data-sci.html</loc>
+    <lastmod>2026-06-23T22:33:17.546Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/recordings/team-sci.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/team-sci_communicate-external.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nceas-learning-hub.github.io/nceas-wg-portal/team-sci_facilitation.html</loc>
+    <lastmod>2026-06-23T22:33:17.547Z</lastmod>
   </url>
 </urlset>
