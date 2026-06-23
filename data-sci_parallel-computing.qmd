@@ -2,8 +2,10 @@
 title: Parallel Computing in R
 ---
 
-:::{.callout-tip}
-## Learning Objectives {.unnumbered}
+:::{.callout-tip icon="false"}
+### {{< fa brain >}} Learning Objectives
+
+After completing this session, you will be able to:
 
 - Understand what parallel computing is and when it may be useful
 - Understand how parallelism can work
@@ -12,7 +14,6 @@ title: Parallel Computing in R
 - Understand and use the `foreach` package functions
 - Review asynchronous futures and the `furrr` package
 :::
-
 
 ## Introduction
 
@@ -26,8 +27,7 @@ Alternatively, think of remote sensing data.  Processing airborne hyperspectral 
 
 ![NEON Data Cube](images/data-sci_parallel-computing/DataCube.png)
 
-
-## Why parallelism?
+## Why Parallelism?
 
 Much R code runs fast and fine on a single processor.  But at times, computations
 can be:
@@ -128,7 +128,7 @@ Finally, maybe one of these [NSF-sponsored high performance computing clusters (
 
 Note that these clusters have multiple nodes (hosts), and each host has multiple cores. So this is really multiple computers clustered together to act in a coordinated fashion, but each node runs its own copy of the operating system, and is in many ways independent of the other nodes in the cluster.  One way to use such a cluster would be to use just one of the nodes, and use a multi-core approach to parallelization to use all of the cores on that single machine.  But to truly make use of the whole cluster, one must use parallelization tools that let us spread out our computations across multiple host nodes in the cluster.
 
-## Modes of parallelization
+## Modes of Parallelization
 
 Several different approaches can be taken to structuring a computer program to take advantage of the hardware capabilities of multi-core processors. In the typical, and simplest, case, each task in a computation is executed serially in order of first to last. The total computation time is the sum of the time of all of the subtasks that are executed.  In the next figure, a single core of the processor is used to sequentially execute each of the five tasks, with time flowing from left to right.
 
@@ -142,7 +142,7 @@ Finally, **cluster parallel** execution is shown in the last panel, in which a c
 
 The key to performance gains is to ensure that the overhead associated with creating new threads or processes is small relative to the time it takes to perform a task. Somewhat unintuitively, when the setup overhead time exceeds the task time, parallel execution will likely be slower than serial.
 
-## When to parallelize
+## When to Parallelize
 
 It's not as simple as it may seem. While in theory each added processor would linearly increase the throughput of a computation, there is overhead that reduces that efficiency.  For example, the code and, importantly, the data need to be copied to each additional CPU, and this takes time and bandwidth.  Plus, new processes and/or threads need to be created by the operating system, which also takes time.  This overhead reduces the efficiency enough that realistic performance gains are much less than theoretical, and usually do not scale linearly as a function of processing power. For example, if the time that a computation takes is short, then the overhead of setting up these additional resources may actually overwhelm any advantages of the additional processing power, and the computation could potentially take longer!
 
@@ -207,7 +207,8 @@ system.time({
 })
 ```
 
-## Approaches to parallelization
+## Approaches to Parallelization
+
 When parallelizing jobs, one can:
 
 - Use the multiple cores on a local computer through `mclapply`
@@ -216,7 +217,7 @@ When parallelizing jobs, one can:
     - In this approach, one has to manually copy data and code to each cluster member using `clusterExport`
     - This is extra work, but sometimes gaining access to a large cluster is worth it
   
-### Parallelize using: mclapply
+### Parallelize Using: `mclapply`
 
 The `parallel` library can be used to send tasks (encoded as function calls) to each of the processing cores on your machine in parallel.  This is done by using the `parallel::mclapply` function, which is analogous to `lapply`, but distributes the tasks to multiple processor cores. `mclapply` gathers up the responses from each of these function calls, and returns a list of responses that is the same length as the list or vector of input data (one return per input item). Now let's demonstrate with our bootstrap example. First, determine how many cores are available on this machine:
 
@@ -234,7 +235,7 @@ system.time({
 })
 ```
 
-### Parallelize using: foreach and doParallel
+### Parallelize Using: `foreach` and `doParallel`
 
 The normal `for` loop in R looks like:
 
@@ -390,7 +391,7 @@ So basically by dropping in `furrr::future_map` as a replacement for `purrr::map
 
 In this lesson, we showed examples of computing tasks that are likely limited by the number of CPU cores that can be applied, and we reviewed the architecture of computers to understand the relationship between CPU processors and cores.  Next, we reviewed the way in which traditional `for` loops in R can be rewritten as functions that are applied to a list serially using `lapply`, and then how the `parallel` package `mclapply` function can be substituted in order to utilize multiple cores on the local computer to speed up computations. We also installed and reviewed the use of the `foreach` package with the `%dopar` operator to accomplish a similar parallelization using multiple cores. And finally, we reviewed the use of the `furrr::future_map()` function as a drop in replacement for map operations using asynchronous futures.
 
-## Readings and tutorials
+## Additional Resources
 
 - [Multicore Data Science with R and Python](https://blog.dominodatalab.com/multicore-data-science-r-python/)
 - [Beyond Single-Core R](https://ljdursi.github.io/beyond-single-core-R/#/) by Jonoathan Dursi (also see [GitHub repo for slide source](https://github.com/ljdursi/beyond-single-core-R))
@@ -398,5 +399,3 @@ In this lesson, we showed examples of computing tasks that are likely limited by
 - The [doParallel Vignette](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
 - [future: Unified Parallel and Distributed Processing in R for Everyone](https://future.futureverse.org)
 - [furrr](https://furrr.futureverse.org)
-
-
