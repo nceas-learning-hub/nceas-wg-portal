@@ -55,6 +55,8 @@ website:
           href: data-sci_reproducibility.qmd
         - text: "Parallel Computing in R"
           href: data-sci_parallel-computing.qmd
+        - text: "**_Recordings_**"
+          href: recordings/data-sci.qmd
       - section: "Team Science Trainings"
         contents:
         - text: "Successful Facilitation"
