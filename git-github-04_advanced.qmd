@@ -1,270 +1,397 @@
 ---
 title: "Git & GitHub: Advanced Features"
 ---
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8/preview" allowfullscreen></iframe>
 
-:::{.callout-tip}
-## Learning Objectives
+<!--- 
+No (known) GoogleSlides deck for this lesson
+--->
 
-- Use Git and GitHub tools to collaborate effectively on shared research code.
+:::{.callout-tip icon="false"}
+### {{< fa brain >}} Learning Objectives
 
-- Identify and resolve merge conflicts in the RStudio environment.
+After completing this session, you will be able to:
 
-- Apply workflows and best practices that reduce conflicts in shared github repositories.
+- Define branch, fork, reset, and revert in the context of Git/GitHub 
+- Contrast branches and forks
+- Create a branch on an existing repository
+- Use the fork feature on GitHub for an existing repository
+- Explain the three different types of reset, when they're useful, and how they differ in severity
+
 :::
-
-
-## Introduction to Git and GitHub Tools for Collaboration
-![](images/github_collaboration/allison-horst-jenny-bryan-quote.png){width="100%" fig-align="center"}
-<p style="text-align: left; font-style: italic;font-size: 0.75em;">
-Artwork by Allison Horst
-</p>
-
-Git is a powerful tool for both individual and collaborative work. When multiple researchers contribute to the same project, Git ensures everyone can work independently while still being able to synchronize their changes reliably. Using a shared repository on [GitHub](https://github.com) provides a central place where collaborators can clone the project, make updates, and merge their work smoothly.
-
-During collaboration, it’s normal to encounter merge conflicts, which occur when two people modify the same part of a file in different ways. Conflicts are a routine part of team workflows and simply signal that Git needs human guidance to decide which version to keep. Learning to identify and resolve conflicts builds confidence and helps collaborators integrate their work more effectively.
-
-![](images/github_collaboration/github-collaborators-diagram.png){width="70%" fig-align="center"}
-
-More advanced collaboration relies on GitHub’s workflow tools: branches, pull requests, and reviews. Branches allow contributors to develop new analyses separately from the stable main branch. Pull requests act as formal proposals to merge those changes, creating a space for documentation and discussion. Reviews ensure quality, clarity, and consistency across the project. Together, these tools support a well-structured workflow for ecological research teams working on shared repositories.
-
-
-## Collaborating with a trusted colleague **without conflicts**
-
-### Step 0: Owner adds a Collaborator to their repository on GitHub {.unnumbered}
-
-We start our collaboration by giving a trusted colleague access to our repository on GitHub. In this example, we define the **Owner as the individual who owns the repository**, and the **Collaborator as the person whom the Owner chooses to give permission to make changes to their repository**.
-
-
-::: {.callout-tip icon=false}
-**These steps are for the Owner:**
-
-- Navigate to the `{FIRSTNAME}_test` repository
-- Go to **Settings** and navigate to **Collaborators** in the **Access** section on the left-hand side
-- Under **Manage Access** click the button **Add people** and type the username of your Collaborator in the search box
-- Once you've found the correct username, click **Add {Collaborator username} to this repository**
-
-**Now, the Collaborator will follow this step:**
-
-- Check your email for an invitation to GitHub or check your notifications (likely under **Your Organizations**) on GitHub to accept the invite to collaborate.
-:::
-
-
-### Step 1: Collaborator clones the remote repository {.unnumbered}
-
-In order to contribute, the Collaborator must **clone** the repository from the **Owner's** GitHub account (*Note: as a Collaborator, you won't see the repository appear under your profile's Repositories page*). To do this, the Collaborator should navigate to the Owner's repository on GitHub, then copy the clone URL. In RStudio, the Collaborator will create a new project from version control by pasting this clone URL into the appropriate dialog box (see the [earlier chapter](s02_github_introduction.qmd) introducing GitHub).
-
-::: {.callout-tip icon=false}
-### INTERMEDIATE STEP: Collaborators communicate with each other that they plan to make some changes {.unnumbered}
-
-Frequent communication is SO important when collaborating! Letting one another know that you're about to make and push changes to the remote repo can help to prevent merge conflicts (and reduce headaches). **The easiest way to avoid merge conflicts is to ensure that you and your collaborators aren't working on the same file(s)/section(s) of code at the same time.**
-:::
-
-### Step 2: Collaborator edits files locally {.unnumbered}
-
-With the repo cloned locally, the Collaborator can now make changes to the file, adding a line or statement somewhere noticeable near the top. Save the changes.
-
-### Step 3: Collaborator `commit`s, `pull`s, and `push`s {.unnumbered}
-
-It's recommended that all collaborators (including the repo Owner) follow this workflow when syncing changes between their local repo and the remote repo (in this example, the Collaborator is now following these steps):
-
-1. `commit` your modified file(s)
-2. `pull` to fetch and merge changes from the remote/origin repository (in an ideal situation, as we're demonstrating here, any potential changes are merged seamlessly without conflict)
-3. `push` your changes to the remote/origin repository
 
 ::: {.callout-note}
-## Why do I need to add and commit files *before* pulling?
-Remember, `git pull` is a combination of `git fetch`ing remote changes to your local repo and `git merge`ing those changes from your local repo into your local working file(s).
+## Acknowledgments
 
-The **merge** part of `git pull` will fail if you have uncommitted changes in your local working file(s) to avoid any potential overwriting of your own changes. Because of this, you should always, add/commit *then* pull, *and finally* push.
+Parts of this page were adapted from the Long Term Ecological Research (LTER) Network's workshop "Collaborative Coding with GitHub". Those materials can be found at [lter.github.io/workshop-github](https://lter.github.io/workshop-github/)
 :::
 
-![](images/github_collaboration/rstudio-commit-push.png){width="80%" fig-align="center"}
+## Overview
 
-### Step 4: Owner `pull`s new changes from the remote repo to their local repo {.unnumbered}
-### Step 5: Owner edits, `commit`s, `pull`s (just in case!) and `push`es {.unnumbered}
+At this point, you're likely at least somewhat familiar with the fundamental operations of Git and GitHub; you know how to stage your edits, make (informative) commit messages, and sync (pull/push) those changes between a remote repository and a local clone of that repository. However, in prior modules, a handful of topics have been raised but only touched on in a superficial way. This module is where we will dig into greater detail on some of these "advanced" topics.
 
-Following the same workflow as the Collaborator did earlier.
+We'll discuss branches and forks--what they are, how they differ, and when/how to use them--how they relate to pull requests, and how to un-do problematic commits with varying levels of severity.
 
-## Merge conflicts
+## Core Vocabulary
 
-**Merge conflicts** occur when both collaborators make conflicting changes to the same file. Resolving merge conflicts involves identifying the root of the problem and restoring the project to a normal state. Good communication, discussing file sections to work on, and avoiding overlaps can help prevent merge conflicts. However, if conflicts do arise, Git warns about potential issues and ensures that changes from different collaborators based on the same file version are not overwritten. To resolve conflicts, you need to explicitly specify whose changes should be used for each conflicting line in the file.
+We've covered a number of the fundamental tools for working with Git and GitHub already. However, to this point, we've only lightly touched on "branches" and "forks," two terms that sometimes arise in advanced Git/GitHub collaborations.
 
-### Common ways to resolve a merge conflict {.unnumbered}
+:::{.panel-tabset}
+### Branches
 
-Sometimes you just made a mistake.  When you get a merge conflict, the repository
-is placed in a "Merging" state until you resolve it. You can simply choose to "revert" file back to the earlier version before you changed.
+**A "branch" is essentially a working area in your Git repository that is separate from, but connected to, your main working area.** Branches can be incredibly useful when you have a task to work on but you don't want to risk damaging the version of your code that already works. Note that "branch" can be either a noun or a verb as with many of the Git vocabulary words discussed earlier (e.g., "commit", "push").
 
-Of course, after doing that you still haven't synced with your Collaborator's
-changes, so things are still unresolved.  But at least your repository is now
-usable on your local machine.
+**_Typically_, branches are typically created with a specific task/sub-task in mind and deleted once that task is done.** There are some exceptions to this but generally keeping a manageable number of active branches and deleting inactive branches will make it easier for your team to collaborate in the right branch(es).
 
-Option 2: When you `pull` a file with a conflict, Git will provide you with a warning modify the file so that it includes both your own changes and your Collaborator's changes. The file will also appear in the **Git** tab with an orange `U` icon, which indicates that the file is `Unmerged` and therefore awaiting your help to resolve the conflict. It delimits these blocks of conflicted code with a series of less than and greater than signs, so they are easy to find:
+As an analogy, imagine that you want to put a better engine in your car but you don't want to risk damaging your car as you go about that job. In Git terms, you'd create a copy of your car that you could work on (i.e., a branch) while still running errands or driving to work with the version of your car before you started tinkering (i.e., the main branch). When you feel that you've finished upgrading your car, you can seamlessly combine the two cars, keeping all improvements made in the branch version. You could instead decide that the branch version of your car isn't actually worthwhile and abandon/delete it instead of merging it with the 'actual' version of your car.
 
-![](images/github_collaboration/rstudio-merge-conflict.png){width="80%" fig-align="center"}
+Benefits | When to Use | When Not to Use |
+|----------|-------------|-----------------|
+| - Enables parallel development and experimentation<br>- Facilitates isolation of features or bug fixes<br> - Provides flexibility and control over project workflows | - When working on larger projects with multiple features or bug fixes simultaneously<br> - When you want to maintain a stable main branch while developing new features or resolving issues on separate branches<br> - When collaborating with teammates on different aspects of a project and later integrating their changes | - When working on small projects with a single developer or limited codebase<br> - When the project scope is simple and doesn't require extensive branch management<br> - When there is no need to isolate features or bug fixes |
 
-In the above example, `<<<<<<< HEAD` marks the start of *your* changes. The `=======` delimiter separates your changes from your Collaborator's conflicting changes. `>>>>>>>` mark the end of your Collaborator's changes. 
+### Forks
 
-To resolve the conflicts, simply find all of these blocks, and edit them so that
-the file looks how you want (either pick your lines, your Collaborator's lines,
-some combination, or something altogether new), and save. Be sure you removed the
-delimiter lines that started with 
+**A "fork" is a duplicate of a GitHub repository that has a different owner than the original.** Any repository that you can view on GitHub, you can fork. This includes (1) any public repository, and (2) private repositories to which you have access.
 
-- `<<<<<<<`
-- `=======`
-- `>>>>>>>`
+Forks are most commonly used when you want to use someone else's work to 'jump start' your own, but aren't collaborating with that person and likely don't want to re-integrate your changes into their version of the project. 
 
-Once you have made those changes, you simply `commit`, and `push` the files to resolve the conflict.
+Returning to our car analogy, a fork would be when you like a car that you see someone else driving so you make a copy of it and then modify your copy to better suit your lifestyle and aesthetic tastes. You _could_ offer your changes back to the original car owner but probably if they wanted those edits, you'd be a formal collaborator and you'd be working in a branch of their repository rather than your own fork.
 
-## Producing and resolving merge conflicts
+| Benefits | When to Use | When Not to Use |
+|----------|-------------|-----------------|
+| - Enables independent experimentation and development<br>- Provides a way to contribute to a project without direct access<br>- Allows for creating separate, standalone copies of a repository | - When you want to contribute to a project without having direct write access to the original repository<br> - When you want to work on an independent variation or extension of an existing project<br> - When experimenting with changes or modifications to a project while keeping the original repository intact | - When collaborating on a project with direct write access to the original repository<br> - When the project does not allow external contributions or forking<br> - When the project size or complexity doesn't justify the need for independent variations |
 
-To illustrate this process, the instructors are going to carefully create a merge conflict step-by-step, show how to resolve it, and show how to see the results of the successful merge after it is complete. First, the instructors will walk through the exercise to demonstrate the issues. Then, participants will pair up and try the exercise.
-
-
-### Step 1: Owner and Collaborator ensure that their local repos are synced with the remote repo {.unnumbered}
-
- Begin the exercise by ensuring that both the Owner and Collaborator have all of the changes synced from the remote repo to their local repos. This includes doing a `git pull` to ensure that you have all changes locally, and ensuring that the **Git** tab in RStudio doesn't show any changes that need to be committed.
-
-### Step 2: Owner makes a change and commits locally {.unnumbered}
-
-From this clean slate, the Owner will first modify and commit a small change. The Owner should add their name on a specific line of the `README.md` file (we will change the title in line 1). Save and commit the change (**but DO NOT push**). The Owner should now have a local but unpushed commit that the Collaborator does not yet have access to. 
-
-### Step 3: Collaborator makes a change and commits **on the same line** {.unnumbered}
-
-Now, the Collaborator will modify and commit a small change. The Collaborator should add their name to the same line of the `README.md` file (we will again change the title in line 1). Save and commit the change (**but DO NOT push**). The Collaborator should now also have a local but unpushed commit that the Owner does not yet have access to.
-
-*At this point, both the Owner and Collaborator have committed local changes, but neither have tried to share their changes via GitHub.*
-
-### Step 4: Collaborator pushes the file to GitHub {.unnumbered}
-
-Sharing starts when the Collaborator pushes their changes to the GitHub repo, which updates GitHub with their version of the file. The Owner is now one revision behind, but doesn't know it yet.
-
-### Step 5: Owner pushes their changes and gets an error {.unnumbered}
-
-At this point, the Owner tries to push their change to the repository, which triggers
-an error from GitHub. While the error message is long, it tells you everything 
-needed (that the Owner's repository doesn't reflect the changes on GitHub, and that they
-need to `pull` before they can push).
-
-![](images/github_collaboration/git-conflict-01-push-error.png)
-
-### Step 6: Owner pulls from GitHub to get Collaborator changes {.unnumbered}
-
-Following the error message, the Owner pulls the changes from GitHub, and gets
-another, different error message. Here, it indicates that there is a merge 
-conflict because of the conflicting lines.
-
-![](images/github_collaboration/git-conflict-02-pull-error.png)
-
-In the **Git** pane of RStudio, the file is also flagged with an orange `U`, which stands
-for an unresolved merge conflict.
-
-![](images/github_collaboration/git-conflict-03-conflict.png)
-
-### Step 7: Owner edits the file to resolve the conflict {.unnumbered}
-
-To resolve the conflict, the Owner now needs to edit the file. Again, as indicated above,
-Git has flagged the locations in the file where a conflict occurred 
-with `<<<<<<<`, `=======`, and `>>>>>>>`. The Owner should edit the file, merging whatever changes are appropriate until the conflicting lines read how they should, and eliminate all of the marker lines with `<<<<<<<`, `=======`, and `>>>>>>>`.
-
-![](images/github_collaboration/git-conflict-04-conflict-tags.png)
-
-Of course, for scripts and programs, resolving the changes means more than just 
-merging the text -- whoever is doing the merging should make sure that the code 
-runs properly and that none of the logic of the program has been broken.
-
-![](images/github_collaboration/git-conflict-05-resolved-file.png)
-
-### Step 8: Owner commits the resolved changes {.unnumbered}
-
-From this point forward, things proceed as normal. The Owner first `add`s the file, which changes the orange `U` to a blue `M` for modified. Then, the Owner commits the changes locally. The Owner now has a resolved version of the file on their
-system.
-
-![](images/github_collaboration/git-conflict-06-commit-resolved.png)
-
-### Step 9: Owner pushes the resolved changes to GitHub {.unnumbered}
-
-The Owner can now push the changes, without error, to GitHub. 
-
-![](images/github_collaboration/git-conflict-07-push-resolved.png)
-
-### Step 10: Collaborator pulls the resolved changes from GitHub {.unnumbered}
-
-Finally, the Collaborator can pull from GitHub to get the changes (which include the resolved conflicted lines of code) that the Owner made.
-
-### Step 11: Both can view commit history {.unnumbered}
-
-Both the Collaborator and the Owner can view the history, which includes information about the conflict, the associated 
-branch, and the merged changes. 
-
-![](images/github_collaboration/git-conflict-08-history.png)
-
-
-
-## Best practices to avoid merge conflicts
-
-Some basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:
-
-::: column-margin
-[![XKCD 1597](images/github_collaboration/git-xkcd-comic.png)](https://xkcd.com/1597/)
 :::
 
-- Communicate often and set up effective communication channels
-- Tell each other what you are working on
-- Start your working session with a `pull`
-- `Pull` immediately after you `commit` and before you `push`
-- `Commit` often in small chunks (this helps you organize your work!)
-- Make sure you and who you are collaborating with all **fully** understand the Git workflow you're using (aka make sure you're on the same page before you start)!
+The difference between **forks** and **branches** is a source of great confusion for many (even veteran!) Git and GitHub users but hopefully this table helps to clarify!
 
-A good workflow is encapsulated as follows:
+| FAQ | Branch | Fork | 
+|:----------------|:---:|:---:|
+| Does making one also create a new repository? | No | **Yes!** |
+| Does repository ownership change when you make one? | No | **Yes!** |
+| Does <u>Git</u> know the "parent" repository/branch? | **Yes!** | No |
+| Does <u>GitHub</u> know the "parent" repository/branch | **Yes!** | **Yes!** |
 
-**Pull -> Edit -> Save -> Commit -> Pull -> (OPTIONAL) Fix any merge conflicts -> Push**
+## Pull Requests
 
+Regardless of whether you branch or fork, when you want to merge your changes into another branch or back to the original repository, it is good practice to use a **"pull request"** to do this! A pull request (a.k.a. "PR") is a GitHub feature that allows collaborators on a project to do a specific review of the content from a branch/fork as a final check before those edits are integrated into the another branch/repository.
 
-## A Note on Advanced Collaboration Techniques
+| Benefits | When to Use | When Not to Use |
+|----------|-------------|-----------------|
+| - Facilitates code review and discussion<br>- Allows for collaboration and feedback from team members<br>- Enables better organization and tracking of proposed changes | - When working on a shared repository with a team and wanting to contribute changes in a controlled and collaborative manner<br>- When you want to propose changes to a project managed by others and seek review and approval before merging them into the main codebase | - When working on personal projects or individual coding tasks without the need for collaboration<br>- When immediate changes or fixes are required without review processes<br>- When working on projects with a small team or single developer with direct write access to the repository |
 
-There are many Git and GitHub collaboration techniques, some more advanced than others. Here is a table for your reference on a few popular Git collaboration workflow strategies and tools. 
+## Branch Workflow
 
-| Collaboration Technique | Benefits | When to Use | When Not to Use |
-|-------------------------|----------|-------------|-----------------|
-| Branch Management Strategies | 1. Enables parallel development and experimentation<br>2. Facilitates isolation of features or bug fixes<br>3. Provides flexibility and control over project workflows | When working on larger projects with multiple features or bug fixes simultaneously.<br>When you want to maintain a stable main branch while developing new features or resolving issues on separate branches.<br>When collaborating with teammates on different aspects of a project and later integrating their changes. | When working on small projects with a single developer or limited codebase.<br>When the project scope is simple and doesn't require extensive branch management.<br>When there is no need to isolate features or bug fixes. |
-| Code Review Practices | 1. Enhances code quality and correctness through feedback<br>2. Promotes knowledge sharing and learning within the team<br>3. Helps identify bugs, improve performance, and ensure adherence to coding standards | When collaborating on a codebase with team members to ensure code quality and maintain best practices.<br>When you want to receive feedback and suggestions on your code to improve its readability, efficiency, or functionality.<br>When working on critical or complex code that requires an extra layer of scrutiny before merging it into the main branch. | When working on personal projects or small codebases with no collaboration involved.<br>When time constraints or project size make it impractical to conduct code reviews.<br>When the codebase is less critical or has low complexity. |
-| Forking                 | 1. Enables independent experimentation and development<br>2. Provides a way to contribute to a project without direct access<br>3. Allows for creating separate, standalone copies of a repository | When you want to contribute to a project without having direct write access to the original repository.<br>When you want to work on an independent variation or extension of an existing project.<br>When experimenting with changes or modifications to a project while keeping the original repository intact. | When collaborating on a project with direct write access to the original repository.<br>When the project does not allow external contributions or forking.<br>When the project size or complexity doesn't justify the need for independent variations. |
-| Pull Requests           | 1. Facilitates code review and discussion<br>2. Allows for collaboration and feedback from team members<br>3. Enables better organization and tracking of proposed changes | When working on a shared repository with a team and wanting to contribute changes in a controlled and collaborative manner.<br>When you want to propose changes to a project managed by others and seek review and approval before merging them into the main codebase. | When working on personal projects or individual coding tasks without the need for collaboration.<br>When immediate changes or fixes are required without review processes.<br>When working on projects with a small team or single developer with direct write access to the repository. |
+Before diving into the specifics of how to use branches while working with Git, let's take a high-level look at what a branch workflow might look like. **Before you start, identify a 'branch-worthy' task**--this should be a specific, actionable task that can only be done by potentially breaking core project files that need to be unbroken while the task is being pursued. 
 
-: {tbl-colwidths="[15,28,28,28]"}
+Once the task is identified:
 
-The "When Not to Use" column provides insights into situations where it *may* be less appropriate / unnecessary to use each collaboration technique, helping you make informed decisions based on the specific context and requirements of your project.
+1. Make sure your local repository's main branch is up-to-date with the remote's main branch
+2. Create a branch
+3. Work in the branch as you would normally with Git
+    - I.e., make commits as needed and periodically sync with the remote repository
+4. When the branch-worthy task is done, merge the branch back into the main branch of the repository
+    - Open a pull request if you want an added layer of checks/safety before integrating your changes
+5. Switch your local repository back to main and pull the now-integrated changes
+6. Delete the branch (locally and on the remote)
 
-These techniques provide different benefits and are used in various collaboration scenarios, depending on the project's needs and team dynamics.
+As you can see from the above text, branches have a few more steps than the Git/GitHub operations we've discussed so far. That said, they can be a powerful tool in service of collaborative work because you can have multiple branches active at the same all working on separate tasks. This approach can be an easy (or at least _easier_) workflow for working together while avoiding conflicts.
 
-#### Advanced Git Commands
+Now we've gone over this big picture overview, let's walk step-by-step through creating, working in and ultimately merging branches!
 
-This table includes more advanced Git terms and commands that are commonly used in both individual and collaborative projects.
+### Create a Branch
 
- Term | Git Command(s) | Definition |
-|:---:|:-----|:-------------------------|
-| Branch | `git branch` | Lists existing branches or creates a new branch |
-| Checkout | `git checkout [branch]` | Switches to a different branch or restores files from a specific commit |
-| Clone | `git clone [repository]` | Creates a local copy of a remote repository |
-| Diff | `git diff` | Shows differences between files, commits, or branches |
-| Log | `git log` | Displays the commit history of the repository |
-| Merge | `git merge [branch]` | Integrates changes from one branch into another branch |
-| Rebase | `git rebase` | Integrates changes from one branch onto another by modifying commit history |
-| Remote | `git remote` | Manages remote repositories linked to the local repository |
-| Repository | `git init` | A directory where Git tracks and manages files and their versions |
-| Stash | `git stash` | Temporarily saves changes that are not ready to be committed |
-| Tag | `git tag` | Assigns a label or tag to a specific commit |
+**_Before_ you create a branch, <span style="color:blue">pull</span> from/sync with GitHub** as a precaution so that you are certain your local repository has the most up-to-date content. Failing to do so is a recipe for a brutal merge conflict when you are finished with your branch and want to merge it back into the main flow of your repository.
 
-Git has a rich set of commands and features, and there are many more terms beyond either table. Learn more by visiting the [Git documentation](https://git-scm.com/docs).
+:::{.panel-tabset}
 
-#### Other Terms
+### Positron
 
-This table includes terms for which there **are not specific Git commands.**
+To begin, **go to the "source control" section of Positron.**
 
- Term | Definition |
-|:---:|:-------------------------|
-| Sync | Fetches, merges, and pushes (in that order) commits to/from a local repository |
-| Fork  | Creates a personal copy of a repository under your GitHub account for independent development |
-| Merge Conflict | Occurs when Git cannot automatically merge changes from different branches, requiring manual resolution |
-| Pull Request (PR) | A request to merge changes from a branch into another branch, typically in a collaborative project |
+![](images/git-github-04_advanced/positron-01_start.png){fig-alt="Screen capture of Positron" .lightbox}
+
+To create a branch, **hover over the "Changes" dropdown menu and click `...`** to expand the set of Git operations that are visible. From there, **scroll down to "Branch" and click it.** Finally, **click "Create Branch...".**
+
+![](images/git-github-04_advanced/positron-02_new-branch.png){fig-alt="Screenshot of the dropdown menu in Positron for creating a new branch" fig-align="center" width="80%" .lightbox}
+
+In the resulting field (top middle of Positron), **give your new branch an informative name.** In this example we haven't given our new branch a great name but in a "real" repository you will greatly appreciate having concise but descriptive branch names. Once you're happy with the name, **hit the Enter key on your computer.**
+
+![](images/git-github-04_advanced/positron-03_branch-details.png){fig-alt="Screenshot of the field in Positron where you type new branch names" .lightbox}
+
+Now that you've made your new branch locally, you need to send it up to GitHub. Positron calls this "Publishing" but this isn't conceptually different from any other sync/push--essentially you're just letting GitHub know that you have a branch locally that it doesn't have a record of yet. To publish the branch, **click the "Publish Branch" button.**
+
+![](images/git-github-04_advanced/positron-04_publish-branch.png){fig-alt="Screenshot of the Positron 'source control' pane where the 'Publish Branch' button is active" fig-align="center" width="80%" .lightbox}
+
+You'll know that this worked when you look at the branch diagram in the bottom left corner of Positron's source control menu. Note how the second commit from the top has the "origin/main" label while the top-most one has the label that matches whatever you named your new branch.
+
+![](images/git-github-04_advanced/positron-05_published.png){fig-alt="Screenshot of the Positron 'source control' pane after a new branch has been published" fig-align="center" width="80%" .lightbox}
+
+### RStudio
+
+To create a branch, click the **<span style="color:purple">purple</span>** button in the "Git" tab of RStudio that shows two rectangles connected by a diamond at right-angles from one another.
+
+![](images/git-github-04_advanced/rstudio-01_start.png){fig-alt="Screen capture of RStudio" .lightbox}
+
+In the resulting dialogue box, **give your new branch an informative name.** In this example we haven't given our new branch a great name but in a "real" repository you will greatly appreciate having concise but descriptive branch names. Once you're happy with the name, **click the "Create" button** (you can ignore the other options and buttons on this dialogue box).
+
+![](images/git-github-04_advanced/rstudio-02_branch-details.png){fig-alt="Screenshot of the menu that opens when you click the purple 'create branch' button in RStudio. Includes a text field for the branch name as well as a some other checkboxes/options (that can be safely left at their default settings in many cases)" fig-align="center" width="50%" .lightbox}
+
+This will create a confirmation message that is superficially similar to the format of messages returned by other Git actions.
+
+![](images/git-github-04_advanced/rstudio-03_branch-message.png){fig-alt="Screenshot of the text returned when you create a branch in RStudio" fig-align="center" width="80%" .lightbox}
+
+You may also notice that in your Git tab where previously it said "main" it now shows whatever name you chose for your branch.
+
+:::
+
+### Work in the Branch
+
+You can now work in a branch *in the same way* that you work with GitHub via your IDE of choice when you are not using branches.
+
+1. Make **<span style="color:gold">edits</span>**
+2. **Commit** changes locally
+3. **<span style="color:blue">Pull</span>** from GitHub to reduce the chances of a conflict
+4. **<span style="color:green">Push</span>** your committed changes to GitHub
+
+The reason you use the same workflow is--as previously stated--even if you don't typically use branches, all work in Git is functionally done in the "main" branch of your repository so your work in this new branch should use the same order of operations as work done in the "main" branch.
+
+### Open & Merge a Pull Request
+
+When you are done with your work in the branch, you will want to merge your new branch with the "main" branch of the repository. This branch merging is most easily done via GitHub so the following instructions are agnostic to IDE and purposefully exclude the repository name from the screen capture area. To start, **<span style="color:green">push</span>/sync your final commit(s) from your local branch with GitHub.**
+
+After you <span style="color:green">push</span>/sync your changes, GitHub should recognize this and automatically create a button at the top of your repository's home page for you to start the process of creating a "pull request." Pull requests are how you merge branches on GitHub and the entire process is conducted entirely in the browser so we'll leave our IDEs until the pull request is completed.
+
+To start the branch merging process, **click the "Compare & pull request" button**
+
+![](images/git-github-04_advanced/github-01_pr-button.png){fig-alt="Screenshot of a repository in GitHub where the 'compare and pull request' button is being offered because GitHub detected a push in the branch" fig-align="center" width="80%" .lightbox}
+
+You will then be prompted to write a title and message for your pull request to give some broader context for what the branch does. This is especially valuable if you are not the one reviewing pull requests as this can help someone quickly familiarize themselves with what you have done.
+
+Once you're satisfied with your title and message, **click the "Create pull request" button.**
+
+![](images/git-github-04_advanced/github-02_pr-details.png){fig-alt="Screenshot of GitHub when you open a pull request and are prompted to give it a title and description" .lightbox}
+
+That done, GitHub will send you to a page that looks very much like a GitHub issue (see the module on issues for more detail). At the top is whatever title and message you just wrote when opening the pull request following by a list of all of the commits in that branch.
+
+Those commits are hyperlinks in case you want to view the specific differences to files edited in this branch.
+
+Note also that if you realize you forgot to do something in your branch (or if someone asks you change something) you can return to your IDE and commit/pull/push and it will automatically update on the pull request. Pull requests are for merging a whole branch, not for merging just a part of the work in the branch.
+
+You or your team can also post messages on a pull request as needed (see the text box at the bottom of the below picture). If you are ready to merge a pull request from your branch into the "main" branch **click the "Merge pull request" button.**
+
+![](images/git-github-04_advanced/github-03_pr-open.png){fig-alt="Screenshot of an open pull request on GitHub" .lightbox}
+
+GitHub will open another text box where you can add a commit message to your acceptance of the pull request. If whoever opened the pull request was sufficiently detailed in their opening comment(s) this may not need to be terribly detailed but it can't hurt!
+
+Once your message is written, **click the "Confirm merge" button.**
+
+![](images/git-github-04_advanced/github-04_pr-merge-message.png){fig-alt="Screenshot of the menu that opens on GitHub when you click 'merge pull request' where you are prompted to add an optional description before clicking 'confirm merge'" .lightbox}
+
+Your pull request has now been merged! Now we need to do some minor housekeeping in GitHub that--fortunately--GitHub makes really accessible.
+
+### Post-Merge Housekeeping
+
+Branches are meant to be short-lived and deleted once the specific purpose for which they were created has been accomplished. So, once the pull request is merged, we should **click the "Delete branch" button.** This will ensure that the number of active branches remains manageable and also will let you re-use branch names later on if you deem that necessary.
+
+![](images/git-github-04_advanced/github-05_pr-merged.png){fig-alt="Screenshot of a closed pull request on GitHub with a 'delete branch' button provided" .lightbox}
+
+After you click "Delete branch" it will be replaced by a "Restore branch" button so you could always reclaim it if the deletion was premature.
+
+![](images/git-github-04_advanced/github-06_pr-delete-branch.png){fig-alt="Screenshot of a pull request on GitHub after the 'delete branch' button has been clicked and replaced by a 'restore branch' button" .lightbox}
+
+Finally, if we return to the home page of the repository, we can see that the most recent commit is whatever we put in the pull request text field right before we merged it.
+
+![](images/git-github-04_advanced/github-07_repo-home.png){fig-alt="Screenshot of a the home page of a GitHub repository where the most recent commit matches the pull request commit message from an earlier screen capture" .lightbox}
+
+### Update the Local Clone
+
+Now that the branches have been merged on GitHub, we need to make sure our local clone gets those updates from GitHub. This is particularly important if our IDE is still in the branch we created earlier because--now that we've deleted the branch's counterpart in GitHub--we'll get an error if we attempt to push from that branch.
+
+::::{.panel-tabset}
+
+### Positron
+
+First, in the "source control" part of Positron, **hover over the "Changes" menu and click `...`** to expand the set of Git operations that are visible. In the resulting dropdown, **scroll down and click "Checkout to...".** Note that you may want to close your open files before doing this, particularly if some files were created in the branch because they wouldn't yet exist in the "main" branch locally (you merged on GitHub with the pull request but haven't pulled those updates locally).
+
+![](images/git-github-04_advanced/post-branch_positron-01_switch.png){fig-alt="Screenshot of the Git operations dropdown menu in Positron with the 'checkout to...' menu highlighted" fig-align="center" width="50%" .lightbox}
+
+This should open up a list of the available branches in the top middle of Positron. **Find the "main" branch in the list of available branches and click it.**
+
+![](images/git-github-04_advanced/post-branch_positron-02_switch-dest.png){fig-alt="Screenshot of the Git operations dropdown menu in Positron" fig-align="center" width="80%" .lightbox}
+
+Now that you're back in the "main" branch, **pull the latest changes from GitHub.** You should receive all of the commits that you just merged via pull request earlier.
+
+![](images/git-github-04_advanced/post-branch_positron-03_pull.png){fig-alt="Screenshot of the Git operations dropdown menu in Positron with the 'pull' menu highlighted" fig-align="center" width="50%" .lightbox}
+
+You will know this was successful when you **look at the branch diagram at the bottom of the "source control" menu** and see that the line for your experimental branch now re-connects to the leftmost branch's line.
+
+![](images/git-github-04_advanced/post-branch_positron-04_success.png){fig-alt="Screenshot of the branch diagram in Positron's source control menu" fig-align="center" width="50%" .lightbox}
+
+### RStudio
+
+First, in the top right corner of RStudio, **click the active branch name and switch to back to the "main" branch.** Note that you may want to close your open files before doing this, particularly if some files were created in the branch because they wouldn't yet exist in the "main" branch locally (you merged on GitHub with the pull request but haven't pulled those updates locally).
+
+![](images/git-github-04_advanced/post-branch_rstudio-01_switch.png){fig-alt="Screenshot of the Git branch dropdown menu in RStudio" fig-align="center" width="50%" .lightbox}
+
+This should create a message that looks like the following image. You should **ignore the part of the message telling you that your are up to date**; you are not up to date with GitHub yet. The message is referring to the status of your local clone's version of the "main" branch.
+
+![](images/git-github-04_advanced/post-branch_rstudio-02_switch-message.png){fig-alt="Screenshot of the Git message in RStudio when switching branches" fig-align="center" width="80%" .lightbox}
+
+Now that you're back in the "main" branch, **pull the latest changes from GitHub.** You should receive all of the commits that you just merged via pull request earlier. This will create a message that is something like the following image--though of course it will list all changed files so it may be a longer message than what is pictured below if you edited more files.
+
+![](images/git-github-04_advanced/post-branch_rstudio-03_pull-main.png){fig-alt="Screenshot of the Git message in RStudio when switching branches" fig-align="center" width="80%" .lightbox}
+
+::::
+
+### Branch Housekeeping
+
+Now that our "main" branch is updated, we need to do the same sort of branch housekeeping that we did in GitHub after merging the pull request. In your IDE's {{< fa terminal >}} Terminal, **delete the finished branch with the following command line code.** _Remember to replace "BRANCH_NAME" with whatever you named your branch!_
+
+```
+git branch -d BRANCH_NAME
+```
+
+Once you've deleted that branch, you'll need to "prune" your branches. The previous code deleted the local version of your branch but your IDE still 'thinks' that GitHub has an equivalent of the branch. To reduce the potential for confusion, **prune your local clone with the following command line code.** Just like branch deletion, this should code should be run in the {{< fa terminal >}} Terminal.
+
+```
+git remote update origin --prune
+```
+
+Once you've run those two lines of code, confirm that it worked by following the below instructions for your IDE!
+
+:::{.panel-tabset}
+
+### Positron
+
+Click the "Checkout to..." button in the dropdown menu of Git operations. The resulting list of branches should only list the "main" branch under each sub-heading.
+
+![](images/git-github-04_advanced/post-branch_positron-05_confirm-prune.png){fig-alt="Screenshot of the Git branch dropdown menu in Positron" fig-align="center" width="80%" .lightbox}
+
+### RStudio
+
+Click the "main" branch name in RStudio's Git pane. The resulting dropdown of local and remote branches should only list the "main" branch under each sub-heading.
+
+![](images/git-github-04_advanced/post-branch_rstudio-04_confirm-prune.png){fig-alt="Screenshot of the Git branch dropdown menu in RStudio" fig-align="center" width="50%" .lightbox}
+
+:::
+
+## Fork Workflow
+
+Forking is (arguably) one of the more straightforward GitHub operations but before we cover it in detail, let's review the broader context. **You should only make a fork if _all_ of the following are true:**
+
+- You don't have edit access to the original repository (and can't reasonably ask for it)
+- Your work can't be done in a branch
+- It is unlikely that any edits you want to make will/should ever be integrated back into the original repository
+
+If you're confident that a fork is warranted:
+
+1. From the GitHub landing page for the repository, click the "Fork" button
+2. Clone your fork of the repository
+3. Work in your fork as you would normally with Git
+4. If warranted, open a pull request to merge your edits back into the original repository
+
+Note that in many cases, you won't do step 4 and in some cases you may not even do step 3. For example, some people fork repositories that have key resources (e.g., education materials, non-CRAN R packages), just so they can guarantee that those resources stay available to them; even if the original repository is deleted/archived, your fork remains safe and active!
+
+![](images/git-github-04_advanced/git-fork-workflow.png){fig-alt="Graphic of the workflow when using forks. Begins by forking someone else's repository then working in your fork as you normally would" fig-align="center" width="75%" .lightbox}
+
+### Create a Fork
+
+To start, **go to the repository landing page for the repo you want to fork.** In the top right of the repository's GitHub page there is a "Fork" button (between "Unwatch" and "Star"), click it to begin forking.
+
+![](images/git-github-04_advanced/forks-1-start.png){fig-alt="Screenshot of the top of a GitHub repository including the 'fork' button in the top right (in-line with the name of the repository)" .lightbox}
+
+This redirects you to a page that is very similar to the page for creating a new repository _de novo_.
+
+Here you can select who you want to own the repository from a dropdown including any organizations you are a member of and your username if you want to personally own the fork. You can also change the repository name (though the default is to retain the same name) and add a description of your purpose for the fork.
+
+You may notice that in this page you do not have the option to specify public versus private or any of the 'initialize' steps (e.g., README, gitignore, or license). Forks will inherit these settings from the repository they are forked from so they do not need to specified here.
+
+Once you are happy with the owner of the fork, the name, and the description, click the <span style="color:green">green</span> "Create fork" button.
+
+![](images/git-github-04_advanced/forks-2-name-fork.png){fig-alt="Screenshot of the GitHub interface for making a fork (where the repository can be renamed and have a description added)" .lightbox}
+
+Depending on the amount of content in the repository you are forking and your internet speed this may take anywhere from a few seconds to 1-2 minutes so you may need to wait for a moment while GitHub creates a new duplicate repository under the control of the owner you specified.
+
+After the process completes the page will refresh and you will find yourself on the landing page for your new forked repository!
+
+![](images/git-github-04_advanced/forks-3-fork-landing-page.png){fig-alt="Screenshot of the forked repository owned by a different owner than the original repository" .lightbox}
+
+This repository has a fork icon in the top left (to the left of the owner/repository name) and includes a link to the repository that it came from just beneath that. 
+
+There is also a new status bar indicating how 'ahead of' or 'behind' the fork is relative to the original repository. If the "parent" repository is updated (i.e., someone pushes changes to it after you forked) you can click the "Fetch upstream" button to integrate those changes with your fork.
+
+From here on you can work within your fork as you would within any other repository! **<span style="color:purple">Clone</span>** the fork into your local computer and work as you normally would.
+
+If you decide that your changes are a meaningful improvement that the parent repository could benefit from, you can click the "Contribute" button to begin the process of submitting a pull request to integrate your edits with the parent.
+
+## Git Resets
+
+What if you make a commit that you want to _undo_ (i.e., remove from your repository's history)? Git offers a command known as a "reset" to undo commits. There are three levels of severity to a reset; see the table below for more details on each.
+
+:::{.callout-note icon="false"}
+### When a Reset is Warranted
+
+If you want to undo a commit for merely cosmetic reasons, consider just leaving it as-is, but if you commit sensitive information or large files, or attach an incorrect commit message, undoing a commit can be a useful solution.
+:::
+
+| Reset Type | Un-Does Commit | Un-Stages File(s) | Discards Changes | Use-Case |
+|:-:|:-----:|:-----:|:-----:|:---------------------|
+| <span style="color:#c77dff">**Soft**</span> | **Yes!** | No | No | You make a commit but want to edit a typo in the commit message |
+| <span style="color:#9d4edd">**Mixed**</span> <br>(Default) | **Yes!** | **Yes!** | No | Your commit included files you actually didn't mean to include at all (or at least not in that commit) |
+| <span style="color:#5a189a">**Hard**</span> | **Yes!** | **Yes!** | **Yes!** | This is a "scorched earth" solution that is _highly_ situational |
+
+<br> 
+
+Once you've chosen the type of reset that you need, you can use the following syntax to execute it. Note that this is {{< fa terminal >}} Command Line code that must be run in the "Terminal" pane of Positron/RStudio.
+
+:::{.panel-tabset}
+### Reset the Most Recent Commit
+
+To undo just the most recent commit:
+```
+git reset --soft HEAD~1
+```
+
+### Reset to a Specific Commit
+
+To undo every commit after a specific commit, you can use the target commit's "hash" (unique letter/number string identifying that commit). This method does not care how long ago the target commit was so use with caution!
+
+```
+git reset --mixed <commit-hash>
+```
+
+**It is _much_ safer to just roll back one commit at a time** until you're happy with how things look than it is to use this approach!
+:::
+
+### Finding a Particular Commit
+
+Before you can reset to a specific commit, you need to be able to find the "hash," and even if you just want to roll back one commit, it's probably a good idea to take a quick glance at what that commit actually included before un-doing it!
+
+To see your most recent commits (in reverse chronological order), you can run the following {{< fa terminal >}} Command Line code.
+
+```
+git log --oneline
+```
+
+**The commit hashes are the 7-character letter/number strings** (e.g., `f3b8b9a`) on the left of the output from the command above.
+
+A similar view can be found in GitHub by checking out the commit history of your remote repository but if you're trying to un-do a commit that you _haven't_ pushed, GitHub can't show you that commit.
+
+### Local vs. Remote Commits
+
+All of the above only affects _local_ commits (i.e., commits that have not been synced/pushed). If you realize that you want to undo a commit that you've already pushed to GitHub, you'll need to both reset the commit and "force" push back to GitHub to get the remote repository to reset in the same way.
+
+```
+git reset --hard HEAD~1
+git push --force
+```
+
+### Re<u>set</u> vs. Re<u>vert</u>
+
+If resetting feels too extreme, you could also revert a commit. **Reverting moves the status of all files back to what they were under a particular commit but <u>retains the full commit history</u>--including commits made after that focal commit.** You can then make a new commit where you officially change files back to that old status but you don't lose the history of the changes you now skip over as you would with a reset.
+
+To revert a repository:
+
+```
+git revert <commit-hash>
+```
