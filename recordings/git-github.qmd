@@ -11,7 +11,7 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 
 **Sep. 10^th^ 2025, Li Kui**
 
-<iframe src="https://drive.google.com/file/d/1DzaddOJwVFZMoEXIT_oZOXrGL2XtczC8/preview" width="700" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1DzaddOJwVFZMoEXIT_oZOXrGL2XtczC8/preview" width="640" height="480"></iframe>
 
 :::
 
@@ -22,7 +22,7 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 
 **Dec. 10^th^ 2025, Li Kui**
 
-<iframe src="https://drive.google.com/file/d/1Kf5SBzO7QwOmb0wbYc7dgFrcUaFEBzdB/preview" width="700" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1Kf5SBzO7QwOmb0wbYc7dgFrcUaFEBzdB/preview" width="640" height="480"></iframe>
 :::
 
 ## Git & GitHub: Advanced Features
@@ -41,6 +41,6 @@ _This workshop wasn't offered during this time range_
 
 **Nov. 12^th^ 2025, Li Kui**
 
-<iframe src="https://drive.google.com/file/d/1fAdA5Eu7pQLOphq1AaYX1oVjNsi9MvMP/preview" width="700" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1fAdA5Eu7pQLOphq1AaYX1oVjNsi9MvMP/preview" width="640" height="480"></iframe>
 
 :::
