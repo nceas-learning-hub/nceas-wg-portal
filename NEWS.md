@@ -1,4 +1,4 @@
-## Version 2.0
+## Version 2.0.00
 
 Version updated by Nick Lyon as part of them taking a primary role in NCEAS working group trainings (beginning in late 2026); changes from the preceding version are listed below.
 
