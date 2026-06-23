@@ -20,15 +20,17 @@ After completing this session, you will be able to:
 
 :::
 
+<div style="display: flex; justify-content: center;"> 
+<iframe width="560" height="380" src="https://docs.google.com/presentation/d/1X0ARSAMYMvYZlSNLgVJkdeF6LGFN9k927QwYZAIG4Kc/preview?" frameborder="0" allowfullscreen></iframe>
+</div> 
+
 ## Workshop Description
 
 Effective science communication starts long before results are published and develops alongside the research itself. This interactive Zoom workshop is designed for scientific working groups who want to think more strategically about communication and integrate it into their collaborative process.
 
 Participants will learn how to clarify communication goals, identify priority audiences, and craft audience-centered messages and learn how to use tools such as the Compass SciComm Message Box. The workshop focuses on building shared understanding and practical approaches that working groups can revisit and apply throughout their project. Participants will leave better equipped to make intentional communication decisions and support the use and impact of their science.
 
-<iframe src="https://docs.google.com/presentation/d/1X0ARSAMYMvYZlSNLgVJkdeF6LGFN9k927QwYZAIG4Kc/preview" width="100%" height="480" style="border:0;"allowfullscreen></iframe>
-
-## Additional Resources {.unnumbered}
+## Additional Resources
 
 - [Message box Workbook](https://drive.google.com/file/d/1sJ0e97Wnrv6y_gVjLS0ij57F9UXoLEgE/view?usp=sharing)
 - [Message box blank template](https://drive.google.com/file/d/1367JePN-ZNJvTxhFPL9F7oJH6aXIYfUw/view?usp=sharing)

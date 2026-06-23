@@ -3,6 +3,10 @@ title: "Facilitating a Successful Working Group"
 number-sections: false
 ---
 
+<!---
+Related GoogleSlide deck link: https://docs.google.com/presentation/d/1VCRV2htljOrSUkW3Fvjl2rwkm-TNR-9LRn-tS2_2CGY
+--->
+
 :::{.callout-tip icon="false"}
 ### {{< fa brain >}} Learning Objectives
 

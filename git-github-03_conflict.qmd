@@ -4,6 +4,11 @@ title: "Git & GitHub: Resolving Merge Conflicts"
 
 <!---
 Old (as of June 2026) GoogleSlides deck on this topic here: https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8
+
+Slide deck embed code (vvv)
+<div style="display: flex; justify-content: center;"> 
+<iframe width="560" height="380" src="https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8/preview?" frameborder="0" allowfullscreen></iframe>
+</div> 
 --->
 
 :::{.callout-tip icon="false"}

@@ -19,8 +19,9 @@ After completing this session, you will be able to:
 
 :::
 
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1-tdu7KtmEE92rAdSTZbvh8_yHH7qfbD2mDLKUpJQgx8/preview" allowfullscreen></iframe>
-
+<div style="display: flex; justify-content: center;"> 
+<iframe width="560" height="380" src="https://docs.google.com/presentation/d/1-tdu7KtmEE92rAdSTZbvh8_yHH7qfbD2mDLKUpJQgx8/preview?" frameborder="0" allowfullscreen></iframe>
+</div> 
 
 ### Workshop Description
 

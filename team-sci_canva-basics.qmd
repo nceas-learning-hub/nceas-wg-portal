@@ -28,7 +28,9 @@ After completing this session, you will be able to:
 - Collaborate with team members on shared Canva projects
 :::
 
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1hRpsOjCLOCGKgV149oK1FEYtz6ID54ZNtCSDdg0rUmU/preview" allowfullscreen></iframe>
+<div style="display: flex; justify-content: center;"> 
+<iframe width="560" height="380" src="https://docs.google.com/presentation/d/1hRpsOjCLOCGKgV149oK1FEYtz6ID54ZNtCSDdg0rUmU/preview?" frameborder="0" allowfullscreen></iframe>
+</div> 
 
 ### Workshop Description {.unnumbered}
 This introductory webinar will teach working group members how to use Canva, a free online design tool, to create and edit visual materials. The training will focus on navigating Canva’s interface, understanding basic design tools, and making edits to pre-made one-pager templates provided by NCEAS comms team. No previous design experience is necessary—just make a free Canva account to get started!

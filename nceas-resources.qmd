@@ -9,16 +9,12 @@ Explore the core infrastructure available to support your research-from other tr
 
 - [**Synthesis Skills for Early Career Researchers**](https://lter.github.io/ssecr/) (SSECR)  
     - An LTER course designed to build foundational synthesis and collaboration skills
-
 - [**LTER Scientific Computing Team**](https://lter.github.io/scicomp/)  
     - A collection of resources and tutorials on scientific computing best practices from the LTER community
-  
 - [**Ecological Data Synthesis: A Primer on Essential Methods**](https://lter.github.io/eco-data-synth-primer/)
     - A comprehensive guide to methods and best practices for ecological data synthesis
-
 - [**Using 'sf' for Spatial Data & Intro to Making Maps**](https://learning.nceas.ucsb.edu/2023-08-delta/session_10.html)
     - A hands-on tutorial introducing spatial data operations and basic mapping in R
-
 - [**Carpentry @ UCSB library**](https://carpentry.library.ucsb.edu/)  
     - A list of the free training provided by the UCSB library, including various R and Python courses for the coming quarter
 
