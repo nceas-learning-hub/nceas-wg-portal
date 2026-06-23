@@ -41,10 +41,12 @@ website:
           href: git-github-01_setup.qmd
         - text: "Fundamentals"
           href: git-github-02_fundamentals.qmd
+        - text: "Resolving Conflicts"
+          href: git-github-03_conflict.qmd
         - text: "Advanced Features"
-          href: git-github-03_advanced.qmd
+          href: git-github-04_advanced.qmd
         - text: "Project Management"
-          href: git-github-04_project-mgmt.qmd
+          href: git-github-05_project-mgmt.qmd
         - text: "**_Recordings_**"
           href: recordings/git-github.qmd
       - section: "Data Science Trainings"
