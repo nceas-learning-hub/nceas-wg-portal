@@ -1,0 +1,24 @@
+---
+title: "<TOPIC CATEGORY> Training Recordings"
+---
+
+Missed the training? Don't worry! We record most of our trainings and you can watch them below.
+
+## LESSON NAME
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Dec. 4^th^ 2025, INSTRUCTOR**
+
+<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+
+<!---
+To get the above video embedding code:
+1. Click into the video file of image in the Google Drive
+2. Click the "File" menu
+3. Click "Get embed link"
+4. Paste the newly-copied link into the relevant Quarto doc
+--->
+
+:::
