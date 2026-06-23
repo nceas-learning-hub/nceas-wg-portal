@@ -1,6 +1,6 @@
-## Version 1.0.00.900
+## Version 2.0
 
-This is the development version; changes from the preceding version are listed below.
+Version updated by Nick Lyon as part of them taking a primary role in NCEAS working group trainings (beginning in late 2026); changes from the preceding version are listed below.
 
 - Renames all workshop lessons to group them by category (and mirrors that grouping in website sidebar)
 - Overhauls all GitHub lessons (setup, fundamentals, resolving conflict, advanced features, project management)
