@@ -15,7 +15,7 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 
 :::
 
-## Git & GitHub: Advanced Features
+## Git & GitHub Resolving Merge Conflicts
 
 :::{.panel-tabset}
 ### 2025-26 Training Recordings
@@ -23,6 +23,15 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 **Dec. 10^th^ 2025, Li Kui**
 
 <iframe src="https://drive.google.com/file/d/1Kf5SBzO7QwOmb0wbYc7dgFrcUaFEBzdB/preview" width="700" height="480"></iframe>
+:::
+
+## Git & GitHub: Advanced Features
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+_This workshop wasn't offered during this time range_
+
 :::
 
 ## Project Management with GitHub
