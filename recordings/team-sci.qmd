@@ -23,25 +23,32 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 
 :::
 
-## 2 LESSON NAME
+## Building a Communications Strategy
 
 :::{.panel-tabset}
 ### 2025-26 Training Recordings
 
-**Dec. 4^th^ 2025, INSTRUCTOR**
+**Jan. 21^st^ 2026, Tess Cafritz**
 
-<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1i8kcO_qPrfuVK-R52Oi5-wq2TwAf39vQ/preview" width="640" height="480"></iframe>
 
 :::
 
-## 3 LESSON NAME
+## Communicating Results to External Audiences
 
 :::{.panel-tabset}
 ### 2025-26 Training Recordings
 
-**Dec. 4^th^ 2025, INSTRUCTOR**
+_This workshop wasn't offered during this time range_
 
-<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+### Pre-2025 Training Recordings
+
+**Alex Phillips**
+
+<!---
+Recording link absent
+<iframe src="LINK/preview" width="640" height="480"></iframe>
+-->
 
 :::
 
@@ -50,23 +57,23 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 :::{.panel-tabset}
 ### 2025-26 Training Recordings
 
-<!---
-Date/instructor unknown
+_This workshop wasn't offered during this time range_
 
-**Dec. 4^th^ 2025, INSTRUCTOR**
---->
+### Pre-2025 Training Recordings
+
+**Alex Phillips**
 
 <iframe src="https://drive.google.com/file/d/1PfOcQaiDtlcYymEkyW_rvkuMSpyQ-Z3k/preview" width="640" height="480"></iframe>
 
 :::
 
-## 5 LESSON NAME
+## Graphic Design with Canva
 
 :::{.panel-tabset}
 ### 2025-26 Training Recordings
 
-**Dec. 4^th^ 2025, INSTRUCTOR**
+**Sep. 24^th^ 2025, Nicole Greco & Tessa Cafritz**
 
-<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1c_1BqKQsEItFfO5rpjGpIsKn-gfhnGMv/preview" width="640" height="480"></iframe>
 
 :::
