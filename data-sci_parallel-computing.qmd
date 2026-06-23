@@ -18,13 +18,13 @@ title: Parallel Computing in R
 
 Processing large amounts of data with complex models can be time consuming.  New types of sensing means the scale of data collection today is massive. And modeled outputs can be large as well. For example, here's a 2 TB (that's Terabyte) set of modeled output data from [Ofir Levy et al. 2016](https://doi.org/10.5063/F1Z899CZ) that models 15 environmental variables at hourly time scales for hundreds of years across a regular grid spanning a good chunk of North America:
 
-![Levy et al. 2016. doi:10.5063/F1Z899CZ](images/r_parallel_computing/levy-map.png)
+![Levy et al. 2016. doi:10.5063/F1Z899CZ](images/data-sci_parallel-computing/levy-map.png)
 
 There are over 400,000 individual netCDF files in the [Levy et al. microclimate data set](https://doi.org/10.5063/F1Z899CZ).  Processing them would benefit massively from parallelization.
 
 Alternatively, think of remote sensing data.  Processing airborne hyperspectral data can involve processing each of hundreds of bands of data for each image in a flight path that is repeated many times over months and years.  
 
-![NEON Data Cube](images/r_parallel_computing/DataCube.png)
+![NEON Data Cube](images/data-sci_parallel-computing/DataCube.png)
 
 
 ## Why parallelism?
@@ -48,7 +48,7 @@ cores are available to perform computations. But, just what's the difference bet
 processors and cores? A computer with one processor may still have 4 cores (quad-core), 
 allowing 4 (or possibly more) computations to be executed at the same time.
 
-![](images/r_parallel_computing/processor.png) 
+![](images/data-sci_parallel-computing/processor.png) 
 
 + [**Microprocessor**](https://en.wikipedia.org/wiki/Microprocessor):
 an integrated circuit that contains the data processing logic and control for a computer. 
@@ -69,7 +69,7 @@ A typical modern computer has multiple cores, ranging from one or two in laptops
 to thousands in high performance compute clusters.  Here we show four quad-core
 processors for a total of 16 cores in this machine.
 
-![](images/r_parallel_computing/processors.png)
+![](images/data-sci_parallel-computing/processors.png)
 
 You can think of this as allowing 16 computations to happen at the same time. Theroetically, your computation would take 1/16 of the time (but only theoretically, more on that later).
 
@@ -132,7 +132,7 @@ Note that these clusters have multiple nodes (hosts), and each host has multiple
 
 Several different approaches can be taken to structuring a computer program to take advantage of the hardware capabilities of multi-core processors. In the typical, and simplest, case, each task in a computation is executed serially in order of first to last. The total computation time is the sum of the time of all of the subtasks that are executed.  In the next figure, a single core of the processor is used to sequentially execute each of the five tasks, with time flowing from left to right.
 
-![Serial and parallel execution of tasks using threads and processes.](images/r_parallel_computing/serial-parallel-exec.png)
+![Serial and parallel execution of tasks using threads and processes.](images/data-sci_parallel-computing/serial-parallel-exec.png)
 
 In comparison, the middle panel shows two approaches to parallelization on a single computer: Parallel Threads and Parallel Processes. With **multi-threaded** execution, a separate thread of execution is created for each of the 5 tasks, and these are executed concurrently on 5 of the cores of the processor. All of the threads are in the same process and share the same memory and resources, so one must take care that they do not interfere with each other.
 
@@ -148,7 +148,7 @@ It's not as simple as it may seem. While in theory each added processor would li
 
 In addition, not all of a task can be parallelized. Depending on the proportion, the expected speedup can be significantly reduced.  Some propose that this may follow [Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law), where the speedup of the computation (y-axis) is a function of both the number of cores (x-axis) and the proportion of the computation that can be parallelized (see colored lines):
 
-![Amdahl's Law](images/r_parallel_computing/Amdahl_law.png)
+![Amdahl's Law](images/data-sci_parallel-computing/Amdahl_law.png)
 
 So, its important to evaluate the computational efficiency of requests, and work to ensure that additional compute resources brought to bear will pay off in terms of increased work being done.  With that, let's do some parallel computing...
 
@@ -158,7 +158,7 @@ So, its important to evaluate the computational efficiency of requests, and work
 
 When you have a list of repetitive tasks, you may be able to speed it up by adding more computing power.  If each task is completely independent of the others, then it is a prime candidate for executing those tasks in parallel, each on its own core.  For example, let's build a simple loop that uses sample with replacement to do a bootstrap analysis.  In this case, we select `bill_length_mm` and `species` from the `palmerpenguins` dataset, randomly subset it to 100 observations, and then iterate across 3,000 trials, each time resampling the observations with replacement.  We then run a logistic regression fitting species as a function of length, and record the coefficients for each trial to be returned. 
 
-![](images/r_parallel_computing/penguins-logo.png)
+![](images/data-sci_parallel-computing/penguins-logo.png)
 :::
 
 ```{r label="penguins-data",eval= FALSE, message=FALSE, warning=FALSE}
@@ -309,7 +309,7 @@ stopImplicitCluster()
 
 While `parallel` and `mclapply` have been reliably working in R for years for multicore parallel processing, different approaches like `clusterApply` have been needed to run tasks across multiple nodes in larger clusters. The [`future` package](https://future.futureverse.org) has emerged in R as a powerful mechanism to support many types of asynchronous execution, both within a single node and across a cluster of nodes, but all using a uniform evaluation mechanism across different processing backends. The basic idea behind `future` is that you can either implicitly or explicitly create a `future` expression, and control is returned to calling code while the expression is evaluated asynchronously, and possibly in parallel depending on the backend chosen.
 
-<img src="images/r_parallel_computing/future-logo.png" alt="Future logo" width="200"/>
+<img src="images/data-sci_parallel-computing/future-logo.png" alt="Future logo" width="200"/>
 
 :::
 
@@ -366,7 +366,7 @@ So, what's the point of all of this? Basically, the `future` package provides a 
 
 With `furrr`, you can use the `map()` pattern to execute an expression across a set of inputs using asynchronous futures. Most of the details here are hidden under the hood, so this usage pattern should feel really familiar to `purrr` users. For example, let's return to our bootstrap linear model, and reimplement it, first using purrr, and then with furrr.
 
-<img src="images/r_parallel_computing/furrr-logo.png" alt="Furrr logo" width="200"/>
+<img src="images/data-sci_parallel-computing/furrr-logo.png" alt="Furrr logo" width="200"/>
 :::
 
 ```{r,eval=FALSE}
