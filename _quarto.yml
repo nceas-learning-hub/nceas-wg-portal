@@ -69,6 +69,8 @@ website:
           href: team-sci_one-pagers.qmd
         - text: "Canva 101"
           href: team-sci_canva-basics.qmd
+        - text: "**_Recordings_**"
+          href: recordings/team-sci.qmd
       - text: "Other NCEAS Resources"
         href: nceas-resources.qmd
   page-footer:

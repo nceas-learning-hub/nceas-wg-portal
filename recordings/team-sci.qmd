@@ -1,0 +1,72 @@
+---
+title: "Team Science Training Recordings"
+---
+
+<!---
+To get the video embedding code (for videos stored in Drive):
+1. Click into the video file of image in the Google Drive
+2. Click the "File" menu
+3. Click "Get embed link"
+4. Paste the newly-copied link into the relevant Quarto doc
+--->
+
+Missed the training? Don't worry! We record most of our trainings and you can watch them below.
+
+## 1 LESSON NAME
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Dec. 4^th^ 2025, INSTRUCTOR**
+
+<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+
+:::
+
+## 2 LESSON NAME
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Dec. 4^th^ 2025, INSTRUCTOR**
+
+<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+
+:::
+
+## 3 LESSON NAME
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Dec. 4^th^ 2025, INSTRUCTOR**
+
+<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+
+:::
+
+## Making One Pagers with Google Documents
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+<!---
+Date/instructor unknown
+
+**Dec. 4^th^ 2025, INSTRUCTOR**
+--->
+
+<iframe src="https://drive.google.com/file/d/1PfOcQaiDtlcYymEkyW_rvkuMSpyQ-Z3k/preview" width="640" height="480"></iframe>
+
+:::
+
+## 5 LESSON NAME
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Dec. 4^th^ 2025, INSTRUCTOR**
+
+<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+
+:::
