@@ -12,14 +12,14 @@ To get the video embedding code (for videos stored in Drive):
 
 Missed the training? Don't worry! We record most of our trainings and you can watch them below.
 
-## 1 LESSON NAME
+## Facilitating a Successful Working Group
 
 :::{.panel-tabset}
 ### 2025-26 Training Recordings
 
-**Dec. 4^th^ 2025, INSTRUCTOR**
+**Aug. 21^st^ 2025, Courtney Scarborough & Heather Lahr**
 
-<iframe src="https://drive.google.com/file/d/1744ieGoL_GXMglC_zfLB_fbdryygA3o-/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1Xn-jATeL5IkLhKj1NwTYrzgWcXQ10fW_/preview" width="640" height="480"></iframe>
 
 :::
 
