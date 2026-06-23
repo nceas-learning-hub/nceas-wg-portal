@@ -1,33 +1,31 @@
 ---
 title: "Communicating Results to External Audiences"
+number-sections: false
 ---
+
+<!---
+Related GoogleSlide deck link: https://docs.google.com/presentation/d/1-tdu7KtmEE92rAdSTZbvh8_yHH7qfbD2mDLKUpJQgx8
+--->
+
+:::{.callout-tip icon="false"}
+### {{< fa brain >}} Learning Objectives
+
+After completing this session, you will be able to:
+
+- Recognize the power of social media in spreading information about papers 
+- Identify successful strategies for marketing publications
+- Practice summarizing complex scientific information in short, accessible formats 
+- Apply methods for storytelling to developing a social media post thread 
+
+:::
+
 <iframe width="560" height="380"src="https://docs.google.com/presentation/d/1-tdu7KtmEE92rAdSTZbvh8_yHH7qfbD2mDLKUpJQgx8/preview" allowfullscreen></iframe>
 
 
-### Workshop Description {.unnumbered}
+### Workshop Description
+
 Your paper was just accepted, but now what? From social media to press releases to multimedia products to stakeholder meetings, learn about pathways for promoting your publication and products. 
 
-
-### Learning Objectives{.unnumbered}
--   Recognize the power of social media in spreading information about papers 
-
--   Identify successful strategies for marketing publications
-
--   Practice summarizing complex scientific information in short, accessible formats 
-
--   Apply methods for storytelling to developing a social media post thread 
-
-
-
-:::callout-important
-## Missed the training?
-
-Recorded video will be posted after the training
-:::
-
-
-
-### Resources {.unnumbered}
+### Additional Resources
 
 - [How Science Communication Can Boost Your Research](https://www.aldacenter.org/thelink/posts/Boosting_Research_Through_Scicomm.php#:~:text=Everyone%20has%20the%20right%20to,not%20do%20science%20at%20all.)
-
