@@ -1,270 +1,308 @@
 ---
-title: "Git & GitHub: Advanced Features"
+title: "Git & GitHub: Resolving Merge Conflicts"
 ---
-<iframe width="560" height="380"src="https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8/preview" allowfullscreen></iframe>
 
-:::{.callout-tip}
-## Learning Objectives
+<!---
+Old (as of June 2026) GoogleSlides deck on this topic here: https://docs.google.com/presentation/d/1bIS1urTZ-IMOXGafqSe8gYfJ_PWqKTRoblxvubFzVY8
+--->
 
-- Use Git and GitHub tools to collaborate effectively on shared research code.
+:::{.callout-tip icon="false"}
+### {{< fa brain >}} Learning Objectives
 
-- Identify and resolve merge conflicts in the RStudio environment.
+After completing this session, you will be able to:
 
-- Apply workflows and best practices that reduce conflicts in shared github repositories.
+- Describe common causes of conflicts that arise when collaborating on repositories 
+- Resolve conflicts using Git conflict resolution techniques
+- Apply workflows and best practices that minimize conflicts on collaborative repositories
 :::
 
+![Artwork by @allison_horst](images/git-github-03_conflict/allison_horst_jenny_bryan_quote.png){width="100%" fig-align="center" .lightbox fig-alt="Artwork by @allison_horst with a quote from Jenny Bryan that reads: 'Collaboration is the most compelling reason to manage a project with Git and GitHub.  My definition of collaboration includes hands-on participation by multiple people, including your past and future self, as well as an asymmetric model, in which some people are active makers and others only read or review.'"}
 
-## Introduction to Git and GitHub Tools for Collaboration
-![](images/github_collaboration/allison-horst-jenny-bryan-quote.png){width="100%" fig-align="center"}
-<p style="text-align: left; font-style: italic;font-size: 0.75em;">
-Artwork by Allison Horst
-</p>
+Git is a powerful tool for both individual and collaborative work. The most common way to collaborate is through a **shared repository on [GitHub](https://github.com)**, which acts as a central hub where teammates can exchange and merge changes. In this lesson, one person (the **Owner**) hosts the repository on GitHub and grants a colleague (the **Collaborator**) permission to push changes directly.
 
-Git is a powerful tool for both individual and collaborative work. When multiple researchers contribute to the same project, Git ensures everyone can work independently while still being able to synchronize their changes reliably. Using a shared repository on [GitHub](https://github.com) provides a central place where collaborators can clone the project, make updates, and merge their work smoothly.
+![](images/git-github-03_conflict/github-collaborators-diagram.png){width="70%" fig-align="center" .lightbox fig-alt="Diagram showing the relationship between the Owner, Collaborator, and GitHub repository. The Owner has a local repository and a remote repository on GitHub. The Collaborator has a local repository that is connected to the remote repository on GitHub. Both the Owner and Collaborator can pull changes from GitHub to their local repositories and push changes from their local repositories to GitHub."}
 
-During collaboration, it’s normal to encounter merge conflicts, which occur when two people modify the same part of a file in different ways. Conflicts are a routine part of team workflows and simply signal that Git needs human guidance to decide which version to keep. Learning to identify and resolve conflicts builds confidence and helps collaborators integrate their work more effectively.
+Before diving into the exercise, keep these tips in mind - we'll return to them throughout:
 
-![](images/github_collaboration/github-collaborators-diagram.png){width="70%" fig-align="center"}
+* Start every work session with a Pull, and Pull occasionally throughout (to ensure you are up to date with your collaborator's changes!)
+* Save {{<fa arrow-right>}} Stage (Add) {{<fa arrow-right>}} Commit {{<fa arrow-right>}} Sync (Pull {{<fa arrow-right>}} Push) your work throughout the session, in small logical chunks (so your changes are available to your collaborator!)
 
-More advanced collaboration relies on GitHub’s workflow tools: branches, pull requests, and reviews. Branches allow contributors to develop new analyses separately from the stable main branch. Pull requests act as formal proposals to merge those changes, creating a space for documentation and discussion. Reviews ensure quality, clarity, and consistency across the project. Together, these tools support a well-structured workflow for ecological research teams working on shared repositories.
+And the single most effective conflict-prevention strategy: **communicate with your collaborators** before and after making changes. Knowing who is editing which files, and when, eliminates most problems before they start.
 
+:::callout-note
+## Pull {{<fa arrow-right>}} Push versus Sync
 
-## Collaborating with a trusted colleague **without conflicts**
-
-### Step 0: Owner adds a Collaborator to their repository on GitHub {.unnumbered}
-
-We start our collaboration by giving a trusted colleague access to our repository on GitHub. In this example, we define the **Owner as the individual who owns the repository**, and the **Collaborator as the person whom the Owner chooses to give permission to make changes to their repository**.
-
-
-::: {.callout-tip icon=false}
-**These steps are for the Owner:**
-
-- Navigate to the `{FIRSTNAME}_test` repository
-- Go to **Settings** and navigate to **Collaborators** in the **Access** section on the left-hand side
-- Under **Manage Access** click the button **Add people** and type the username of your Collaborator in the search box
-- Once you've found the correct username, click **Add {Collaborator username} to this repository**
-
-**Now, the Collaborator will follow this step:**
-
-- Check your email for an invitation to GitHub or check your notifications (likely under **Your Organizations**) on GitHub to accept the invite to collaborate.
+The RStudio IDE uses the terms *Pull* and *Push* for Git operations, while the Positron IDE uses *Sync* to encompass both pulling and pushing changes. Because the underlying Git operation is *pull* {{<fa arrow-right>}} *push*, we will use this terminology instead of *sync.*
 :::
 
+## Collaborating Without Conflicts
 
-### Step 1: Collaborator clones the remote repository {.unnumbered}
+### Demonstration
 
-In order to contribute, the Collaborator must **clone** the repository from the **Owner's** GitHub account (*Note: as a Collaborator, you won't see the repository appear under your profile's Repositories page*). To do this, the Collaborator should navigate to the Owner's repository on GitHub, then copy the clone URL. In RStudio, the Collaborator will create a new project from version control by pasting this clone URL into the appropriate dialog box (see the [earlier chapter](s02_github_introduction.qmd) introducing GitHub).
+We start with the ideal scenario: two collaborators taking turns, working on the same repo without ever editing the same lines simultaneously.  
 
-::: {.callout-tip icon=false}
-### INTERMEDIATE STEP: Collaborators communicate with each other that they plan to make some changes {.unnumbered}
+Here, the instructors will demonstrate.  In the following exercise, the participants will pair up and try it themselves.
 
-Frequent communication is SO important when collaborating! Letting one another know that you're about to make and push changes to the remote repo can help to prevent merge conflicts (and reduce headaches). **The easiest way to avoid merge conflicts is to ensure that you and your collaborators aren't working on the same file(s)/section(s) of code at the same time.**
+1. [**Owner**]{style="color: orange;"} adds [**Collaborator**]{style="color: purple;"} on GitHub
+    - [**Owner**]{style="color: orange;"} creates a new repository on GitHub, called `git_collab_<username>` (or similar), and includes a README.  
+    - Then, [**Owner**]{style="color: orange;"} navigates to the repository {{<fa arrow-right>}} **Settings** {{<fa arrow-right>}} **Collaborators** {{<fa arrow-right>}} **Add people**. Enter the [**Collaborator's**]{style="color: purple;"} username and send the invitation. 
+    - The [**Collaborator**]{style="color: purple;"} accepts via email or GitHub notifications, gaining push access.
+2. [**Collaborator**]{style="color: purple;"} clones the repository
+    - The [**Collaborator**]{style="color: purple;"} navigates to the [**Owner's**]{style="color: orange;"} GitHub repository, copies the clone URL, and creates a new RStudio project or Positron folder from version control using that URL.
+    - Note: the cloned repo **will not** appear under the [**Collaborator's**]{style="color: purple;"} own GitHub profile page.
+3. [**Collaborator**]{style="color: purple;"} creates new file, commit-pull-push
+    - With the repo cloned, the [**Collaborator**]{style="color: purple;"} creates a new Quarto document, edits the title (e.g., "Git Collaboration Tips") and author(s).
+    Delete any placeholder text in the body of the document, leaving just the YAML header and a blank body.  Then paste in the content in the details box below.  
+    - Save the Quarto doc as `git_collaboration_tips.qmd` in the repo directory.
+
+<details>
+<summary>Content for new file</summary>
+Paste the following template text into the Quarto document body:
+```markdown
+
+## Git Collaboration Tips
+
+### Tips: <owner's name here>
+
+<Owner adds their tips here!>
+
+### Tips: <collaborator's name here>
+
+<Collaborator adds their tips here!>
+
+## How to Create a Merge Conflict 
+
+### Merge Conflict: Owner Resolves
+
+<Owner and Collaborator edit the same line here to create a conflict! - COLLABORATOR commits-pulls-pushes first>
+
+### Merge Conflict: Collaborator Resolves
+
+<Owner and Collaborator edit the same line here to create a conflict! - OWNER commits-pulls-pushes first>
+
+## Summary: How to Avoid Merge Conflicts
+
+<Owner and Collaborator use best practices to write some concluding tips here!>
+```
+</details>
+
+4. [**Collaborator**]{style="color: purple;"} follows the standard workflow:
+    - **Stage and commit** the new file
+    - **Pull** (to fetch any changes made since cloning)
+    - **Push** to the shared remote repository
+
+:::callout-tip
+## Communicate!
+Let the [**Owner**]{style="color: orange;"} know you've pushed your changes so they know it's safe to pull.
 :::
 
-### Step 2: Collaborator edits files locally {.unnumbered}
+5. [**Owner**]{style="color: orange;"} pulls, all repos now in sync
+    - The [**Owner**]{style="color: orange;"} opens their local copy in RStudio and **pulls** the [**Collaborator's**]{style="color: purple;"} changes. 
+    - All three repositories - remote, [**Owner's**]{style="color: orange;"} local, and [**Collaborator's**]{style="color: purple;"} local - are now in sync.
+6. [**Owner**]{style="color: orange;"} and [**Collaborator**]{style="color: purple;"} add tips, then commit-pull-push
+    - The [**Owner**]{style="color: orange;"} then edits their own "tips" section ONLY.
+    - At the same time as the the [**Owner**]{style="color: orange;"} is adding their tips, the [**Collaborator**]{style="color: purple;"} adds their own tips to their section ONLY.
+7. Wrapping Up
+    - Both [**Owner**]{style="color: orange;"} and [**Collaborator**]{style="color: purple;"} follow the same **commit {{<fa arrow-right>}} pull {{<fa arrow-right>}} push workflow** - Decide who goes first, though it should not matter here - and **communicate**!
+    - Once both have pulled each other's changes, the first person should do one last **pull** to retrieve changes made by the second.
+    - Check with each other to ensure the repositories are in sync again.
 
-With the repo cloned locally, the Collaborator can now make changes to the file, adding a line or statement somewhere noticeable near the top. Save the changes.
+**You've just successfully collaborated!** {{< fa champagne-glasses >}}
 
-### Step 3: Collaborator `commit`s, `pull`s, and `push`s {.unnumbered}
+:::{.callout-warning} 
+## Why Commit Before Pulling?
 
-It's recommended that all collaborators (including the repo Owner) follow this workflow when syncing changes between their local repo and the remote repo (in this example, the Collaborator is now following these steps):
+`git pull` includes a merge step. **If you have uncommitted local changes, Git will refuse to merge** - since it doesn't know exactly where *you've* made changes, it doesn't know where it can safely merge in your *collaborator's* changes. Always:
 
-1. `commit` your modified file(s)
-2. `pull` to fetch and merge changes from the remote/origin repository (in an ideal situation, as we're demonstrating here, any potential changes are merged seamlessly without conflict)
-3. `push` your changes to the remote/origin repository
-
-::: {.callout-note}
-## Why do I need to add and commit files *before* pulling?
-Remember, `git pull` is a combination of `git fetch`ing remote changes to your local repo and `git merge`ing those changes from your local repo into your local working file(s).
-
-The **merge** part of `git pull` will fail if you have uncommitted changes in your local working file(s) to avoid any potential overwriting of your own changes. Because of this, you should always, add/commit *then* pull, *and finally* push.
+commit {{<fa arrow-right>}} pull {{<fa arrow-right>}} push (RStudio or Terminal) or commit {{<fa arrow-right>}} sync (Positron)
 :::
 
-![](images/github_collaboration/rstudio-commit-push.png){width="80%" fig-align="center"}
+### Exercise: Collaborate Well!
 
-### Step 4: Owner `pull`s new changes from the remote repo to their local repo {.unnumbered}
-### Step 5: Owner edits, `commit`s, `pull`s (just in case!) and `push`es {.unnumbered}
+Get into pairs.  Designate one person as [**Owner**]{style="color: orange;"} and one as [**Collaborator**]{style="color: purple;"} - we recommend whoever has the **fewer** repositories should be the [**Owner**]{style="color: orange;"}.  
 
-Following the same workflow as the Collaborator did earlier.
+::::{.callout-note }
+## Setup
 
-## Merge conflicts
+* [**Owner**]{style="color: orange;"}: Create a new repository `git_collab_<username>` then go to **Settings** {{<fa arrow-right>}} **Collaborators** {{<fa arrow-right>}} **Add people** {{<fa arrow-right>}} add your partner's username
+* [**Collaborator**]{style="color: purple;"}: accept the invitation from your email or GitHub notifications
 
-**Merge conflicts** occur when both collaborators make conflicting changes to the same file. Resolving merge conflicts involves identifying the root of the problem and restoring the project to a normal state. Good communication, discussing file sections to work on, and avoiding overlaps can help prevent merge conflicts. However, if conflicts do arise, Git warns about potential issues and ensures that changes from different collaborators based on the same file version are not overwritten. To resolve conflicts, you need to explicitly specify whose changes should be used for each conflicting line in the file.
+:::
 
-### Common ways to resolve a merge conflict {.unnumbered}
+:::{.callout-exercise}
 
-Sometimes you just made a mistake.  When you get a merge conflict, the repository
-is placed in a "Merging" state until you resolve it. You can simply choose to "revert" file back to the earlier version before you changed.
+### Instructions{.unnumbered}
 
-Of course, after doing that you still haven't synced with your Collaborator's
-changes, so things are still unresolved.  But at least your repository is now
-usable on your local machine.
+* [**Owner**]{style="color: orange;"} adds [**Collaborator**]{style="color: purple;"} to `git_collab_<username>` (see Setup above)
+* [**Collaborator**]{style="color: purple;"} clones the [**Owner**]{style="color: orange;"}'s repository
+* [**Collaborator**]{style="color: purple;"} creates a new Quarto document `git_collaboration_tips.qmd` with the provided template content above, then saves and commit-pull-push
+* [**Owner**]{style="color: orange;"} pulls those changes
+* [**Owner**]{style="color: orange;"} and [**Collaborator**]{style="color: purple;"} each their own Git tips under their respective headers
+* [**Owner**]{style="color: orange;"} and [**Collaborator**]{style="color: purple;"} decide who will commit-pull-push first, and each performs the Git workflow as agreed
+* The first person to commit-pull-push does one final pull to retrieve the second person's changes {{< fa cake-candles >}}
 
-Option 2: When you `pull` a file with a conflict, Git will provide you with a warning modify the file so that it includes both your own changes and your Collaborator's changes. The file will also appear in the **Git** tab with an orange `U` icon, which indicates that the file is `Unmerged` and therefore awaiting your help to resolve the conflict. It delimits these blocks of conflicted code with a series of less than and greater than signs, so they are easy to find:
+:::
 
-![](images/github_collaboration/rstudio-merge-conflict.png){width="80%" fig-align="center"}
+## Merge Conflicts
 
-In the above example, `<<<<<<< HEAD` marks the start of *your* changes. The `=======` delimiter separates your changes from your Collaborator's conflicting changes. `>>>>>>>` mark the end of your Collaborator's changes. 
+A **merge conflict** occurs when two collaborators edit the *same line(s) of the same file*. Git cannot automatically decide which version to keep, so it pauses the merge and asks you to resolve the conflict manually.
 
-To resolve the conflicts, simply find all of these blocks, and edit them so that
-the file looks how you want (either pick your lines, your Collaborator's lines,
-some combination, or something altogether new), and save. Be sure you removed the
-delimiter lines that started with 
+When a conflict occurs, Git marks the affected section of the file like this:
 
-- `<<<<<<<`
-- `=======`
-- `>>>>>>>`
+```r
+ <<<<<<< HEAD
+ Your version of this line
+ =======
+ Collaborator's version of this line
+ >>>>>>> (commit SHA)
+```
+<!-- NOTE: added space in front of conflict message lines to prevent rendering issues in Quarto -->
 
-Once you have made those changes, you simply `commit`, and `push` the files to resolve the conflict.
+To resolve the conflict: edit the file so it reads how you want, remove all the marker lines (`<<<<<<<`, `=======`, `>>>>>>>`), then stage (add), commit-pull-push.  This might look different depending on your IDE.
 
-## Producing and resolving merge conflicts
+:::{.panel-tabset}
+### {{< fa p >}} Positron
 
-To illustrate this process, the instructors are going to carefully create a merge conflict step-by-step, show how to resolve it, and show how to see the results of the successful merge after it is complete. First, the instructors will walk through the exercise to demonstrate the issues. Then, participants will pair up and try the exercise.
+![](images/git-github-03_conflict/positron_merge_conflict_diff.png){width="70%" fig-align="center" .lightbox fig-alt="Screenshot of Positron IDE showing a merge conflict warning and diff view with conflict markers"}
 
+In Positron, when you pull remote changes that conflict with local changes, you will see a window that looks like this.  Conflicted files appear with a red "!" icon in the Git pane.  The image also shows the "diff" view where you can see the header `<<<<<<<`, footer `>>>>>>>` followed by commit SHA, and dividing line `=======`.  
 
-### Step 1: Owner and Collaborator ensure that their local repos are synced with the remote repo {.unnumbered}
+You can edit the conflicted file(s) directly in this view, or click on [&nbsp;**Resolve in Merge Editor**&nbsp;]{style="color:white; background-color:blue;"} to open the file in the Merge Editor:
 
- Begin the exercise by ensuring that both the Owner and Collaborator have all of the changes synced from the remote repo to their local repos. This includes doing a `git pull` to ensure that you have all changes locally, and ensuring that the **Git** tab in RStudio doesn't show any changes that need to be committed.
+![](images/git-github-03_conflict/positron_merge_editor.png){width="70%" fig-align="center" .lightbox fig-alt="Screenshot of Positron IDE Merge Editor showing the same conflict markers as the diff view, but with options to select either version or both"}
 
-### Step 2: Owner makes a change and commits locally {.unnumbered}
+After resolution and staging, the icon changes to a green "M" (Modified).
 
-From this clean slate, the Owner will first modify and commit a small change. The Owner should add their name on a specific line of the `README.md` file (we will change the title in line 1). Save and commit the change (**but DO NOT push**). The Owner should now have a local but unpushed commit that the Collaborator does not yet have access to. 
+### {{< fa brands r-project >}} RStudio
 
-### Step 3: Collaborator makes a change and commits **on the same line** {.unnumbered}
+![](images/git-github-03_conflict/rstudio_merge_conflict_warning.png){width="70%" fig-align="center" .lightbox fig-alt="Screenshot of RStudio window showing the warning message: 'CONFLICT (content): Merge conflict in README.md. Automatic merge failed; fix conflicts and then commit the result.'"}
 
-Now, the Collaborator will modify and commit a small change. The Collaborator should add their name to the same line of the `README.md` file (we will again change the title in line 1). Save and commit the change (**but DO NOT push**). The Collaborator should now also have a local but unpushed commit that the Owner does not yet have access to.
+In RStudio, when you pull remote changes that conflict with local changes, you will see a window that looks like this.  Read it - it basically says there was a merge conflict and it needs to be fixed and then committed before you can do anything else.  Close the window.
 
-*At this point, both the Owner and Collaborator have committed local changes, but neither have tried to share their changes via GitHub.*
+![](images/git-github-03_conflict/rstudio_merge_conflict_diff.png){width="70%" fig-align="center" .lightbox fig-alt="Screenshot of RStudio window showing the diff view with conflict markers"}
 
-### Step 4: Collaborator pushes the file to GitHub {.unnumbered}
+In RStudio, conflicted files appear with an orange U (Unmerged) in the Git pane. The image also shows the "diff" view where you can see the header `<<<<<<<`, footer `>>>>>>>` followed by commit SHA, and dividing line `=======`.  You can resolve your edits in the text editor.
 
-Sharing starts when the Collaborator pushes their changes to the GitHub repo, which updates GitHub with their version of the file. The Owner is now one revision behind, but doesn't know it yet.
+After resolution and staging, the icon changes to a blue M (Modified).
 
-### Step 5: Owner pushes their changes and gets an error {.unnumbered}
+:::
 
-At this point, the Owner tries to push their change to the repository, which triggers
-an error from GitHub. While the error message is long, it tells you everything 
-needed (that the Owner's repository doesn't reflect the changes on GitHub, and that they
-need to `pull` before they can push).
+### Three Ways to Resolve a Conflict!
 
-![](images/github_collaboration/git-conflict-01-push-error.png)
+Depending on whether you want to keep none, part, or all of the changes made by the collaborator and owner, there are three common options for resolving a merge conflict.
 
-### Step 6: Owner pulls from GitHub to get Collaborator changes {.unnumbered}
+:::{.panel-tabset}
+### Manually Edit
 
-Following the error message, the Owner pulls the changes from GitHub, and gets
-another, different error message. Here, it indicates that there is a merge 
-conflict because of the conflicting lines.
+Open the file (or in Positron, use the Merge Editor), hand-edit the conflict blocks to produce the desired result (keeping some of each version if needed), making sure to remove the conflict marker lines.  Then save your resolved file, stage, commit-pull-push. **This is the most flexible approach.**
 
-![](images/github_collaboration/git-conflict-02-pull-error.png)
+### Abort!
 
-In the **Git** pane of RStudio, the file is also flagged with an orange `U`, which stands
-for an unresolved merge conflict.
+Abort - if you made a mistake and want to start fresh:
 
-![](images/github_collaboration/git-conflict-03-conflict.png)
+```bash
+git merge --abort
+```
 
-### Step 7: Owner edits the file to resolve the conflict {.unnumbered}
+This returns the repo to a usable state, as it was just before you tried to pull - but you still haven't integrated your collaborator's changes.  This basically just kicks the can down the line!
 
-To resolve the conflict, the Owner now needs to edit the file. Again, as indicated above,
-Git has flagged the locations in the file where a conflict occurred 
-with `<<<<<<<`, `=======`, and `>>>>>>>`. The Owner should edit the file, merging whatever changes are appropriate until the conflicting lines read how they should, and eliminate all of the marker lines with `<<<<<<<`, `=======`, and `>>>>>>>`.
+### Keep One Version Entirely
 
-![](images/github_collaboration/git-conflict-04-conflict-tags.png)
+From the Terminal, choose whose version to keep (note, need to specify the file!).  Note, you should DEFINITELY communicate with your collaborator before rejecting their changes wholesale.
 
-Of course, for scripts and programs, resolving the changes means more than just 
-merging the text -- whoever is doing the merging should make sure that the code 
-runs properly and that none of the logic of the program has been broken.
+To keep your collaborator's version: 
+```bash
+git checkout --theirs <path/to/conflicted_file.qmd>
+```
 
-![](images/github_collaboration/git-conflict-05-resolved-file.png)
+To keep your own version: 
+```bash
+git checkout --ours <path/to/conflicted_file.qmd>
+```
 
-### Step 8: Owner commits the resolved changes {.unnumbered}
+Then stage, commit-pull-push as normal.
 
-From this point forward, things proceed as normal. The Owner first `add`s the file, which changes the orange `U` to a blue `M` for modified. Then, the Owner commits the changes locally. The Owner now has a resolved version of the file on their
-system.
+:::
 
-![](images/github_collaboration/git-conflict-06-commit-resolved.png)
+## Producing and Resolving Merge Conflicts
 
-### Step 9: Owner pushes the resolved changes to GitHub {.unnumbered}
+### Demonstration
 
-The Owner can now push the changes, without error, to GitHub. 
+As before, the instructors will first demonstrate this sequence. Then participants will pair off and work through this in the exercise that follows.
 
-![](images/github_collaboration/git-conflict-07-push-resolved.png)
+1. **Both** pull to sync to the [**Owner's**]{style="color: orange;"} `git_collab_<username>` repository
+    - Ensure both [**Owner**]{style="color: orange;"} and [**Collaborator**]{style="color: purple;"} have all the latest changes locally (Git pane shows no pending commits).
+2. [**Owner**]{style="color: orange;"} edits the content in the Quarto document under the section titled "Merge Conflict: Owner Resolves" and commits - but **does not pull or push**
+3. [**Collaborator**]{style="color: purple;"} edits the same line and commits - but **does not pull or push**
+    - **Both people now have local commits that conflict with each other!**
+4. [**Collaborator**]{style="color: purple;"} pushes
+    - **GitHub now reflects the [Collaborator]{style="color: purple;"}'s version.** The [**Owner**]{style="color: orange;"} is one commit behind.
+5. [**Owner**]{style="color: orange;"} tries to push and gets an error
+    - GitHub rejects the push because the [**Owner**]{style="color: orange;"}'s repo is out of date. The error message instructs them to pull first.
+6. [**Owner**]{style="color: orange;"} pulls but now, gets a **merge conflict** warning
+    - Git flags the conflict: the file appears with an orange U in RStudio's Git pane. or a red [**!**]{style="color: red;"} in Positron's Git pane. 
+    - The file contains the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) showing both versions of the conflicting lines.
+7. [**Owner**]{style="color: orange;"} edits the file to resolve the conflict
+    - Owner communicates with [**Collaborator**]{style="color: purple;"} if there is any uncertainty about how to resolve the conflict.
+    - Find and resolve all `<<<<<<< ... ======= ... >>>>>>>` blocks. Verify the code logic still works correctly after merging.
+8. [**Owner**]{style="color: orange;"} stages/adds the resolved file, then applies commit-pull-push workflow
+9. [**Collaborator**]{style="color: purple;"} pulls the resolved version
 
-### Step 10: Collaborator pulls the resolved changes from GitHub {.unnumbered}
+Both repos are back in sync. The commit history now shows the conflict branch and the merge. 😅
 
-Finally, the Collaborator can pull from GitHub to get the changes (which include the resolved conflicted lines of code) that the Owner made.
+### Exercise: Collaborate Poorly!
 
-### Step 11: Both can view commit history {.unnumbered}
+:::{.callout-exercise}
 
-Both the Collaborator and the Owner can view the history, which includes information about the conflict, the associated 
-branch, and the merged changes. 
+Work with the same partner as the previous exercise (since you've already both invited one another as collaborators!). Complete two rounds, switching roles between them.
 
-![](images/github_collaboration/git-conflict-08-history.png)
+**Round One:**
 
+1.  **Both** pull to sync to the [**Owner's**]{style="color: orange;"} `git_collab_<username>` repository
+2. [**Owner**]{style="color: orange;"} edits the content in the section titled "Merge Conflict: Owner Resolves" and commits but **does not pull or push**
+3. [**Collaborator**]{style="color: purple;"} edits the same section differently and commits but **does not pull or push**
+    - **Both people now have local commits that conflict with each other!**
+4. [**Collaborator**]{style="color: purple;"} pushes
+    - **GitHub now reflects the [Collaborator]{style="color: purple;"}'s version.** The [**Owner**]{style="color: orange;"} is one commit behind.
+5. [**Owner**]{style="color: orange;"} tries to push {{<fa arrow-right>}} gets an error (consider why?)
+6. [**Owner**]{style="color: orange;"} pulls {{<fa arrow-right>}} and sees merge conflict
+7. [**Owner**]{style="color: orange;"} edits the file to resolve the conflict
+    - [**Owner**]{style="color: orange;"} communicates with [**Collaborator**]{style="color: purple;"} to make sure edits are OK!
+8. [**Owner**]{style="color: orange;"} stages, then commit-pull-push the resolved file
+9. [**Collaborator**]{style="color: purple;"} pulls the resolved version
+10. Both view commit history to see the conflict and merge commits.
+11. Repeat steps 2-10, in the section titled "Merge Conflict: Collaborator Resolves", and this time, swap the order of who pushes first.
 
+**Congratulations, you've just created and resolved two merge conflicts!** {{< fa champagne-glasses >}}
 
-## Best practices to avoid merge conflicts
+:::
+
+### Discussion
+
+What are some steps you could have taken to avoid merge conflicts in the first place? How would you communicate with your collaborator to prevent or resolve conflicts?
+
+## Best Practices to Avoid Merge Conflicts
 
 Some basic rules of thumb can avoid the vast majority of merge conflicts, saving a lot of time and frustration. These are words our teams live by:
 
-::: column-margin
-[![XKCD 1597](images/github_collaboration/git-xkcd-comic.png)](https://xkcd.com/1597/)
+:::{.column-margin}
+[![XKCD 1597](images/git-github-03_conflict/git_xkcd_comic.png)](https://xkcd.com/1597/){fig-alt="XKCD comic showing three people at a desk.  One points to a computer and says 'This is Git. It tracks collaborative work on projects througha beautiful distributed graphy theory tree model.' The second person says 'Cool. How do we use it?' The third person says 'No idea. Just memorize these shell commands and type them to sync up.  If you get errors, save your work elsewhere, delete the project, and download a fresh copy.'"}
 :::
 
-- Communicate often and set up effective communication channels
-- Tell each other what you are working on
-- Start your working session with a `pull`
-- `Pull` immediately after you `commit` and before you `push`
-- `Commit` often in small chunks (this helps you organize your work!)
-- Make sure you and who you are collaborating with all **fully** understand the Git workflow you're using (aka make sure you're on the same page before you start)!
+- **Communicate before and after changes.** Tell your collaborator what you're about to work on, and when you've pushed.
+- **Divide the work and work in different sections or files.** Avoid editing the same part of the same files simultaneously.
+- **Start every session with a pull.** And then pull occasionally while working just to make sure you're up to date with your collaborator's changes.
+- **Pull again before you push** (after committing). This ensures you have the latest changes before you try to push (and avoids Git's warning about uncommitted changes).
+- **Commit in small, logical chunks.** This makes it easier to review and easier to merge your changes.
+- **Make sure everyone understands the workflow** before you start collaborating.
 
-A good workflow is encapsulated as follows:
+:::{.callout-tip}
+### Internalize this Workflow!
 
-**Pull -> Edit -> Save -> Commit -> Pull -> (OPTIONAL) Fix any merge conflicts -> Push**
+Pull {{< fa arrow-right >}} Edit {{< fa arrow-right >}} Save {{< fa arrow-right >}} Add (stage) {{< fa arrow-right >}} Commit {{< fa arrow-right >}} Pull^\*^ {{< fa arrow-right >}} Push
 
+^\*^ = Resolve any merge conflicts if necessary!
 
-## A Note on Advanced Collaboration Techniques
+:::
 
-There are many Git and GitHub collaboration techniques, some more advanced than others. Here is a table for your reference on a few popular Git collaboration workflow strategies and tools. 
-
-| Collaboration Technique | Benefits | When to Use | When Not to Use |
-|-------------------------|----------|-------------|-----------------|
-| Branch Management Strategies | 1. Enables parallel development and experimentation<br>2. Facilitates isolation of features or bug fixes<br>3. Provides flexibility and control over project workflows | When working on larger projects with multiple features or bug fixes simultaneously.<br>When you want to maintain a stable main branch while developing new features or resolving issues on separate branches.<br>When collaborating with teammates on different aspects of a project and later integrating their changes. | When working on small projects with a single developer or limited codebase.<br>When the project scope is simple and doesn't require extensive branch management.<br>When there is no need to isolate features or bug fixes. |
-| Code Review Practices | 1. Enhances code quality and correctness through feedback<br>2. Promotes knowledge sharing and learning within the team<br>3. Helps identify bugs, improve performance, and ensure adherence to coding standards | When collaborating on a codebase with team members to ensure code quality and maintain best practices.<br>When you want to receive feedback and suggestions on your code to improve its readability, efficiency, or functionality.<br>When working on critical or complex code that requires an extra layer of scrutiny before merging it into the main branch. | When working on personal projects or small codebases with no collaboration involved.<br>When time constraints or project size make it impractical to conduct code reviews.<br>When the codebase is less critical or has low complexity. |
-| Forking                 | 1. Enables independent experimentation and development<br>2. Provides a way to contribute to a project without direct access<br>3. Allows for creating separate, standalone copies of a repository | When you want to contribute to a project without having direct write access to the original repository.<br>When you want to work on an independent variation or extension of an existing project.<br>When experimenting with changes or modifications to a project while keeping the original repository intact. | When collaborating on a project with direct write access to the original repository.<br>When the project does not allow external contributions or forking.<br>When the project size or complexity doesn't justify the need for independent variations. |
-| Pull Requests           | 1. Facilitates code review and discussion<br>2. Allows for collaboration and feedback from team members<br>3. Enables better organization and tracking of proposed changes | When working on a shared repository with a team and wanting to contribute changes in a controlled and collaborative manner.<br>When you want to propose changes to a project managed by others and seek review and approval before merging them into the main codebase. | When working on personal projects or individual coding tasks without the need for collaboration.<br>When immediate changes or fixes are required without review processes.<br>When working on projects with a small team or single developer with direct write access to the repository. |
-
-: {tbl-colwidths="[15,28,28,28]"}
-
-The "When Not to Use" column provides insights into situations where it *may* be less appropriate / unnecessary to use each collaboration technique, helping you make informed decisions based on the specific context and requirements of your project.
-
-These techniques provide different benefits and are used in various collaboration scenarios, depending on the project's needs and team dynamics.
-
-#### Advanced Git Commands
-
-This table includes more advanced Git terms and commands that are commonly used in both individual and collaborative projects.
-
- Term | Git Command(s) | Definition |
-|:---:|:-----|:-------------------------|
-| Branch | `git branch` | Lists existing branches or creates a new branch |
-| Checkout | `git checkout [branch]` | Switches to a different branch or restores files from a specific commit |
-| Clone | `git clone [repository]` | Creates a local copy of a remote repository |
-| Diff | `git diff` | Shows differences between files, commits, or branches |
-| Log | `git log` | Displays the commit history of the repository |
-| Merge | `git merge [branch]` | Integrates changes from one branch into another branch |
-| Rebase | `git rebase` | Integrates changes from one branch onto another by modifying commit history |
-| Remote | `git remote` | Manages remote repositories linked to the local repository |
-| Repository | `git init` | A directory where Git tracks and manages files and their versions |
-| Stash | `git stash` | Temporarily saves changes that are not ready to be committed |
-| Tag | `git tag` | Assigns a label or tag to a specific commit |
-
-Git has a rich set of commands and features, and there are many more terms beyond either table. Learn more by visiting the [Git documentation](https://git-scm.com/docs).
-
-#### Other Terms
-
-This table includes terms for which there **are not specific Git commands.**
-
- Term | Definition |
-|:---:|:-------------------------|
-| Sync | Fetches, merges, and pushes (in that order) commits to/from a local repository |
-| Fork  | Creates a personal copy of a repository under your GitHub account for independent development |
-| Merge Conflict | Occurs when Git cannot automatically merge changes from different branches, requiring manual resolution |
-| Pull Request (PR) | A request to merge changes from a branch into another branch, typically in a collaborative project |
+It may take a bit of practice to get comfortable with navigating merge conflicts, but like any other technical skill, they'll become less intimidating with time. With careful communication and a consistent workflow, conflicts can be largely avoided or resolved when they do occur.
