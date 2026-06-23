@@ -1,25 +1,27 @@
 ---
-title: "Facilitating a successful working group"
+title: "Facilitating a Successful Working Group"
+number-sections: false
 ---
 
+:::{.callout-tip icon="false"}
+### {{< fa brain >}} Learning Objectives
+
+After completing this session, you will be able to:
+
+- Recognize best practices for designing, running, and sustaining a successful working group from initiation through completion
+- Apply strategies for effective communication, collaboration, and group norm-setting to foster inclusive participation
+- Use practical facilitation tools and techniques to guide discussions, manage conflict, and navigate challenging group dynamics
+- Understand the full lifecycle of a working group—including logistics, project management, and decision-making—and identify the factors that make NCEAS-style working groups uniquely effective
+
+:::
 
 <div style="display: flex; justify-content: center;"> 
 <iframe width="560" height="380" src="https://docs.google.com/presentation/d/1VCRV2htljOrSUkW3Fvjl2rwkm-TNR-9LRn-tS2_2CGY/preview?" frameborder="0" allowfullscreen></iframe>
 </div> 
 
-## Workshop Description {.unnumbered}
+## Workshop Description
 
 Learn how to effectively manage a working group from before the first meeting, during the first meeting, and what comes next. We will discuss how to align expectations, general tips on communicating with the team, and what to expect from the working group process. This workshop will also touch on project management and facilitation tips with plenty of time to ask questions to our professional facilitators.
-
-:::{.callout-tip}
-## Learning Objectives {.unnumbered}
-
--   Recognize best practices for designing, running, and sustaining a successful working group from initiation through completion
--   Apply strategies for effective communication, collaboration, and group norm-setting to foster inclusive participation
--   Use practical facilitation tools and techniques to guide discussions, manage conflict, and navigate challenging group dynamics
--   Understand the full lifecycle of a working group—including logistics, project management, and decision-making—and identify the factors that make NCEAS-style working groups uniquely effective.
-:::
-
 
 ## Foundations of a Successful Working Group
 
@@ -64,8 +66,6 @@ Learn how to effectively manage a working group from before the first meeting, d
 - Encourage subgroups to share “key takeaways and next steps” with the broader team.
 - Strategies that can quickly gauge agreement and readiness to move forward
 
-
-
 :::callout-important
 ## Missed the training?
 
@@ -73,13 +73,9 @@ Find the video recording of this workshop in this [link](https://drive.google.co
 
 :::
 
+### Additional Resources
 
-### Key Resources {.unnumbered}
-
--   NCEAS’ [Resources for Working Groups](https://www.nceas.ucsb.edu/working-group-resources) webpage
-
--   NCEAS’ [Guide to successful scientific working groups](https://docs.google.com/document/d/1HupL2BNiew-L3LdqOFSD85_qpMdPB7I_zXeXly0tuPY/edit)
-
--   NCEAS’ [Checklists! for successful scientific working groups](https://docs.google.com/document/d/1QZFxXh9KQ3VPFwMBjt1nC_rdG7kW80KeL5C3PjyEaP8/edit)
-
--   [Liberating Structures](https://www.liberatingstructures.com/ls-menu) for facilitation
+- NCEAS' [Resources for Working Groups](https://www.nceas.ucsb.edu/working-group-resources) webpage
+- NCEAS' [Guide to successful scientific working groups](https://docs.google.com/document/d/1HupL2BNiew-L3LdqOFSD85_qpMdPB7I_zXeXly0tuPY/edit)
+- NCEAS' [Checklists! for successful scientific working groups](https://docs.google.com/document/d/1QZFxXh9KQ3VPFwMBjt1nC_rdG7kW80KeL5C3PjyEaP8/edit)
+- [Liberating Structures](https://www.liberatingstructures.com/ls-menu) for facilitation
