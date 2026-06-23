@@ -1,77 +1,80 @@
 project:
   type: website
+  execute-dir: project
   output-dir: docs
-
-filters:
-- nceas-learning-hub/theme
-
-exercises: ### for custom theme callouts
-  number: true ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html but does not work
+  render:
+    - "*.qmd"
 
 editor: source
 execute:
   freeze: auto
-
-format:
-  theme-html
-
+filters:
+  - nceas-learning-hub/theme
+exercises: ### for custom theme callouts
+  number: true ### see https://cambiotraining.github.io/quarto-course-template/materials/02-content_guidelines.html
 
 website:
-  title: "NCEAS Working Group Training"
-  reader-mode: false
+  title: "NCEAS Training Series: Supporting Effective Collaboration in Working Groups"
   repo-url: https://github.com/nceas-learning-hub/nceas-wg-portal
-
-  favicon: images/logo_lh_hex.png # learning hub logo on browser tab
-
-
+  repo-actions: [issue]
+  favicon: images/logo_lh.png
   bread-crumbs: false
   navbar:
     right:
-      - text: "Instructors"
-        menu:
-          - text: "Li Kui"
-            href: https://www.oharascience.com/
       - icon: github
         href: https://github.com/nceas-learning-hub/nceas-wg-portal
         aria-label: GitHub
-
   sidebar:
-    title: "Training Materials"
-    style: "floating"
+    title: "Materials"
     search: true
     tools:
-      - icon: house-door-fill
-        href: https://www.nceas.ucsb.edu/learning-hub
-      - icon: twitter
-        href: https://twitter.com/ucsb_nceas
       - icon: github
         href: nceas-learning-hub.github.io/nceas-wg-portal
+      - icon: house-door-fill
+        href: https://www.nceas.ucsb.edu/learning-hub
     contents:
-      - index.qmd # preface
-      # START SESSIONS
-      - section: "Working Groups Learning"
+      - text: "Series Home"
+        href: index.qmd
+      - section: "Git & GitHub Trainings"
         contents:
-        - s01_lecture_facilitating_working_group.qmd
-        - s02_github_introduction.qmd
-        - s12_lecture_canvas.qmd
-        - s03_lecture_data_mgmt_reproducibility.qmd
-        - s04_github_project_management.qmd
-        - s05_github_collaboration.qmd
-        - s06_lecture_communication_plan.qmd
-
-      - section: "Additional Resources"
+        - text: "Setup"
+          href: git-github-01_setup.qmd
+        - text: "Fundamentals"
+          href: git-github-02_fundamentals.qmd
+        - text: "Resolving Conflicts"
+          href: git-github-03_conflict.qmd
+        - text: "Advanced Features"
+          href: git-github-04_advanced.qmd
+        - text: "Project Management"
+          href: git-github-05_project-mgmt.qmd
+        - text: "**_Recordings_**"
+          href: recordings/git-github.qmd
+      - section: "Data Science Trainings"
         contents:
-        - s07_lecture_one_pagers.qmd
-        - s08_lecture_communication_results.qmd
-        - s09_r_git_install_guide.qmd
-        - s10_r_parallel_computing.qmd
-        - s11_data_resources.qmd
-      # END SESSIONS
-
+        - text: "Data Management & Reproducibility"
+          href: data-sci_reproducibility.qmd
+        - text: "Parallel Computing in R"
+          href: data-sci_parallel-computing.qmd
+        - text: "**_Recordings_**"
+          href: recordings/data-sci.qmd
+      - section: "Team Science Trainings"
+        contents:
+        - text: "Successful Facilitation"
+          href: team-sci_facilitation.qmd
+        - text: "Communication Plans"
+          href: team-sci_communication-plan.qmd
+        - text: "Communicating Results"
+          href: team-sci_communicate-external.qmd
+        - text: "Making a One Pager"
+          href: team-sci_one-pagers.qmd
+        - text: "Canva 101"
+          href: team-sci_canva-basics.qmd
+        - text: "**_Recordings_**"
+          href: recordings/team-sci.qmd
+      - text: "Other NCEAS Resources"
+        href: nceas-resources.qmd
   page-footer:
-    center: "Copyright \u00a9 2025, NCEAS"
-    ### NCEAS main website footer:
-    # center: "\u00a9 The Regents of the University of California, All Rights Reserved"
-    # could also include license info?
+    center: "Copyright &copy; 2026, [NCEAS](https://www.nceas.ucsb.edu/) | [{{< fa scale-balanced >}} CC 4.0 International](http://creativecommons.org/licenses/by/4.0/) "
 
-
+format:
+  theme-html
