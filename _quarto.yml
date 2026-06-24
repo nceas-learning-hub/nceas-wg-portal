@@ -27,6 +27,7 @@ website:
   sidebar:
     title: "Materials"
     search: true
+    collapse-level: 1
     tools:
       - icon: github
         href: nceas-learning-hub.github.io/nceas-wg-portal
@@ -35,7 +36,7 @@ website:
     contents:
       - text: "Series Home"
         href: index.qmd
-      - section: "Git & GitHub Trainings"
+      - section: "Git & GitHub"
         contents:
         - text: "Setup"
           href: git-github-01_setup.qmd
@@ -49,7 +50,7 @@ website:
           href: git-github-05_project-mgmt.qmd
         - text: "**_Recordings_**"
           href: recordings/git-github.qmd
-      - section: "Data Science Trainings"
+      - section: "Data Science"
         contents:
         - text: "Data Management & Reproducibility"
           href: data-sci_reproducibility.qmd
@@ -57,7 +58,7 @@ website:
           href: data-sci_parallel-computing.qmd
         - text: "**_Recordings_**"
           href: recordings/data-sci.qmd
-      - section: "Team Science Trainings"
+      - section: "Team Science"
         contents:
         - text: "Successful Facilitation"
           href: team-sci_facilitation.qmd
