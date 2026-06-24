@@ -3,6 +3,7 @@
 Version updated by Nick Lyon as part of them taking a primary role in NCEAS working group trainings (beginning in late 2026); changes from the preceding version are listed below.
 
 - Renames all workshop lessons to group them by category (and mirrors that grouping in website sidebar)
+    - Accepted categories are: "Git & GitHub", "Data Science", "Team Science", and "Graphic Design"
 - Overhauls all GitHub lessons (setup, fundamentals, resolving conflict, advanced features, project management)
 - Standardizes learning objective callouts, header format, and behind-the-scenes markdown format in all pages
 - Checks for (and resolves) numerous typos in various lesson pages
