@@ -12,6 +12,17 @@ To get the video embedding code (for videos stored in Drive):
 
 Missed the training? Don't worry! We record most of our trainings and you can watch them below.
 
+## Graphic Design with Canva
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Sep. 24^th^ 2025, Nicole Greco & Tessa Cafritz**
+
+<iframe src="https://drive.google.com/file/d/1c_1BqKQsEItFfO5rpjGpIsKn-gfhnGMv/preview" width="640" height="480"></iframe>
+
+:::
+
 ## Graphic Design with Google Documents
 
 :::{.panel-tabset}
@@ -24,16 +35,5 @@ _This workshop wasn't offered during this time range_
 **Alex Phillips**
 
 <iframe src="https://drive.google.com/file/d/1PfOcQaiDtlcYymEkyW_rvkuMSpyQ-Z3k/preview" width="640" height="480"></iframe>
-
-:::
-
-## Graphic Design with Canva
-
-:::{.panel-tabset}
-### 2025-26 Training Recordings
-
-**Sep. 24^th^ 2025, Nicole Greco & Tessa Cafritz**
-
-<iframe src="https://drive.google.com/file/d/1c_1BqKQsEItFfO5rpjGpIsKn-gfhnGMv/preview" width="640" height="480"></iframe>
 
 :::
