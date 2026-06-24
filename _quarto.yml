@@ -65,12 +65,16 @@ website:
           href: team-sci_communication-plan.qmd
         - text: "Communicating Results"
           href: team-sci_communicate-external.qmd
-        - text: "Making a One Pager"
-          href: team-sci_one-pagers.qmd
-        - text: "Canva 101"
-          href: team-sci_canva-basics.qmd
         - text: "**_Recordings_**"
           href: recordings/team-sci.qmd
+      - section: "Graphic Design"
+        contents:
+        - text: "With Canva"
+          href: design_canva-basics.qmd
+        - text: With GoogleDocs
+          href: design_googledocs.qmd
+        - text: "**_Recordings_**"
+          href: recordings/design.qmd
       - text: "Other NCEAS Resources"
         href: nceas-resources.qmd
   page-footer:

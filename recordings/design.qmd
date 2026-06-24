@@ -1,0 +1,39 @@
+---
+title: "Graphic Design Training Recordings"
+---
+
+<!---
+To get the video embedding code (for videos stored in Drive):
+1. Click into the video file of image in the Google Drive
+2. Click the "File" menu
+3. Click "Get embed link"
+4. Paste the newly-copied link into the relevant Quarto doc
+--->
+
+Missed the training? Don't worry! We record most of our trainings and you can watch them below.
+
+## Graphic Design with Google Documents
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+_This workshop wasn't offered during this time range_
+
+### Pre-2025 Training Recordings
+
+**Alex Phillips**
+
+<iframe src="https://drive.google.com/file/d/1PfOcQaiDtlcYymEkyW_rvkuMSpyQ-Z3k/preview" width="640" height="480"></iframe>
+
+:::
+
+## Graphic Design with Canva
+
+:::{.panel-tabset}
+### 2025-26 Training Recordings
+
+**Sep. 24^th^ 2025, Nicole Greco & Tessa Cafritz**
+
+<iframe src="https://drive.google.com/file/d/1c_1BqKQsEItFfO5rpjGpIsKn-gfhnGMv/preview" width="640" height="480"></iframe>
+
+:::
