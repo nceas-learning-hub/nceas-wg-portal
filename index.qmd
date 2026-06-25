@@ -26,6 +26,17 @@ All sessions are held via Zoom. Training slides and video recordings will be pos
 ### Training Schedule
 
 :::{.panel-tabset}
+### 2026-27 Workshop Offerings 
+
+| Workshop | Date & Time | Year | Instructor(s) |
+|:--------------|:---------:|:-:|:--------------|
+| How to Run a Working Group | Aug. 5^th^<br>10-11a PT | '26 | Courtney Scarborough<br> Heather Lahr | 
+| Git & GitHub: Fundamentals | Sep. 10^th^<br>10-11a PT | '26 | Nick J Lyon | 
+| Project Management with Github | Oct. 8^th^<br>10-11a PT | '26 | Nick J Lyon | 
+| Git & GitHub: Resolving Conflicts | Nov. 5^th^<br>10-11a PT | '26 | Nick J Lyon | 
+| Graphic Design with Canva | Jan. 6^th^<br>10-11a PT | '27 | Tessa Cafritz | 
+| Communicating Your Results | Feb. 21^th^<br>10-11a PT | '27 | Tessa Cafritz | 
+
 ### 2025-26 Workshop Offerings 
 
 | Workshop | Date & Time | Year | Instructor(s) |
