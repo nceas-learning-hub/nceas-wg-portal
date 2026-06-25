@@ -10,8 +10,9 @@ Version updated by Nick Lyon as part of them taking a primary role in NCEAS work
 - Adds dedicated "recordings" pages for each category of training
 - Adds alt text to all images in parallel processing lesson (only lesson missing such text)
 - Adds custom 404 page
-- Expands `.gitignore` and clarifies types of content listed therein
+- Adds schedule for 2026-27 trainings
 - Adds README to repo
+- Expands `.gitignore` and clarifies types of content listed therein
 
 ## Version 1.0.00
 
