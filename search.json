@@ -4,7 +4,7 @@
     "href": "team-sci_facilitation.html",
     "title": "Facilitating a Successful Working Group",
     "section": "",
-    "text": "Tip Learning Objectives\n\n\n\nAfter completing this session, you will be able to:\n\nRecognize best practices for designing, running, and sustaining a successful working group from initiation through completion\nApply strategies for effective communication, collaboration, and group norm-setting to foster inclusive participation\nUse practical facilitation tools and techniques to guide discussions, manage conflict, and navigate challenging group dynamics\nUnderstand the full life-cycle of a working group—including logistics, project management, and decision-making—and identify the factors that make NCEAS-style working groups uniquely effective",
+    "text": "Note Workshop Overview\n\n\n\n\n\nLearn how to effectively manage a working group from before the first meeting, during the first meeting, and what comes next. We will discuss how to align expectations, general tips on communicating with the team, and what to expect from the working group process. This workshop will also touch on project management and facilitation tips with plenty of time to ask questions to our professional facilitators.",
     "crumbs": [
       "{{< fa people-group >}} Team Science",
       "Successful Facilitation"
@@ -92,7 +92,7 @@
     "href": "team-sci_communicate-external.html",
     "title": "Communicating Results to External Audiences",
     "section": "",
-    "text": "Tip Learning Objectives\n\n\n\nAfter completing this session, you will be able to:\n\nRecognize the power of social media in spreading information about papers\nIdentify successful strategies for marketing publications\nPractice summarizing complex scientific information in short, accessible formats\nApply methods for storytelling to developing a social media post thread\n\n\n\n\n\n\n\n\nWorkshop Description\nYour paper was just accepted, but now what? From social media to press releases to multimedia products to stakeholder meetings, learn about pathways for promoting your publication and products.\n\n\nAdditional Resources\n\nHow Science Communication Can Boost Your Research",
+    "text": "Note Workshop Overview\n\n\n\n\n\nYour paper was just accepted (congratulations!), but now what? From social media to press releases to multimedia products to stakeholder meetings, learn about pathways for promoting your publication and products.\n\n\n\n\n\n\n\n\n\nTip Learning Objectives\n\n\n\nAfter completing this session, you will be able to:\n\nRecognize the power of social media in spreading information about papers\nIdentify successful strategies for marketing publications\nPractice summarizing complex scientific information in short, accessible formats\nApply methods for storytelling to developing a social media post thread\n\n\n\n\n\n\n\n\nWorkshop Description\nYour paper was just accepted, but now what? From social media to press releases to multimedia products to stakeholder meetings, learn about pathways for promoting your publication and products.\n\n\nAdditional Resources\n\nHow Science Communication Can Boost Your Research",
     "crumbs": [
       "{{< fa people-group >}} Team Science",
       "Communicating Results"
@@ -114,7 +114,7 @@
     "href": "recordings/git-github.html#git-github-fundamentals",
     "title": "Git & GitHub Training Recordings",
     "section": "1 Git & GitHub: Fundamentals",
-    "text": "1 Git & GitHub: Fundamentals\n\n2025-26 Training Recordings\n\n\nSep. 10th 2025, Li Kui",
+    "text": "1 Git & GitHub: Fundamentals\n\n2026-27 Training Recordings2025-26 Training Recordings\n\n\nSep. 9th 2026, Nick Lyon\n\n\n\n\nSep. 10th 2025, Li Kui",
     "crumbs": [
       "{{< fa brands github >}} Git & GitHub",
       "**_Recordings_**"
@@ -308,7 +308,7 @@
     "href": "git-github-02_fundamentals.html",
     "title": "Git & GitHub: Fundamentals",
     "section": "",
-    "text": "Tip Learning Objectives\n\n\n\nAfter completing this session, you will be able to:\n\nDescribe how Git and GitHub integrate to support teamwork on shared projects\nApply the principles of Git to track and manage changes of a project\nPerform each step of the Git workflow to edit files locally and sync them with a remote repository\nCreate and configure Git repositories using different workflows",
+    "text": "Note Workshop Overview\n\n\n\n\n\nEvery file changes throughout the scientific process. Manuscripts are edited. Figures get revised. Code gets fixed when bugs are discovered. Sometimes those fixes lead to even more bugs, leading to more changes in the code base. Data files get combined. Those same files are split and combined again. In just one research project, we can expect thousands of changes! These changes are important to track, and yet, we often use simplistic file names to do so. Many of us have experienced renaming a document or script multiple times with the disingenuous addition of “final” to the file name. Fortunately, there’s a better way: version control. Version control provides an organized and transparent way to track changes in code and files. This practice was designed for software development, but is easily applicable to scientific programming. The version control system we’ll be diving into is Git, the most widely used modern version control system in the world.",
     "crumbs": [
       "{{< fa brands github >}} Git & GitHub",
       "Fundamentals"
@@ -539,7 +539,7 @@
     "href": "design_canva-basics.html",
     "title": "Graphic Design with Canva",
     "section": "",
-    "text": "WarningBefore the Workshop!\n\n\n\nPlease make a free Canva account here.",
+    "text": "Note Workshop Overview\n\n\n\n\n\nInfographics are powerful ways to convey complex scientific information to a general audience. Learn how to create compelling materials, including choices around fonts, layouts, content, and color schemes.",
     "crumbs": [
       "{{< fa brush >}} Graphic Design",
       "With Canva"
@@ -671,7 +671,7 @@
     "href": "git-github-03_conflict.html",
     "title": "Git & GitHub: Resolving Merge Conflicts",
     "section": "",
-    "text": "Tip Learning Objectives\n\n\n\nAfter completing this session, you will be able to:\n\nDescribe common causes of conflicts that arise when collaborating on repositories\nResolve conflicts using Git conflict resolution techniques\nApply workflows and best practices that minimize conflicts on collaborative repositories\nGit is a powerful tool for both individual and collaborative work. The most common way to collaborate is through a shared repository on GitHub, which acts as a central hub where teammates can exchange and merge changes. In this lesson, one person (the Owner) hosts the repository on GitHub and grants a colleague (the Collaborator) permission to push changes directly.\nBefore diving into the exercise, keep these tips in mind - we’ll return to them throughout:\nAnd the single most effective conflict-prevention strategy: communicate with your collaborators before and after making changes. Knowing who is editing which files, and when, eliminates most problems before they start.",
+    "text": "Note Workshop Overview\n\n\n\n\n\nGit is a great tool for working independently, but even better for working with friends and colleagues. However, working with a team together with Git requires a different approach than platforms that support synchronous collaboration (e.g., GoogleDocs). This lesson presents step-by-step instructions on how to avoid conflicts while collaborating with colleagues. It also walks you through how to solve a merge conflict if one does occur, and best practices for collaboration in Git/GitHub in general.\nGit is a powerful tool for both individual and collaborative work. The most common way to collaborate is through a shared repository on GitHub, which acts as a central hub where teammates can exchange and merge changes. In this lesson, one person (the Owner) hosts the repository on GitHub and grants a colleague (the Collaborator) permission to push changes directly.\nBefore diving into the exercise, keep these tips in mind - we’ll return to them throughout:\nAnd the single most effective conflict-prevention strategy: communicate with your collaborators before and after making changes. Knowing who is editing which files, and when, eliminates most problems before they start.",
     "crumbs": [
       "{{< fa brands github >}} Git & GitHub",
       "Resolving Conflicts"
@@ -726,7 +726,7 @@
     "href": "git-github-05_project-mgmt.html",
     "title": "Project Management with GitHub",
     "section": "",
-    "text": "Tip Learning Objectives\n\n\n\nAfter completing this session, you will be able to:\n\nDefine an issue in the context of GitHub\nCreate a new issue in an existing repository\nExplain considerations for creating a useful, appropriately-scoped issue\nDefine a project in the context of GitHub\nExplain in what contexts Projects are useful\nIdentify the three available project view options\nExplain how issues can get added to projects",
+    "text": "Note Workshop Overview\n\n\n\n\n\nGitHub is mainly known as a platform that facilitates collaborative coding. However, GitHub also offers several features that can support communication and project management. During this workshop, we will discuss and practice taking advantage of GitHub Issues and Projects to document and communicate your work process.",
     "crumbs": [
       "{{< fa brands github >}} Git & GitHub",
       "Project Management"
