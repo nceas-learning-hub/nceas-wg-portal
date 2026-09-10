@@ -11,6 +11,12 @@ Slide deck embed code (vvv)
 </div> 
 --->
 
+:::{.callout-note icon="false" collapse="true"}
+### {{< fa compass >}} Workshop Overview
+
+Every file changes throughout the scientific process. Manuscripts are edited. Figures get revised. Code gets fixed when bugs are discovered. Sometimes those fixes lead to even more bugs, leading to more changes in the code base. Data files get combined. Those same files are split and combined again. In just one research project, we can expect thousands of changes! These changes are important to track, and yet, we often use simplistic file names to do so. Many of us have experienced renaming a document or script multiple times with the disingenuous addition of "final" to the file name. Fortunately, there's a better way: version control. Version control provides an organized and transparent way to track changes in code and files. This practice was designed for software development, but is easily applicable to scientific programming. The version control system we'll be diving into is Git, the most widely used modern version control system in the world.
+:::
+
 :::{.callout-tip icon="false"}
 ### {{< fa brain >}} Learning Objectives
 

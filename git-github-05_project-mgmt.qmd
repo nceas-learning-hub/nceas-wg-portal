@@ -13,6 +13,12 @@ Slide deck embed code (vvv)
 </div> 
 --->
 
+:::{.callout-note icon="false" collapse="true"}
+### {{< fa compass >}} Workshop Overview
+
+GitHub is mainly known as a platform that facilitates collaborative coding. However, GitHub also offers several features that can support communication and project management. During this workshop, we will discuss and practice taking advantage of GitHub Issues and Projects to document and communicate your work process.
+:::
+
 :::{.callout-tip icon="false"}
 ### {{< fa brain >}} Learning Objectives
 

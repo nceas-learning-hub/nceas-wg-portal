@@ -11,6 +11,12 @@ Slide deck embed code (vvv)
 </div> 
 --->
 
+:::{.callout-note icon="false" collapse="true"}
+### {{< fa compass >}} Workshop Overview
+
+Git is a great tool for working independently, but even better for working with friends and colleagues. However, working with a team together with Git requires a different approach than platforms that support synchronous collaboration (e.g., GoogleDocs). This lesson presents step-by-step instructions on how to avoid conflicts while collaborating with colleagues. It also walks you through how to solve a merge conflict if one does occur, and best practices for collaboration in Git/GitHub in general.
+:::
+
 :::{.callout-tip icon="false"}
 ### {{< fa brain >}} Learning Objectives
 

@@ -7,6 +7,12 @@ number-sections: false
 Related GoogleSlide deck link: https://docs.google.com/presentation/d/1VCRV2htljOrSUkW3Fvjl2rwkm-TNR-9LRn-tS2_2CGY
 --->
 
+:::{.callout-note icon="false" collapse="true"}
+### {{< fa compass >}} Workshop Overview
+
+Learn how to effectively manage a working group from before the first meeting, during the first meeting, and what comes next. We will discuss how to align expectations, general tips on communicating with the team, and what to expect from the working group process. This workshop will also touch on project management and facilitation tips with plenty of time to ask questions to our professional facilitators.
+:::
+
 :::{.callout-tip icon="false"}
 ### {{< fa brain >}} Learning Objectives
 
