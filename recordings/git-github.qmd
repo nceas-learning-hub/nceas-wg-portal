@@ -7,6 +7,12 @@ Missed the training? Don't worry! We record most of our trainings and you can wa
 ## Git & GitHub: Fundamentals
 
 :::{.panel-tabset}
+### 2026-27 Training Recordings
+
+**Sep. 9^th^ 2026, Nick Lyon**
+
+<iframe src="https://drive.google.com/file/d/1nh2zS-EJB7gWbxY1kYzoOXspbM5xD0UA/preview" width="640" height="480"></iframe>
+
 ### 2025-26 Training Recordings
 
 **Sep. 10^th^ 2025, Li Kui**
