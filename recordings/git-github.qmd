@@ -43,6 +43,12 @@ _This workshop wasn't offered during this time range_
 ## Project Management with GitHub
 
 :::{.panel-tabset}
+### 2026-27 Training Recordings
+
+**Oct. 7^th^ 2026, Nick Lyon**
+
+<iframe src="https://drive.google.com/file/d/1FiNvYaM0GXkHrRsECptVXNqPLxg9hiY6/preview" width="640" height="480"></iframe>
+
 ### 2025-26 Training Recordings
 
 **Nov. 12^th^ 2025, Li Kui**
